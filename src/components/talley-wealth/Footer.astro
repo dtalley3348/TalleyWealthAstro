@@ -1,0 +1,310 @@
+---
+/**
+ * Talley Wealth — footer.
+ *
+ * Astro-native port of the reference React Footer. Newsletter form posts
+ * to the tenant-aware platform newsletter API.
+ */
+
+const howWeWork = [
+  { title: 'The Keystone Method™', href: '/how-we-work/keystone-method' },
+  { title: 'What to Expect', href: '/how-we-work/what-to-expect' },
+  { title: 'Planning Examples', href: '/how-we-work/success-stories' },
+  { title: 'Pricing', href: '/pricing' },
+];
+
+const company = [
+  { title: 'Who We Help', href: '/who-we-help' },
+  { title: 'Meet David Talley', href: '/about/meet-david-talley' },
+  { title: 'Meet the Team', href: '/meet-the-team' },
+  { title: 'Our Commitment', href: '/about/our-commitment' },
+  { title: 'Contact Us', href: '/contact' },
+];
+
+const resources = [
+  { title: 'Resources Home', href: '/resources' },
+  { title: 'Blog', href: '/resources/blog' },
+  { title: 'Learning Center', href: '/resources/learning-center' },
+  { title: 'Planning Tools', href: '/resources/tools' },
+  { title: 'Retirement Guide', href: '/guide' },
+  { title: 'Key Dates', href: '/resources/key-dates' },
+  { title: 'Client Hub', href: '/resources/portal' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="tw-footer relative">
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" aria-hidden="true"></div>
+
+  <!-- Upper footer: Contact / Credentials / Newsletter -->
+  <div class="border-b border-white/10">
+    <div class="section-container py-16">
+      <div class="grid gap-12 md:grid-cols-3">
+        <div class="text-center">
+          <h3 class="font-serif text-xl font-bold mb-4">Get in Touch</h3>
+          <div class="space-y-1 text-sm text-white/80">
+            <p>203 Broyles Dr, Ste 301</p>
+            <p>Johnson City, TN 37601</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <a href="tel:+14236170160" class="block text-sm text-white/80 hover:text-accent transition-colors">(423) 617-0160</a>
+            <a href="mailto:hello@talleywealth.com" class="block text-sm text-white/80 hover:text-accent transition-colors">hello@talleywealth.com</a>
+          </div>
+          <a href="/get-started" class="mt-6 inline-flex items-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-foreground hover:brightness-95 transition">Schedule an Explore Call</a>
+        </div>
+
+        <div class="text-center">
+          <h3 class="font-serif text-xl font-bold mb-4">Verified</h3>
+          <div class="flex flex-col items-center gap-4">
+            <a
+              href="https://www.cfp.net/verify-a-cfp-professional"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-32 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover-glow"
+              aria-label="Verify David Talley, CFP® Professional"
+            >
+              <img decoding="async" src="/brands/talley-wealth/badges/cfp.png" alt="CFP Board Certified" class="w-full h-auto block"  loading="lazy" />
+            </a>
+            <a
+              href="https://www.irs.gov/tax-professionals/enrolled-agents"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-32 rounded-lg bg-white p-3 transition-all duration-300 hover:-translate-y-1 hover-glow"
+              aria-label="IRS Enrolled Agent credential info"
+            >
+              <img decoding="async" src="/brands/talley-wealth/badges/enrolled-agent.jpg" alt="IRS Enrolled Agent" class="w-full h-auto"  loading="lazy" />
+            </a>
+          </div>
+          <p class="mt-4 text-sm font-bold">60+ clients have left 5-star reviews</p>
+          <a href="https://share.google/fLD3pNTTDtrwScu4z" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex items-center gap-1 text-sm text-accent hover:text-accent/80 transition">
+            Read reviews
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="text-center">
+          <h3 class="font-serif text-xl font-bold mb-4">Planning Notes</h3>
+          <p class="mb-4 text-sm text-white/70">Occasional plain-English notes on retirement, tax planning, and decisions worth thinking through before they become urgent.</p>
+
+          <form id="tw-newsletter" class="mx-auto max-w-xs space-y-3" novalidate>
+            <div class="grid grid-cols-2 gap-2">
+              <input
+                type="text"
+                name="first_name"
+                required
+                placeholder="First"
+                class="w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+              <input
+                type="text"
+                name="last_name"
+                required
+                placeholder="Last"
+                class="w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Email"
+              class="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+            <div class="grid grid-cols-[1fr_90px] gap-2">
+              <input
+                type="text"
+                name="city"
+                required
+                placeholder="City"
+                class="w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+              <input
+                type="text"
+                name="zip"
+                required
+                placeholder="Zip"
+                class="w-full rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full rounded-md bg-accent py-2 px-4 text-sm font-medium text-accent-foreground hover:brightness-95 transition disabled:opacity-60"
+            >
+              <span data-label>Get Planning Notes</span>
+            </button>
+            <p data-message class="hidden text-sm"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link columns -->
+  <div class="section-container py-12">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-1">
+        <div class="mb-6">
+          <img decoding="async" src="/brands/talley-wealth/logo.webp" alt="Talley Wealth" class="h-10 w-auto"  loading="lazy" />
+        </div>
+        <p class="mb-6 text-sm leading-relaxed text-white/70">
+          Clarity for the financial decisions that shape your future. Planning, tax, and investments—coordinated.
+        </p>
+        <div class="flex items-center gap-2 text-sm text-white/70">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Fri: 8am – 5pm</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="mb-5 font-serif font-bold">How We Work</h4>
+        <ul class="space-y-2.5">
+          {howWeWork.map((item) => (
+            <li>
+              <a href={item.href} class="tw-footer-link">{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="mb-5 font-serif font-bold">Company</h4>
+        <ul class="space-y-2.5">
+          {company.map((item) => (
+            <li>
+              <a href={item.href} class="tw-footer-link">{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="mb-5 font-serif font-bold">Resources</h4>
+        <ul class="space-y-2.5">
+          {resources.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="tw-footer-link"
+                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclosures -->
+  <div class="border-t border-white/10">
+    <div class="section-container py-6">
+      <p class="mb-3 text-xs leading-relaxed text-white/50">
+        Securities offered through Registered Representatives of Cambridge Investment Research, Inc., a broker-dealer member
+        <a href="https://www.finra.org" target="_blank" rel="noopener noreferrer" class="underline text-accent/70 hover:text-accent">FINRA</a>/<a href="https://www.sipc.org" target="_blank" rel="noopener noreferrer" class="underline text-accent/70 hover:text-accent">SIPC</a>.
+        Advisory services through Cambridge Investment Research Advisors, Inc., a Registered Investment Adviser. Cambridge and Talley Wealth are not affiliated. Cambridge does not offer tax or legal advice.
+      </p>
+      <p class="text-xs leading-relaxed text-white/50">
+        Financial Professionals may only conduct business with residents of the states or jurisdictions in which they are properly registered, licensed or exempt from registration. Testimonials reflect individual experiences and should not be considered a guarantee of future results.
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="section-container py-5">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <p class="text-sm text-white/50">© {year} Talley Wealth. All rights reserved.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <a href="/privacy" class="text-sm text-white/50 hover:text-accent transition-colors">Privacy Policy</a>
+          <a href="/terms" class="text-sm text-white/50 hover:text-accent transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  html[data-tenant="talley-wealth"] .tw-footer {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+  html[data-tenant="talley-wealth"] .tw-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.15s;
+  }
+  html[data-tenant="talley-wealth"] .tw-footer-link::after {
+    content: '→';
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  html[data-tenant="talley-wealth"] .tw-footer-link:hover {
+    color: var(--color-accent);
+  }
+  html[data-tenant="talley-wealth"] .tw-footer-link:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>
+
+<script>
+  (() => {
+    const form = document.getElementById('tw-newsletter') as HTMLFormElement | null;
+    if (!form) return;
+    const input = form.querySelector<HTMLInputElement>('input[type="email"]');
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const label = form.querySelector<HTMLElement>('[data-label]');
+    const message = form.querySelector<HTMLElement>('[data-message]');
+    if (!input || !button || !label || !message) return;
+
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      message.classList.add('hidden');
+      const email = input.value.trim().toLowerCase();
+      const data = new FormData(form);
+      const firstName = String(data.get('first_name') ?? '').trim();
+      const lastName = String(data.get('last_name') ?? '').trim();
+      const city = String(data.get('city') ?? '').trim();
+      const zip = String(data.get('zip') ?? '').trim();
+      if (!emailRe.test(email)) {
+        message.textContent = 'Please enter a valid email.';
+        message.className = 'text-sm text-red-300';
+        message.classList.remove('hidden');
+        return;
+      }
+      if (!firstName || !lastName || !city || !zip) {
+        message.textContent = 'Please fill out all fields.';
+        message.className = 'text-sm text-red-300';
+        message.classList.remove('hidden');
+        return;
+      }
+      button.disabled = true;
+      label.textContent = 'Sending…';
+      try {
+        const res = await fetch('/api/newsletter/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, first_name: firstName, last_name: lastName, city, zip, source: 'footer' }),
+        });
+        if (!res.ok) throw new Error('request failed');
+        form.reset();
+        message.textContent = 'Thanks. You are on the Planning Notes list.';
+        message.className = 'text-sm text-green-300';
+        message.classList.remove('hidden');
+        label.textContent = 'Get Planning Notes';
+        button.disabled = false;
+      } catch (err) {
+        message.textContent = 'Something went wrong. Please try again.';
+        message.className = 'text-sm text-red-300';
+        message.classList.remove('hidden');
+        label.textContent = 'Get Planning Notes';
+        button.disabled = false;
+      }
+    });
+  })();
+</script>

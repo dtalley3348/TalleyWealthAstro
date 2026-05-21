@@ -1,0 +1,362 @@
+---
+/**
+ * Talley Wealth — primary navigation.
+ *
+ * Astro-native implementation of the reference React Header. Desktop
+ * dropdown labels are real links with hover/focus panels; scroll-state +
+ * mobile open are handled by a tiny inline script at the bottom.
+ */
+
+const howWeWork = [
+  { title: 'The Keystone Method™', href: '/how-we-work/keystone-method', description: 'Why we plan before we manage, and how it works' },
+  { title: 'What to Expect', href: '/how-we-work/what-to-expect', description: 'Step by step, from Explore Call to ongoing guidance' },
+  { title: 'Planning Examples', href: '/how-we-work/success-stories', description: 'Composite examples of coordinated planning decisions' },
+];
+
+const about = [
+  { title: 'Meet David Talley', href: '/about/meet-david-talley', description: 'Founder & Lead Advisor' },
+  { title: 'Meet the Team', href: '/meet-the-team', description: 'The people behind Talley Wealth' },
+  { title: 'Our Commitment', href: '/about/our-commitment', description: 'Fiduciary, transparent, accountable' },
+  { title: 'Contact', href: '/contact', description: 'Get in touch or visit an office' },
+];
+
+const resources = [
+  { title: 'Blog', href: '/resources/blog', description: 'Deeper articles, planning perspective, and firm thinking' },
+  { title: 'Learning Center', href: '/resources/learning-center', description: 'Short answers to common planning, tax, and retirement questions' },
+  { title: 'Planning Tools', href: '/resources/tools', description: 'Calculators, assessments, and interactive planning tools' },
+  { title: 'Retirement Guide', href: '/guide', description: 'A practical framework for retirement readiness' },
+];
+
+interface Props {
+  /** True when the page has a dark hero — header starts transparent with white text. */
+  transparentOverHero?: boolean;
+}
+const { transparentOverHero = false } = Astro.props;
+---
+
+<div id="tw-toolbar" class="fixed left-0 right-0 top-0 z-40 hidden h-8 bg-primary text-primary-foreground sm:block">
+  <div class="section-container flex h-full items-center justify-end gap-6 text-xs">
+    <a href="/resources/portal" class="tw-toolbar__link">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+      Client Portal
+    </a>
+    <a href="https://talleytax.com" target="_blank" rel="noopener noreferrer" class="tw-toolbar__link">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+      Talley Tax
+    </a>
+  </div>
+</div>
+
+<header
+  id="tw-header"
+  data-transparent={transparentOverHero ? 'true' : 'false'}
+  class="fixed left-0 right-0 top-0 sm:top-8 z-40 transition-all duration-500 border-b py-4 sm:py-5 border-transparent bg-transparent"
+>
+  <div class="section-container">
+    <div class="flex items-center justify-between">
+      <a href="/" class="flex items-center" aria-label="Talley Wealth home">
+        <img
+          src="/brands/talley-wealth/logo-white.png"
+          alt="Talley Wealth"
+          class="tw-logo tw-logo--light h-16 sm:h-20 w-auto transition-opacity duration-300"
+          loading="eager"
+          decoding="async"
+        />
+        <img
+          src="/brands/talley-wealth/logo-dark.png"
+          alt="Talley Wealth"
+          class="tw-logo tw-logo--dark h-16 sm:h-20 w-auto transition-opacity duration-300"
+          loading="eager"
+          decoding="async"
+        />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+        <a
+          href="/who-we-help"
+          class="tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors"
+        >Who We Help</a>
+
+        <div class="tw-dropdown">
+          <a href="/how-we-work/what-to-expect" class="tw-dropdown__trigger tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors">
+            How We Work
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="ml-1 tw-chev"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="tw-dropdown__panel">
+            <div class="tw-dropdown__surface">
+              <ul class="grid w-[400px] gap-1 p-3">
+                {howWeWork.map((item) => (
+                  <li>
+                    <a href={item.href} class="tw-dropdown__item block rounded-md p-3">
+                      <div class="text-sm font-medium text-primary">{item.title}</div>
+                      <p class="mt-1 text-xs text-muted-foreground line-clamp-2">{item.description}</p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tw-dropdown">
+          <a href="/about" class="tw-dropdown__trigger tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors">
+            About
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="ml-1 tw-chev"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="tw-dropdown__panel">
+            <div class="tw-dropdown__surface">
+              <ul class="grid w-[400px] gap-1 p-3">
+                {about.map((item) => (
+                  <li>
+                    <a href={item.href} class="tw-dropdown__item block rounded-md p-3">
+                      <div class="text-sm font-medium text-primary">{item.title}</div>
+                      <p class="mt-1 text-xs text-muted-foreground line-clamp-2">{item.description}</p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="/pricing"
+          class="tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors"
+        >Pricing</a>
+
+        <div class="tw-dropdown">
+          <a href="/resources" class="tw-dropdown__trigger tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors">
+            Resources
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="ml-1 tw-chev"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="tw-dropdown__panel">
+            <div class="tw-dropdown__surface">
+              <ul class="grid w-[430px] gap-1 p-3">
+                {resources.map((item) => (
+                  <li>
+                    <a href={item.href} class="tw-dropdown__item block rounded-md p-3">
+                      <div class="text-sm font-medium text-primary">{item.title}</div>
+                      <p class="mt-1 text-xs text-muted-foreground line-clamp-2">{item.description}</p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a
+          href="tel:+14236170160"
+          class="tw-phone flex items-center gap-2 text-sm transition-colors"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>(423) 617-0160</span>
+        </a>
+        <a
+          href="/get-started"
+          class="inline-flex items-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-foreground shadow-elegant transition-colors hover:brightness-95"
+        >Schedule an Explore Call</a>
+      </div>
+
+      <!-- Mobile menu trigger -->
+      <button
+        id="tw-mobile-trigger"
+        class="lg:hidden p-2 rounded-md transition-colors"
+        aria-label="Open menu"
+        aria-controls="tw-mobile-panel"
+        aria-expanded="false"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile panel -->
+<div
+  id="tw-mobile-panel"
+  class="lg:hidden fixed inset-0 z-50 bg-card"
+  hidden
+>
+  <div class="flex items-center justify-between p-4 border-b border-border">
+    <img decoding="async" src="/brands/talley-wealth/logo-dark.png" alt="Talley Wealth" class="h-12 w-auto"  loading="lazy" />
+    <button id="tw-mobile-close" class="p-2 rounded-md text-primary" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="p-6 flex flex-col gap-6 overflow-y-auto h-[calc(100vh-72px)]" aria-label="Mobile primary">
+    <a href="/who-we-help" class="font-serif font-bold text-primary hover:text-accent transition-colors">Who We Help</a>
+
+    <div>
+      <a href="/how-we-work/what-to-expect" class="font-serif font-bold text-primary hover:text-accent transition-colors mb-3 block">How We Work</a>
+      <div class="flex flex-col gap-2 pl-4 border-l border-border">
+        {howWeWork.map((item) => (
+          <a href={item.href} class="text-sm text-muted-foreground hover:text-primary transition-colors">{item.title}</a>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <a href="/about" class="font-serif font-bold text-primary hover:text-accent transition-colors mb-3 block">About</a>
+      <div class="flex flex-col gap-2 pl-4 border-l border-border">
+        {about.map((item) => (
+          <a href={item.href} class="text-sm text-muted-foreground hover:text-primary transition-colors">{item.title}</a>
+        ))}
+      </div>
+    </div>
+
+    <a href="/pricing" class="font-serif font-bold text-primary hover:text-accent transition-colors">Pricing</a>
+
+    <div>
+      <a href="/resources" class="font-serif font-bold text-primary hover:text-accent transition-colors mb-3 block">Resources</a>
+      <div class="flex flex-col gap-2 pl-4 border-l border-border">
+        {resources.map((item) => (
+          <a href={item.href} class="text-sm text-muted-foreground hover:text-primary transition-colors">{item.title}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="pt-4 border-t border-border flex flex-col gap-4">
+      <a href="/get-started" class="block text-center rounded-md bg-accent py-3 px-4 font-medium text-accent-foreground">
+        Schedule an Explore Call
+      </a>
+      <a href="tel:+14236170160" class="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(423) 617-0160</span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<style>
+  /* Transparent-over-hero state: header floats on a dark hero image. */
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="true"] {
+    background: transparent;
+    border-bottom-color: transparent;
+  }
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="true"] .tw-nav-link,
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="true"] .tw-phone,
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="true"] #tw-mobile-trigger {
+    color: #fff;
+  }
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="true"] .tw-logo--dark { display: none; }
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="true"] .tw-logo--light { display: block; }
+
+  /* Solid (default) state: dark logo, navy text. */
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="false"],
+  html[data-tenant="talley-wealth"] #tw-header.is-scrolled {
+    background: color-mix(in srgb, var(--color-card) 90%, transparent);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-elegant-lg);
+    border-bottom-color: color-mix(in srgb, var(--color-border) 30%, transparent);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="false"] .tw-logo--dark { display: block; }
+  html[data-tenant="talley-wealth"] #tw-header[data-transparent="false"] .tw-logo--light { display: none; }
+  html[data-tenant="talley-wealth"] #tw-header.is-scrolled .tw-logo--dark { display: block; }
+  html[data-tenant="talley-wealth"] #tw-header.is-scrolled .tw-logo--light { display: none; }
+  html[data-tenant="talley-wealth"] #tw-header.is-scrolled .tw-nav-link,
+  html[data-tenant="talley-wealth"] #tw-header.is-scrolled .tw-phone,
+  html[data-tenant="talley-wealth"] #tw-header.is-scrolled #tw-mobile-trigger {
+    color: var(--color-foreground);
+  }
+
+  html[data-tenant="talley-wealth"] .tw-nav-link:hover,
+  html[data-tenant="talley-wealth"] .tw-phone:hover {
+    color: color-mix(in srgb, currentColor 80%, transparent);
+  }
+  html[data-tenant="talley-wealth"] .tw-toolbar__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: rgba(255, 255, 255, 0.72);
+    transition: color 0.15s;
+  }
+  html[data-tenant="talley-wealth"] .tw-toolbar__link:hover {
+    color: var(--color-accent);
+  }
+
+  /* Anchor-based dropdown: parent label remains a real link. */
+  html[data-tenant="talley-wealth"] .tw-dropdown {
+    position: relative;
+  }
+  html[data-tenant="talley-wealth"] .tw-chev {
+    transition: transform 0.2s;
+  }
+  html[data-tenant="talley-wealth"] .tw-dropdown:hover .tw-chev,
+  html[data-tenant="talley-wealth"] .tw-dropdown:focus-within .tw-chev {
+    transform: rotate(180deg);
+  }
+  html[data-tenant="talley-wealth"] .tw-dropdown__panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 8px;
+    z-index: 50;
+  }
+  html[data-tenant="talley-wealth"] .tw-dropdown:hover .tw-dropdown__panel,
+  html[data-tenant="talley-wealth"] .tw-dropdown:focus-within .tw-dropdown__panel {
+    display: block;
+  }
+  html[data-tenant="talley-wealth"] .tw-dropdown__surface {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-elegant-lg);
+  }
+  html[data-tenant="talley-wealth"] .tw-dropdown__item:hover {
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  /* Mobile panel */
+  html[data-tenant="talley-wealth"] #tw-mobile-panel:not([hidden]) {
+    display: block;
+  }
+
+  /* Push body content below fixed header on pages without transparent hero */
+  html[data-tenant="talley-wealth"] body:not(.has-transparent-header) main {
+    padding-top: 8rem;
+  }
+</style>
+
+<script>
+  (() => {
+    const header = document.getElementById('tw-header');
+    const trigger = document.getElementById('tw-mobile-trigger');
+    const panel = document.getElementById('tw-mobile-panel');
+    const closeBtn = document.getElementById('tw-mobile-close');
+    if (!header) return;
+
+    // Scroll-based solid/transparent transition (only matters when transparent-over-hero=true)
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // Mobile menu
+    if (trigger && panel && closeBtn) {
+      trigger.addEventListener('click', () => {
+        panel.hidden = false;
+        trigger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      });
+      closeBtn.addEventListener('click', () => {
+        panel.hidden = true;
+        trigger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    }
+
+  })();
+</script>

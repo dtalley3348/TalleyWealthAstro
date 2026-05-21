@@ -1,0 +1,38 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+import { wikiArticles } from '../../../../data/talley-wealth/wiki/articles';
+import { wikiCategories, getCategoryBySlug } from '../../../../data/talley-wealth/wiki/categories';
+
+export function getStaticPaths() {
+  return wikiCategories.map((category) => ({ params: { category: category.slug } }));
+}
+
+const categorySlug = Astro.params.category ?? '';
+const category = getCategoryBySlug(categorySlug);
+const articles = wikiArticles.filter((article) => article.category === categorySlug);
+if (!category || !articles.length) return new Response('Not found', { status: 404 });
+---
+
+<TalleyPage title={`${category.title} | Talley Wealth Knowledge Base`} description={category.description}>
+  <section class="bg-muted/35">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Learn</p>
+      <h1 class="mt-5 font-serif text-4xl font-bold text-primary md:text-5xl">{category.title}</h1>
+      <p class="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">{category.description}</p>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {articles.map((article) => (
+          <a href={`/learn/${article.category}/${article.slug}`} class="rounded-lg border border-border/40 bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{article.type.replace('-', ' ')}</p>
+            <h2 class="mt-3 font-serif text-2xl font-bold text-primary">{article.question}</h2>
+            <p class="mt-3 line-clamp-4 text-muted-foreground">{article.quickAnswer}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</TalleyPage>

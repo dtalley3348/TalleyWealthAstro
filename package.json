@@ -1,0 +1,31 @@
+{
+  "name": "talley-wealth-astro-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/node": "^10.0.4",
+    "@iconify-json/lucide": "^1.2.101",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.5",
+    "astro-icon": "^1.1.5",
+    "lucide-react": "^1.8.0",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "vite": "^7.2.7"
+  }
+}

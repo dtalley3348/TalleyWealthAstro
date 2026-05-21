@@ -1,0 +1,418 @@
+---
+import TalleyPage from '../../../../../components/talley-wealth/TalleyPage.astro';
+import { blogPosts, blogPostMap } from '../../../../../data/talley-wealth/site-content';
+import { getBlogPost, getBlogPosts, type DirectusBlogPost } from '../../../../../lib/directus';
+import { assetUrl } from '../../../../../lib/asset-url';
+import { buildBlogPostingSchema } from '../../../../../data/talley-wealth/seo/schema';
+import { normalizeBlogPost, type BlogContentBlock } from '../../../../../lib/talley-wealth/blog-content';
+import { getInternalLinks } from '../../../../../data/talley-wealth/seo/internal-links';
+import { blogStrategyBySlug } from '../../../../../data/talley-wealth/blog-strategy';
+
+const DIRECTUS_PUBLIC_URL = import.meta.env.DIRECTUS_PUBLIC_URL || import.meta.env.DIRECTUS_URL || 'http://localhost:8055';
+
+function formatDate(date: string) {
+  const [year, month, day] = date.split('-').map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+function inlineHtml(value: string) {
+  return escapeHtml(value)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, label, href) => {
+      const safeHref = String(href).startsWith('/') || String(href).startsWith('https://') ? href : '#';
+      return `<a href="${safeHref}">${label}</a>`;
+    });
+}
+
+function headingId(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .slice(0, 80);
+}
+
+function stripWrappingQuotes(value: string) {
+  return value.replace(/^["“]/, '').replace(/["”]$/, '');
+}
+
+function isPullQuoteText(value: string) {
+  const cleaned = value.trim();
+  if (/^["“].+["”]$/.test(cleaned) && cleaned.length < 240) return true;
+  if (cleaned.length > 180) return false;
+  return [
+    'Same balance.',
+    'Same withdrawals.',
+    'Completely different outcomes.',
+    'You cannot control the sequence.',
+    'A plan that looks good on paper',
+  ].some((phrase) => cleaned.includes(phrase));
+}
+
+function videoEmbedUrl(videoUrl?: string | null) {
+  if (!videoUrl) return null;
+  const youtube = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]+)/);
+  if (youtube) return `https://www.youtube.com/embed/${youtube[1]}`;
+  const vimeo = videoUrl.match(/vimeo\.com\/(\d+)/);
+  if (vimeo) return `https://player.vimeo.com/video/${vimeo[1]}`;
+  return null;
+}
+
+export async function getStaticPaths() {
+  const directusPosts = await getBlogPosts({ siteKey: 'talley-wealth' });
+  const slugs = directusPosts.length > 0 ? directusPosts.map((post: DirectusBlogPost) => post.slug) : blogPosts.map((post) => post.slug);
+  return slugs.map((slug) => ({ params: { slug } }));
+}
+
+const slug = Astro.params.slug ?? '';
+const directusPost = await getBlogPost(slug, 'talley-wealth');
+const fallbackPost = blogPostMap.get(slug);
+const directusPosts = await getBlogPosts({ siteKey: 'talley-wealth' });
+const relatedSourcePosts = directusPosts.length > 0
+  ? directusPosts.map((post: DirectusBlogPost) => ({
+      slug: post.slug,
+      title: post.title,
+      description: post.excerpt,
+      category: post.category,
+      date: post.date_published,
+      image: assetUrl(post.hero_image_url ?? post.hero_image, DIRECTUS_PUBLIC_URL, { width: 900, fit: 'cover', quality: 82 }) ?? '/brands/talley-wealth/blog/retirement-number-hero.jpg',
+      author: post.author,
+      readTime: post.read_time,
+      featured: post.featured,
+      duration: post.duration,
+      videoUrl: post.video_url,
+      body: String(post.body ?? '').split(/\n{2,}/).filter(Boolean),
+    }))
+  : blogPosts;
+const rawPost = directusPost
+  ? {
+      title: directusPost.title,
+      description: directusPost.excerpt,
+      category: directusPost.category,
+      date: directusPost.date_published,
+      image: assetUrl(directusPost.hero_image_url ?? directusPost.hero_image, DIRECTUS_PUBLIC_URL, { width: 1200, fit: 'cover', quality: 84 }) ?? '/brands/talley-wealth/blog/retirement-number-hero.jpg',
+      author: directusPost.author,
+      readTime: directusPost.read_time,
+      featured: directusPost.featured,
+      duration: directusPost.duration,
+      videoUrl: directusPost.video_url,
+      body: String(directusPost.body ?? '').split(/\n{2,}/).filter(Boolean),
+    }
+  : fallbackPost;
+if (!rawPost) return new Response('Not found', { status: 404 });
+const post = normalizeBlogPost({ slug, ...rawPost }, relatedSourcePosts);
+const strategy = blogStrategyBySlug[slug];
+const internalLinks = strategy?.links ?? getInternalLinks([post.category, post.title, post.description, ...post.tags], 4);
+const planningLinks = internalLinks.map((link) => ({
+  label: 'href' in link ? link.title : link.label,
+  href: 'href' in link ? link.href : link.path,
+}));
+const embedUrl = videoEmbedUrl(post.videoUrl);
+const canonicalUrl = new URL(`/resources/blog/${slug}`, Astro.site ?? Astro.url.origin).href;
+const cta = strategy?.cta ?? (post.category.toLowerCase().includes('retirement')
+  ? { eyebrow: 'Retirement guide', title: 'Want a clearer way to think about your number?', body: 'The retirement guide walks through the real inputs: spending, taxes, timing, risk, and the decisions that shape whether the plan holds up.', href: '/guide', label: 'Download the free guide' }
+  : { eyebrow: 'Next step', title: 'Want to see how this applies to your situation?', body: 'An Explore Call is a short conversation about what prompted you to reach out and whether our planning process is a fit.', href: '/get-started', label: 'Schedule an Explore Call' });
+const tableOfContents = post.bodyBlocks
+  .filter((block): block is Extract<BlogContentBlock, { type: 'heading' }> => block.type === 'heading' && block.level === 2)
+  .map((block) => ({ text: block.text, id: headingId(block.text) }));
+let paragraphCount = 0;
+const articleBlocks = post.bodyBlocks.map((block) => {
+  if (block.type === 'heading') return { ...block, id: headingId(block.text) };
+  if (block.type !== 'paragraph') return block;
+  paragraphCount += 1;
+  return {
+    ...block,
+    text: isPullQuoteText(block.text) ? stripWrappingQuotes(block.text) : block.text,
+    isLead: paragraphCount === 1,
+    isPullQuote: paragraphCount !== 1 && isPullQuoteText(block.text),
+  };
+});
+---
+
+<TalleyPage title={`${post.title} | Talley Wealth`} description={post.description} ogImage={post.image} ogType="article" jsonLd={buildBlogPostingSchema({ title: post.title, description: post.description, datePublished: post.date, image: post.image, url: canonicalUrl, author: post.author })}>
+  <article class="bg-background">
+    <header class="bg-muted/35">
+      <div class="section-container grid gap-10 py-16 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.65fr)] lg:items-end">
+        <div>
+          <a href="/resources/blog" class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Back to Blog</a>
+          <p class="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-accent">{post.category}</p>
+          <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{post.title}</h1>
+          <p class="mt-5 max-w-3xl text-xl leading-relaxed text-muted-foreground">{post.description}</p>
+          <div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-muted-foreground">
+            <span>{formatDate(post.date)}</span>
+            <span aria-hidden="true">/</span>
+            <span>{post.readTime}</span>
+            <span aria-hidden="true">/</span>
+            <span>{post.author}</span>
+          </div>
+        </div>
+        <img decoding="async" src={post.image} alt={post.title} class="aspect-[4/3] w-full rounded-lg object-cover shadow-elegant" loading="eager" />
+      </div>
+    </header>
+
+    <div class="section-container grid gap-12 py-16 lg:grid-cols-[minmax(0,720px)_300px] lg:items-start lg:justify-center">
+      <div>
+        {embedUrl && (
+          <div class="mb-10 overflow-hidden rounded-lg border border-border bg-card shadow-elegant">
+            <iframe
+              src={embedUrl}
+              title={`${post.title} video`}
+              class="aspect-video w-full"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        )}
+
+        {tableOfContents.length > 0 && (
+          <nav class="tw-blog-toc tw-blog-toc--mobile mb-10 rounded-lg border border-border bg-card p-5 shadow-elegant lg:hidden" aria-label="In this article">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">In this article</p>
+            <div class="mt-4 grid gap-2">
+              {tableOfContents.map((item) => (
+                <a href={`#${item.id}`} class="text-sm font-semibold text-primary transition hover:text-accent">{item.text}</a>
+              ))}
+            </div>
+          </nav>
+        )}
+
+        <div class="tw-blog-body">
+          {articleBlocks.map((block) => (
+            <>
+              {block.type === 'heading' && block.level === 2 && <h2 id={block.id} set:html={inlineHtml(block.text)} />}
+              {block.type === 'heading' && block.level === 3 && <h3 id={block.id} set:html={inlineHtml(block.text)} />}
+              {block.type === 'paragraph' && block.isPullQuote && (
+                <aside class="tw-blog-pullquote">
+                  <p set:html={inlineHtml(block.text)} />
+                </aside>
+              )}
+              {block.type === 'paragraph' && !block.isPullQuote && <p class:list={[block.isLead && 'tw-blog-lead']} set:html={inlineHtml(block.text)} />}
+              {block.type === 'quote' && <blockquote><p set:html={inlineHtml(block.text)} /></blockquote>}
+              {block.type === 'list' && (
+                <ul>
+                  {block.items.map((item) => <li set:html={inlineHtml(item)} />)}
+                </ul>
+              )}
+            </>
+          ))}
+        </div>
+
+        <section class="mt-14 rounded-lg bg-primary p-8 text-primary-foreground shadow-elegant-xl">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{cta.eyebrow}</p>
+          <h2 class="mt-3 font-serif text-3xl font-bold">{cta.title}</h2>
+          <p class="mt-4 max-w-2xl text-primary-foreground/80">{cta.body}</p>
+          <a href={cta.href} class="mt-7 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">{cta.label}</a>
+        </section>
+
+        {post.relatedPosts.length > 0 && (
+          <section class="mt-14">
+            <h2 class="font-serif text-3xl font-bold text-primary">Related thinking</h2>
+            <div class="mt-6 grid gap-5 md:grid-cols-3">
+              {post.relatedPosts.map((related) => (
+                <a href={`/resources/blog/${related.slug}`} class="rounded-lg border border-border bg-card p-5 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+                  <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">{related.category}</p>
+                  <h3 class="mt-3 font-serif text-xl font-bold text-primary">{related.title}</h3>
+                  <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{related.description}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <aside class="lg:sticky lg:top-32">
+        <div class="rounded-lg border border-border bg-card p-6 shadow-elegant">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Article</p>
+          <p class="mt-3 font-serif text-2xl font-bold text-primary">{post.readTime}</p>
+          <p class="mt-2 text-sm text-muted-foreground">Written by {post.author}</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            {post.tags.map((tag) => <span class="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-muted-foreground">{tag}</span>)}
+          </div>
+        </div>
+
+        {tableOfContents.length > 0 && (
+          <nav class="mt-6 rounded-lg border border-border bg-card p-6 shadow-elegant" aria-label="In this article">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">In this article</p>
+            <div class="mt-4 grid gap-3">
+              {tableOfContents.map((item) => (
+                <a href={`#${item.id}`} class="text-sm font-semibold leading-snug text-primary transition hover:text-accent">{item.text}</a>
+              ))}
+            </div>
+          </nav>
+        )}
+
+        <div class="mt-6 rounded-lg border border-border bg-card p-6 shadow-elegant">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Planning paths</p>
+          {strategy && <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{strategy.primaryIntent}</p>}
+          <div class="mt-4 grid gap-3">
+            {planningLinks.map((link) => (
+              <a href={link.href} class="text-sm font-semibold leading-snug text-primary transition hover:text-accent">{link.label}</a>
+            ))}
+          </div>
+        </div>
+
+        {strategy && (
+          <div class="mt-6 rounded-lg border border-border bg-card p-6 shadow-elegant">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Related topics</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {strategy.supportingIntents.map((intent) => (
+                <span class="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-muted-foreground">{intent}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="mt-6 rounded-lg border border-border bg-muted/35 p-6">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Important note</p>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">This is general educational information, not individualized investment, tax, or legal advice. Planning recommendations should be based on your full situation.</p>
+        </div>
+      </aside>
+    </div>
+  </article>
+</TalleyPage>
+
+<style>
+  html[data-tenant="talley-wealth"] .tw-blog-body {
+    color: var(--color-muted-foreground);
+    font-size: 1.0625rem;
+    line-height: 1.82;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body > * + * {
+    margin-top: 1.35rem;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body p {
+    max-width: 68ch;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body .tw-blog-lead {
+    margin-bottom: 2rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+    color: var(--color-primary);
+    font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+    line-height: 1.62;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body h2 {
+    scroll-margin-top: 9rem;
+    margin-top: 3.6rem;
+    padding-top: 2.2rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+    font-size: clamp(1.85rem, 2.4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.18;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body h3 {
+    scroll-margin-top: 9rem;
+    margin-top: 2.4rem;
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+    font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.24;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body a {
+    color: var(--color-accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body strong {
+    color: var(--color-primary);
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body ul {
+    display: grid;
+    gap: 0.7rem;
+    margin-block: 1.7rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body li {
+    position: relative;
+    max-width: 66ch;
+    padding-left: 1.55rem;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body li::before {
+    content: "";
+    position: absolute;
+    top: 0.85em;
+    left: 0;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-pullquote {
+    max-width: 68ch;
+    margin-block: 2.2rem;
+    padding: clamp(1.25rem, 3vw, 1.8rem);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-card) 78%, var(--color-muted));
+    box-shadow: var(--shadow-elegant);
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-pullquote p {
+    margin: 0;
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body blockquote {
+    max-width: 68ch;
+    margin-block: 2rem;
+    padding-left: 1.25rem;
+    border-left: 4px solid var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-body blockquote p {
+    color: var(--color-primary);
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    line-height: 1.45;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-toc a {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    padding-bottom: 0.55rem;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-blog-toc a:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    html[data-tenant="talley-wealth"] .tw-blog-body {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+  }
+</style>

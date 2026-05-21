@@ -1,0 +1,505 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+import CalendlyEmbed from '../../../../components/talley-wealth/CalendlyEmbed.astro';
+import { buildFAQPageSchema } from '../../../../data/talley-wealth/seo/schema';
+
+type ServicePage = {
+  title: string;
+  description: string;
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  image: string;
+  imageAlt: string;
+  primaryTitle: string;
+  primaryBody: string[];
+  cardsTitle: string;
+  cards: { title: string; body: string }[];
+  listTitle: string;
+  listItems: string[];
+  stepsTitle?: string;
+  steps?: { title: string; body: string }[];
+  faqs?: { q: string; a: string }[];
+  related?: { title: string; body: string; href: string }[];
+  ctaTitle: string;
+  ctaBody: string;
+};
+
+const pages: Record<string, ServicePage> = {
+  'individual-tax': {
+    title: 'Individual Tax Preparation | Talley Wealth, Johnson City TN',
+    description: 'Accurate, thorough individual tax preparation by local professionals who take the time to understand your situation.',
+    eyebrow: 'Individual Services',
+    heading: 'Individual Tax Preparation',
+    intro: 'Accurate, thorough tax preparation by local professionals who take the time to understand your situation. We go beyond simple compliance to find every legitimate opportunity.',
+    image: '/brands/talley-wealth/stephenee-client-couch.jpg',
+    imageAlt: 'Talley Wealth tax preparation meeting',
+    primaryTitle: 'More Than Annual Filing',
+    primaryBody: [
+      'A tax return is a record of decisions that have already happened. Good tax work still needs accuracy and care, but the most useful conversations often come from understanding what changed and what should be planned before next year.',
+      'We help individuals and families organize the details, file accurately, and carry the right insights back into the broader financial plan.',
+    ],
+    cardsTitle: 'What You Can Expect',
+    cards: [
+      { title: 'Comprehensive Review', body: 'We review all income sources, deductions, and credits to ensure nothing is missed.' },
+      { title: 'Accuracy Guarantee', body: "We stand behind our work. If we make an error, we'll fix it and cover any penalties." },
+      { title: 'Year-Round Access', body: "Questions don't stop on April 15th. We're here whenever you need us." },
+      { title: 'Secure Document Handling', body: 'Your sensitive information is protected with bank-level encryption.' },
+    ],
+    listTitle: 'Common Situations We Handle',
+    listItems: [
+      'W-2 employees with multiple income sources',
+      'Self-employed individuals and freelancers',
+      'Rental property owners',
+      'Stock options and RSU recipients',
+      'Retirees with pension and Social Security income',
+      'Families with education expenses',
+      'Medical professionals with locum tenens income',
+      'Individuals with significant charitable giving',
+    ],
+    stepsTitle: 'Our Process',
+    steps: [
+      { title: 'Gather', body: 'Upload documents securely through our client portal.' },
+      { title: 'Review', body: 'We analyze your situation and identify opportunities.' },
+      { title: 'Prepare', body: 'Your return is prepared by an experienced professional.' },
+      { title: 'Discuss', body: 'We review your return with you before filing.' },
+      { title: 'File', body: 'Electronic filing with confirmation and records.' },
+    ],
+    ctaTitle: 'Interested in Year-Round Planning?',
+    ctaBody: 'If you want tax decisions coordinated with retirement, investments, and cash flow, start with an Explore Call.',
+  },
+  'business-services': {
+    title: 'Business Tax & Financial Services | Talley Wealth, Tri-Cities TN',
+    description: 'Strategic tax planning and guidance to help Tri-Cities business owners make informed decisions.',
+    eyebrow: 'Business Services',
+    heading: 'Support for Tri-Cities Businesses',
+    intro: 'Strategic tax planning and guidance to help local business owners make informed decisions.',
+    image: '/brands/talley-wealth/david-whiteboard-strategy.jpg',
+    imageAlt: 'David Talley leading a planning conversation at a whiteboard',
+    primaryTitle: 'Business and Personal Planning Touch Each Other',
+    primaryBody: [
+      'For owners, business tax choices rarely stay inside the business. Entity structure, owner compensation, retirement plans, cash flow, and exit planning can all affect the household plan.',
+      'We help local businesses think through the tax and financial decisions that matter during the year, not only after the year is over.',
+    ],
+    cardsTitle: 'Business Services',
+    cards: [
+      { title: 'Entity Guidance', body: 'Not sure if your current structure is right? We can help you understand the pros and cons of LLC, S-Corp, and other options.' },
+      { title: 'Tennessee Tax Expertise', body: "Tennessee's Franchise & Excise tax creates unique considerations. We help local businesses navigate these requirements." },
+      { title: 'Business Tax Returns', body: 'Accurate preparation of partnership, S-Corp, and C-Corp returns with attention to your specific situation.' },
+      { title: 'Tax Planning', body: 'Proactive strategies to minimize tax burden and help you make informed decisions throughout the year.' },
+      { title: 'Ongoing Support', body: 'Regular check-ins to discuss estimated taxes, cash flow, and questions as they come up.' },
+    ],
+    listTitle: 'Tennessee Business Considerations',
+    listItems: ['Minimum tax thresholds and exemptions', 'Apportionment rules for multi-state businesses', 'S-Corp vs. LLC implications', 'Local business tax requirements'],
+    faqs: [
+      { q: 'Should I switch from LLC to S-Corp?', a: 'It depends on profit, payroll, owner compensation, administrative complexity, and Tennessee tax rules. We model the tradeoffs before recommending a change.' },
+      { q: 'Do I need to pay quarterly estimated taxes?', a: 'Many owners do. We help estimate payments so you are not surprised by penalties or a large balance due.' },
+      { q: 'Does Tennessee have a business income tax?', a: 'Tennessee does not have a personal income tax, but many businesses need to consider Franchise & Excise tax and local business tax requirements.' },
+    ],
+    ctaTitle: 'Bring the Business Questions Into the Plan',
+    ctaBody: 'Use an Explore Call to talk through what is changing in the business and where tax strategy needs to support the bigger picture.',
+  },
+  'irs-resolution': {
+    title: 'IRS Tax Resolution | Talley Wealth, Johnson City TN',
+    description: 'Help with audits, back taxes, IRS notices, and tax resolution options from experienced tax professionals.',
+    eyebrow: 'Tax Resolution',
+    heading: 'Help With IRS Issues',
+    intro: 'Facing an audit, back taxes, or IRS collections? Our experienced Enrolled Agents and CPAs can help you understand your options and work toward resolution.',
+    image: '/brands/talley-wealth/david-whiteboard.jpg',
+    imageAlt: 'David Talley planning at a whiteboard',
+    primaryTitle: 'Tax Problems Need Calm Coordination',
+    primaryBody: [
+      'IRS notices and tax debt can create stress quickly. The first step is to understand exactly what the notice says, what deadlines matter, and what information is needed.',
+      'From there, we help you evaluate practical resolution paths and keep the tax issue connected to cash flow, planning, and the rest of your financial life.',
+    ],
+    cardsTitle: 'Resolution Services',
+    cards: [
+      { title: 'Audit Representation', body: "We handle IRS communications, document requests, and meetings so you don't have to face the audit alone." },
+      { title: 'Appeals', body: 'If you disagree with an IRS decision, we can represent you through the formal appeals process.' },
+      { title: 'Tax Debt Resolution', body: 'Offer in Compromise, installment agreements, and penalty abatement to address outstanding tax liabilities.' },
+      { title: 'Innocent Spouse Relief', body: "If you're being held responsible for a spouse or ex-spouse's tax issues, we can help you seek relief." },
+    ],
+    listTitle: 'Warning Signs to Address Quickly',
+    listItems: ['You received a CP2000 notice', "You've been contacted for an audit", 'You have unfiled tax returns from prior years', "You owe back taxes and can't pay the full amount", "You're facing wage garnishment or bank levy threats", "You've received a Notice of Intent to Levy"],
+    stepsTitle: 'How We Help',
+    steps: [
+      { title: 'Free Consultation', body: 'We review the notice or issue and identify the immediate next step.' },
+      { title: 'Power of Attorney', body: 'When appropriate, we communicate with the IRS on your behalf.' },
+      { title: 'Investigation', body: 'We gather transcripts, filings, balances, and deadlines.' },
+      { title: 'Strategy', body: 'We compare available resolution options.' },
+      { title: 'Resolution', body: 'We help pursue the chosen path and keep the process moving.' },
+    ],
+    ctaTitle: "You're Not Alone",
+    ctaBody: 'If you have received an IRS notice or have unresolved tax debt, call (423) 617-0160 or use the form to start a confidential conversation.',
+  },
+  'keystone-plan': {
+    title: 'The Keystone Method | Talley Wealth',
+    description: 'The Keystone Method is Talley Wealth’s structured planning engagement for coordinating retirement, taxes, investments, estate, risk, and cash flow before ongoing advisory begins.',
+    eyebrow: 'The Keystone Method',
+    heading: 'The planning engagement that makes the rest of the advice possible.',
+    intro: 'Keystone is the six-month engagement where scattered financial pieces get organized, tested, shaped, and turned into a plan strong enough to guide investment, tax, retirement, estate, and family decisions.',
+    image: '/brands/talley-wealth/david-whiteboard.jpg',
+    imageAlt: 'David Talley planning at a whiteboard',
+    primaryTitle: 'Broad enough to see the whole picture. Deep enough to change the details.',
+    primaryBody: [
+      'Most people arrive with pieces: investment accounts, tax returns, estate documents, insurance policies, employer benefits, business decisions, and questions that have been sitting in the background. None of those pieces can be judged well in isolation.',
+      'Keystone is the process of laying the pieces out together, deciding what belongs, reshaping what needs to change, adding what is missing, and then locking the plan together so the next decisions have a structure to stand on.',
+    ],
+    cardsTitle: 'What Keystone Shapes',
+    cards: [
+      { title: 'Retirement Timing', body: 'When work becomes optional, what each extra year changes, and how income should be created.' },
+      { title: 'Tax Strategy', body: 'Multi-year tax projections, Roth decisions, charitable planning, business income, and timing opportunities.' },
+      { title: 'Investments', body: 'Portfolio risk, concentration, asset location, and allocation calibrated to what the plan actually needs.' },
+      { title: 'Estate and Family', body: 'Beneficiaries, documents, liquidity, legacy intent, and coordination with your attorney.' },
+      { title: 'Risk and Protection', body: 'Insurance, disability, liability, healthcare, longevity, and the risks that do not show up in a portfolio report.' },
+      { title: 'Cash Flow', body: 'The practical rhythm of what needs to happen monthly, annually, and during transition years.' },
+    ],
+    listTitle: 'Where Keystone Fits Best',
+    listItems: ['Retirement is close enough that the decisions feel real', 'A business, equity comp, inheritance, or major tax issue has made coordination more valuable', 'You have accounts, documents, and advisors, but no single plan holding them together', 'Investment management alone is not answering the questions you actually care about', 'You want the plan built before ongoing advisory decisions are made'],
+    related: [
+      { title: 'See how Keystone unfolds', body: 'Walk through the Explore Call, strategy session, Keystone work, and ongoing advisory path.', href: '/how-we-work/what-to-expect' },
+      { title: 'Review pricing', body: 'See the flat fee tiers and how ongoing advisory works after the plan is built.', href: '/pricing' },
+      { title: 'Who this tends to fit', body: 'Start with the client situations where Keystone is usually most useful.', href: '/who-we-help' },
+    ],
+    ctaTitle: 'Start With an Explore Call',
+    ctaBody: 'Bring the question that is on your mind. We will talk through whether Keystone is the right structure for what you are trying to solve.',
+  },
+};
+
+const canonicalPlanningPages: Record<string, ServicePage> = {
+  'financial-planning': {
+    title: 'Financial Planning | Talley Wealth',
+    description: 'Comprehensive financial planning for families who need investments, taxes, retirement, estate planning, and cash flow coordinated in one plan.',
+    eyebrow: 'Core Service',
+    heading: 'Financial Planning That Connects the Whole Picture',
+    intro: 'Most financial decisions are not isolated. A tax move affects the portfolio. A retirement date affects the estate plan. A business decision changes household cash flow. Keystone is our way of putting the full picture on the table before recommendations are made.',
+    image: '/brands/talley-wealth/david-whiteboard.jpg',
+    imageAlt: 'David Talley discussing a coordinated financial plan',
+    primaryTitle: 'The Plan Comes Before the Portfolio',
+    primaryBody: [
+      'Talley Wealth starts with planning because successful households rarely have one simple question. They have a set of connected decisions: when to retire, how much to spend, what to do with concentrated assets, how taxes should be managed, whether estate documents still fit, and how investment risk should support the life they actually want.',
+      'The Keystone Method gives those decisions a structure. We lay out the pieces, model the tradeoffs, identify the highest-value decisions, reshape what needs to change, and turn the plan into a practical sequence of next steps.',
+    ],
+    cardsTitle: 'What Planning Coordinates',
+    cards: [
+      { title: 'Retirement', body: 'Income timing, Social Security, pensions, healthcare, spending, and withdrawal sequencing.' },
+      { title: 'Taxes', body: 'Roth conversions, capital gains, charitable giving, state tax issues, and annual return coordination.' },
+      { title: 'Investments', body: 'Portfolio risk, asset location, concentration, rebalancing, and tax-aware implementation.' },
+      { title: 'Estate', body: 'Beneficiary review, liquidity, titling, charitable intent, and coordination with your attorney.' },
+      { title: 'Cash Flow', body: 'What the plan requires monthly, annually, and during transition years.' },
+      { title: 'Business', body: 'Entity decisions, owner compensation, retirement plans, and exit planning when the business is central.' },
+    ],
+    listTitle: 'Who This Is Built For',
+    listItems: [
+      'Pre-retirees and retirees with meaningful assets',
+      'Business owners whose company and personal plan are intertwined',
+      'Executives and professionals with equity comp who want tax, investments, and planning coordinated',
+      'Families with multiple advisors but no single integrated strategy',
+      'Regional professionals with employer benefits, equity compensation, or complex tax decisions',
+      'People who want a thinking partner, not only portfolio management',
+    ],
+    faqs: [
+      { q: 'Is financial planning the same thing as investment management?', a: 'No. Investment management is one part of the plan. Financial planning decides what the money needs to do, how taxes affect the path, when retirement is realistic, and how the portfolio should be built around those facts.' },
+      { q: 'Do I have to move my investments to get a plan?', a: 'Keystone starts as a planning engagement. If ongoing advisory makes sense afterward, investment management can become part of the relationship, but the planning work comes first.' },
+      { q: 'Can you work with my CPA and attorney?', a: 'Yes. Many planning issues live between professions. We coordinate with CPAs and attorneys so tax, legal, investment, and retirement decisions line up.' },
+    ],
+    related: [
+      { title: 'The Keystone Method', body: 'See the planning engagement that gives the work its structure.', href: '/how-we-work/keystone-method' },
+      { title: 'Who we help', body: 'Find the situation that sounds closest to what is happening in your life.', href: '/who-we-help' },
+      { title: 'Pricing', body: 'See the flat-fee planning structure before any ongoing advisory decision.', href: '/pricing' },
+    ],
+    ctaTitle: 'Start With the Plan',
+    ctaBody: 'Use an Explore Call to talk through the decisions that feel connected, unresolved, or ready for a more complete planning process.',
+  },
+  'retirement-planning': {
+    title: 'Retirement Planning | Talley Wealth',
+    description: 'Retirement planning for pre-retirees and retirees who want clarity around income, taxes, Social Security, healthcare, and investment risk.',
+    eyebrow: 'Core Service',
+    heading: 'Retirement Planning for the Decisions That Actually Matter',
+    intro: 'Retirement is not one decision. It is a sequence: when to stop working, when to claim Social Security, how to replace a paycheck, how to manage taxes, how much risk to keep, and how to avoid turning a good nest egg into a fragile plan.',
+    image: '/brands/talley-wealth/stephenee-client-couch.jpg',
+    imageAlt: 'Talley Wealth team members in a client conversation',
+    primaryTitle: 'The Last Decade Before Retirement Is Different',
+    primaryBody: [
+      'The years before and after retirement are when small decisions can compound quickly. Social Security timing, pension elections, Roth conversions, Medicare, IRMAA, withdrawal sequencing, and portfolio risk all interact.',
+      'We build retirement plans year by year, not as a generic probability score. The goal is to understand what the money needs to do, what could break the plan, and which decisions deserve attention before they become irreversible.',
+    ],
+    cardsTitle: 'Retirement Questions We Model',
+    cards: [
+      { title: 'Can I retire?', body: 'A spending, income, tax, and investment projection that tests the actual timeline.' },
+      { title: 'When should I claim Social Security?', body: 'Claiming strategies viewed alongside taxes, portfolio withdrawals, and spouse benefits.' },
+      { title: 'Should I convert to Roth?', body: 'Multi-year tax projections during the window before required distributions begin.' },
+      { title: 'How should I create income?', body: 'Withdrawal sequencing across taxable, tax-deferred, and Roth accounts.' },
+      { title: 'What about healthcare?', body: 'Medicare timing, pre-Medicare bridge coverage, and possible IRMAA exposure.' },
+      { title: 'How much risk is still appropriate?', body: 'Portfolio design based on spending needs, not just age or a risk questionnaire.' },
+    ],
+    listTitle: 'Common Retirement Planning Situations',
+    listItems: [
+      'Five to ten years from retirement and unsure what is realistic',
+      'Recently retired and deciding how to draw income',
+      'Pension, lump sum, or deferred compensation decisions',
+      'Large pre-tax retirement balances and potential Roth conversion windows',
+      'Healthcare bridge planning before Medicare',
+      'Estate and tax coordination for surviving spouses and heirs',
+    ],
+    faqs: [
+      { q: 'How do I know if I have enough to retire?', a: 'We build a projection that includes spending, taxes, healthcare, Social Security, pensions, investment accounts, and inflation. Then we stress-test the parts of the plan that could break.' },
+      { q: 'Is retirement planning only for people within a year of retiring?', a: 'No. The best planning often happens five to ten years before retirement, when there is still time to adjust savings, taxes, benefits, and investment risk.' },
+      { q: 'Do you help after retirement starts?', a: 'Yes. Retirement planning continues after the first withdrawal. Tax brackets, markets, health costs, and family needs keep changing, so the plan needs ongoing attention.' },
+    ],
+    related: [
+      { title: 'Financial Advisor for Pre-Retirees', body: 'A more personal look at the retirement transition years.', href: '/financial-advisor-for-pre-retirees' },
+      { title: 'Sequence risk calculator', body: 'See why the order of returns can matter once withdrawals begin.', href: '/calculators' },
+      { title: 'Tax planning', body: 'Retirement decisions often become tax decisions before people realize it.', href: '/services/tax-planning' },
+    ],
+    ctaTitle: 'Get Clarity Before the Decision Is Final',
+    ctaBody: 'If retirement is close enough to feel real, Keystone can help turn the question into a modeled plan.',
+  },
+  'investment-management': {
+    title: 'Investment Management | Talley Wealth',
+    description: 'Tax-aware investment management coordinated with your financial plan, retirement income needs, and tax return.',
+    eyebrow: 'Core Service',
+    heading: 'Investment Management Built Around the Plan',
+    intro: 'A portfolio should not be designed in a vacuum. The right investment strategy depends on your tax situation, retirement timeline, cash needs, estate goals, employer benefits, and how much risk the plan actually requires.',
+    image: '/brands/talley-wealth/david-conversation.jpg',
+    imageAlt: 'David Talley in conversation at Talley Wealth',
+    primaryTitle: 'Disciplined, Tax-Aware, and Coordinated',
+    primaryBody: [
+      'We do not start with products or market predictions. We start with the financial plan, then design the portfolio to support it. That includes asset allocation, asset location, rebalancing, withdrawal strategy, concentrated-position planning, and tax-aware implementation.',
+      'Because tax planning and preparation can be part of the broader Talley Wealth relationship, portfolio decisions are not separated from the return they eventually affect.',
+    ],
+    cardsTitle: 'How We Manage Portfolios',
+    cards: [
+      { title: 'Allocation', body: 'Set risk based on the plan, time horizon, spending needs, and emotional capacity.' },
+      { title: 'Asset Location', body: 'Place investments across taxable, tax-deferred, and Roth accounts with taxes in mind.' },
+      { title: 'Rebalancing', body: 'Keep the portfolio aligned without creating unnecessary taxes or trading noise.' },
+      { title: 'Tax Loss Harvesting', body: 'Look for useful losses in taxable accounts when they improve the after-tax result.' },
+      { title: 'Income Strategy', body: 'Coordinate withdrawals from the right accounts at the right time.' },
+      { title: 'Concentration', body: 'Reduce single-stock or employer-stock risk in a tax-aware sequence.' },
+    ],
+    listTitle: 'Where Investment Management Fits Best',
+    listItems: [
+      'Retirement portfolios that need to create reliable income',
+      'Taxable accounts where realized gains and losses matter',
+      'Employer stock, RSUs, options, or concentrated holdings',
+      'Multiple old 401(k), 403(b), IRA, Roth, and brokerage accounts',
+      'Business owners building wealth outside the company',
+      'Families who want portfolio decisions connected to tax planning',
+    ],
+    faqs: [
+      { q: 'Do you try to time the market?', a: 'No. We use a disciplined process focused on diversification, costs, taxes, risk, and the purpose of the money. The plan should not depend on guessing the next market move.' },
+      { q: 'Can you manage my 401(k)?', a: 'We generally cannot directly manage an employer plan, but we can review the investment options and coordinate that account with the rest of your portfolio.' },
+      { q: 'How does tax planning affect investments?', a: 'Taxes affect what to own, where to own it, when to sell, when to harvest losses, how to diversify concentrated positions, and how to create retirement income.' },
+    ],
+    related: [
+      { title: 'Financial planning', body: 'See why the portfolio is built after the plan, not before it.', href: '/services/financial-planning' },
+      { title: 'Tax planning', body: 'Understand how taxes shape asset location, gains, losses, and withdrawals.', href: '/services/tax-planning' },
+      { title: 'Executives and equity comp', body: 'For people with concentrated stock, RSUs, options, or employer exposure.', href: '/financial-advisor-for-executives-equity-comp' },
+    ],
+    ctaTitle: 'Make the Portfolio Serve the Plan',
+    ctaBody: 'If your investments feel disconnected from your tax return, retirement date, or cash needs, that is exactly the kind of issue Keystone is built to organize.',
+  },
+  'tax-planning': {
+    ...pages['keystone-plan'],
+    title: 'Tax Planning | Talley Wealth',
+    description: 'Proactive tax planning coordinated with financial planning, investment management, retirement income, and tax preparation.',
+    eyebrow: 'Core Service',
+    heading: 'Tax Planning That Looks Forward',
+    intro: 'Tax preparation records what already happened. Tax planning helps you make better decisions before the year is over. At Talley Wealth, tax planning is coordinated with your investments, retirement plan, cash flow, and the tax return that eventually reports those decisions.',
+    primaryTitle: 'The tax return is a record. The planning happens before the record is written.',
+    primaryBody: [
+      'Most people experience taxes as a filing deadline. By then, the year is over and the best decisions may no longer be available.',
+      'We look forward instead: projected income, Roth conversion windows, business profit, charitable strategy, capital gains, equity compensation, retirement withdrawals, and the way one tax move changes the rest of the plan.',
+    ],
+    cardsTitle: 'Tax Decisions Worth Planning Before Year-End',
+    cards: [
+      { title: 'Income Timing', body: 'Project income before the year closes so bonuses, business profit, vesting, and withdrawals can be handled deliberately.' },
+      { title: 'Roth Windows', body: 'Evaluate conversion opportunities before required distributions, Medicare thresholds, or other income changes close the window.' },
+      { title: 'Business Profit', body: 'Coordinate entity structure, owner compensation, retirement plans, and estimated taxes before the tax bill arrives.' },
+      { title: 'Capital Gains', body: 'Plan sales, losses, charitable gifts, and concentrated-position decisions with the full tax picture in view.' },
+      { title: 'Charitable Strategy', body: 'Compare cash gifts, appreciated assets, donor-advised funds, and bunching strategies when generosity and tax planning overlap.' },
+      { title: 'Equity Compensation', body: 'Coordinate vesting, withholding, diversification, AMT exposure, and estimated payments around the rest of the plan.' },
+    ],
+    listTitle: 'Where Proactive Tax Planning Usually Matters',
+    listItems: [
+      'Retirement is close enough that Roth conversions, Social Security, Medicare, and withdrawals need to be modeled together',
+      'Business profit has increased and the tax bill feels like it needs a better strategy',
+      'Equity compensation, concentrated stock, or a large capital gain is creating tax complexity',
+      'A move across the Tennessee/Virginia line or another state-tax question could change the numbers',
+      'You want tax planning connected to the investment plan instead of handled after the fact',
+    ],
+    related: [
+      { title: 'What tax planning actually looks like', body: 'Read the article that explains the difference between filing and planning.', href: '/resources/blog/what-tax-planning-actually-looks-like' },
+      { title: 'Business owners', body: 'For owners whose profits and tax decisions have started to call for more strategy.', href: '/financial-advisor-for-business-owners' },
+      { title: 'The Keystone Method', body: 'See how tax planning fits inside the full planning engagement.', href: '/how-we-work/keystone-method' },
+    ],
+  },
+  'business-owner-planning': {
+    ...pages['business-services'],
+    title: 'Financial Planning for Business Owners | Talley Wealth',
+    description: 'Planning for business owners who need personal finances, business cash flow, taxes, retirement plans, and exit decisions coordinated.',
+    eyebrow: 'Core Service',
+    heading: 'Financial Planning for Business Owners',
+    intro: 'For business owners, the company is rarely separate from the household. Entity structure, owner compensation, retirement plans, cash flow, taxes, and exit planning all affect the personal financial plan.',
+    primaryTitle: 'The business may be the engine. It should not be the whole plan.',
+    primaryBody: [
+      'Owners are often excellent at solving problems inside the business while letting personal planning, tax strategy, retirement savings, entity decisions, and exit planning stay scattered.',
+      'We help connect the business and the family plan so decisions about profit, cash flow, tax, retirement plans, risk, and future transition are made with the full picture in view.',
+    ],
+    cardsTitle: 'Business Owner Planning Questions',
+    cards: [
+      { title: 'Profit and Taxes', body: 'What should happen before year-end so business income, deductions, estimated taxes, and cash flow are coordinated?' },
+      { title: 'Owner Pay', body: 'How should salary, distributions, retirement contributions, and household cash needs fit together?' },
+      { title: 'Retirement Plans', body: 'Could a SEP, SIMPLE, 401(k), cash balance plan, or other structure help the owner and the team?' },
+      { title: 'Business Cash Flow', body: 'How much should stay in the business, move to personal reserves, or be invested outside the company?' },
+      { title: 'Risk and Protection', body: 'Where are the blind spots in insurance, continuity, disability, liability, or key-person exposure?' },
+      { title: 'Exit Optionality', body: 'Even if a sale is not imminent, what would make the business and the owner less dependent on each other?' },
+    ],
+    listTitle: 'Where This Usually Starts',
+    listItems: [
+      'The business is making real money and the tax bill has become hard to ignore',
+      'You want a strategist who understands owners, not only a return preparer',
+      'Personal wealth is still too dependent on the business',
+      'You are deciding how to save, invest, and protect wealth outside the company',
+      'You want someone who can think with you across tax, retirement, investment, and family decisions',
+    ],
+    related: [
+      { title: 'Financial Advisor for Business Owners', body: 'A more personal look at why owners usually reach out.', href: '/financial-advisor-for-business-owners' },
+      { title: 'Tax planning', body: 'Business-owner planning often starts with taxes, then gets broader.', href: '/services/tax-planning' },
+      { title: 'Pricing', body: 'See when Keystone Owner may be the right planning tier.', href: '/pricing' },
+    ],
+  },
+};
+
+Object.assign(pages, canonicalPlanningPages);
+
+export function getStaticPaths() {
+  return Object.keys(pages).map((slug) => ({ params: { slug } }));
+}
+
+const slug = Astro.params.slug ?? '';
+const page = pages[slug];
+if (!page) return new Response('Not found', { status: 404 });
+---
+
+<TalleyPage title={page.title} description={page.description} ogImage={page.image} jsonLd={page.faqs ? buildFAQPageSchema(page.faqs) : undefined}>
+  <section class="bg-muted/35">
+    <div class="section-container grid min-h-[620px] items-center gap-12 py-20 lg:grid-cols-[0.95fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.eyebrow}</p>
+        <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{page.heading}</h1>
+        <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">{page.intro}</p>
+      </div>
+      <div class="overflow-hidden rounded-xl border-[14px] border-primary/15 shadow-elegant-lg">
+        <img decoding="async" src={page.image} alt={page.imageAlt} class="aspect-[4/3] w-full object-cover" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.76fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">How this fits</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{page.primaryTitle}</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-relaxed text-muted-foreground">
+        {page.primaryBody.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.cardsTitle}</p>
+      <div class="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {page.cards.map((item) => (
+          <article class="rounded-lg border border-border bg-background p-6 shadow-elegant">
+            <h2 class="font-serif text-2xl font-bold text-primary">{item.title}</h2>
+            <p class="mt-4 leading-relaxed text-muted-foreground">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.75fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Details</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{page.listTitle}</h2>
+      </div>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {page.listItems.map((item) => (
+          <li class="rounded-md border border-border bg-card p-4 text-sm font-semibold leading-relaxed text-primary shadow-sm">{item}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  {page.steps && (
+    <section class="bg-muted/30">
+      <div class="section-container py-20">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.stepsTitle}</p>
+        <div class="mt-8 grid gap-5 md:grid-cols-5">
+          {page.steps.map((step, index) => (
+            <article class="rounded-lg border border-border bg-card p-5 shadow-sm">
+              <p class="font-serif text-3xl font-bold text-accent">{String(index + 1).padStart(2, '0')}</p>
+              <h2 class="mt-3 font-serif text-xl font-bold text-primary">{step.title}</h2>
+              <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.faqs && (
+    <section class="bg-muted/30">
+      <div class="section-container max-w-4xl py-20">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Common questions</p>
+        <div class="tw-faq-list mt-8" data-reveal>
+          {page.faqs.map((faq) => (
+            <details class="tw-faq-item">
+              <summary>
+                <span>{faq.q}</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="tw-faq-answer"><p>{faq.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.related && (
+    <section class="bg-card">
+      <div class="section-container py-20">
+        <div class="mx-auto mb-10 max-w-3xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Continue exploring</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">Related next pages</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          {page.related.map((item) => (
+            <a href={item.href} class="group rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+              <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="bg-primary text-primary-foreground">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.8fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Next step</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight md:text-4xl">{page.ctaTitle}</h2>
+        <p class="mt-5 text-lg leading-relaxed text-white/78">{page.ctaBody}</p>
+      </div>
+      <CalendlyEmbed source={`services-${slug}`} title="Schedule an Explore Call" description="Choose a time that works for you. No prep needed." />
+    </div>
+  </section>
+</TalleyPage>

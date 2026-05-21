@@ -1,0 +1,70 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import LeadForm from '../../../components/talley-wealth/LeadForm.astro';
+
+const contactCards = [
+  { label: 'Address', value: '203 Broyles Dr, Ste 301, Johnson City, TN 37601', href: 'https://maps.google.com/?q=203+Broyles+Dr+Ste+301+Johnson+City+TN+37601' },
+  { label: 'Phone', value: '(423) 617-0160', href: 'tel:+14236170160' },
+  { label: 'Email', value: 'hello@talleywealth.com', href: 'mailto:hello@talleywealth.com' },
+];
+---
+
+<TalleyPage
+  title="Contact Talley Wealth | Johnson City, TN Financial Advisor"
+  description="Get in touch with Talley Wealth in Johnson City, TN. Call (423) 617-0160 or visit our office at 203 Broyles Dr, Ste 301."
+>
+  <section class="bg-muted/35">
+    <div class="section-container py-20 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Contact Us</p>
+      <h1 class="mx-auto mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
+        Let's start a conversation.
+      </h1>
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        Have questions about your financial future? Start with the question that brought you here.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <LeadForm source="contact" title="Send us a message" />
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <h2 class="mb-6 font-serif text-3xl font-bold text-primary">Our Office</h2>
+            <div class="space-y-4">
+              {contactCards.map((card) => (
+                <a href={card.href} target={card.href.startsWith('http') ? '_blank' : undefined} rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined} class="block rounded-lg border border-border/40 bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+                  <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{card.label}</p>
+                  <p class="mt-2 font-medium text-primary">{card.value}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div class="rounded-lg bg-primary p-6 text-primary-foreground shadow-elegant-lg">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-accent">Office Hours</p>
+            <h3 class="font-serif text-xl font-bold">Monday - Friday: 8:00 AM - 5:00 PM</h3>
+            <p class="mt-2 text-sm text-primary-foreground/75">Evenings and weekends by appointment.</p>
+          </div>
+
+          <div class="rounded-lg border border-border/40 bg-background p-6 shadow-elegant">
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-accent">Fiduciary Advisors</p>
+            <h3 class="font-serif text-xl font-bold text-primary">Advice should be clear about who it serves.</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+              As fiduciary advisors, we are legally obligated to act in your best interest. Most clients pay a clear, flat fee with full transparency about compensation.
+            </p>
+          </div>
+
+          <div class="rounded-lg border border-accent/20 bg-accent/10 p-6 text-center">
+            <p class="font-medium text-primary">Prefer to talk now?</p>
+            <a href="tel:+14236170160" class="mt-2 inline-flex text-lg font-bold text-accent">(423) 617-0160</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</TalleyPage>

@@ -1,0 +1,178 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+
+const learnItems = [
+  'When to claim Social Security, and how timing changes lifetime income.',
+  'The right order to pull from accounts so taxes do not drive the plan by accident.',
+  'The Roth conversion window many retirees miss entirely.',
+  'How to stress-test income against a market downturn early in retirement.',
+];
+---
+
+<TalleyPage title="Design Your Retirement Paycheck | Talley Wealth" description="Register interest for a Talley Wealth retirement income workshop.">
+  <section class="bg-primary text-primary-foreground">
+    <div class="section-container grid min-h-[680px] items-center gap-12 py-20 lg:grid-cols-[0.9fr_0.8fr]">
+      <div>
+        <img decoding="async" src="/brands/talley-wealth/logo-white.png" alt="Talley Wealth" class="mb-12 h-10 w-auto"  loading="lazy" />
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Free educational workshop</p>
+        <h1 class="mt-5 font-serif text-3xl font-bold md:text-4xl leading-tight md:text-6xl">Design Your Retirement Paycheck</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/82">
+          How to turn a lifetime of saving into reliable monthly income, on your terms.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/72">
+          <span>Wednesday, April 22, 2026</span>
+          <span>6:00 PM</span>
+          <span>Johnson City Public Library</span>
+        </div>
+      </div>
+      <div class="rounded-lg bg-card p-6 text-foreground shadow-elegant-lg md:p-8">
+        <h2 class="font-serif text-3xl font-bold text-primary">Reserve your seat</h2>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+          This form writes to the platform registration system as Talley Wealth workshop interest.
+        </p>
+        <form id="tw-workshop-form" class="mt-6 grid gap-4" novalidate>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-1 text-sm font-bold">
+              First name
+              <input name="firstName" required class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+            <label class="grid gap-1 text-sm font-bold">
+              Last name
+              <input name="lastName" required class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+          </div>
+          <label class="grid gap-1 text-sm font-bold">
+            Email
+            <input name="email" type="email" required class="rounded-md border border-border px-3 py-2 font-normal" />
+          </label>
+          <label class="grid gap-1 text-sm font-bold">
+            Phone
+            <input name="phone" type="tel" class="rounded-md border border-border px-3 py-2 font-normal" />
+          </label>
+          <fieldset class="grid gap-2">
+            <legend class="text-sm font-bold">How will you attend?</legend>
+            <div class="flex flex-wrap gap-5 text-sm">
+              <label class="flex items-center gap-2"><input type="radio" name="attendanceMode" value="in-person" checked /> In person</label>
+              <label class="flex items-center gap-2"><input type="radio" name="attendanceMode" value="virtual" /> Virtual</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="rounded-md bg-accent px-5 py-3 font-bold text-accent-foreground transition hover:brightness-95 disabled:opacity-60">
+            <span data-label>Save my seat</span>
+          </button>
+          <p data-message class="hidden text-sm"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card">
+    <div class="section-container py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What you'll learn</p>
+        <h2 class="mt-4 font-serif text-4xl font-bold text-primary md:text-5xl">The retirement paycheck is more than a withdrawal rate.</h2>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {learnItems.map((item, index) => (
+          <article class="rounded-lg border border-border bg-background p-6 shadow-elegant">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-accent/12 font-serif text-lg font-bold text-accent">{index + 1}</div>
+            <p class="text-lg font-semibold leading-relaxed text-primary">{item}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.75fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Who this is for</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">People within shouting distance of retirement.</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-relaxed text-muted-foreground">
+        <p>
+          This workshop is built for people who have saved, invested, and done the responsible things, but have not yet turned the accounts into an actual income plan.
+        </p>
+        <p>
+          Social Security, taxes, IRA withdrawals, portfolio risk, and healthcare costs are not separate questions. The workshop is about seeing those decisions together before the first withdrawal sets the pattern.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card">
+    <div class="section-container grid gap-8 py-16 text-center md:grid-cols-3">
+      <div>
+        <p class="font-serif text-xl font-bold text-primary">Wednesday, April 22, 2026</p>
+        <p class="mt-1 text-sm text-muted-foreground">6:00 to 7:00 PM</p>
+      </div>
+      <div>
+        <p class="font-serif text-xl font-bold text-primary">Johnson City Public Library</p>
+        <p class="mt-1 text-sm text-muted-foreground">100 W Millard St, Johnson City, TN 37604</p>
+      </div>
+      <div>
+        <p class="font-serif text-xl font-bold text-primary">Free</p>
+        <p class="mt-1 text-sm text-muted-foreground">(423) 617-0160 · talleywealth.com</p>
+      </div>
+    </div>
+  </section>
+</TalleyPage>
+
+<script>
+  (() => {
+    const form = document.querySelector<HTMLFormElement>('#tw-workshop-form');
+    if (!form) return;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const label = form.querySelector<HTMLElement>('[data-label]');
+    const message = form.querySelector<HTMLElement>('[data-message]');
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!button || !label || !message) return;
+      const data = new FormData(form);
+      const firstName = String(data.get('firstName') ?? '').trim();
+      const lastName = String(data.get('lastName') ?? '').trim();
+      const email = String(data.get('email') ?? '').trim().toLowerCase();
+      const phone = String(data.get('phone') ?? '').trim();
+      const attendanceMode = String(data.get('attendanceMode') ?? 'in-person');
+
+      message.classList.add('hidden');
+      if (!firstName || !lastName || !emailRe.test(email)) {
+        message.textContent = 'Please add your name and a valid email.';
+        message.className = 'text-sm text-red-700';
+        message.classList.remove('hidden');
+        return;
+      }
+
+      button.disabled = true;
+      label.textContent = 'Submitting';
+      try {
+        const res = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: `${firstName} ${lastName}`.trim(),
+            email,
+            phone,
+            registration_type: 'interest',
+            course_slug: 'talley-retirement-paycheck-workshop',
+            course_title: 'Design Your Retirement Paycheck',
+            how_class_helps: `Attendance mode: ${attendanceMode}`,
+          }),
+        });
+        if (!res.ok) throw new Error('submission failed');
+        form.reset();
+        message.textContent = 'Thanks. Your workshop interest was received.';
+        message.className = 'text-sm text-green-700';
+        message.classList.remove('hidden');
+      } catch {
+        message.textContent = 'Something went wrong. Please try again or call us.';
+        message.className = 'text-sm text-red-700';
+        message.classList.remove('hidden');
+      } finally {
+        button.disabled = false;
+        label.textContent = 'Save my seat';
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,358 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+import KeystoneDiagram from '../../../../components/talley-wealth/sections/KeystoneDiagram.astro';
+import CtaSection from '../../../../components/talley-wealth/CtaSection.astro';
+import { buildFAQPageSchema } from '../../../../data/talley-wealth/seo/schema';
+
+const personalOutcomes = [
+  'Retirement income strategy mapped and the first actions initiated',
+  'Multi-year Roth conversion plan decided and in motion',
+  'Tax strategy coordinated across the year, not left until April',
+  'Investment allocation calibrated to the plan',
+  'Estate review complete, with gaps flagged and next steps coordinated',
+];
+
+const ownerOutcomes = [
+  'Owner compensation structure reviewed and optimized',
+  'Business tax strategy coordinated with personal tax strategy',
+  'Retirement plan design reviewed',
+  'Entity structure examined for whether it still fits',
+  'Early succession or exit considerations surfaced, if relevant',
+];
+
+const complexExamples = [
+  'Multi-entity analysis across related businesses and family trusts',
+  'Cross-border tax coordination with outside international counsel',
+  'Concentrated equity unwinding across multiple grants and lockups',
+  'Estate planning coordinated across multiple generations',
+  'Pre-sale or post-sale planning for a business transition',
+];
+
+const walkAwayItems = [
+  {
+    label: 'Decisions resolved',
+    body: 'The Roth conversion strategy for the next several years. The withdrawal sequencing plan. The asset location across accounts. The beneficiary designations across every account. The estate document gaps and how they will be filled. The insurance coverage that is right-sized to your situation. Every major decision has a reason behind it that you understand.',
+  },
+  {
+    label: 'Coordinated actions, completed or in motion',
+    body: 'Conversions initiated. Beneficiary forms updated. Allocations shifted. Policies reviewed with recommendations to your agent or attorney. Tax elections filed. I handle the work I am best positioned to handle. You handle what is genuinely yours to do. Either way, nothing gets dropped. We are tracking every open item to completion.',
+  },
+  {
+    label: 'A written summary of what was decided, and why',
+    body: 'A short document you can refer back to. Covers the decisions we made, the reasoning, the actions taken, and anything still outstanding. Your spouse can read it. Your heirs eventually could too.',
+  },
+  {
+    label: 'A clear next chapter, whatever that is',
+    body: 'If continuing into ongoing advisory makes sense, you will roll in with everything already coordinated. If it does not, you will leave in good enough shape to manage independently until life changes. Both endings are fine.',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'Can I start with just one area, like tax or retirement income?',
+    answer: 'Not really, and here is why. The reason Keystone exists is that those areas are not actually separate. Your tax strategy is shaped by your retirement income plan, which is shaped by your investment allocation, which is shaped by your estate picture. If you only want help with one piece, an hourly advisor is probably a better fit. If you want coordinated work across everything, that is what Keystone is for.',
+  },
+  {
+    question: 'Do I have to move my investments to work with you?',
+    answer: 'No. Keystone is a planning engagement. Whether investments end up moving is a decision we make together during the work, based on what the plan actually needs. If it does not need to happen, it will not.',
+  },
+  {
+    question: 'What happens after Keystone is complete?',
+    answer: 'One of three things. Most clients roll into ongoing advisory, where we maintain the plan, manage the investments, and keep the tax work coordinated year to year. Some finish Keystone in good enough shape to manage independently and come back when life changes. A small number decide partway through it is not the right fit and take the refund. All three endings are valid.',
+  },
+  {
+    question: 'Is Keystone really refundable?',
+    answer: 'Yes. Fully. If at any point during the engagement you decide Keystone is not the right fit, for any reason, I will refund what you have paid. I would rather you leave a partial engagement feeling fairly treated than stay in one that is not working.',
+  },
+  {
+    question: 'How much of the work do you actually do versus me doing it?',
+    answer: 'I lead the work. That means I run the analysis, set the agendas, ask the questions that matter, and coordinate everything moving between meetings. Some of the execution is mine to do directly. Some of it needs to be yours, because it is your signature or your conversation. When it is yours, I have prepared you for it and I am in the chain. The one thing that does not happen is you sitting at home searching for what to do next. That is my job, not yours.',
+  },
+];
+---
+
+<TalleyPage
+  title="The Keystone Method™ | Six-Month Coordinated Engagement | Talley Wealth"
+  description="Keystone is a six-month coordinated planning engagement. Four to five working meetings. Decisions get made and acted on."
+  heroTransparent
+>
+  <section class="relative overflow-hidden bg-primary py-16 pt-28 text-primary-foreground sm:py-24 sm:pt-36">
+    <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div class="absolute -left-20 -top-20 h-96 w-96 rounded-full bg-accent/10 blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 h-72 w-72 rounded-full bg-white/5 blur-2xl"></div>
+    </div>
+
+    <div class="section-container relative z-10">
+      <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div class="text-center lg:text-left" data-reveal="left">
+          <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-accent">The Keystone Method™</p>
+          <h1 class="font-serif text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+            Six months of coordinated work, with the decisions that matter actually getting made.
+          </h1>
+          <p class="mt-6 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+            Keystone isn't a planning process that ends in a binder. It's a structured engagement where I lead you through the questions you've been carrying, the decisions you've been deferring get resolved, and the actions those decisions require get moving. By the time we're done, your financial situation looks different than it did when we started.
+          </p>
+          <a href="/get-started" class="mt-8 inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:brightness-95">
+            Schedule an Explore Call
+          </a>
+        </div>
+
+        <div class="hidden lg:block lg:scale-110 lg:origin-center" data-reveal="right">
+          <KeystoneDiagram animated />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-12 lg:hidden">
+    <div class="section-container">
+      <KeystoneDiagram compact />
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="tw-copy mx-auto max-w-3xl">
+        <h2>What Keystone actually is.</h2>
+        <p>A lot of financial planning engagements produce a plan document. You leave with a PDF. You put it in a drawer. Six months later, the recommendations haven't happened, because recommendations don't implement themselves.</p>
+        <p>Keystone is structured differently. Over six months and four to five working meetings, we go through your financial life together. My job is to lead the work. I know which questions to ask, in what order, and why. I've seen how these decisions play out for people in situations like yours, and that experience is the reason you're hiring me in the first place.</p>
+        <p>Some of the work I do directly. Tax analysis, allocation adjustments, coordination with your CPA or attorney, the Roth conversion paperwork, the beneficiary form review. Some of it you do yourself, because it's your signature on the document or your conversation to have. But you're never doing it alone, and you're never guessing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">How Keystone is different from what you've probably been offered before.</h2>
+      </div>
+      <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-border/40 border-l-muted-foreground/40 bg-background p-8 shadow-elegant md:border-l-4">
+          <h3 class="font-serif text-xl font-bold text-primary">What Keystone isn't.</h3>
+          <p class="mt-4 leading-relaxed text-muted-foreground">Not a plan document that sits on a shelf. Not a sales process dressed up as planning. Not a one-time consultation where you leave with questions instead of answers. Not a product pitch with financial planning bolted on the front.</p>
+        </article>
+        <article class="rounded-2xl border border-border/40 border-l-accent bg-background p-8 shadow-elegant md:border-l-4">
+          <h3 class="font-serif text-xl font-bold text-primary">What Keystone is.</h3>
+          <p class="mt-4 leading-relaxed text-muted-foreground">A six-month working engagement where we go through your whole financial picture together, make the decisions that have been waiting, and get the actions those decisions require into motion.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="tw-copy mx-auto max-w-3xl">
+        <h2>How the work actually gets led.</h2>
+        <p>The best version of this engagement is one where I'm doing the work of leading, and you're doing the work of being the person whose life it is. Those are different jobs.</p>
+        <p>My job is to know what to ask, what order to ask it in, what's worth analyzing deeply and what's worth setting aside, and how decisions in one area ripple into three others. I've sat across the table from people in situations like yours more times than I can count.</p>
+        <p>Your job is to be clear about what you actually want. Not the sanitized version. Not what sounds reasonable. The real thing. You make the final calls on decisions that are genuinely yours to make. I handle the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">How the six months actually go.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">There isn't a rigid script. Every client's situation dictates which pieces need attention first, and in what order. What stays the same across every engagement is the shape of the work and the rhythm of the meetings.</p>
+      </div>
+      <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-border/40 bg-background p-8 shadow-elegant">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-accent">What stays the same</p>
+          <p class="leading-relaxed text-muted-foreground">Four to five meetings across roughly six months. Between meetings, our team handles analysis, modeling, and coordination. You get a clear agenda before every session and a written summary after, so nothing gets lost.</p>
+        </article>
+        <article class="rounded-2xl border border-border/40 bg-background p-8 shadow-elegant">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-accent">What flexes</p>
+          <p class="leading-relaxed text-muted-foreground">The sequence and emphasis. A client five years from retirement with concentrated stock will spend different time than a business owner three years from a sale. The framework is the same. The depth shifts to where decisions are actually waiting.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-12 text-center">
+          <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">What you walk away with.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">Most of the value of Keystone isn't a thing you can hold. It's a set of decisions that have been made with real analysis behind them, and a set of actions that are either complete or clearly in motion.</p>
+        </div>
+        <div class="space-y-8">
+          {walkAwayItems.map((item, index) => (
+            <article class={index < walkAwayItems.length - 1 ? 'border-b border-border/40 pb-8' : ''}>
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-accent">{item.label}</p>
+              <p class="leading-relaxed text-muted-foreground">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">One framework. Three levels of depth.</h2>
+        <p class="mt-5 text-lg text-muted-foreground">Every client follows the same Keystone shape. The tier reflects the complexity of the decisions, not how hard we work.</p>
+      </div>
+      <div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+        <article class="tw-tier">
+          <h3>Keystone Personal</h3>
+          <p class="tw-price">$6,000</p>
+          <p class="tw-note">flat fee, six-month engagement</p>
+          <p>For households and professionals where the financial picture is mostly personal. Retirement timing, tax strategy, investment coordination, estate review.</p>
+          <p class="tw-kicker">By the end of six months:</p>
+          <ul>{personalOutcomes.map((item) => <li>{item}</li>)}</ul>
+          <a href="/financial-advisor-for-pre-retirees">Read more about who this fits</a>
+        </article>
+        <article class="tw-tier tw-tier--featured">
+          <h3>Keystone Owner</h3>
+          <p class="tw-price">$12,000</p>
+          <p class="tw-note">flat fee, six-month engagement</p>
+          <p>For business owners and households where the entity materially shapes the personal outcome. The depth extends across the business and personal sides of the balance sheet together.</p>
+          <p class="tw-kicker">Everything in Keystone Personal, plus:</p>
+          <ul>{ownerOutcomes.map((item) => <li>{item}</li>)}</ul>
+          <a href="/financial-advisor-for-business-owners">Read more about who this fits</a>
+        </article>
+        <article class="tw-tier">
+          <h3>Keystone Complex</h3>
+          <p class="tw-price">Starts at $20,000</p>
+          <p class="tw-note">scoped by complexity, six-month engagement</p>
+          <p>For genuinely complicated situations. Multiple entities, multi-state, cross-border considerations, significant concentrated equity, or estate structures that span generations.</p>
+          <p class="tw-kicker">Typical examples:</p>
+          <ul>{complexExamples.map((item) => <li>{item}</li>)}</ul>
+          <a href="/financial-advisor-for-inherited-wealth">Read more about who this fits</a>
+        </article>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="/pricing" class="inline-flex font-bold text-accent">See full pricing details</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="tw-copy mx-auto max-w-3xl">
+        <h2>Which tier is me?</h2>
+        <p>If your financial life sits mostly on W-2 income, retirement accounts, and a brokerage account, Keystone Personal is almost certainly right. If you own a business, have meaningful K-1 income, or manage entities alongside personal wealth, Keystone Owner is the fit.</p>
+        <p>Keystone Complex is reserved for the cases where the usual frameworks don't quite stretch far enough, usually when multiple entities, cross-border considerations, or generational estate structures are involved.</p>
+        <p><a href="/get-started" class="font-bold text-accent">Schedule an Explore Call</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-12 text-center font-serif text-3xl font-bold text-primary md:text-4xl">Common Questions</h2>
+        <div class="tw-faq-list" data-reveal>
+          {faqItems.map((faq) => (
+            <details class="tw-faq-item">
+              <summary>
+                <span>{faq.question}</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="tw-faq-answer"><p>{faq.answer}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="If this is the kind of work you're looking for."
+    description="The Explore Call is the next step. Fifteen minutes on the phone, no prep, no obligation. If Keystone is a fit for your situation, we'll talk about which tier and what the first meeting looks like. If it isn't, I'll tell you that directly."
+    primaryText="Schedule Your Explore Call"
+  />
+</TalleyPage>
+
+<style>
+  html[data-tenant="talley-wealth"] .tw-copy h2 {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  html[data-tenant="talley-wealth"] .tw-copy p {
+    margin-top: 1.5rem;
+    color: var(--color-muted-foreground);
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    border-top: 4px solid var(--color-accent);
+    border-radius: 1rem;
+    background: var(--color-background);
+    padding: 2rem;
+    box-shadow: var(--shadow-elegant);
+  }
+  html[data-tenant="talley-wealth"] .tw-tier--featured {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    box-shadow: var(--shadow-elegant-lg);
+  }
+  html[data-tenant="talley-wealth"] .tw-tier h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: inherit;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier p {
+    margin-top: 1rem;
+    color: color-mix(in srgb, currentColor 78%, transparent);
+    line-height: 1.65;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier .tw-price {
+    margin-top: 1.25rem;
+    color: var(--color-accent);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier .tw-note {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier .tw-kicker {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    color: inherit;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier ul {
+    margin-top: 0.8rem;
+    display: grid;
+    gap: 0.6rem;
+    color: color-mix(in srgb, currentColor 80%, transparent);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier li {
+    display: grid;
+    grid-template-columns: 0.65rem 1fr;
+    gap: 0.65rem;
+  }
+  html[data-tenant="talley-wealth"] .tw-tier li::before {
+    content: '';
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: 0.45rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+  }
+  html[data-tenant="talley-wealth"] .tw-tier a {
+    margin-top: 1.25rem;
+    color: var(--color-accent);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+</style>

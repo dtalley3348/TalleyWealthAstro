@@ -1,0 +1,251 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import CtaSection from '../../../components/talley-wealth/CtaSection.astro';
+import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsProof.astro';
+
+const startingQuestions = [
+  {
+    question: '"I am close to retirement, but I do not know which accounts to use first."',
+    detail: "Retirement is close enough to feel real. Now the questions are about income, taxes, Social Security, Medicare, Roth conversions, and whether the plan still works if markets cooperate less than expected.",
+    href: '/financial-advisor-for-pre-retirees',
+    label: 'Retirement planning',
+  },
+  {
+    question: "\"My business is profitable, but I'm not sure the tax strategy is keeping up.\"",
+    detail: "The business is working. The personal plan may not be. Owner pay, retirement plan design, entity structure, cash flow, and eventual transition decisions all start to matter more.",
+    href: '/financial-advisor-for-business-owners',
+    label: 'Business owners and professionals',
+  },
+  {
+    question: "\"I inherited money and I'm afraid of making a permanent mistake.\"",
+    detail: "A parent passes away, assets arrive, accounts need decisions, and the tax and family questions are suddenly yours to handle. You do not need to know every question before you ask for help.",
+    href: '/financial-advisor-for-inherited-wealth',
+    label: 'Inherited wealth and transitions',
+  },
+  {
+    question: "\"I make good money, but I do not have time to coordinate all of this.\"",
+    detail: "Equity comp, bonuses, deferred comp, benefits, taxes, investments, cash flow, and estate details can stack up quickly. You need more than a busy calendar and a collection of accounts.",
+    href: '/financial-advisor-for-executives-equity-comp',
+    label: 'Executives and equity comp',
+  },
+  {
+    question: "\"My employer benefits are valuable, but I don't know how they fit into retirement.\"",
+    detail: "A good benefits package can still create decisions that are too important to guess on. Pension choices, 401(k), deferred compensation, stock, taxes, and timing need to be modeled together.",
+    href: '/financial-advisor-for-kingsport-employer-benefits',
+    label: 'Kingsport employer-benefit planning',
+  },
+  {
+    question: "\"I already have someone managing investments, but the bigger questions are not getting answered.\"",
+    detail: "Portfolio management matters. It is just not the whole job. Taxes, income strategy, estate coordination, employer benefits, and life transitions often need more attention than performance reports alone.",
+    href: '/how-we-work/keystone-method',
+    label: 'How Keystone works',
+  },
+];
+
+const audiencePaths = [
+  {
+    title: 'Nearing retirement',
+    description: 'You are close enough that the decisions are no longer theoretical: when to stop working, claim Social Security, draw from accounts, convert to Roth, and avoid tax surprises.',
+    href: '/financial-advisor-for-pre-retirees',
+  },
+  {
+    title: 'Business owners with tax complexity',
+    description: 'The business is doing well. Now taxes, owner pay, retirement plan design, cash flow, and a possible future sale need more than scattered decisions.',
+    href: '/financial-advisor-for-business-owners',
+  },
+  {
+    title: 'Executives and professionals with equity comp',
+    description: 'RSUs, options, bonuses, deferred comp, and company stock can create tax and timing decisions that should not be handled one grant at a time.',
+    href: '/financial-advisor-for-executives-equity-comp',
+  },
+  {
+    title: 'Inherited wealth or family money',
+    description: 'You received assets, expect to receive them, or are helping a parent. Now the tax, estate, investment, and family decisions need order.',
+    href: '/financial-advisor-for-inherited-wealth',
+  },
+  {
+    title: 'Physicians and healthcare professionals',
+    description: 'Healthcare income, benefits, student loans, insurance, tax drag, and burnout risk do not fit a simple planning template.',
+    href: '/financial-advisor-for-healthcare-professionals',
+  },
+  {
+    title: 'Kingsport professionals with employer-benefit decisions',
+    description: 'Pension choices, 401(k) decisions, stock, deferred compensation, taxes, and retirement timing can be valuable and complicated at the same time.',
+    href: '/financial-advisor-for-kingsport-employer-benefits',
+  },
+];
+
+const reachOutMoments = [
+  'Retirement gets close enough to put a date on it.',
+  'A business starts producing enough profit that taxes feel different.',
+  'An inheritance, power of attorney role, or family transition puts new decisions in front of you.',
+  'Employer benefits, stock, deferred comp, pension, or rollover decisions become too important to guess on.',
+  'You realize investment management alone is not answering the questions that matter most.',
+];
+
+const notFit = [
+  'You only need a quick second opinion on one isolated decision.',
+  'You want to pick your own investments and simply need a place to hold accounts.',
+  'You are looking for market predictions or stock picks.',
+  'Your financial life is simple enough that coordinated planning would be more depth than you need.',
+  'You are not comfortable sharing tax returns, estate documents, benefits details, and the full financial picture.',
+];
+---
+
+<TalleyPage
+  title="Who We Help | Talley Wealth Financial Planning"
+  description="Talley Wealth helps retirees, business owners, executives with equity comp, healthcare professionals, Kingsport professionals, and families with inherited wealth make better financial decisions."
+>
+  <section class="bg-muted/35">
+    <div class="section-container py-20 text-center">
+      <div class="mb-6 flex items-center justify-center gap-3">
+        <span class="gold-line"></span>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Who this is for</p>
+      </div>
+      <h1 class="mx-auto max-w-5xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl">
+        Financial planning for the moments when the pieces need to work together.
+      </h1>
+      <p class="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        You may be nearing retirement, running a business, managing employer benefits, practicing medicine, settling an inheritance, or realizing your current advisor only talks about investments. The common thread is not one age or one net worth. It is that the decisions now work better when they are coordinated.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+          Start with the situation that sounds most like your life right now.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          These are not rigid boxes. They are the most common reasons people realize they need more than disconnected advice.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {audiencePaths.map((item) => (
+          <a href={item.href} class="group flex h-full flex-col rounded-lg border border-border/40 bg-background p-7 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <h3 class="font-serif text-xl font-bold text-primary">{item.title}</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-muted-foreground">{item.description}</p>
+            <span class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-accent transition group-hover:gap-2">
+              Learn more
+              <span aria-hidden="true">-&gt;</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-16 max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Questions that sound more like real life.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          Most clients do not come in with a perfectly defined planning problem. They come in with a decision, a worry, a tax bill, a transition, or a sense that someone more capable needs to be looking at the whole picture.
+        </p>
+      </div>
+
+      <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+        {startingQuestions.map((item) => (
+          <article class="flex h-full flex-col rounded-lg border border-border/40 bg-card p-8 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="font-serif text-lg font-bold italic text-primary">{item.question}</p>
+            <p class="mt-3 flex-1 leading-relaxed text-muted-foreground">{item.detail}</p>
+            <a href={item.href} class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-accent transition hover:gap-2">
+              {item.label}
+              <span aria-hidden="true">-&gt;</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">People usually reach out when something changes.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          Sometimes the change is obvious. Sometimes it is just a quiet realization that the old way of handling money questions feels too light for the next chapter.
+          </p>
+        </div>
+        <div class="rounded-lg border border-border/40 bg-background p-7 shadow-elegant">
+          <ul class="space-y-4">
+            {reachOutMoments.map((item) => (
+              <li class="flex gap-3 leading-relaxed text-muted-foreground">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-center font-serif text-3xl font-bold text-primary md:text-4xl">Different situations. Same underlying problem.</h2>
+        <div class="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <p>The details change from person to person. A retiring couple may be focused on Roth conversions, Medicare brackets, and withdrawal timing. A business owner may be focused on tax strategy, owner compensation, and a possible sale. A long-tenured employee may be weighing pension, stock, deferred comp, and retirement timing.</p>
+          <p>But the risk is often the same: one advisor sees the investments, another sees the tax return, another drafted the estate documents, and no one is responsible for how those decisions interact.</p>
+          <p>That is what Keystone is built to handle. Not to add more products or more accounts, but to give you one integrated view of the plan and the decisions that need to be made next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-center font-serif text-3xl font-bold text-primary md:text-4xl">Who this is not for.</h2>
+        <p class="mt-6 text-center text-lg leading-relaxed text-muted-foreground">
+          This matters as much as who it is for. Keystone is a deep planning engagement, and there are plenty of good situations where it would be more than someone needs.
+        </p>
+        <div class="mt-10 rounded-lg border border-border/40 bg-background p-7 shadow-elegant">
+          <ul class="space-y-4">
+            {notFit.map((item) => (
+              <li class="flex gap-3 leading-relaxed text-muted-foreground">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-6 text-center leading-relaxed text-muted-foreground">
+          If one of those describes your situation, I will tell you directly on the Explore Call and point you toward a cleaner path.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <GoogleReviewsProof
+    compact
+    title="The proof is not one perfect story. It is a pattern."
+    description="Across public reviews, clients tend to mention the same themes: clear explanations, personal attention, tax-aware planning, and a team that follows through."
+  />
+
+  <section class="bg-primary py-24 text-primary-foreground">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold md:text-4xl">What makes this work different.</h2>
+      </div>
+      <div class="mx-auto mt-12 max-w-2xl space-y-6 text-lg leading-relaxed text-primary-foreground/85">
+        <p>The work starts by identifying which path you are on and which decisions are coming next. Then we build around the real moving parts: your tax return, investment accounts, employer benefits, business interests, estate documents, income needs, and timing.</p>
+        <p>Investments matter, but they are not treated as a separate universe. They are part of the plan. Tax strategy matters, but it is not useful in a vacuum. It has to fit your income, accounts, estate, and life.</p>
+        <p>You work directly with me, with planning and tax thinking in the same conversation, and with clear next steps instead of a stack of disconnected recommendations.</p>
+      </div>
+      <div class="mt-12 text-center">
+        <a href="/how-we-work/keystone-method" class="inline-flex rounded-md border border-accent px-7 py-4 font-bold text-accent transition hover:bg-accent hover:text-accent-foreground">See how Keystone works</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Not sure which path fits?"
+    description="That is exactly what the Explore Call is for. In fifteen minutes, we will talk through what is changing, what feels unresolved, and whether Talley Wealth is the right fit. If it is not, you will hear that clearly too."
+    primaryText="Schedule Your Explore Call"
+  />
+</TalleyPage>

@@ -1,0 +1,26 @@
+---
+interface Props {
+  quote: string;
+  author: string;
+  location?: string;
+  rating?: number;
+}
+const { quote, author, location, rating = 5 } = Astro.props;
+---
+
+<div class="h-full flex flex-col rounded-2xl border border-border/30 bg-card p-8 shadow-elegant transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant-lg hover:border-border/50">
+  <div class="mb-4 flex gap-1" aria-label={`${rating} out of 5 stars`}>
+    {Array.from({ length: rating }).map(() => (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-accent" aria-hidden="true">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+    ))}
+  </div>
+  <blockquote class="mb-6 flex-grow leading-relaxed text-foreground">
+    &ldquo;{quote}&rdquo;
+  </blockquote>
+  <div class="border-t border-border pt-4">
+    <p class="font-semibold text-primary">{author}</p>
+    {location && <p class="text-sm text-muted-foreground">{location}</p>}
+  </div>
+</div>

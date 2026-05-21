@@ -1,0 +1,45 @@
+---
+import TalleyPage from '../../../../../components/talley-wealth/TalleyPage.astro';
+import { wikiArticles, getArticleBySlug } from '../../../../../data/talley-wealth/wiki/articles';
+import { getCategoryBySlug } from '../../../../../data/talley-wealth/wiki/categories';
+
+export function getStaticPaths() {
+  return wikiArticles.map((article) => ({ params: { category: article.category, slug: article.slug } }));
+}
+
+const article = getArticleBySlug(Astro.params.slug ?? '');
+if (!article || article.category !== Astro.params.category) return new Response('Not found', { status: 404 });
+const category = getCategoryBySlug(article.category);
+
+const renderBlocks = article.content
+  .split(/\n{2,}/)
+  .map((block) => block.trim())
+  .filter(Boolean)
+  .map((block) => {
+    const html = block
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n- /g, '<br />- ');
+    return html.startsWith('- ') ? `<p>${html.replace(/<br \/>/g, '<br />')}</p>` : `<p>${html}</p>`;
+  });
+---
+
+<TalleyPage title={`${article.question} | Talley Wealth`} description={article.quickAnswer}>
+  <article class="bg-background">
+    <div class="section-container max-w-4xl py-20">
+      <a href={`/learn/${article.category}`} class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{category?.title ?? article.category}</a>
+      <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{article.question}</h1>
+      <div class="mt-8 rounded-lg border border-accent/20 bg-accent/10 p-6">
+        <p class="text-lg leading-relaxed text-primary">{article.quickAnswer}</p>
+      </div>
+      <div class="prose prose-lg mt-10 max-w-none prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-strong:text-primary">
+        {renderBlocks.map((block) => <Fragment set:html={block} />)}
+      </div>
+      <footer class="mt-12 border-t border-border pt-6 text-sm text-muted-foreground">
+        <p>Updated {article.lastUpdated} by {article.author}</p>
+      </footer>
+    </div>
+  </article>
+</TalleyPage>

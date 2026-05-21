@@ -1,0 +1,281 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+type Section = {
+  title: string;
+  tone?: 'card' | 'default';
+  paragraphs?: string[];
+  bullets?: string[];
+};
+
+const pages: Record<string, {
+  title: string;
+  description: string;
+  heading: string;
+  intro: string;
+  tier: string;
+  image?: string;
+  imageAlt?: string;
+  imagePosition?: string;
+  sections: Section[];
+}> = {
+  retirement: {
+    title: 'Planning the Retirement Chapter | Talley Wealth',
+    description: 'Coordinated retirement planning for the five to ten years on either side of leaving full-time work. Withdrawal sequence, Roth conversions, Social Security timing, and Medicare brackets in one plan.',
+    heading: 'Planning the retirement chapter',
+    intro: "Most of what I do sits in the five to ten years on either side of a retirement transition. The work is figuring out, in coordinated fashion, how the savings you've built turn into a life that doesn't run out of room.",
+    tier: 'Most retirement-focused clients fit the Personal tier ($6,000).',
+    image: '/brands/talley-wealth/david-conversation.jpg',
+    imageAlt: 'David Talley in conversation at the Talley Wealth office',
+    imagePosition: 'center center',
+    sections: [
+      {
+        title: 'What this typically looks like',
+        paragraphs: [
+          "The clients I help in this stage have usually done the saving part well. They have IRAs, 401(k)s, maybe a Roth, maybe deferred comp, maybe a pension election still to make. The question they're working through isn't whether they saved enough. The question is the order in which to draw it down, when to convert what to a Roth, what to do with the brokerage account, when to claim Social Security, how to think about Medicare brackets, and how all of that interacts with the tax bracket they live in for the rest of their life.",
+          "The withdrawal sequence determines your tax bracket. Convert too much to a Roth in one year and you bump into a higher Medicare premium for two years. Pull income from the wrong account in the first decade of retirement and you lose a tax bracket window you can't get back. None of this is reactive work. The plan needs to drive the decisions, year by year, before the year happens.",
+          'Keystone is the six-month engagement where we work all of this out and put it into motion.',
+        ],
+      },
+      {
+        title: 'The planning windows that open and close in this decade',
+        tone: 'card',
+        paragraphs: [
+          "There's a specific set of tax-planning windows that open between the year you stop working and the year you start Required Minimum Distributions. Most of them close again after they've been missed. A few that come up most often:",
+        ],
+        bullets: [
+          "The gap years between the end of a W-2 paycheck and the start of Social Security or pension income. These are often the lowest-tax-rate years you'll ever have, which makes them the right years for Roth conversions, or for harvesting long-term capital gains at the 0% bracket.",
+          "The IRMAA brackets that determine Medicare Part B and Part D premiums. They're based on your income from two years ago, so the planning has to run on a two-year delay.",
+          'The Social Security claiming decision, which interacts with spousal benefits, ongoing work, and every other income decision sitting around it.',
+          "The sequence in which you pull from taxable, traditional, and Roth accounts during the first decade of retirement. This usually has the largest cumulative tax impact of any decision in retirement, and it's the one most often made by default rather than by plan.",
+        ],
+      },
+      {
+        title: 'What the Personal Keystone engagement actually looks like for retirement planning',
+        paragraphs: [
+          'When a retirement-focused client engages Keystone, the six months usually flows like this.',
+          'The first meeting is a working session where we lay out the complete picture. Accounts, balances, pensions, Social Security statements, expected income, the non-portfolio parts of the financial life, and the decisions that are coming.',
+          "The second meeting is where I come back with the modeling. Multiple scenarios for retirement timing, Roth conversion sequences, withdrawal order, Social Security claiming, Medicare planning, and the tax projections that tie them together. We talk through trade-offs. You don't need to make calls in this meeting either. You leave with a view of what the numbers actually show.",
+          'The third and fourth meetings are where decisions get made and actions start getting implemented. This might be initiating the first Roth conversion, rebalancing a 401(k) rollover, filing for Social Security, restructuring the taxable account, or aligning the estate documents.',
+          'At the end of the six months you have a coordinated plan in place and a clear picture of which moves are scheduled for each year over the next decade.',
+        ],
+      },
+      {
+        title: "Questions you're probably already asking yourself",
+        tone: 'card',
+        bullets: [
+          "When should I claim Social Security and how does it interact with my spouse's claim?",
+          'Do I convert to Roth, and if so, how much per year and for how many years?',
+          "What's the order I draw from my brokerage, IRA, and Roth?",
+          'How do I think about long-term care insurance now versus self-insuring?',
+          'Do I delay Medicare or take it on schedule, and what does that do to my premiums?',
+        ],
+      },
+      {
+        title: 'How this overlaps with tax prep',
+        paragraphs: [
+          'A lot of what retirement planning looks like in practice is tax planning that spans multiple years. I run Talley Tax on the same engagement model as the planning work, and for most retirement clients the planning and the tax prep end up in the same conversation.',
+          'If your CPA currently handles the return and you want to keep that relationship, we coordinate. If you would rather have both sides handled in the same engagement, that is also a clean option. We figure out which makes sense on the Explore Call.',
+        ],
+      },
+    ],
+  },
+  professionals: {
+    title: 'Business Owners, Executives & Equity Comp Planning | Talley Wealth',
+    description: 'Coordinated planning for business owners, executives, and professionals with RSUs, stock options, deferred comp, or partnership distributions.',
+    heading: 'Planning for business owners, executives, and professionals with equity comp',
+    intro: 'If you own a business or sit in a senior role with equity compensation, the wealth side of your life is often the part that gets pushed off until something forces it. I work with clients who want to handle those decisions on purpose instead of in reaction.',
+    tier: 'Most clients in this category fit the Owner tier ($12,000).',
+    image: '/brands/talley-wealth/david-whiteboard-strategy.jpg',
+    imageAlt: 'David Talley explaining financial planning strategy at a whiteboard',
+    imagePosition: 'center 34%',
+    sections: [
+      {
+        title: 'What this typically looks like',
+        paragraphs: [
+          'The clients I help in this stage are often running a business, leading a team, or holding a role where stock comp, deferred comp, bonuses, or partnership distributions do not fit the standard W-2 planning template.',
+          'The wealth question for them is layered: when to exercise or sell, how much company exposure is too much, how to prepare for a concentrated tax year, and how to build a personal plan that does not depend on every employer or business decision going perfectly.',
+          'This work usually involves more entities, more types of accounts, more tax surface, and more coordination with other professionals. Keystone is built to be the central coordinating engagement that makes those pieces work together rather than against each other.',
+        ],
+      },
+      {
+        title: 'The kinds of compensation I work around',
+        tone: 'card',
+        paragraphs: [
+          'The planning gets more interesting when compensation stops being a single W-2 number. A few of the structures that come up most often:',
+          'Stock-based compensation. RSUs, ISOs, NSOs, ESPP, phantom stock, stock appreciation rights, restricted stock awards. Each has its own tax treatment, timing decisions, holding-period math, and interaction with AMT.',
+          'Deferred compensation. Non-qualified deferred comp plans, supplemental executive retirement plans, and 409A arrangements. The election window is usually narrow, the distribution schedule locks in early, and the plan often interacts with how and when you actually retire or leave.',
+          'Partnership and pass-through income. K-1s, guaranteed payments, profits interests, distributions that do not match actual cash, state-level pass-through entity tax elections.',
+          'Business ownership itself. S-corp reasonable comp, owner 401(k) or cash balance pension setup, QBI optimization, entity structure review, and the ongoing question of what comes out of the business as wage, as distribution, or retained for later.',
+        ],
+      },
+      {
+        title: 'What the Owner Keystone engagement usually looks like',
+        paragraphs: [
+          'For business owners, executives, and professionals with equity comp, the six-month Keystone flow usually starts with the working inventory. We lay out everything on the personal, compensation, and business side that touches the financial life.',
+          'The second meeting is where I come back with the integrated model: personal tax projection, business-side projection if you are an owner, equity scenarios, retirement trajectory, and the coordination touchpoints with your CPA and attorney.',
+          'The third and fourth meetings are where the actions start getting implemented: updating the comp election, structuring the next exercise, opening or rebuilding a retirement plan, adjusting withholding or estimated taxes, triggering entity-level filings, and aligning estate documents.',
+          'By the end, you have a coordinated plan that lives across the business and personal sides, with the next three to five years of major decisions already sketched out.',
+        ],
+      },
+      {
+        title: 'Exit planning and the long view',
+        tone: 'card',
+        paragraphs: [
+          'A lot of Owner-tier engagements include some version of: we are thinking about a sale in the next three to five years, what should we be doing now.',
+          'That is usually a planning question, not a transaction question. What I do is make sure the personal balance sheet, the tax strategy, and the entity structure are in the right shape before the deal starts, so that when the deal does happen, the aftermath is orderly.',
+          'For senior-role employees with a liquidity event coming, the same principle applies. The planning work is what happens in the year or two before the event, not after.',
+        ],
+      },
+      {
+        title: "Questions you're probably already asking yourself",
+        bullets: [
+          'How do I think about exercising or unwinding concentrated stock without handing a third of it to the IRS?',
+          "What's the right vehicle for the next chunk of saving after the 401(k) max, and how does it interact with my entity structure?",
+          "If I'm planning a business sale in the next 3 to 5 years, what should I be doing now to prepare the personal balance sheet?",
+          "How do I coordinate between my CPA, attorney, benefits package, and financial planning so I'm not the one translating between them?",
+          'What does retirement income look like when most of my wealth is illiquid until an event?',
+        ],
+      },
+      {
+        title: 'Coordinating with your CPA and attorney',
+        tone: 'card',
+        paragraphs: [
+          'Business owners, executives, and professionals with meaningful equity compensation often already have a CPA, attorney, or HR benefits contact. My role is not to replace them. My role is to be the one seat at the table thinking about how the personal, tax, compensation, and business decisions connect, and to coordinate across the professionals so that decisions line up instead of running on parallel tracks.',
+          'If you would rather have the tax prep consolidated with the planning work in one engagement, Talley Tax is available and runs on the same model. If you prefer to keep your existing CPA, we coordinate with them directly.',
+        ],
+      },
+    ],
+  },
+  complex: {
+    title: 'Situations With Multiple Moving Pieces | Talley Wealth',
+    description: 'Coordinated planning for situations where more than one major financial event is happening at once. Inheritance with a business sale, divorce intersecting retirement timing, layered transitions.',
+    heading: 'When the situation has multiple moving pieces',
+    intro: "Some financial situations don't fit one category. There's a sudden inheritance and a business sale at the same time. A divorce that intersects with retirement timing. A career change layered with concentrated equity. The complex tier of Keystone is for those, where the work has to coordinate across more than one major moving piece at once.",
+    tier: 'The complex tier starts at $20,000 and is scoped individually.',
+    sections: [
+      {
+        title: 'What this typically looks like',
+        paragraphs: [
+          'The clients in this category often arrive after working with a planner or advisor who looked at one piece of the situation and missed how the others connected.',
+          'The most common pattern is two or three major events stacking up at the same time: an inheritance during a year that already has a tax-significant event happening, a business sale alongside an estate-planning need, or a divorce running concurrent with a forced retirement-timing decision.',
+          "The work in these situations is not more complicated because there are more numbers. It is more complicated because the decisions interact in ways that are not visible until they're laid out side by side.",
+        ],
+      },
+      {
+        title: 'The patterns that usually qualify as complex',
+        tone: 'card',
+        paragraphs: [
+          'Complex is not a synonym for wealthy. It describes a situation where multiple major financial events are converging at once and need to be coordinated as a single plan, not treated as separate projects.',
+          'A business sale plus an estate plan update. The deal structure, proceeds, tax bracket, charitable strategy, estate vehicle selection, and timing need to happen in the right order.',
+          'A divorce that intersects with retirement timing or business ownership. The planning runs in parallel with the legal work and needs to be done in coordination with the attorney, not after.',
+          'A concentrated inheritance received mid-career. A large inheritance changes the saving strategy, investment approach, tax picture, estate trajectory, and often the decision about whether to continue working.',
+          'A forced or accelerated career transition. Early retirement packages, sudden severance, unexpected partnership departures.',
+          'Multigenerational coordination, when the planning question is also about an aging parent, adult child, or family business.',
+        ],
+      },
+      {
+        title: 'How the complex tier actually gets scoped',
+        paragraphs: [
+          'Unlike the Personal and Owner tiers where the fee is fixed, the complex tier starts at $20,000 and is quoted individually. The reason is that the work varies a lot more case to case.',
+          "The scoping conversation happens on the Explore Call and gets finalized in a short follow-up. I walk through what I would expect the six months to cover, how many working meetings it would take, which outside coordinations are likely, and where the fee lands.",
+          'The six-month structure stays the same across tiers. The refund policy stays the same too.',
+        ],
+      },
+      {
+        title: 'What the first couple of months usually look like',
+        tone: 'card',
+        paragraphs: [
+          'In the complex tier, the first meeting or two is spent on scope and sequencing. Because there are multiple moving pieces, the first priority is identifying which decisions are time-sensitive, which can wait, and what the right order of operations actually is.',
+          'From there we move into the modeling phase, same as the other tiers, but with more scenarios and more coordination. The third and fourth meetings are where decisions start getting made and put into motion, and we stay in frequent contact with the outside professionals involved.',
+          "Because of the complexity, we also sometimes bring in a shorter cadence of check-ins between the formal meetings. That's built into the engagement, not an extra.",
+        ],
+      },
+      {
+        title: "Questions you're probably already asking yourself",
+        bullets: [
+          'I have two or three major financial events happening within 12 months of each other; can they be coordinated?',
+          'I have been told my situation is outside the normal practice of an existing advisor. What does that actually mean for my planning?',
+          "I'm not sure whether my situation is Owner or Complex. How do I figure out which tier makes sense?",
+          'What does coordination look like across my CPA, attorney, and the people involved in the events themselves?',
+        ],
+      },
+      {
+        title: "When the complex tier isn't the right fit",
+        tone: 'card',
+        paragraphs: [
+          'Not every financial situation that feels complicated belongs in the complex tier. A retirement transition alone, even a well-resourced one, usually fits the Personal tier. A business owner with standard equity comp fits the Owner tier.',
+          'The complex tier is specifically for situations where more than one major piece is in motion at the same time and the planning work has to coordinate across them.',
+        ],
+      },
+    ],
+  },
+};
+
+export function getStaticPaths() {
+  return Object.keys(pages).map((audience) => ({ params: { audience } }));
+}
+
+const page = pages[Astro.params.audience ?? ''];
+if (Astro.params.audience === 'retirement') {
+  return Astro.redirect('/financial-advisor-for-pre-retirees', 301);
+}
+if (Astro.params.audience === 'professionals') {
+  return Astro.redirect('/financial-advisor-for-executives-equity-comp', 301);
+}
+if (Astro.params.audience === 'complex') {
+  return Astro.redirect('/financial-advisor-for-inherited-wealth', 301);
+}
+if (!page) return new Response('Not found', { status: 404 });
+---
+
+<TalleyPage title={page.title} description={page.description}>
+  <section class="bg-card pt-32 pb-16 sm:pt-40 sm:pb-20">
+    <div class="section-container">
+      <div class="grid items-center gap-10 lg:grid-cols-[0.9fr_0.85fr]">
+      <div>
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-accent">Who we help</p>
+        <h1 class="font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{page.heading}</h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">{page.intro}</p>
+        <p class="mt-6 inline-flex rounded-md bg-accent/10 px-4 py-2 text-sm font-bold text-accent">{page.tier}</p>
+      </div>
+      {page.image && (
+        <div class="overflow-hidden rounded-lg border-[12px] border-primary/10 shadow-elegant-lg">
+          <img decoding="async" src={page.image} alt={page.imageAlt ?? ''} class="aspect-[4/3] w-full object-cover" style={`object-position: ${page.imagePosition ?? 'center center'}`} loading="lazy" />
+        </div>
+      )}
+      </div>
+    </div>
+  </section>
+
+  {page.sections.map((section, index) => (
+    <section class:list={[section.tone === 'card' ? 'bg-card' : 'bg-background', 'py-20']}>
+      <div class="section-container">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="mb-8 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{section.title}</h2>
+          {section.paragraphs && (
+            <div class="space-y-6 text-lg leading-relaxed text-muted-foreground">
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+          )}
+          {section.bullets && (
+            <ul class:list={['space-y-4', section.paragraphs && 'mt-8']}>
+              {section.bullets.map((item) => (
+                <li class="flex gap-3 text-lg leading-relaxed text-foreground">
+                  <span class="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="bg-background py-20">
+    <div class="section-container text-center">
+      <a href="/get-started" class="inline-flex rounded-md bg-accent px-7 py-4 font-bold text-accent-foreground shadow-elegant transition hover:bg-accent/90">Schedule an Explore Call</a>
+    </div>
+  </section>
+</TalleyPage>

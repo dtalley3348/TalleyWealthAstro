@@ -1,0 +1,230 @@
+---
+/**
+ * Talley Wealth — base layout.
+ *
+ * Talley-scoped: imports only Talley's CSS entry. Nothing here is shared
+ * with other tenants. Renders <html data-tenant="talley-wealth"> so the
+ * Tailwind utilities + base styles in entry.css scope to this tenant
+ * only.
+ */
+import '../styles/talley-wealth/entry.css';
+import PageEditorRuntime from '../components/PageEditorRuntime.astro';
+import { resolveEditorMode } from '../lib/page-editor-runtime';
+import { loadPageMetaOverrides, applyMetaOverrides } from '../lib/page-meta-overrides';
+import { buildTalleyJsonLd } from '../data/talley-wealth/seo/schema';
+
+const site = Astro.locals.site;
+const editor = await resolveEditorMode(Astro);
+
+interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonical?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  heroTransparent?: boolean;
+}
+
+const _props = Astro.props;
+const _meta = await loadPageMetaOverrides(editor.site, editor.path);
+const _resolved = applyMetaOverrides(
+  { title: _props.title, description: _props.description, ogImage: _props.ogImage ?? null },
+  _meta,
+);
+const title = _resolved.metaTitle ?? _resolved.title;
+const description = _resolved.metaDescription ?? _resolved.description;
+const ogTitle = _props.ogTitle ?? _resolved.title;
+const ogDescription = _props.ogDescription ?? _resolved.description;
+const ogImage = _resolved.ogImage ?? undefined;
+const canonical = _props.canonical ?? editor.path;
+const ogType = _props.ogType ?? 'website';
+const jsonLd = _props.jsonLd;
+const heroTransparent = _props.heroTransparent ?? false;
+
+const siteOrigin = Astro.site?.origin ?? new URL(Astro.url).origin;
+const canonicalUrl = new URL(canonical === '/' ? '/' : canonical, `${siteOrigin}/`).href;
+const defaultJsonLd = buildTalleyJsonLd({ pathname: canonical, canonicalUrl, title, description });
+const jsonLdArray = [...defaultJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [])];
+---
+
+<!doctype html>
+<html lang="en" data-tenant="talley-wealth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#182635" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/brands/talley-wealth/favicon.png" />
+
+    <!-- Fonts: Merriweather (serif) + Source Sans Pro (sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    {jsonLdArray.map((ld) => (
+      <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+    ))}
+
+    {/* Site-level head tracking code (GTM, GA4, Plausible, etc.) */}
+    {site?.headInject && <Fragment set:html={site.headInject} />}
+  </head>
+  <body class={heroTransparent ? 'has-transparent-header' : ''}>
+    {/* Site-level body-start injection (GTM noscript fallback) */}
+    {site?.bodyStartInject && <Fragment set:html={site.bodyStartInject} />}
+    <slot name="header" />
+    <main id="main" class={heroTransparent ? '' : 'pt-28 sm:pt-32'}>
+      <slot />
+    </main>
+    <slot name="footer" />
+
+    <!-- Global scroll-reveal: content visible by default; JS opts into the fade/slide on intersection. -->
+    <style is:global>
+      html[data-tenant="talley-wealth"] body.js-reveal [data-reveal]:not(.is-in) {
+        opacity: 0;
+        transform: translateY(20px);
+        will-change: opacity, transform;
+      }
+      html[data-tenant="talley-wealth"] body.js-reveal [data-reveal="left"]:not(.is-in)  { transform: translateX(-20px); }
+      html[data-tenant="talley-wealth"] body.js-reveal [data-reveal="right"]:not(.is-in) { transform: translateX(20px); }
+      html[data-tenant="talley-wealth"] [data-reveal] {
+        transition:
+          opacity 0.6s var(--ease-smooth) var(--reveal-delay, 0ms),
+          transform 0.6s var(--ease-smooth) var(--reveal-delay, 0ms);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html[data-tenant="talley-wealth"] body.js-reveal [data-reveal]:not(.is-in) {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        html[data-tenant="talley-wealth"] .tw-faq-item,
+        html[data-tenant="talley-wealth"] .tw-faq-answer,
+        html[data-tenant="talley-wealth"] .tw-faq-item summary svg {
+          transition: none;
+        }
+      }
+
+
+      /* Lightweight modern accordion used across Talley pages. */
+      html[data-tenant="talley-wealth"] .tw-faq-stack {
+        display: grid;
+        gap: 2rem;
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-list {
+        display: grid;
+        gap: 0.6rem;
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item {
+        overflow: hidden;
+        border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+        border-radius: 0.75rem;
+        background: var(--color-card);
+        box-shadow: var(--shadow-elegant);
+        transition: border-color 240ms var(--ease-smooth), box-shadow 240ms var(--ease-smooth), transform 240ms var(--ease-smooth);
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item:hover {
+        border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-border));
+        box-shadow: var(--shadow-elegant-lg);
+        transform: translateY(-1px);
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item summary {
+        display: flex;
+        cursor: pointer;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.1rem;
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item summary svg {
+        flex: 0 0 auto;
+        color: var(--color-accent);
+        transition: transform 240ms var(--ease-smooth);
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item[open] {
+        border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-border));
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item[open] summary svg {
+        transform: rotate(180deg);
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 280ms var(--ease-smooth);
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-answer > p {
+        min-height: 0;
+        overflow: hidden;
+        padding: 0 1.1rem;
+        color: var(--color-muted-foreground);
+        line-height: 1.7;
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item[open] .tw-faq-answer {
+        grid-template-rows: 1fr;
+      }
+      html[data-tenant="talley-wealth"] .tw-faq-item[open] .tw-faq-answer > p {
+        padding-bottom: 1rem;
+      }
+    </style>
+    <script>
+      (() => {
+        if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+        const els = document.querySelectorAll('[data-reveal]');
+        if (!els.length || !('IntersectionObserver' in window)) return;
+        document.body.classList.add('js-reveal');
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+            });
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+        );
+        els.forEach((el) => io.observe(el));
+
+        document.querySelectorAll('.tw-faq-list').forEach((group) => {
+          group.addEventListener('toggle', (event) => {
+            const target = event.target;
+            if (!(target instanceof HTMLDetailsElement) || !target.open) return;
+            group.querySelectorAll('details[open]').forEach((item) => {
+              if (item !== target) item.removeAttribute('open');
+            });
+          }, true);
+        });
+      })();
+    </script>
+    {editor.active && (
+      <PageEditorRuntime site={editor.site} path={editor.path} overrides={editor.overrides} />
+    )}
+  </body>
+</html>

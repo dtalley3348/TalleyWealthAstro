@@ -1,0 +1,111 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import PageHero from '../../../components/talley-wealth/PageHero.astro';
+import CtaSection from '../../../components/talley-wealth/CtaSection.astro';
+
+const teamMembers = [
+  {
+    name: 'David Talley, CFP®, ChFC®, EA',
+    role: 'Founder & Lead Advisor',
+    image: '/brands/talley-wealth/david-talley.webp',
+    bio: [
+      "David leads Talley Wealth with a calm, practical approach that helps people make sense of life's biggest financial decisions. He believes good planning should feel clear, connected, and stress-free.",
+      'A Johnson City native, David combines more than a decade of experience in wealth and tax strategy with a genuine love for helping others build confidence in their financial lives. Outside the office, he enjoys golf, time outdoors with his family, and good books that challenge how he thinks.',
+    ],
+  },
+  {
+    name: 'Stephenee Carberry, FPQP',
+    role: 'Practice Manager',
+    image: '/brands/talley-wealth/stephenee-carberry.webp',
+    bio: [
+      "Stephenee joined Talley Wealth in 2024, bringing with her a background in Business Management and a growing expertise in the financial industry. She's known for her genuine dedication to helping others and takes pride in creating an experience that leaves every client feeling clear and confident about their next steps.",
+      "Outside of work, Stephenee enjoys time with her husband, her high school sweetheart, and rarely misses a Tennessee football game (Go Vols!). She's happiest during the summer months, loves to travel, and is steadily working her way through a very long bucket list of destinations.",
+    ],
+  },
+  {
+    name: 'Daisy',
+    role: 'Chief of Morale',
+    image: '/brands/talley-wealth/daisy.webp',
+    bio: [
+      "Daisy keeps everyone at the office smiling. Whether she's greeting visitors, curling up under a desk, or reminding the team it's time for a break, she brings energy and warmth to every day. Clients know her as the friendly face that makes financial planning feel just a little lighter.",
+    ],
+  },
+];
+
+const credentials = [
+  { abbr: 'CFP®', full: 'Certified Financial Planner' },
+  { abbr: 'ChFC®', full: 'Chartered Financial Consultant' },
+  { abbr: 'EA', full: 'Enrolled Agent' },
+];
+---
+
+<TalleyPage
+  title="Our Team | Talley Wealth Financial Advisors"
+  description="Meet the Talley Wealth team: experienced financial professionals dedicated to helping Tri-Cities families achieve financial clarity."
+  ogImage="/brands/talley-wealth/hero-team-meeting.jpg"
+>
+  <PageHero
+    label="Our Team"
+    title="Meet the People Behind Talley Wealth"
+    description="A small team dedicated to helping you find clarity in your financial life."
+  />
+
+  <section class="bg-card">
+    <div class="section-container py-24">
+      <div class="mx-auto max-w-4xl space-y-20">
+        {teamMembers.map((member, index) => (
+          <article class:list={['flex flex-col items-center gap-8 md:gap-12', index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row']} data-reveal>
+            <div class="w-full flex-shrink-0 md:w-2/5">
+              <div class="aspect-[4/5] overflow-hidden rounded-2xl shadow-elegant-xl">
+                <img decoding="async" src={member.image} alt={member.name} class="h-full w-full object-cover"  loading="lazy" />
+              </div>
+            </div>
+
+            <div class="flex-1 text-center md:text-left">
+              <h2 class="font-serif text-2xl font-bold text-primary md:text-3xl">{member.name}</h2>
+              <p class="mt-2 font-semibold text-accent">{member.role}</p>
+              <div class="mt-6 space-y-4 leading-relaxed text-muted-foreground">
+                {member.bio.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-24">
+      <div class="mx-auto max-w-3xl text-center">
+        <div data-reveal>
+          <h2 class="font-serif text-3xl font-bold text-primary">Professional Credentials</h2>
+          <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+            Our team holds respected professional designations and maintains ongoing education to serve you better.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-6 md:grid-cols-3">
+          {credentials.map((cred) => (
+            <article class="rounded-lg border border-border bg-card p-6 text-center shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg" data-reveal>
+              <p class="font-serif text-2xl font-bold text-accent">{cred.abbr}</p>
+              <p class="mt-2 text-sm text-muted-foreground">{cred.full}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-secondary/30">
+    <div class="section-container py-24">
+      <div class="mx-auto max-w-3xl text-center" data-reveal>
+        <h2 class="font-serif text-3xl font-bold text-primary">Our Fiduciary Commitment</h2>
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+          As fiduciary advisors, we are legally and ethically bound to act in your best interest at all times. Most of our clients pay a clear, flat fee, and we always provide full transparency about how we're compensated, ensuring our advice is never conflicted.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection />
+</TalleyPage>

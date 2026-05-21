@@ -1,0 +1,68 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+const resourceGroups = [
+  {
+    eyebrow: 'Articles',
+    title: 'Blog',
+    body: 'Longer-form planning perspective, stories, and commentary on the financial decisions that tend to matter most.',
+    href: '/resources/blog',
+    label: 'Read the blog',
+  },
+  {
+    eyebrow: 'Short answers',
+    title: 'Learning Center',
+    body: 'Clear, answer-first explainers for retirement, tax, investing, and planning questions people ask every day.',
+    href: '/resources/learning-center',
+    label: 'Browse questions',
+  },
+  {
+    eyebrow: 'Interactive',
+    title: 'Planning Tools',
+    body: 'Calculators, assessments, and simple visual tools that make planning concepts easier to understand.',
+    href: '/resources/tools',
+    label: 'Use the tools',
+  },
+  {
+    eyebrow: 'Guide',
+    title: 'Retirement Readiness Guide',
+    body: 'A practical framework for thinking through retirement timing, income, taxes, market risk, and tradeoffs.',
+    href: '/guide',
+    label: 'Get the guide',
+  },
+  {
+    eyebrow: 'Calendar',
+    title: 'Key Dates',
+    body: 'Important tax, retirement, and planning deadlines to keep on your radar throughout the year.',
+    href: '/resources/key-dates',
+    label: 'View key dates',
+  },
+];
+---
+
+<TalleyPage title="Resources | Talley Wealth" description="Articles, learning center answers, planning tools, guides, and key dates from Talley Wealth.">
+  <section class="bg-muted/35">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Resources</p>
+      <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Resources for better financial decisions.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        Articles, short explainers, planning tools, guides, and practical reference pages for the questions that tend to come up before good decisions get made.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {resourceGroups.map((item) => (
+          <a href={item.href} class="group rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{item.eyebrow}</p>
+            <h2 class="mt-3 font-serif text-2xl font-bold text-primary">{item.title}</h2>
+            <p class="mt-4 leading-relaxed text-muted-foreground">{item.body}</p>
+            <span class="mt-6 inline-flex font-bold text-accent transition group-hover:gap-2">{item.label} <span aria-hidden="true">-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</TalleyPage>

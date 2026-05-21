@@ -1,0 +1,211 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import CtaSection from '../../../components/talley-wealth/CtaSection.astro';
+import TestimonialsSection from '../../../components/talley-wealth/TestimonialsSection.astro';
+import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsProof.astro';
+
+const startingPoints = [
+  {
+    quote: "\"Retirement is getting close, and I want to know whether we're actually going to be okay.\"",
+    detail: 'Nearing retirement',
+  },
+  {
+    quote: "\"The business is finally doing well, but the taxes are starting to feel like a real problem.\"",
+    detail: 'Business owners',
+  },
+  {
+    quote: "\"I inherited money, and I do not want to make a mistake just because I don't know what to ask.\"",
+    detail: 'Inherited wealth',
+  },
+  {
+    quote: "\"My compensation is getting more complicated, and I do not have time to figure out every tax and timing decision myself.\"",
+    detail: 'Executives and equity comp',
+  },
+];
+
+const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
+---
+
+<TalleyPage
+  title="Talley Wealth | Financial Planning, Tax & Investing"
+  description="Talley Wealth is a Johnson City, TN financial advisory firm that integrates tax strategy and investment management into one coordinated plan, so your money is actually working together."
+  heroTransparent
+  ogImage="/brands/talley-wealth/hero-bg.png"
+>
+  <section class="relative flex min-h-[85vh] items-center overflow-hidden bg-primary pt-20 text-primary-foreground sm:pt-28">
+    <img decoding="async" src="/brands/talley-wealth/hero-bg.png" alt="" class="absolute inset-0 h-full w-full object-cover" loading="eager" />
+    <div class="absolute inset-0 bg-gradient-to-r from-primary from-40% via-primary/90 via-70% to-primary/60"></div>
+
+    <div class="section-container relative z-10 w-full">
+      <div class="max-w-xl">
+        <div class="mb-6 flex items-center gap-3">
+          <div class="h-1 w-16 rounded-full bg-accent"></div>
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
+        </div>
+        <h1 class="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl">
+          Real financial planning for the decisions <span class="text-accent">that shape what comes next.</span>
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
+          Talley Wealth helps families nearing retirement, business owners, and executives or professionals with equity compensation make better decisions about taxes, investments, retirement, and what comes next.
+        </p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-4 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
+          <a href="/how-we-work/what-to-expect" class="inline-flex rounded-md border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-4 font-bold text-primary-foreground transition hover:bg-primary-foreground/20">How We Work</a>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-primary-foreground/75">
+          {trustStats.map((stat) => (
+            <div class="flex items-center gap-2">
+              <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+              <span>{stat}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border/50 bg-card">
+    <div class="section-container py-8">
+      <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
+        <p><strong class="block font-serif text-lg text-primary">Plan first</strong> The advice starts with your life, not a product or portfolio model.</p>
+        <p><strong class="block font-serif text-lg text-primary">Tax-aware</strong> Planning, investments, and tax strategy are reviewed together.</p>
+        <p><strong class="block font-serif text-lg text-primary">Founder-led</strong> You work directly with David, supported by a prepared team.</p>
+        <p><strong class="block font-serif text-lg text-primary">Clear next step</strong> Start with a no-pressure 15-minute Explore Call.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div class="relative">
+          <div class="aspect-[3/2] overflow-hidden rounded-lg shadow-elegant-xl">
+            <img decoding="async" src="/brands/talley-wealth/david-stephenee-window.jpg" alt="David Talley and Stephenee Carberry at Talley Wealth" class="h-full w-full object-cover"  loading="lazy" />
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-6 flex items-center gap-3">
+            <div class="gold-line"></div>
+            <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Why It Matters</span>
+          </div>
+          <h2 class="font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+            Most people reach this point with pieces, not a real plan.
+          </h2>
+          <div class="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
+            <p>They have investment accounts. A CPA. Maybe an old retirement projection. Estate documents from years ago. A few good decisions made at different times by different people.</p>
+            <blockquote class="border-l-4 border-accent py-2 pl-5">
+              <p class="font-serif text-2xl italic leading-snug text-primary">The problem is not usually a lack of effort. It is that no one is responsible for the whole picture.</p>
+            </blockquote>
+            <p>That matters when retirement is close, income is high, taxes are more visible, a business is changing, or an inheritance opens up new choices. In those moments, the best decisions usually need more context than one account, one tax return, or one projection can provide.</p>
+            <p>Our work runs the other way around. We build the plan first, then let the plan guide the investment allocation, tax strategy, estate coordination, and ongoing decisions.</p>
+          </div>
+          <a href="/pricing" class="mt-8 inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">
+            How we get paid and how the engagement is structured <span aria-hidden="true">-&gt;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-16 max-w-3xl text-center">
+        <div class="mb-6 flex items-center justify-center gap-3">
+          <div class="h-1 w-16 rounded-full bg-accent"></div>
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Sound Familiar?</span>
+          <div class="h-1 w-16 rounded-full bg-accent"></div>
+        </div>
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">People usually reach out when the decisions start feeling more real.</h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          The details are different, but the feeling is familiar: there is enough going on now that a more thoughtful plan would feel useful.
+        </p>
+      </div>
+
+      <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+        {startingPoints.map((item) => (
+          <article class="h-full rounded-lg border border-border/30 bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.detail}</p>
+            <p class="mt-4 font-serif text-lg font-bold italic text-primary">{item.quote}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/who-we-help" class="inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:bg-accent/90">See who this tends to fit</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary py-24 text-primary-foreground">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="mb-6 flex items-center justify-center gap-3">
+          <div class="h-1 w-16 rounded-full bg-accent"></div>
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">The Keystone Method™</span>
+          <div class="h-1 w-16 rounded-full bg-accent"></div>
+        </div>
+        <h2 class="font-serif text-3xl font-bold md:text-4xl">Keystone turns the questions into a plan.</h2>
+        <p class="mt-6 text-lg leading-relaxed text-primary-foreground/80">
+          Most firms start by managing money and hope the rest of the picture works itself out. Keystone runs in the other order. It is a structured six-month engagement where we build the plan first, calibrate investments to it, and weave tax strategy through both. By the end, you have a plan that is actually yours, and decisions that get made instead of debated.
+        </p>
+        <p class="mt-6 text-sm italic text-primary-foreground/70">Fully refundable at any point during the engagement, for any reason.</p>
+        <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="/how-we-work/keystone-method" class="inline-flex rounded-md border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-3 font-bold text-primary-foreground transition hover:bg-primary-foreground/20">See how Keystone works</a>
+          <a href="/how-we-work/what-to-expect" class="inline-flex text-sm font-bold text-primary-foreground/75 transition hover:text-accent">Or see how the engagement actually unfolds</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-2">
+        <a href="/about/meet-david-talley" class="group block">
+          <div class="aspect-[4/5] overflow-hidden rounded-lg shadow-elegant-xl">
+            <img decoding="async" src="/brands/talley-wealth/david-talley.webp" alt="David Talley, CFP, ChFC, EA" class="h-full w-full object-cover transition duration-500 group-hover:scale-105"  loading="lazy" />
+          </div>
+        </a>
+
+        <div>
+          <div class="mb-6 flex items-center gap-3">
+            <div class="gold-line"></div>
+            <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Your Advisor</span>
+          </div>
+          <h2 class="font-serif text-3xl font-bold text-primary">David Talley</h2>
+          <p class="mt-2 font-bold text-accent">CFP®, ChFC®, EA, Founder & Lead Advisor</p>
+          <div class="mt-6 space-y-5 leading-relaxed text-muted-foreground">
+            <p>The thing I see most often is successful people carrying more financial complexity than they want to carry alone. They are not careless. They are busy, thoughtful, and trying to make good decisions in areas where the answers can get technical quickly.</p>
+            <p>I built Talley Wealth to do that work differently. Every client works directly with me. The plan, the investments, and the tax strategy sit in one conversation. Stephenee keeps the operational side running so nothing falls between the cracks, and meetings actually feel prepared rather than improvised.</p>
+          </div>
+          <a href="/about/meet-david-talley" class="mt-5 inline-flex text-sm font-bold text-muted-foreground transition hover:text-accent">The longer version of why I do this work</a>
+          <div class="mt-8 flex flex-wrap gap-3">
+            {['CFP®', 'ChFC®', 'EA'].map((credential) => (
+              <span class="rounded-md bg-primary px-4 py-2 font-bold text-primary-foreground">{credential}</span>
+            ))}
+          </div>
+          <div class="mt-8 flex items-center gap-4 border-t border-border pt-5">
+            <div class="h-12 w-12 overflow-hidden rounded-full shadow-elegant">
+              <img decoding="async" src="/brands/talley-wealth/stephenee-carberry.webp" alt="Stephenee Carberry, FPQP" class="h-full w-full object-cover"  loading="lazy" />
+            </div>
+            <div>
+              <p class="text-sm font-bold text-primary">Supported by Stephenee Carberry, FPQP</p>
+              <p class="text-xs text-muted-foreground">Practice Manager</p>
+            </div>
+          </div>
+          <a href="/get-started" class="mt-8 inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TestimonialsSection />
+
+  <GoogleReviewsProof compact reviewSet="home" />
+
+  <CtaSection
+    title="Ready to talk through what is on your mind?"
+    description="The Explore Call is the next step. Fifteen minutes, no prep, no obligation. If it is a fit, we will talk about going further. If it is not, I will say so directly."
+    primaryText="Schedule Your Explore Call"
+  />
+</TalleyPage>

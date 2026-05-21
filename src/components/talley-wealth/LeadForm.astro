@@ -1,0 +1,145 @@
+---
+interface Props {
+  id?: string;
+  title?: string;
+  source?: string;
+  topic?: string;
+  compact?: boolean;
+}
+
+const {
+  id = `tw-lead-${Math.random().toString(36).slice(2)}`,
+  title = 'Start the conversation',
+  source = 'contact',
+  topic = '',
+  compact = false,
+} = Astro.props;
+---
+
+<form id={id} class={`tw-lead-form ${compact ? 'tw-lead-form--compact' : ''}`} data-source={source} data-topic={topic} novalidate>
+  {title && <h2 class="font-serif text-2xl font-bold text-primary">{title}</h2>}
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label>
+      <span>First name</span>
+      <input name="firstName" autocomplete="given-name" required />
+    </label>
+    <label>
+      <span>Last name</span>
+      <input name="lastName" autocomplete="family-name" />
+    </label>
+  </div>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <label>
+      <span>Email</span>
+      <input name="email" type="email" autocomplete="email" required />
+    </label>
+    <label>
+      <span>Phone</span>
+      <input name="phone" type="tel" autocomplete="tel" />
+    </label>
+  </div>
+  <label>
+    <span>What prompted you to reach out?</span>
+    <textarea name="message" rows={compact ? 3 : 5}></textarea>
+  </label>
+  <button type="submit" class="inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 font-semibold text-accent-foreground transition hover:brightness-95 disabled:opacity-60">
+    <span data-label>Send</span>
+  </button>
+  <p data-message class="hidden text-sm"></p>
+</form>
+
+<style>
+  html[data-tenant="talley-wealth"] .tw-lead-form {
+    display: grid;
+    gap: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-card);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    box-shadow: var(--shadow-elegant);
+  }
+  html[data-tenant="talley-wealth"] .tw-lead-form--compact {
+    padding: 1.25rem;
+  }
+  html[data-tenant="talley-wealth"] .tw-lead-form label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--color-foreground);
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  html[data-tenant="talley-wealth"] .tw-lead-form input,
+  html[data-tenant="talley-wealth"] .tw-lead-form textarea {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: #fff;
+    color: var(--color-foreground);
+    padding: 0.75rem 0.85rem;
+    font-weight: 400;
+  }
+  html[data-tenant="talley-wealth"] .tw-lead-form input:focus,
+  html[data-tenant="talley-wealth"] .tw-lead-form textarea:focus {
+    outline: 2px solid color-mix(in srgb, var(--color-accent) 65%, transparent);
+    outline-offset: 2px;
+  }
+</style>
+
+<script>
+  (() => {
+    const forms = document.querySelectorAll<HTMLFormElement>('.tw-lead-form');
+    forms.forEach((form) => {
+      if (form.dataset.bound === 'true') return;
+      form.dataset.bound = 'true';
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const label = form.querySelector<HTMLElement>('[data-label]');
+      const message = form.querySelector<HTMLElement>('[data-message]');
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!button || !label || !message) return;
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const data = new FormData(form);
+        const payload = {
+          firstName: String(data.get('firstName') ?? '').trim(),
+          lastName: String(data.get('lastName') ?? '').trim(),
+          email: String(data.get('email') ?? '').trim().toLowerCase(),
+          phone: String(data.get('phone') ?? '').trim(),
+          message: String(data.get('message') ?? '').trim(),
+          source: form.dataset.source || 'contact',
+          topic: form.dataset.topic || '',
+        };
+
+        message.classList.add('hidden');
+        if (!payload.firstName || !emailRe.test(payload.email)) {
+          message.textContent = 'Please add your first name and a valid email.';
+          message.className = 'text-sm text-red-700';
+          message.classList.remove('hidden');
+          return;
+        }
+
+        button.disabled = true;
+        label.textContent = 'Sending';
+        try {
+          const res = await fetch('/api/talley/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error('submission failed');
+          form.reset();
+          message.textContent = 'Thanks. We received it.';
+          message.className = 'text-sm text-green-700';
+          message.classList.remove('hidden');
+        } catch {
+          message.textContent = 'Something went wrong. Please try again or call us.';
+          message.className = 'text-sm text-red-700';
+          message.classList.remove('hidden');
+        } finally {
+          button.disabled = false;
+          label.textContent = 'Send';
+        }
+      });
+    });
+  })();
+</script>

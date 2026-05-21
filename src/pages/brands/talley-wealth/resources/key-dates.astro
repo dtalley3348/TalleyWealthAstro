@@ -1,0 +1,40 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+const dates = [
+  ['January 15', 'Q4 Estimated Tax Payment Due'],
+  ['January 31', 'W-2s and 1099s issued to recipients'],
+  ['April 15', 'Individual Tax Return Deadline / Q1 Estimated Payment'],
+  ['June 15', 'Q2 Estimated Tax Payment Due'],
+  ['September 15', 'Q3 Estimated Tax Payment Due / Extended Business Returns'],
+  ['October 15', 'Extended Individual Returns Due'],
+];
+---
+
+<TalleyPage title="Key Tax Dates & Deadlines | Talley Wealth" description="Stay on top of critical filing dates and payment deadlines for 2025.">
+  <section class="bg-muted/35">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Key Dates</p>
+      <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Important Tax Deadlines</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        Stay on top of critical filing dates and payment deadlines for 2025.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container max-w-4xl py-20">
+      <div class="grid gap-4">
+        {dates.map(([date, title]) => (
+          <article class="grid gap-4 rounded-lg border border-border bg-card p-6 shadow-elegant sm:grid-cols-[160px_1fr] sm:items-center">
+            <p class="font-serif text-2xl font-bold text-accent">{date}</p>
+            <h2 class="font-serif text-2xl font-bold text-primary">{title}</h2>
+          </article>
+        ))}
+      </div>
+      <p class="mt-8 text-sm leading-relaxed text-muted-foreground">
+        Dates can shift for weekends, holidays, extensions, and state-specific rules. Use this as a planning reference and confirm the deadline that applies to your situation.
+      </p>
+    </div>
+  </section>
+</TalleyPage>

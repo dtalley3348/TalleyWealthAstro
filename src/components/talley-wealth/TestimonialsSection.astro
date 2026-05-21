@@ -1,0 +1,85 @@
+---
+import TestimonialCard from './TestimonialCard.astro';
+import {
+  getFeaturedReviews,
+  reviews,
+  TOTAL_REVIEW_COUNT,
+  AVERAGE_RATING,
+  TESTIMONIAL_DISCLAIMER,
+} from '../../data/talley-wealth/reviews';
+
+const featured = getFeaturedReviews().slice(0, 3);
+const additional = reviews.filter((r) => !r.featured).slice(0, 6);
+
+const aggregateRating = {
+  '@context': 'https://schema.org',
+  '@type': 'FinancialService',
+  name: 'Talley Wealth Management',
+  url: 'https://www.talleywealth.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: AVERAGE_RATING.toString(),
+    bestRating: '5',
+    worstRating: '1',
+    ratingCount: TOTAL_REVIEW_COUNT.toString(),
+    reviewCount: TOTAL_REVIEW_COUNT.toString(),
+  },
+};
+---
+
+<section class="bg-muted/30 py-20">
+  <script type="application/ld+json" set:html={JSON.stringify(aggregateRating)} />
+
+  <div class="section-container">
+    <div class="mb-12 text-center">
+      <div class="mb-6 flex items-center justify-center gap-3">
+        <span class="gold-line"></span>
+        <span class="text-sm font-semibold uppercase tracking-wider text-accent">Client Stories</span>
+        <span class="gold-line"></span>
+      </div>
+      <h2 class="mb-6 font-serif text-3xl font-bold text-primary md:text-4xl">What Our Clients Say</h2>
+
+      <div class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 shadow-elegant">
+        <span class="flex gap-0.5">
+          {Array.from({ length: 5 }).map(() => (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-accent" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          ))}
+        </span>
+        <span class="text-sm font-semibold text-primary">{TOTAL_REVIEW_COUNT} Five-Star Reviews</span>
+        <span class="text-sm text-muted-foreground">on Google</span>
+      </div>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {featured.map((review) => (
+        <TestimonialCard quote={review.quote} author={review.author} location="Tri-Cities, TN" />
+      ))}
+    </div>
+
+    <details id="tw-more-reviews" class="group mt-10">
+      <summary class="mx-auto flex w-fit cursor-pointer select-none items-center gap-2 rounded-md border border-border bg-card px-4 py-2 text-sm font-medium text-primary transition hover:bg-secondary">
+        <span class="group-open:hidden">Show More Reviews</span>
+        <span class="hidden group-open:inline">Show Fewer Reviews</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-open:rotate-180" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="mt-8 grid gap-8 md:grid-cols-3">
+        {additional.map((review) => (
+          <TestimonialCard quote={review.quote} author={review.author} location="Tri-Cities, TN" />
+        ))}
+      </div>
+    </details>
+
+    <p class="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-foreground">{TESTIMONIAL_DISCLAIMER}</p>
+  </div>
+</section>
+
+<style>
+  html[data-tenant="talley-wealth"] #tw-more-reviews > summary {
+    list-style: none;
+  }
+  html[data-tenant="talley-wealth"] #tw-more-reviews > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

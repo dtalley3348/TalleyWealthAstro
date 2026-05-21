@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.talley-wealth.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  heroTransparent?: boolean;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[] | null;
+}
+
+const { title, description, heroTransparent = false, ogImage, ogType, jsonLd } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} heroTransparent={heroTransparent} ogImage={ogImage} ogType={ogType} jsonLd={jsonLd ?? undefined}>
+  <Header slot="header" transparentOverHero={heroTransparent} />
+  <slot />
+  <Footer slot="footer" />
+</BaseLayout>

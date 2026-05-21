@@ -1,0 +1,174 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro';
+import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsProof.astro';
+import { buildFAQPageSchema } from '../../../data/talley-wealth/seo/schema';
+
+const callDetails = [
+  {
+    eyebrow: 'Length',
+    label: 'About 15 minutes',
+    description: 'Enough time to understand what prompted you to reach out and whether a deeper conversation makes sense.',
+  },
+  {
+    eyebrow: 'Format',
+    label: 'Phone call',
+    description: 'A simple phone conversation with David. No video setup, no presentation, no paperwork.',
+  },
+  {
+    eyebrow: 'What to bring',
+    label: 'The question on your mind',
+    description: 'You do not need statements, tax returns, or spreadsheets. If something feels unresolved, that is enough.',
+  },
+  {
+    eyebrow: "What you'll leave with",
+    label: 'A clearer next step',
+    description: "If we can help, we'll explain what that could look like. If not, we'll say so directly.",
+  },
+];
+
+const goodFit = [
+  'Something meaningful is coming into focus: retirement, business profits, inherited money, tax complexity, or a decision that touches more than one part of your life.',
+  'You have accounts, taxes, investments, or old plans that no one is looking at together.',
+  'You suspect something is being missed, but you are not sure where.',
+  'You are busy, tired of guessing, and ready for someone capable to help you get oriented.',
+  'You may not know the exact question yet, but you know this probably needs more than a quick one-off answer.',
+];
+
+const faqs = [
+  { q: 'Is there any cost for the Explore Call?', a: "None. It's a short conversation to see if we should keep talking." },
+  { q: 'Will I be pressured to move forward?', a: "No. The call is meant to help both of us understand whether there is a fit. If it makes sense to continue, we'll explain the next step. If it does not, we'll say that directly." },
+  { q: "What if I'm not ready to make any decisions?", a: "That's the norm, not the exception. Most people who schedule an Explore Call are still figuring out what they need. That's what the call is for." },
+  { q: 'Can I schedule even if I am not sure what I need?', a: 'Yes. That is often the best reason to schedule. You do not need to diagnose the problem before we talk.' },
+  { q: 'What should I prepare?', a: "Nothing. No documents, no numbers, no spreadsheets. Come ready to talk about what's on your mind. I'll guide the rest." },
+  { q: 'Do you have minimums?', a: 'No minimum to start. Keystone is a flat-fee planning engagement open to anyone it fits. If ongoing advisory makes sense later, we will explain that structure clearly before you decide.' },
+];
+
+const relatedLinks = [
+  {
+    title: 'Who this tends to fit',
+    body: 'See the common situations where the planning process is usually most useful.',
+    href: '/who-we-help',
+  },
+  {
+    title: 'What to expect',
+    body: 'Walk through the Explore Call, strategy session, Keystone, and what happens after.',
+    href: '/how-we-work/what-to-expect',
+  },
+  {
+    title: 'Pricing',
+    body: 'Review the flat-fee Keystone tiers before you schedule.',
+    href: '/pricing',
+  },
+];
+---
+
+<TalleyPage
+  title="Schedule an Explore Call | Talley Wealth"
+  description="Schedule a 15-minute Explore Call with David Talley to see whether Keystone is the right fit. No prep needed, no pressure to move forward afterward."
+  jsonLd={buildFAQPageSchema(faqs)}
+>
+  <section class="bg-muted/35">
+    <div class="section-container py-20 text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Schedule an Explore Call</p>
+      <h1 class="mx-auto mt-5 max-w-5xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
+        Start with the question that made you look for help.
+      </h1>
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        Bring the question, concern, or loose end that made you look for help. In 15 minutes, we will talk through what is going on, answer what we can, and decide whether Talley Wealth is the right next step.
+      </p>
+      <p class="mx-auto mt-4 max-w-2xl font-bold text-primary">No documents. No prep. No pressure to move forward.</p>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <CalendlyEmbed source="get-started" title="Schedule a 15-minute Explore Call" description="Pick a time for a short phone call with David. Bring whatever is on your mind." />
+          <div class="mt-4 text-center">
+            <a href="/explore-call-read" class="inline-flex items-center gap-2 text-sm text-muted-foreground transition hover:text-accent">
+              Read a short note before we talk
+            </a>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div>
+            <h2 class="mb-6 font-serif text-3xl font-bold text-primary">What to expect on the call.</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+              {callDetails.map((item) => (
+                <article class="rounded-lg border border-border/40 bg-background p-5 shadow-elegant">
+                  <p class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-accent">{item.eyebrow}</p>
+                  <h3 class="font-serif text-lg font-bold text-primary">{item.label}</h3>
+                  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div class="rounded-lg bg-primary p-7 text-primary-foreground shadow-elegant-lg">
+            <h3 class="font-serif text-xl font-bold">This call is probably useful if...</h3>
+            <ul class="mt-5 space-y-3">
+              {goodFit.map((item) => (
+                <li class="flex gap-3 text-sm leading-relaxed">
+                  <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+                  <span class="text-primary-foreground/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="rounded-lg border border-border/40 bg-background p-6 shadow-elegant">
+            <h3 class="font-serif text-xl font-bold text-primary">Prefer to call instead?</h3>
+            <p class="mt-2 text-sm text-muted-foreground">That is completely fine. If scheduling online feels like one more thing to manage, call us directly and we will help you find a time.</p>
+            <a href="tel:+14236170160" class="mt-4 inline-flex font-bold text-accent">(423) 617-0160</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <GoogleReviewsProof
+    compact
+    title="Before you schedule, here is what people tend to notice."
+    description="The reviews are not a guarantee of anyone's future experience. They are useful because they show the kinds of things clients publicly say mattered to them: clarity, preparation, responsiveness, and having planning, tax, and investment questions looked at together."
+  />
+
+  <section class="bg-card py-20">
+    <div class="section-container">
+      <div class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Still orienting?</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">A few useful pages before you schedule.</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-3">
+        {relatedLinks.map((item) => (
+          <a href={item.href} class="group rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">{item.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+            <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="mb-10 text-center font-serif text-3xl font-bold text-primary md:text-4xl">Common Questions</h2>
+        <div class="tw-faq-list" data-reveal>
+          {faqs.map((faq) => (
+            <details class="tw-faq-item">
+              <summary>
+                <span>{faq.q}</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <div class="tw-faq-answer"><p>{faq.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</TalleyPage>

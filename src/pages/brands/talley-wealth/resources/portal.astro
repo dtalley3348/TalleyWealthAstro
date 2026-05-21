@@ -1,0 +1,69 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+const portalLinks = [
+  {
+    title: 'View Your Investment Accounts',
+    description: 'Check holdings, performance, statements, and account activity.',
+    href: 'https://www.cirstatements.com/',
+  },
+  {
+    title: 'View Your Financial Plan',
+    description: 'See planning projections, goals, and progress in RightCapital.',
+    href: 'https://app.rightcapital.com/account/login?cobrand=muiAE0Ch5vXVEpHktkE0tg&type=client',
+  },
+  {
+    title: 'Secure File Sharing',
+    description: 'Upload and receive documents through the secure file portal.',
+    href: 'https://app.botdoc.io/card/davidtalley',
+  },
+];
+---
+
+<TalleyPage title="Client Portal | Talley Wealth" description="Client access information for Talley Wealth.">
+  <section class="bg-muted/35">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.8fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Client hub</p>
+        <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Your Accounts & Resources</h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+          Everything clients need in one place: account access, planning software, file sharing, and a direct line to the Talley Wealth team.
+        </p>
+      </div>
+      <div class="grid gap-5">
+        {portalLinks.map((portal) => (
+          <a href={portal.href} target="_blank" rel="noopener noreferrer" class="group rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <div class="flex items-start justify-between gap-6">
+              <div>
+                <h2 class="font-serif text-2xl font-bold text-primary">{portal.title}</h2>
+                <p class="mt-2 leading-relaxed text-muted-foreground">{portal.description}</p>
+              </div>
+              <span class="mt-1 text-accent transition group-hover:translate-x-1" aria-hidden="true">-&gt;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="bg-background">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.8fr_1fr]">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Have a question?</h2>
+        <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
+          Reach out to Stephenee if you need help finding a document, accessing a portal, or getting a question to the right person.
+        </p>
+      </div>
+      <div class="rounded-lg border border-border bg-card p-7 shadow-elegant">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <a href="mailto:stephenee@talleywealth.com" class="rounded-md border border-border p-4 font-bold text-primary transition hover:border-accent">stephenee@talleywealth.com</a>
+          <a href="tel:+14236170160" class="rounded-md border border-border p-4 font-bold text-primary transition hover:border-accent">(423) 617-0160</a>
+        </div>
+        <div class="mt-6 rounded-md bg-muted/60 p-5">
+          <p class="text-sm leading-relaxed text-muted-foreground">
+            Each account link opens a secure third-party portal. Talley Wealth does not store your login credentials on this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</TalleyPage>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  primaryText?: string;
+  primaryHref?: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+  variant?: 'default' | 'dark';
+}
+
+const {
+  title = 'Ready to See Where You Stand?',
+  description = "Schedule a 15-minute Explore Call. No preparation needed, just an honest conversation about what's on your mind.",
+  primaryText = 'Schedule Your Explore Call',
+  primaryHref = '/get-started',
+  secondaryText = 'Client Hub',
+  secondaryHref = '/resources/portal',
+  variant = 'default',
+} = Astro.props;
+
+const isDark = variant === 'dark';
+---
+
+<section class={isDark ? 'bg-primary' : 'bg-card'}>
+  <div class="section-container py-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class:list={['mb-6 font-serif text-3xl font-bold md:text-4xl', isDark ? 'text-primary-foreground' : 'text-primary']}>
+        {title}
+      </h2>
+      <p class:list={['mb-10 text-lg leading-relaxed', isDark ? 'text-white/70' : 'text-muted-foreground']}>
+        {description}
+      </p>
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href={primaryHref}
+          class="inline-flex min-w-[200px] items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-elegant transition hover:brightness-95"
+        >
+          {primaryText}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        {isDark ? (
+          <a
+            href={secondaryHref}
+            class="inline-flex min-w-[200px] items-center justify-center gap-2 rounded-md border border-white/30 bg-transparent px-6 py-3 text-sm font-medium text-primary-foreground transition hover:bg-white/10"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            {secondaryText}
+          </a>
+        ) : (
+          <a
+            href={secondaryHref}
+            class="inline-flex min-w-[200px] items-center justify-center gap-2 rounded-md border border-border bg-secondary px-6 py-3 text-sm font-medium text-primary transition hover:bg-secondary/70"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            {secondaryText}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

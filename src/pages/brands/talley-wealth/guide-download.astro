@@ -1,0 +1,38 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+---
+
+<TalleyPage title="Your Guide Is Ready | Talley Wealth" description="Download your Talley Wealth retirement planning guide.">
+  <section class="bg-muted/35">
+    <div class="section-container grid min-h-[620px] items-center gap-12 py-20 lg:grid-cols-[0.85fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Guide download</p>
+        <h1 class="mt-5 max-w-2xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Your guide is ready.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Download <em>Are You Actually On Track?</em>, a plain-English framework for understanding what your retirement number really means.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/brands/talley-wealth/guides/are-you-on-track.pdf" class="rounded-md bg-accent px-5 py-3 font-bold text-accent-foreground">Download the PDF</a>
+          <a href="/calculators" class="rounded-md border border-border bg-background px-5 py-3 font-bold text-primary">Run the calculator</a>
+        </div>
+      </div>
+      <div class="rounded-lg border border-border bg-card p-6 shadow-elegant md:p-8">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Suggested order</p>
+        <div class="mt-6 divide-y divide-border">
+          <div class="py-4">
+            <p class="font-serif text-2xl font-bold text-primary">1. Read the guide</p>
+            <p class="mt-2 text-muted-foreground">Get the framework before trying to solve the whole problem with one number.</p>
+          </div>
+          <div class="py-4">
+            <p class="font-serif text-2xl font-bold text-primary">2. Run the calculator</p>
+            <p class="mt-2 text-muted-foreground">Use your numbers to see the rough gap, surplus, or pressure points.</p>
+          </div>
+          <div class="py-4">
+            <p class="font-serif text-2xl font-bold text-primary">3. Talk through the tradeoffs</p>
+            <p class="mt-2 text-muted-foreground">If the questions get more specific, an Explore Call is the next step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</TalleyPage>

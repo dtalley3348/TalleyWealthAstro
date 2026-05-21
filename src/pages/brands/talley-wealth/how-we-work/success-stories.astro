@@ -1,0 +1,174 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+const caseStudies = [
+  {
+    number: 1,
+    title: 'Fast-Growing Business Owner',
+    age: '~40',
+    image: '/brands/talley-wealth/david-whiteboard-strategy.jpg',
+    opener: "Marcus came in with a profitable business and almost no personal wealth outside of it. The question wasn't whether the business was working. It was how to translate the business working into a life that didn't depend entirely on the business continuing to work.",
+    challenges: [
+      'Business was profitable, but nearly all personal wealth was tied up in it, with no diversification.',
+      'No clear framework for deciding how much to reinvest versus pull out for personal financial goals.',
+      'Tax planning was reactive, handled at year-end instead of built into business decisions.',
+    ],
+    actions: [
+      ['Connected business and personal finances', 'Built a single plan that linked business cash flow decisions to personal wealth-building milestones.'],
+      ['Created a reinvestment framework', 'Set clear thresholds for when to reinvest in the business and when to diversify into personal accounts.'],
+      ['Proactive tax strategy', 'Shifted the work from year-end tax scrambles to quarterly planning aligned with retirement contributions and distribution timing.'],
+    ],
+    closer: "By the end of the engagement, decisions about reinvestment, retirement savings, and tax timing were coordinated rather than reactive. That's the kind of decision Keystone is built for.",
+  },
+  {
+    number: 2,
+    title: 'Business Owner Selling Practice and Approaching Retirement',
+    age: '~60',
+    image: '/brands/talley-wealth/david-conversation.jpg',
+    opener: "Linda had a buyer for her practice and a closing date six months out. What she didn't have was a coordinated read on what the sale would do to her tax bill, her retirement income plan, or her estate documents.",
+    challenges: [
+      'Faced a significant tax bill on the sale. Asset versus stock sale structure had not been evaluated.',
+      'No plan for converting a lump sum into reliable retirement income across a 30-year horizon.',
+      'Estate documents had not been updated to reflect the post-sale financial picture.',
+    ],
+    actions: [
+      ['Pre-sale tax structuring', 'Evaluated asset versus stock sale tradeoffs and timed the closing around tax impact.'],
+      ['Retirement income architecture', 'Designed a withdrawal sequence across taxable, tax-deferred, and Roth accounts.'],
+      ['Estate plan coordination', 'Worked with her attorney to update beneficiary designations and trust structures.'],
+    ],
+    closer: 'The sale stopped being a single transaction and became a coordinated transition. Tax, income, and estate decisions were aligned before the closing rather than scrambled together afterward.',
+  },
+  {
+    number: 3,
+    title: 'Executive Navigating Equity Compensation',
+    age: '~45',
+    image: '/brands/talley-wealth/david-stephenee-office.jpg',
+    opener: "James had over 60% of his net worth in one company's stock through a mix of RSUs and options. Nobody owned the whole picture.",
+    challenges: [
+      'Held a concentrated position in employer stock through RSUs and options.',
+      'No clear plan for when to exercise options or sell vested shares without triggering unnecessary taxes.',
+      'Investment accounts, equity compensation, and retirement planning were managed separately.',
+    ],
+    actions: [
+      ['Diversification roadmap', 'Built a multi-year plan to reduce concentration risk through timed exercises and sales.'],
+      ['Tax-aware execution', 'Coordinated option exercises with estimated payments, charitable giving, and retirement contributions.'],
+      ['Unified strategy', 'Replaced three separate advice tracks with one coordinated plan.'],
+    ],
+    closer: 'Diversification happened on a schedule rather than in reaction to the next vesting event. Tax consequences were anticipated rather than discovered in April.',
+  },
+  {
+    number: 4,
+    title: 'Pre-Retiree Couple Preparing for Retirement',
+    age: '~58',
+    image: '/brands/talley-wealth/stephenee-client-couch.jpg',
+    opener: 'Tom and Ellen came in with retirement accounts at four different firms and a clear sense of anxiety about whether the math actually worked.',
+    challenges: [
+      'Had retirement accounts at four different firms with no unified withdrawal strategy.',
+      'Had not evaluated Roth conversion opportunities before Social Security and Medicare began.',
+      'Worried about outliving savings but could not get a clear answer on whether their income plan was sustainable.',
+    ],
+    actions: [
+      ['Account consolidation and clarity', 'Brought scattered accounts into a single view and designed a withdrawal sequence.'],
+      ['Pre-retirement Roth strategy', 'Identified a window for partial Roth conversions before Social Security income began.'],
+      ['Sustainable income modeling', 'Built a retirement income plan stress-tested against market downturns, inflation, and long-term care scenarios.'],
+    ],
+    closer: 'They went from scattered accounts and vague anxiety to a single coordinated plan with clear answers. More than the numbers, they got confidence that their decisions were working together.',
+  },
+];
+---
+
+<TalleyPage title="Planning Examples | Talley Wealth" description="Hypothetical composite examples drawn from the kinds of coordinated planning decisions Talley Wealth helps people work through." heroTransparent>
+  <section class="relative overflow-hidden bg-primary py-16 pt-28 text-primary-foreground sm:py-24 sm:pt-36">
+    <div class="section-container">
+      <div class="max-w-3xl">
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning Examples</p>
+        <h1 class="font-serif text-4xl font-bold text-white md:text-5xl">The kinds of decisions Keystone is built for.</h1>
+        <p class="mt-6 text-lg leading-relaxed text-white/86">Four hypothetical composites drawn from common planning situations. They show what coordinated planning can look like when tax, income, and investment decisions stop being handled by different people.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background pt-10">
+    <div class="section-container">
+      <p class="mx-auto max-w-3xl border-l-2 border-accent pl-4 text-sm italic text-muted-foreground">
+        The stories on this page are hypothetical composites drawn from common planning situations. They are not specific clients, are not based on any one client experience, and should not be understood as referencing a real person. Names and financial details are representative only.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="mx-auto max-w-4xl space-y-16">
+        {caseStudies.map((study) => (
+          <article class="overflow-hidden rounded-lg border border-border/40 bg-card shadow-elegant">
+            <div class="flex flex-col sm:flex-row">
+              <div class="sm:w-64 sm:shrink-0">
+                <img decoding="async" src={study.image} alt={study.title} class="h-56 w-full object-cover sm:h-full"  loading="lazy" />
+              </div>
+              <div class="p-8">
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Composite #{study.number}</p>
+                <h2 class="mt-3 font-serif text-3xl font-bold text-primary">{study.title}</h2>
+                <p class="mt-1 text-muted-foreground">Age {study.age}</p>
+              </div>
+            </div>
+            <div class="p-8 pt-4">
+              <p class="mb-8 leading-relaxed text-foreground">{study.opener}</p>
+              <div class="mb-8 grid gap-8 md:grid-cols-2">
+                <div>
+                  <h3 class="mb-4 font-bold text-primary">What was on the table:</h3>
+                  <ul class="space-y-3">
+                    {study.challenges.map((challenge) => <li class="text-muted-foreground">{challenge}</li>)}
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="mb-4 font-bold text-primary">What we did:</h3>
+                  <ul class="space-y-3">
+                    {study.actions.map(([title, body]) => (
+                      <li><strong class="text-foreground">{title}:</strong><span class="text-muted-foreground"> {body}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div class="rounded-lg border border-accent/20 bg-accent/10 p-6">
+                <p class="leading-relaxed text-foreground">{study.closer}</p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Continue exploring</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">If one example feels familiar, go deeper there.</h2>
+      </div>
+      <div class="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
+        <a href="/financial-advisor-for-business-owners" class="group rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">Business owners</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">For owners whose tax, cash flow, retirement, and business decisions are starting to overlap.</p>
+          <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+        <a href="/financial-advisor-for-pre-retirees" class="group rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">Pre-retirees</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">For people close enough to retirement that timing, taxes, income, and risk need to be modeled together.</p>
+          <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+        <a href="/financial-advisor-for-executives-equity-comp" class="group rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">Equity comp</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">For executives and professionals making tax-aware decisions around RSUs, options, and concentration.</p>
+          <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container text-center">
+      <p class="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">If any of these stories sound like the kind of decision you're working through, the next step is a 15-minute Explore Call.</p>
+      <a href="/get-started" class="mt-8 inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground">Schedule an Explore Call</a>
+    </div>
+  </section>
+</TalleyPage>

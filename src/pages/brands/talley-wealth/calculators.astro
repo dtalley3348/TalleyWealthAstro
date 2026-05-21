@@ -1,0 +1,432 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro';
+---
+
+<TalleyPage title="Retirement Calculators | Talley Wealth" description="Retirement planning calculators and decision tools from Talley Wealth.">
+  <section class="bg-muted/35">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Calculators</p>
+      <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Start with the math. Then look at what the math leaves out.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        These tools are intentionally educational. They are built to surface better questions about retirement income, taxes, timing, inflation, and risk, not to replace a coordinated plan.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.72fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Retirement number</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Will your current path support the income you want in retirement?</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          Start with the core retirement math: assets, savings, time, expected return, income needs, outside income, and withdrawal rate. Then use the result as a planning prompt.
+        </p>
+        <div class="mt-8 rounded-lg border border-border bg-muted/35 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">What it does not solve</p>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+            This does not model tax brackets, Roth conversion windows, IRMAA, survivor benefits, long-term care, estate goals, or sequence risk. Those are exactly why the calculator is a starting point instead of a plan.
+          </p>
+        </div>
+      </div>
+      <div class="rounded-lg border border-border bg-card p-6 shadow-elegant md:p-8">
+        <form id="tw-retirement-calc" class="grid gap-5">
+          <div class="grid gap-4 md:grid-cols-2">
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Current investable assets
+              <input name="assets" type="number" min="0" step="1000" value="1000000" class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Years until retirement
+              <input name="years" type="number" min="0" max="50" value="7" class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Monthly savings until retirement
+              <input name="savings" type="number" min="0" step="100" value="2500" class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Expected annual return before retirement
+              <div class="grid grid-cols-[1fr_76px] gap-3">
+                <input name="return" type="range" min="0" max="10" step="0.25" value="5.5" class="w-full accent-[var(--color-accent)]" />
+                <output data-output="return" class="rounded-md border border-border bg-background px-3 py-2 text-center font-normal">5.5%</output>
+              </div>
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Monthly retirement spending goal
+              <input name="monthly" type="number" min="0" step="100" value="9000" class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Monthly Social Security / pension income
+              <input name="outsideIncome" type="number" min="0" step="100" value="4500" class="rounded-md border border-border px-3 py-2 font-normal" />
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground md:col-span-2">
+              Starting withdrawal rate
+              <div class="grid grid-cols-[1fr_76px] gap-3">
+                <input name="withdrawal" type="range" min="2.5" max="6" step="0.25" value="4" class="w-full accent-[var(--color-accent)]" />
+                <output data-output="withdrawal" class="rounded-md border border-border bg-background px-3 py-2 text-center font-normal">4.0%</output>
+              </div>
+            </label>
+          </div>
+        </form>
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="rounded-lg bg-primary p-5 text-primary-foreground">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Projected portfolio</p>
+            <p id="tw-projected" class="mt-3 font-serif text-3xl font-bold">$0</p>
+          </div>
+          <div class="rounded-lg border border-border bg-background p-5">
+            <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Portfolio need</p>
+            <p id="tw-need" class="mt-3 font-serif text-3xl font-bold text-primary">$0</p>
+          </div>
+          <div class="rounded-lg border border-border bg-background p-5">
+            <p id="tw-gap-label" class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Surplus / gap</p>
+            <p id="tw-gap" class="mt-3 font-serif text-3xl font-bold text-primary">$0</p>
+          </div>
+        </div>
+        <div class="mt-5 rounded-lg bg-muted/50 p-5">
+          <p id="tw-calc-result" class="font-serif text-2xl font-bold text-primary"></p>
+          <p id="tw-calc-note" class="mt-3 text-sm leading-relaxed text-muted-foreground"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <div class="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Sequence risk</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Same average return. Very different outcome.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+            Each scenario below averages 8% per year over 30 years. The only thing changing is the order of returns. Once withdrawals begin, that order can change the retirement experience dramatically.
+          </p>
+          <div class="mt-8 rounded-lg border border-border bg-muted/35 p-5">
+            <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">The point</p>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Average return is not the whole story. Timing, withdrawal flexibility, cash reserves, taxes, and portfolio design all matter once a paycheck turns into portfolio income.
+            </p>
+          </div>
+        </div>
+
+        <div id="tw-sequence-sim" class="rounded-lg border border-border bg-card p-5 shadow-elegant md:p-6">
+          <div class="rounded-lg bg-muted/40 p-4 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">Fixed assumption</p>
+            <p class="mt-2 font-serif text-2xl font-bold text-primary">Every scenario averages 5% per year after inflation over 30 years.</p>
+            <p class="mt-2 text-sm text-muted-foreground">The order of returns is the only market assumption that changes.</p>
+          </div>
+
+          <div class="mt-5 grid gap-4 md:grid-cols-3">
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Starting portfolio
+              <span class="text-xs font-normal text-muted-foreground">Portfolio value at retirement</span>
+              <span class="grid grid-cols-[auto_1fr] items-center rounded-md border border-border bg-card shadow-sm focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20">
+                <span class="border-r border-border px-3 text-muted-foreground">$</span>
+                <input name="seqPortfolio" type="number" min="100000" step="25000" value="1000000" class="w-full border-0 bg-transparent px-3 py-2 font-normal outline-none" />
+              </span>
+            </label>
+            <label class="grid gap-2 text-sm font-bold text-foreground">
+              Annual withdrawal
+              <span class="text-xs font-normal text-muted-foreground">Amount withdrawn in year one</span>
+              <span class="grid grid-cols-[auto_1fr] items-center rounded-md border border-border bg-card shadow-sm focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20">
+                <span class="border-r border-border px-3 text-muted-foreground">$</span>
+                <input name="seqWithdrawal" type="number" min="0" step="5000" value="50000" class="w-full border-0 bg-transparent px-3 py-2 font-normal outline-none" />
+              </span>
+            </label>
+            <div class="grid gap-2 text-sm font-bold text-foreground">
+              Years shown
+              <span class="text-xs font-normal text-muted-foreground">Fixed for this illustration</span>
+              <div class="rounded-md border border-border bg-muted/40 px-3 py-2 font-normal text-primary">30 years</div>
+            </div>
+          </div>
+
+          <div class="mt-5 flex flex-wrap gap-3">
+            <button type="button" data-sequence-mode="steady" class="rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition hover:brightness-95">
+              Steady 5% after inflation
+            </button>
+            <button type="button" data-sequence-mode="bear" class="rounded-md border border-border bg-background px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">
+              Retire into a bear market
+            </button>
+            <button type="button" data-sequence-mode="bull" class="rounded-md border border-border bg-background px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">
+              Retire into a bull market
+            </button>
+          </div>
+
+          <div class="mt-6 rounded-lg border border-border bg-background p-4">
+            <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p id="tw-seq-title" class="font-serif text-xl font-bold text-primary">Steady 5% after inflation</p>
+                <p id="tw-seq-average" class="mt-1 text-sm text-muted-foreground">Average annual return: 5.0% after inflation over 30 years.</p>
+              </div>
+              <div class="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.12em]">
+                <span id="tw-seq-legend" class="inline-flex items-center gap-2 text-primary"><span class="h-2 w-5 rounded-full bg-primary"></span> Selected path</span>
+              </div>
+            </div>
+            <svg id="tw-seq-chart" viewBox="0 0 720 340" role="img" aria-labelledby="tw-seq-title" class="h-auto w-full overflow-visible">
+              <g data-grid></g>
+              <polyline data-line="scenario" fill="none" stroke="#243445" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polyline>
+              <g data-dots></g>
+            </svg>
+          </div>
+
+          <div class="mt-5 grid gap-4 md:grid-cols-3">
+            <div class="rounded-lg bg-primary p-5 text-primary-foreground">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Ending portfolio</p>
+              <p id="tw-seq-ending" class="mt-3 font-serif text-3xl font-bold">$0</p>
+            </div>
+            <div class="rounded-lg border border-border bg-background p-5">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Lowest balance</p>
+              <p id="tw-seq-lowest" class="mt-3 font-serif text-3xl font-bold text-primary">$0</p>
+            </div>
+            <div class="rounded-lg border border-border bg-background p-5">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Money lasts</p>
+              <p id="tw-seq-lasts" class="mt-3 font-serif text-3xl font-bold text-primary">30 years</p>
+            </div>
+          </div>
+
+          <p id="tw-seq-result" class="mt-5 rounded-lg bg-muted/50 p-5 font-serif text-xl font-bold leading-snug text-primary"></p>
+          <div class="mt-5 rounded-lg border border-border bg-background p-5">
+            <p class="font-serif text-2xl font-bold text-primary">Want the full retirement readiness framework?</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">
+              The guide expands this idea into retirement timing, income, taxes, market risk, healthcare, and the decisions that need to work together.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="/guide" class="rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition hover:brightness-95">Get the retirement guide</a>
+              <a href="/resources/blog/retirement-risk-nobody-talks-about" class="rounded-md border border-border px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Read: The retirement risk nobody talks about</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary text-primary-foreground">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.8fr_1fr] lg:items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Next step</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold md:text-4xl">Want help making sense of the result?</h2>
+        <p class="mt-4 text-lg leading-relaxed text-white/78">A calculator can show a number. A conversation can help you understand what to do with it.</p>
+        <a href="/guide" class="mt-7 inline-flex rounded-md border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-accent hover:text-accent">Read the retirement guide</a>
+      </div>
+      <CalendlyEmbed title="Schedule an Explore Call" description="Talk through what the calculator surfaced and whether the planning process is a fit." source="calculators" />
+    </div>
+  </section>
+</TalleyPage>
+
+<script>
+  (() => {
+    const form = document.querySelector<HTMLFormElement>('#tw-retirement-calc');
+    const result = document.querySelector<HTMLElement>('#tw-calc-result');
+    const note = document.querySelector<HTMLElement>('#tw-calc-note');
+    const projectedEl = document.querySelector<HTMLElement>('#tw-projected');
+    const needEl = document.querySelector<HTMLElement>('#tw-need');
+    const gapEl = document.querySelector<HTMLElement>('#tw-gap');
+    const returnOut = document.querySelector<HTMLOutputElement>('[data-output="return"]');
+    const withdrawalOut = document.querySelector<HTMLOutputElement>('[data-output="withdrawal"]');
+    if (!form || !result || !note || !projectedEl || !needEl || !gapEl || !returnOut || !withdrawalOut) return;
+
+    const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+    function update() {
+      const data = new FormData(form);
+      const assets = Number(data.get('assets') || 0);
+      const years = Number(data.get('years') || 0);
+      const savings = Number(data.get('savings') || 0);
+      const monthly = Number(data.get('monthly') || 0);
+      const outsideIncome = Number(data.get('outsideIncome') || 0);
+      const annualReturn = Number(data.get('return') || 0) / 100;
+      const withdrawalRate = Number(data.get('withdrawal') || 4) / 100;
+      const months = Math.max(0, years * 12);
+      const monthlyReturn = Math.pow(1 + annualReturn, 1 / 12) - 1;
+      const futureContributions = monthlyReturn > 0
+        ? savings * ((Math.pow(1 + monthlyReturn, months) - 1) / monthlyReturn)
+        : savings * months;
+      const projected = assets * Math.pow(1 + annualReturn, years) + futureContributions;
+      const annualSpending = monthly * 12;
+      const annualOutside = outsideIncome * 12;
+      const portfolioNeed = Math.max(0, annualSpending - annualOutside);
+      const requiredPortfolio = withdrawalRate > 0 ? portfolioNeed / withdrawalRate : 0;
+      const gap = projected - requiredPortfolio;
+      const supportedIncome = projected * withdrawalRate;
+
+      returnOut.textContent = `${(annualReturn * 100).toFixed(2).replace(/\\.00$/, '')}%`;
+      withdrawalOut.textContent = `${(withdrawalRate * 100).toFixed(2).replace(/\\.00$/, '')}%`;
+      projectedEl.textContent = fmt.format(projected);
+      needEl.textContent = fmt.format(requiredPortfolio);
+      gapEl.textContent = gap >= 0 ? fmt.format(gap) : `-${fmt.format(Math.abs(gap))}`;
+      result.textContent = gap >= 0
+        ? `This path could support about ${fmt.format(supportedIncome)} from the portfolio in year one.`
+        : `This path shows an estimated ${fmt.format(Math.abs(gap))} portfolio shortfall.`;
+      note.textContent = gap >= 0
+        ? 'That does not mean the plan is finished. It means the next questions are taxes, account types, withdrawal order, Social Security timing, healthcare, and how the portfolio handles a bad early market.'
+        : 'A shortfall does not automatically mean you cannot retire. It means the levers matter: timing, spending, savings, outside income, tax strategy, and portfolio design.';
+    }
+    form.addEventListener('input', update);
+    update();
+  })();
+
+  (() => {
+    const sim = document.querySelector<HTMLElement>('#tw-sequence-sim');
+    if (!sim) return;
+
+    const portfolioInput = sim.querySelector<HTMLInputElement>('input[name="seqPortfolio"]');
+    const withdrawalInput = sim.querySelector<HTMLInputElement>('input[name="seqWithdrawal"]');
+    const title = sim.querySelector<HTMLElement>('#tw-seq-title');
+    const average = sim.querySelector<HTMLElement>('#tw-seq-average');
+    const endingEl = sim.querySelector<HTMLElement>('#tw-seq-ending');
+    const lowestEl = sim.querySelector<HTMLElement>('#tw-seq-lowest');
+    const lastsEl = sim.querySelector<HTMLElement>('#tw-seq-lasts');
+    const legendEl = sim.querySelector<HTMLElement>('#tw-seq-legend');
+    const resultEl = sim.querySelector<HTMLElement>('#tw-seq-result');
+    const chart = sim.querySelector<SVGSVGElement>('#tw-seq-chart');
+    const grid = chart?.querySelector<SVGGElement>('[data-grid]');
+    const dots = chart?.querySelector<SVGGElement>('[data-dots]');
+    const scenarioLine = chart?.querySelector<SVGPolylineElement>('[data-line="scenario"]');
+    if (!portfolioInput || !withdrawalInput || !title || !average || !endingEl || !lowestEl || !lastsEl || !legendEl || !resultEl || !grid || !dots || !scenarioLine) return;
+
+    const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+    const scenarioReturnMap = {
+      steady: Array(30).fill(5),
+      bear: [-20, -12, 8, -9, 10, -6, 9, -4, 7, 6, 5, 8, -5, 10, 7, 6, 9, 5, 8, 9, 11, 10, 10, 9, 11, 11, 10, 10, 9, 8],
+      bull: [14, 12, 10, 9, 8, 7, 6, -5, 10, 7, 9, 6, 8, 5, 7, -7, 10, 6, 5, 8, 3, 9, 5, 6, 3, 6, 4, -8, -7, -6],
+    };
+    const scenarioContent = {
+      steady: {
+        title: 'Steady 5% after inflation',
+        color: '#243445',
+        legend: 'Steady 5%',
+        result: 'This is the clean spreadsheet version of retirement. It is useful as a baseline, but real markets rarely arrive this neatly.',
+      },
+      bear: {
+        title: 'Retire into a bear market',
+        color: '#bf8c4d',
+        legend: 'Bear market first',
+        result: 'This is the sequence risk problem. The average return is still 5% after inflation, but early withdrawals during down years can do damage that later good returns may not repair.',
+      },
+      bull: {
+        title: 'Retire into a bull market',
+        color: '#243445',
+        legend: 'Bull market first',
+        result: 'This path gets help early. The same 5% after-inflation average return feels very different when strong years show up before the portfolio is under stress.',
+      },
+    };
+    const chartBox = { width: 720, height: 340, left: 42, right: 18, top: 22, bottom: 38 };
+    let currentMode: 'steady' | 'bear' | 'bull' = 'steady';
+
+    function getReturns(years: number) {
+      const baseReturns = scenarioReturnMap[currentMode];
+      const repeated = Array.from({ length: Math.ceil(years / baseReturns.length) }, () => baseReturns).flat();
+      return repeated.slice(0, years);
+    }
+
+    function project(start: number, withdrawal: number, returns: number[]) {
+      const balances = [start];
+      let balance = start;
+      let ranOutYear = 0;
+      let lowestBalance = start;
+      returns.forEach((returnPct, index) => {
+        if (balance <= 0) {
+          balances.push(0);
+          return;
+        }
+        balance = Math.max(0, (balance - withdrawal) * (1 + returnPct / 100));
+        lowestBalance = Math.min(lowestBalance, balance);
+        if (balance === 0 && ranOutYear === 0) ranOutYear = index + 1;
+        balances.push(balance);
+      });
+      return { balances, ending: balances[balances.length - 1], ranOutYear, lowestBalance };
+    }
+
+    function pointString(values: number[], maxValue: number) {
+      const plotWidth = chartBox.width - chartBox.left - chartBox.right;
+      const plotHeight = chartBox.height - chartBox.top - chartBox.bottom;
+      const denominator = Math.max(1, values.length - 1);
+      return values.map((value, index) => {
+        const x = chartBox.left + (index / denominator) * plotWidth;
+        const y = chartBox.top + plotHeight - (Math.min(value, maxValue) / maxValue) * plotHeight;
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      }).join(' ');
+    }
+
+    function drawGrid(maxValue: number, years: number) {
+      const plotWidth = chartBox.width - chartBox.left - chartBox.right;
+      const plotHeight = chartBox.height - chartBox.top - chartBox.bottom;
+      grid.innerHTML = '';
+      for (let step = 0; step <= 4; step += 1) {
+        const y = chartBox.top + (step / 4) * plotHeight;
+        const value = maxValue * (1 - step / 4);
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', String(chartBox.left));
+        line.setAttribute('x2', String(chartBox.left + plotWidth));
+        line.setAttribute('y1', String(y));
+        line.setAttribute('y2', String(y));
+        line.setAttribute('stroke', '#d4dce2');
+        line.setAttribute('stroke-width', '1');
+        grid.appendChild(line);
+
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', '0');
+        label.setAttribute('y', String(y + 4));
+        label.setAttribute('fill', '#53616e');
+        label.setAttribute('font-size', '12');
+        label.textContent = value >= 1000000 ? `$${(value / 1000000).toFixed(1)}M` : `$${Math.round(value / 1000)}k`;
+        grid.appendChild(label);
+      }
+
+      [0, Math.round(years / 2), years].forEach((year) => {
+        const x = chartBox.left + (year / Math.max(1, years)) * plotWidth;
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('x', String(x));
+        label.setAttribute('y', String(chartBox.height - 8));
+        label.setAttribute('fill', '#53616e');
+        label.setAttribute('font-size', '12');
+        label.setAttribute('text-anchor', 'middle');
+        label.textContent = `Year ${year}`;
+        grid.appendChild(label);
+      });
+    }
+
+    function update() {
+      const start = Math.max(0, Number(portfolioInput.value || 0));
+      const withdrawal = Math.max(0, Number(withdrawalInput.value || 0));
+      const years = 30;
+
+      const badEarlyReturns = getReturns(years);
+      const scenario = project(start, withdrawal, badEarlyReturns);
+      const maxValue = Math.max(start, ...scenario.balances, 1);
+      const averageReturn = badEarlyReturns.reduce((sum, value) => sum + value, 0) / badEarlyReturns.length;
+      const scenarioCopy = scenarioContent[currentMode];
+
+      drawGrid(maxValue * 1.08, years);
+      scenarioLine.setAttribute('points', pointString(scenario.balances, maxValue * 1.08));
+      scenarioLine.setAttribute('stroke', scenarioCopy.color);
+      dots.innerHTML = '';
+
+      title.textContent = scenarioCopy.title;
+      average.textContent = `Average annual return: ${averageReturn.toFixed(1)}% after inflation over ${years} years. Only the order changes between scenarios.`;
+      legendEl.lastChild!.textContent = ` ${scenarioCopy.legend}`;
+      legendEl.querySelector('span')?.setAttribute('style', `background:${scenarioCopy.color}`);
+      endingEl.textContent = fmt.format(scenario.ending);
+      lowestEl.textContent = fmt.format(scenario.lowestBalance);
+      lastsEl.textContent = scenario.ranOutYear ? `Year ${scenario.ranOutYear}` : `${years} years`;
+
+      const timing = scenario.ranOutYear
+        ? `The portfolio runs out in year ${scenario.ranOutYear}.`
+        : `The portfolio lasts the full ${years} years and ends with ${fmt.format(scenario.ending)}.`;
+      resultEl.textContent = `${scenarioCopy.result} ${timing}`;
+    }
+
+    sim.querySelectorAll<HTMLButtonElement>('[data-sequence-mode]').forEach((button) => {
+      button.addEventListener('click', () => {
+        currentMode = (button.dataset.sequenceMode || 'steady') as 'steady' | 'bear' | 'bull';
+        sim.querySelectorAll<HTMLButtonElement>('[data-sequence-mode]').forEach((item) => {
+          item.classList.toggle('bg-accent', item === button);
+          item.classList.toggle('text-accent-foreground', item === button);
+          item.classList.toggle('bg-background', item !== button);
+          item.classList.toggle('text-primary', item !== button);
+        });
+        update();
+      });
+    });
+
+    [portfolioInput, withdrawalInput].forEach((input) => input.addEventListener('input', update));
+    update();
+  })();
+</script>

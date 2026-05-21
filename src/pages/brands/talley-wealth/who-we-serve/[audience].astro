@@ -1,0 +1,9 @@
+---
+const redirects: Record<string, string> = {
+  retirement: '/financial-advisor-for-pre-retirees',
+  professionals: '/financial-advisor-for-executives-equity-comp',
+  complex: '/financial-advisor-for-inherited-wealth',
+};
+
+return Astro.redirect(redirects[Astro.params.audience ?? ''] ?? '/who-we-help', 301);
+---

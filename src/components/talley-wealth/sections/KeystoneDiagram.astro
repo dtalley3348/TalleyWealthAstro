@@ -1,0 +1,248 @@
+---
+interface Props {
+  compact?: boolean;
+  animated?: boolean;
+}
+
+const { compact = false, animated = false } = Astro.props;
+---
+
+<div class={`tw-arch ${compact ? 'tw-arch--compact' : ''} ${animated ? 'tw-arch--animated' : ''}`}>
+  <div class="tw-arch__frame">
+    <svg viewBox="0 0 560 330" class="tw-arch__svg" preserveAspectRatio="xMidYMid meet" aria-label="Keystone Method diagram">
+      <g class="rough-stones" aria-hidden="true">
+        <path d="M38 232 L76 218 L108 238 L98 277 L52 276 Z" />
+        <path d="M94 168 L135 158 L165 186 L151 225 L104 218 Z" />
+        <path d="M38 124 L80 110 L108 140 L89 177 L45 166 Z" />
+        <path d="M124 95 L170 86 L195 116 L174 151 L129 142 Z" />
+      </g>
+
+      <g class="structure">
+        <path class="outer-arch" d="M235 286 C235 195 309 121 400 121 C491 121 565 195 565 286" />
+        <path class="inner-arch" d="M300 286 C300 231 345 186 400 186 C455 186 500 231 500 286" />
+        
+
+        <g class="stone stone--left-base">
+          <path d="M235 286 L257.1 203.5 L313.4 236 L300 286 Z" />
+          <text x="276" y="256" text-anchor="middle">Retire</text>
+        </g>
+        <g class="stone stone--left-mid">
+          <path d="M255.7 206 L310.1 147.6 L345.5 202.1 L312.5 237.5 Z" />
+          <text x="306" y="203" text-anchor="middle">Taxes</text>
+        </g>
+        <g class="stone stone--left-top">
+          <path d="M307.7 149.2 L371.3 123.5 L382.6 187.5 L344.1 203.1 Z" />
+          <text x="352" y="171" text-anchor="middle">Invest</text>
+        </g>
+
+        <g class="stone stone--right-top">
+          <path d="M428.7 123.5 L492.3 149.2 L455.9 203.1 L417.4 187.5 Z" />
+          <text x="449" y="171" text-anchor="middle">Estate</text>
+        </g>
+        <g class="stone stone--right-mid">
+          <path d="M489.9 147.6 L544.3 206 L487.5 237.5 L454.5 202.1 Z" />
+          <text x="494" y="203" text-anchor="middle">Risk</text>
+        </g>
+        <g class="stone stone--right-base">
+          <path d="M542.9 203.5 L565 286 L500 286 L486.6 236 Z" />
+          <text x="524" y="252" text-anchor="middle"><tspan x="524">Cash</tspan><tspan x="524" dy="13">Flow</tspan></text>
+        </g>
+
+        <g class="keystone-group">
+          <path d="M368.5 124 L431.5 124 L419.1 187.8 L380.9 187.8 Z" />
+          <text x="400" y="153" text-anchor="middle"><tspan x="400">Key-</tspan><tspan x="400" dy="14">stone</tspan></text>
+        </g>
+
+        <g class="foundation-group">
+          <rect x="225" y="282" width="350" height="18" rx="8" />
+          <text x="400" y="294" text-anchor="middle">Integrated Plan</text>
+        </g>
+      </g>
+    </svg>
+
+    {compact ? (
+      <p class="tw-arch__compact-copy">Keystone turns scattered financial pieces into an integrated plan that can support real decisions.</p>
+    ) : (
+      <p class="tw-arch__caption">
+        The <span>Keystone Method™</span> turns scattered decisions into an integrated plan that can stand on its own.
+      </p>
+    )}
+  </div>
+</div>
+
+<style>
+  html[data-tenant="talley-wealth"] .tw-arch {
+    position: relative;
+    width: 100%;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch__frame {
+    position: relative;
+    max-width: 46rem;
+    margin-inline: auto;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .tw-arch__frame {
+    max-width: 34rem;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch__svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .tw-arch__svg {
+    width: 108%;
+    transform: translateX(-4%);
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .rough-stones path {
+    fill: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    stroke: color-mix(in srgb, var(--color-primary) 42%, transparent);
+    stroke-width: 2;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .rough-stones path {
+    fill: color-mix(in srgb, var(--color-primary) 12%, transparent);
+    stroke: color-mix(in srgb, var(--color-primary) 26%, transparent);
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .rough-stones {
+    display: none;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .process-labels text {
+    fill: var(--color-muted-foreground);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .process-labels {
+    display: none;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .process-labels,
+  html[data-tenant="talley-wealth"] .tw-arch .process-labels text {
+    display: none;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .outer-arch,
+  html[data-tenant="talley-wealth"] .tw-arch .inner-arch,
+  html[data-tenant="talley-wealth"] .tw-arch .arch-cap {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 4;
+    opacity: 0.42;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .inner-arch {
+    stroke-width: 2;
+    opacity: 0.14;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .arch-cap {
+    stroke-width: 3;
+    opacity: 0.7;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .stone,
+  html[data-tenant="talley-wealth"] .tw-arch .keystone-group {
+    cursor: pointer;
+    transform-origin: center center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .stone:hover,
+  html[data-tenant="talley-wealth"] .tw-arch .keystone-group:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .stone path {
+    fill: color-mix(in srgb, var(--color-primary-foreground) 90%, transparent);
+    stroke: color-mix(in srgb, var(--color-primary) 14%, transparent);
+    stroke-width: 1.5;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .stone path {
+    fill: color-mix(in srgb, var(--color-primary) 88%, var(--color-muted-foreground));
+    stroke: color-mix(in srgb, var(--color-primary-foreground) 28%, transparent);
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .stone text {
+    fill: var(--color-primary);
+    font-size: 13px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .stone text {
+    fill: var(--color-primary-foreground);
+    font-size: 11px;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .keystone-group path,
+  html[data-tenant="talley-wealth"] .tw-arch .integration-group rect {
+    fill: var(--color-accent);
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .foundation-group rect {
+    fill: var(--color-accent);
+  }
+  html[data-tenant="talley-wealth"] .tw-arch .keystone-group text,
+  html[data-tenant="talley-wealth"] .tw-arch .foundation-group text {
+    fill: var(--color-accent-foreground);
+    font-size: 12px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--compact .keystone-group text,
+  html[data-tenant="talley-wealth"] .tw-arch--compact .foundation-group text {
+    font-size: 11px;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch__caption,
+  html[data-tenant="talley-wealth"] .tw-arch__compact-copy {
+    margin-top: 2rem;
+    max-width: 36rem;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--color-muted-foreground);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch__compact-copy {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch__caption span {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  @keyframes twKeystoneGlow {
+    0%, 100% { filter: drop-shadow(0 0 8px rgba(191, 140, 77, 0.4)); }
+    50% { filter: drop-shadow(0 0 20px rgba(191, 140, 77, 0.7)); }
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .keystone-group path {
+    animation: twKeystoneGlow 3s ease-in-out infinite;
+  }
+  @keyframes twStoneSettle {
+    0% { opacity: 0.55; transform: translateY(7px) scale(0.985); }
+    45% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone {
+    animation: twStoneSettle 4.8s ease both infinite;
+  }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--left-base { animation-delay: 0.1s; }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--left-mid { animation-delay: 0.25s; }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--left-top { animation-delay: 0.4s; }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--right-top { animation-delay: 0.55s; }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--right-mid { animation-delay: 0.7s; }
+  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--right-base { animation-delay: 0.85s; }
+  @media (max-width: 640px) {
+    html[data-tenant="talley-wealth"] .tw-arch .rough-stones,
+    html[data-tenant="talley-wealth"] .tw-arch .process-labels {
+      display: none;
+    }
+    html[data-tenant="talley-wealth"] .tw-arch__svg {
+      transform: translateX(-4%);
+      width: 108%;
+    }
+  }
+
+  html[data-tenant="talley-wealth"] .tw-arch .stone--left-top text,
+  html[data-tenant="talley-wealth"] .tw-arch .stone--right-top text {
+    display: block !important;
+    fill: var(--color-primary);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-arch--compact .stone--left-top text,
+  html[data-tenant="talley-wealth"] .tw-arch--compact .stone--right-top text {
+    fill: var(--color-primary-foreground);
+    font-size: 11px;
+  }
+</style>

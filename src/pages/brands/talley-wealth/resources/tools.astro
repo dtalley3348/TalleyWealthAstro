@@ -1,0 +1,83 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+const tools = [
+  {
+    eyebrow: 'Calculator',
+    title: 'Retirement Readiness Calculator',
+    body: 'Estimate whether your current path may support the income you want, then stress-test the result with a sequence-risk simulator.',
+    href: '/calculators',
+    label: 'Open calculator',
+  },
+  {
+    eyebrow: 'Coming next',
+    title: 'Retirement Readiness Assessment',
+    body: 'A short assessment for people who want to know what questions still need answered before they retire.',
+    href: '/guide',
+    label: 'Start with the guide',
+  },
+];
+
+const relatedLinks = [
+  {
+    title: 'Retirement guide',
+    body: 'A fuller framework for the questions the calculators are meant to surface.',
+    href: '/guide',
+  },
+  {
+    title: 'Retirement risk article',
+    body: 'Read more about why the order of returns matters once withdrawals begin.',
+    href: '/resources/blog/retirement-risk-nobody-talks-about',
+  },
+  {
+    title: 'Pre-retirement planning',
+    body: 'See how these concepts fit into the broader retirement transition.',
+    href: '/financial-advisor-for-pre-retirees',
+  },
+];
+---
+
+<TalleyPage title="Planning Tools | Talley Wealth" description="Interactive retirement calculators, assessments, and planning tools from Talley Wealth.">
+  <section class="bg-muted/35">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning Tools</p>
+      <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Tools for seeing the planning question more clearly.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+        These are educational starting points. They are built to surface better questions, not replace a coordinated plan.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <div class="grid gap-5 md:grid-cols-2">
+        {tools.map((tool) => (
+          <a href={tool.href} class="rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{tool.eyebrow}</p>
+            <h2 class="mt-3 font-serif text-2xl font-bold text-primary">{tool.title}</h2>
+            <p class="mt-4 leading-relaxed text-muted-foreground">{tool.body}</p>
+            <span class="mt-6 inline-flex font-bold text-accent">{tool.label} <span aria-hidden="true">-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-20">
+    <div class="section-container">
+      <div class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Where to go next</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">Use the tool, then bring the question into context.</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-3">
+        {relatedLinks.map((item) => (
+          <a href={item.href} class="group rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <h3 class="font-serif text-xl font-bold text-primary transition group-hover:text-accent">{item.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+            <span class="mt-5 inline-flex text-sm font-bold text-accent">Learn more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</TalleyPage>

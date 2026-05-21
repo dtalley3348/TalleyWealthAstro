@@ -1,0 +1,228 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+
+const items = [
+  {
+    title: 'The risk hiding in plain sight',
+    body: "Sequence of returns risk is the reason two people with identical portfolios and identical average returns can end up in completely different places.",
+  },
+  {
+    title: 'The quiet risk on the other side',
+    body: "Playing it too safe has consequences too. A retirement number has to survive inflation, spending changes, taxes, and the reality of a long life.",
+  },
+  {
+    title: 'What your withdrawal rate actually means',
+    body: 'The 4% rule is a starting point, not a plan. Your age, health, account types, and income sources all change what is reasonable.',
+  },
+  {
+    title: 'The tax question almost nobody asks',
+    body: 'A million dollars in a traditional IRA and a million dollars in a Roth are not the same thing. The account wrapper changes the real value.',
+  },
+  {
+    title: 'How to build backwards from your actual life',
+    body: 'The guide walks through the real inputs: spending, timing, risk, taxes, and the decisions that shape whether the plan holds up.',
+  },
+];
+
+const decisionPoints = [
+  'How much annual income the portfolio actually needs to produce',
+  'Whether the number changes after Social Security, pensions, or part-time work',
+  'How taxes change the value of different account types',
+  'Why early market returns matter more once withdrawals start',
+  'What has to be true for the plan to feel durable, not just mathematically possible',
+];
+---
+
+<TalleyPage title="Are You Actually On Track? | Talley Wealth" description="Download the Talley Wealth retirement planning guide and worksheet.">
+  <section class="bg-primary text-primary-foreground">
+    <div class="section-container grid min-h-[720px] items-center gap-12 py-20 lg:grid-cols-[1fr_0.78fr]">
+      <div>
+        <img decoding="async" src="/brands/talley-wealth/logo-white.png" alt="Talley Wealth" class="mb-14 h-10 w-auto"  loading="lazy" />
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Free guide</p>
+        <h1 class="mt-5 max-w-3xl font-serif text-3xl font-bold md:text-4xl leading-tight md:text-6xl">
+          Are You <span class="text-accent">Actually</span> On Track?
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/82">
+          A plain-English framework for understanding what your retirement number really means, and the two risks most people never account for until the decision is close.
+        </p>
+        <div class="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+          <div class="border-l border-white/20 pl-4">
+            <p class="font-serif text-3xl font-bold text-accent">15</p>
+            <p class="text-sm text-white/65">minute read</p>
+          </div>
+          <div class="border-l border-white/20 pl-4">
+            <p class="font-serif text-3xl font-bold text-accent">5</p>
+            <p class="text-sm text-white/65">planning questions</p>
+          </div>
+          <div class="border-l border-white/20 pl-4">
+            <p class="font-serif text-3xl font-bold text-accent">1</p>
+            <p class="text-sm text-white/65">worksheet</p>
+          </div>
+        </div>
+      </div>
+
+      <form id="talley-guide-form" class="rounded-lg bg-card p-6 text-foreground shadow-elegant-lg md:p-8" novalidate>
+        <h2 class="font-serif text-3xl font-bold text-primary">Get the free guide.</h2>
+        <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+          It takes about 15 minutes to read and includes a worksheet for stress-testing your situation.
+        </p>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <label class="grid gap-1 text-sm font-bold text-foreground">
+            First name
+            <input name="first_name" required autocomplete="given-name" class="rounded-md border border-border px-3 py-2 font-normal" />
+          </label>
+          <label class="grid gap-1 text-sm font-bold text-foreground">
+            Last name
+            <input name="last_name" required autocomplete="family-name" class="rounded-md border border-border px-3 py-2 font-normal" />
+          </label>
+        </div>
+        <label class="mt-4 grid gap-1 text-sm font-bold text-foreground">
+          Email
+          <input name="email" type="email" required autocomplete="email" class="rounded-md border border-border px-3 py-2 font-normal" />
+        </label>
+        <div class="mt-4 grid gap-4 sm:grid-cols-[1fr_110px]">
+          <label class="grid gap-1 text-sm font-bold text-foreground">
+            City
+            <input name="city" required autocomplete="address-level2" class="rounded-md border border-border px-3 py-2 font-normal" />
+          </label>
+          <label class="grid gap-1 text-sm font-bold text-foreground">
+            Zip
+            <input name="zip" required autocomplete="postal-code" class="rounded-md border border-border px-3 py-2 font-normal" />
+          </label>
+        </div>
+        <button type="submit" class="mt-6 w-full rounded-md bg-accent px-5 py-3 font-bold text-accent-foreground transition hover:brightness-95 disabled:opacity-60">
+          <span data-label>Send me the guide</span>
+        </button>
+        <p data-message class="mt-3 hidden text-sm"></p>
+        <p class="mt-4 text-center text-xs leading-relaxed text-muted-foreground">
+          Educational content only. The guide is not individualized investment, tax, or legal advice.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.82fr_1fr] lg:items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Use the calculator first</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+          Start with the number. Then understand what the number leaves out.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          The calculator gives you the rough math. The guide helps you think through the missing pieces: taxes, timing, risk, spending stages, and whether your plan can survive the real world.
+        </p>
+        <a href="/calculators" class="mt-7 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Try the retirement calculator</a>
+      </div>
+      <div class="rounded-lg border border-border bg-card p-6 shadow-elegant md:p-8">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">The guide helps answer</p>
+        <div class="mt-5 grid gap-3">
+          {decisionPoints.map((point) => (
+            <div class="flex gap-3 rounded-md bg-background p-4">
+              <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+              <p class="text-sm leading-relaxed text-muted-foreground">{point}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container max-w-4xl py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What's inside</p>
+      <h2 class="mt-4 max-w-3xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
+        What the guide helps you see.
+      </h2>
+      <div class="mt-10 divide-y divide-border rounded-lg border border-border bg-card shadow-elegant">
+        {items.map((item, index) => (
+          <article class="grid gap-5 p-6 md:grid-cols-[56px_1fr] md:p-8">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-serif text-xl font-bold text-accent">{index + 1}</div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-primary">{item.title}</h3>
+              <p class="mt-2 leading-relaxed text-muted-foreground">{item.body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary text-primary-foreground">
+    <div class="section-container max-w-3xl py-16 text-center">
+      <p class="font-serif text-2xl italic leading-relaxed text-white/90">
+        The number is not the plan. The plan is the plan. The number is just what falls out of it when you do the work honestly.
+      </p>
+      <p class="mt-5 text-sm font-bold uppercase tracking-[0.14em] text-white/45">David Talley, CFP® · Talley Wealth · Johnson City, TN</p>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-10 py-16 lg:grid-cols-[0.85fr_1fr] lg:items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-primary">Already requested it?</h2>
+        <p class="mt-4 text-muted-foreground">You can open the PDF directly here, then come back to run the calculator with your own numbers.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 lg:justify-end">
+        <a href="/brands/talley-wealth/guides/are-you-on-track.pdf" class="inline-flex rounded-md border border-border px-5 py-3 font-bold text-primary transition hover:border-accent">Open the guide</a>
+        <a href="/calculators" class="inline-flex rounded-md bg-accent px-5 py-3 font-bold text-accent-foreground transition hover:bg-accent/90">Use the calculator</a>
+      </div>
+    </div>
+  </section>
+</TalleyPage>
+
+<script>
+  (() => {
+    const form = document.querySelector<HTMLFormElement>('#talley-guide-form');
+    if (!form) return;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const label = form.querySelector<HTMLElement>('[data-label]');
+    const message = form.querySelector<HTMLElement>('[data-message]');
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!button || !label || !message) return;
+      const data = new FormData(form);
+      const payload = {
+        first_name: String(data.get('first_name') ?? '').trim(),
+        last_name: String(data.get('last_name') ?? '').trim(),
+        email: String(data.get('email') ?? '').trim().toLowerCase(),
+        city: String(data.get('city') ?? '').trim(),
+        state: 'TN',
+        zip: String(data.get('zip') ?? '').trim(),
+        source: 'guide',
+      };
+
+      message.classList.add('hidden');
+      if (!payload.first_name || !payload.last_name || !emailRe.test(payload.email) || !payload.city || !payload.zip) {
+        message.textContent = 'Please complete the required fields.';
+        message.className = 'mt-3 text-sm text-red-700';
+        message.classList.remove('hidden');
+        return;
+      }
+
+      button.disabled = true;
+      label.textContent = 'Sending';
+      try {
+        const res = await fetch('/api/newsletter/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const body = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(body?.error || 'submission failed');
+        message.innerHTML = 'Thanks. Your guide request was received. <a class="font-bold underline" href="/guide-download">Open the guide now</a>.';
+        message.className = 'mt-3 text-sm text-green-700';
+        message.classList.remove('hidden');
+        form.reset();
+      } catch (err) {
+        message.textContent = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+        message.className = 'mt-3 text-sm text-red-700';
+        message.classList.remove('hidden');
+      } finally {
+        button.disabled = false;
+        label.textContent = 'Send me the guide';
+      }
+    });
+  })();
+</script>

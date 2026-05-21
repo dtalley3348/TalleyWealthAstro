@@ -1,0 +1,39 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import { cities } from '../../../data/talley-wealth/seo/cities';
+import { services } from '../../../data/talley-wealth/seo/services';
+import { personas } from '../../../data/talley-wealth/seo/personas';
+import { allSEORoutes } from '../../../data/talley-wealth/seo/routes';
+
+function labelFor(slug: string) {
+  const route = allSEORoutes.find((item) => item.slug === slug);
+  if (!route) return slug;
+  if (route.type === 'city' && route.cityKey) {
+    const city = cities[route.cityKey];
+    return `Financial Advisor in ${city.name}, ${city.state}`;
+  }
+  if (route.type === 'service-city' && route.cityKey && route.serviceKey) {
+    const city = cities[route.cityKey];
+    const service = services[route.serviceKey];
+    return `${service.name} in ${city.name}, ${city.state}`;
+  }
+  if (route.type === 'persona' && route.personaKey) {
+    return personas[route.personaKey].heroTitle;
+  }
+  return slug;
+}
+---
+
+<TalleyPage title="Talley Wealth SEO Pages" description="Service, city, and audience pages for Talley Wealth.">
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Local planning pages</p>
+      <h1 class="mt-5 font-serif text-4xl font-bold text-primary md:text-5xl">Service and location pages</h1>
+      <div class="mt-12 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        {allSEORoutes.map((route) => (
+          <a href={`/${route.slug}`} class="rounded-md border border-border bg-card p-4 font-bold text-primary transition hover:border-accent">{labelFor(route.slug)}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+</TalleyPage>

@@ -1,0 +1,288 @@
+/**
+ * Talley Wealth — Tailwind v4 entry + design tokens + components.
+ *
+ * Imported only by src/layouts/BaseLayout.talley-wealth.astro, so these
+ * utilities + tokens ship only on Talley pages. Other tenants are
+ * unaffected.
+ */
+@import "tailwindcss";
+
+@source "../../pages/brands/talley-wealth/**/*.{astro,ts,tsx}";
+@source "../../components/talley-wealth/**/*.{astro,ts,tsx}";
+@source "../../layouts/BaseLayout.talley-wealth.astro";
+
+@theme {
+  /* Brand palette — HSL literals, same values as reference's tailwind.config.ts */
+  --color-primary: hsl(211 32% 21%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-accent: hsl(33 47% 52%);
+  --color-accent-foreground: hsl(211 32% 21%);
+  --color-background: hsl(40 5% 91%);
+  --color-foreground: hsl(211 32% 21%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(211 32% 21%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(211 32% 21%);
+  --color-secondary: hsl(211 20% 95%);
+  --color-secondary-foreground: hsl(211 32% 30%);
+  --color-muted: hsl(210 10% 92%);
+  --color-muted-foreground: hsl(210 10% 35%);
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(210 15% 85%);
+  --color-input: hsl(210 15% 85%);
+  --color-ring: hsl(33 47% 52%);
+
+  /* Fonts */
+  --font-sans: "Source Sans Pro", system-ui, sans-serif;
+  --font-serif: Merriweather, Georgia, serif;
+
+  /* Shadows */
+  --shadow-elegant: 0 4px 6px -1px hsl(211 32% 21% / 0.08), 0 2px 4px -2px hsl(211 32% 21% / 0.05);
+  --shadow-elegant-lg: 0 10px 15px -3px hsl(211 32% 21% / 0.08), 0 4px 6px -4px hsl(211 32% 21% / 0.05);
+  --shadow-elegant-xl: 0 20px 25px -5px hsl(211 32% 21% / 0.1), 0 8px 10px -6px hsl(211 32% 21% / 0.05);
+  --shadow-glow: 0 0 20px hsl(33 47% 53% / 0.15);
+  --shadow-glow-lg: 0 0 40px hsl(33 47% 53% / 0.2);
+  --shadow-glass: 0 8px 32px hsl(211 32% 21% / 0.08);
+
+  /* Radius */
+  --radius-sm: calc(0.5rem - 4px);
+  --radius-md: calc(0.5rem - 2px);
+  --radius-lg: 0.5rem;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-scale-in: scale-in 0.3s ease-out forwards;
+  --animate-slide-in-right: slide-in-right 0.4s ease-out forwards;
+  --animate-gold-line: gold-line-reveal 0.8s ease-out forwards;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-reveal: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  /* Easings */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes gold-line-reveal {
+  from { width: 0; }
+  to { width: 4rem; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+/* ─── Base layer ───────────────────────────────────────────────────── */
+@layer base {
+  html[data-tenant="talley-wealth"] {
+    scroll-behavior: smooth;
+  }
+  html[data-tenant="talley-wealth"] body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html[data-tenant="talley-wealth"] h1,
+  html[data-tenant="talley-wealth"] h2,
+  html[data-tenant="talley-wealth"] h3,
+  html[data-tenant="talley-wealth"] h4,
+  html[data-tenant="talley-wealth"] h5,
+  html[data-tenant="talley-wealth"] h6 {
+    font-family: var(--font-serif);
+  }
+  html[data-tenant="talley-wealth"] a {
+    color: inherit;
+  }
+  html[data-tenant="talley-wealth"] img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+/* ─── Component utilities ──────────────────────────────────────────── */
+@layer components {
+  .section-container {
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) { .section-container { padding-inline: 1.5rem; } }
+  @media (min-width: 1024px) { .section-container { padding-inline: 2rem; } }
+
+  .gold-line {
+    display: inline-block;
+    height: 4px;
+    width: 4rem;
+    background: var(--color-accent);
+    border-radius: 9999px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .card-hover {
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elegant-xl);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant-lg);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s;
+  }
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-glass {
+    background: color-mix(in srgb, var(--color-card) 80%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Scroll-reveal utility (initial hidden state + in-view class) */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s var(--ease-smooth),
+      transform 0.6s var(--ease-smooth);
+  }
+  .scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .scroll-animate-delay-1 { transition-delay: 0.1s; }
+  .scroll-animate-delay-2 { transition-delay: 0.2s; }
+  .scroll-animate-delay-3 { transition-delay: 0.3s; }
+  .scroll-animate-delay-4 { transition-delay: 0.4s; }
+}
+
+
+/* Sitewide polish pass: calmer type, quieter cards, better mobile rhythm. */
+@layer components {
+  html[data-tenant="talley-wealth"] article.shadow-elegant,
+  html[data-tenant="talley-wealth"] article.shadow-sm,
+  html[data-tenant="talley-wealth"] .shadow-elegant-lg {
+    transition: transform 240ms var(--ease-smooth), box-shadow 240ms var(--ease-smooth), border-color 240ms var(--ease-smooth);
+  }
+
+  html[data-tenant="talley-wealth"] article.shadow-elegant:hover,
+  html[data-tenant="talley-wealth"] article.shadow-sm:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant-lg);
+    border-color: color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+  }
+
+  html[data-tenant="talley-wealth"] h1,
+  html[data-tenant="talley-wealth"] h2,
+  html[data-tenant="talley-wealth"] h3 {
+    letter-spacing: 0;
+  }
+
+  html[data-tenant="talley-wealth"] p,
+  html[data-tenant="talley-wealth"] li {
+    text-wrap: pretty;
+  }
+
+  html[data-tenant="talley-wealth"] h1,
+  html[data-tenant="talley-wealth"] h2 {
+    text-wrap: balance;
+  }
+
+  @media (max-width: 767px) {
+    html[data-tenant="talley-wealth"] .py-24 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    html[data-tenant="talley-wealth"] .py-20 {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+    html[data-tenant="talley-wealth"] .gap-12 {
+      gap: 2rem;
+    }
+    html[data-tenant="talley-wealth"] .p-8 {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html[data-tenant="talley-wealth"] article.shadow-elegant,
+    html[data-tenant="talley-wealth"] article.shadow-sm,
+    html[data-tenant="talley-wealth"] .shadow-elegant-lg {
+      transition: none;
+    }
+    html[data-tenant="talley-wealth"] article.shadow-elegant:hover,
+    html[data-tenant="talley-wealth"] article.shadow-sm:hover {
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro';
+---
+
+<TalleyPage title="Explore Call Read | Talley Wealth" description="A short read before your Talley Wealth Explore Call.">
+  <section class="bg-muted/35">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.8fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Before we talk</p>
+        <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">A short read before we talk.</h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">This page frames what the Explore Call is for, what it is not for, and how to think about fit.</p>
+        <a href="/brands/talley-wealth/A_Short_Read_Before_We_Talk.pdf" class="mt-8 inline-flex rounded-md bg-accent px-5 py-3 font-bold text-accent-foreground">Open the short read</a>
+      </div>
+      <img decoding="async" src="/brands/talley-wealth/explore-call-read-cover.jpg" alt="" class="rounded-lg shadow-elegant-lg"  loading="lazy" />
+    </div>
+  </section>
+  <section class="bg-background">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.75fr_1fr]">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Ready to talk?</h2>
+        <p class="mt-4 text-lg text-muted-foreground">Choose a time that works for you. No prep needed.</p>
+      </div>
+      <CalendlyEmbed source="explore-call-read" title="Schedule an Explore Call" description="Choose a time that works for you. No prep needed." />
+    </div>
+  </section>
+</TalleyPage>

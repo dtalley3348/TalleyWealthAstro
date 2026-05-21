@@ -1,0 +1,61 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+  align?: 'left' | 'center';
+  size?: 'default' | 'large';
+  showDecorative?: boolean;
+  class?: string;
+}
+
+const {
+  label,
+  title,
+  description,
+  align = 'center',
+  size = 'default',
+  showDecorative = true,
+  class: className = '',
+} = Astro.props;
+
+const paddingClass = size === 'large'
+  ? 'pt-24 pb-12 sm:pt-40 sm:pb-16 md:pt-56 md:pb-28'
+  : 'pt-24 pb-12 sm:pt-40 sm:pb-16 md:pt-48 md:pb-20';
+---
+
+<section class:list={['relative overflow-hidden', paddingClass, className]}>
+  {showDecorative && (
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-accent/5 blur-3xl" style="animation: float 3s ease-in-out infinite"></div>
+      <div class="absolute -bottom-10 -left-10 h-60 w-60 rounded-full bg-primary/5 blur-3xl" style="animation: float 3s ease-in-out infinite; animation-delay: 1s"></div>
+    </div>
+  )}
+
+  <div class="relative z-10 section-container">
+    <div class:list={['max-w-4xl', align === 'center' && 'mx-auto text-center']}>
+      {label && (
+        <div class:list={['mb-6 flex items-center gap-3', align === 'center' && 'justify-center']}>
+          <span class="gold-line"></span>
+          <span class="text-sm font-semibold uppercase tracking-wider text-accent">{label}</span>
+        </div>
+      )}
+
+      <h1 class="mb-4 font-serif text-4xl font-bold leading-tight text-primary sm:mb-6 md:text-5xl">
+        <Fragment set:html={title} />
+      </h1>
+
+      {description && (
+        <p class="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          {description}
+        </p>
+      )}
+
+      {Astro.slots.has('default') && (
+        <div class="mt-10">
+          <slot />
+        </div>
+      )}
+    </div>
+  </div>
+</section>

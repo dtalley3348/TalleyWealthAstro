@@ -1,6 +1,6 @@
 type JsonLd = Record<string, unknown>;
 
-const siteUrl = 'https://www.talleywealth.com';
+const siteUrl = 'https://talleywealth.com';
 const logoUrl = `${siteUrl}/brands/talley-wealth/logo.webp`;
 const davidUrl = `${siteUrl}/about/meet-david-talley`;
 const organizationId = `${siteUrl}/#organization`;

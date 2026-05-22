@@ -3,7 +3,7 @@ import node from '@astrojs/node';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://www.talleywealth.com',
+  site: 'https://talleywealth.com',
   output: 'server',
   adapter: node({ mode: 'standalone' }),
   vite: {

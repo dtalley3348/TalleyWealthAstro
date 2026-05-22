@@ -2,7 +2,7 @@ export const talleySite = {
   id: 'talley-wealth',
   tenantKey: 'talley-wealth',
   name: 'Talley Wealth',
-  siteUrl: 'https://www.talleywealth.com',
+  siteUrl: 'https://talleywealth.com',
   headInject: '',
   bodyStartInject: '',
 };

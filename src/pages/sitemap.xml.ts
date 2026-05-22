@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { blogPosts } from '../data/talley-wealth/site-content';
 
-const site = 'https://www.talleywealth.com';
+const site = 'https://talleywealth.com';
 
 const canonicalPaths = [
   '/',

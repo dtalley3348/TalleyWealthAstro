@@ -13,7 +13,7 @@ const articles = wikiArticles.filter((article) => article.category === categoryS
 if (!category || !articles.length) return new Response('Not found', { status: 404 });
 ---
 
-<TalleyPage title={`${category.title} | Talley Wealth Knowledge Base`} description={category.description}>
+<TalleyPage title={`${category.title} | Talley Wealth Knowledge Base`} description={category.description} noindex>
   <section class="bg-muted/35">
     <div class="section-container py-20">
       <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Learn</p>

@@ -1,3 +1,115 @@
 ---
-return Astro.redirect('/pricing', 301);
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+
+const commitments = [
+  {
+    title: 'Planning first',
+    body: 'The relationship starts with understanding the real decisions in front of you, not with a portfolio proposal or product recommendation.',
+  },
+  {
+    title: 'Clear pricing',
+    body: 'You should understand the fee before you decide whether the work fits. Pricing is published and discussed before an engagement begins.',
+  },
+  {
+    title: 'Plain language',
+    body: 'Good advice should make the next step clearer. We try to translate technical planning, tax, and investment issues into decisions you can actually make.',
+  },
+  {
+    title: 'A real person owning the process',
+    body: 'Clients work directly with David and the team responsible for the planning work. The goal is not a call-center experience or a pile of disconnected recommendations.',
+  },
+];
 ---
+
+<TalleyPage
+  title="Our Commitment | Talley Wealth"
+  description="A planning-first commitment from Talley Wealth: clear advice, transparent pricing, and a process built around the decisions that matter."
+  ogImage="/brands/talley-wealth/david-stephenee-office.jpg"
+>
+  <section class="bg-muted/35">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.9fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Our commitment</p>
+        <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
+          You should know how advice is given and why it is being recommended.
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+          Talley Wealth is built for people who want a more thoughtful planning relationship. The commitment is simple: start with the real question, explain the tradeoffs clearly, price the work plainly, and keep the advice tied to what actually needs to get done.
+        </p>
+      </div>
+      <div class="overflow-hidden rounded-xl border-[14px] border-primary/15 shadow-elegant-lg">
+        <img
+          decoding="async"
+          src="/brands/talley-wealth/david-stephenee-office.jpg"
+          alt="David Talley and Stephenee Carberry at Talley Wealth"
+          class="aspect-[4/3] w-full object-cover"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What that means in practice</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+          Advice should feel understandable before it feels impressive.
+        </h2>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-2">
+        {commitments.map((item) => (
+          <article class="rounded-lg border border-border bg-card p-6 shadow-elegant">
+            <h3 class="font-serif text-2xl font-bold text-primary">{item.title}</h3>
+            <p class="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.8fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Standards</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+          Structure matters because trust needs something to stand on.
+        </h2>
+      </div>
+      <div class="space-y-5 text-lg leading-relaxed text-muted-foreground">
+        <p>
+          David is a CFP professional, ChFC, and Enrolled Agent. Those credentials matter, but the bigger point is how the work is structured: planning first, investment decisions calibrated to the plan, and tax strategy considered before the year is already over.
+        </p>
+        <p>
+          Securities are offered through Cambridge Investment Research, Inc. Advisory services are offered through Cambridge Investment Research Advisors, Inc. Cambridge and Talley Wealth are not affiliated. Tax preparation is available through Talley Tax.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <div class="mx-auto mb-10 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Continue exploring</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The commitment connects to the work.</h2>
+      </div>
+      <div class="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
+        <a href="/how-we-work/keystone-method" class="group rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">The Keystone Method</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">See how the planning-first commitment becomes a structured engagement.</p>
+          <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+        <a href="/pricing" class="group rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">Pricing</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Review planning fees and ongoing advisory structure before you move forward.</p>
+          <span class="mt-5 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+        <a href="/get-started" class="group rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <h3 class="font-serif text-2xl font-bold text-primary transition group-hover:text-accent">Explore Call</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">Start with a short fit conversation about the decision that brought you here.</p>
+          <span class="mt-5 inline-flex text-sm font-bold text-accent">Schedule <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</TalleyPage>

@@ -24,11 +24,19 @@ const startingPoints = [
 ];
 
 const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
+
+const heroAudiences = [
+  'families nearing retirement',
+  'business owners with tax questions',
+  'people who inherited money',
+  'executives with equity comp',
+  'professionals with no time to waste',
+];
 ---
 
 <TalleyPage
   title="Talley Wealth | Financial Planning, Tax & Investing"
-  description="Talley Wealth is a Johnson City, TN financial advisory firm that integrates tax strategy and investment management into one coordinated plan, so your money is actually working together."
+  description="Talley Wealth is a Johnson City, TN financial planning firm helping families, business owners, and professionals make better decisions around retirement, taxes, investments, and what comes next."
   heroTransparent
   ogImage="/brands/talley-wealth/hero-bg.png"
 >
@@ -43,10 +51,21 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
         </div>
         <h1 class="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl">
-          Real financial planning for the decisions <span class="text-accent">that shape what comes next.</span>
+          Financial planning in Johnson City for <span class="text-accent">retirement, taxes, and what comes next.</span>
         </h1>
-        <p class="mt-6 text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
-          Talley Wealth helps families nearing retirement, business owners, and executives or professionals with equity compensation make better decisions about taxes, investments, retirement, and what comes next.
+        <div class="mt-6 flex flex-col gap-2 text-lg font-semibold text-primary-foreground/90 sm:flex-row sm:items-center md:text-xl">
+          <span>Built for</span>
+          <span class="tw-hero-rotator" aria-hidden="true">
+            <span class="tw-hero-rotator__track">
+              {heroAudiences.map((audience) => (
+                <span>{audience}</span>
+              ))}
+            </span>
+          </span>
+          <span class="sr-only">Built for {heroAudiences.join(', ')}.</span>
+        </div>
+        <p class="mt-5 text-lg leading-relaxed text-primary-foreground/80">
+          Talley Wealth helps turn retirement, tax, investment, and major money questions into a planning process that gives the next decision somewhere to stand.
         </p>
         <div class="mt-8 flex flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-4 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
@@ -68,9 +87,9 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
     <div class="section-container py-8">
       <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
         <p><strong class="block font-serif text-lg text-primary">Plan first</strong> The advice starts with your life, not a product or portfolio model.</p>
-        <p><strong class="block font-serif text-lg text-primary">Tax-aware</strong> Planning, investments, and tax strategy are reviewed together.</p>
+        <p><strong class="block font-serif text-lg text-primary">Tax-aware</strong> Tax strategy is part of the conversation before decisions are made.</p>
         <p><strong class="block font-serif text-lg text-primary">Founder-led</strong> You work directly with David, supported by a prepared team.</p>
-        <p><strong class="block font-serif text-lg text-primary">Clear next step</strong> Start with a no-pressure 15-minute Explore Call.</p>
+        <p><strong class="block font-serif text-lg text-primary">Clear next step</strong> Start with a short, no-pressure Explore Call.</p>
       </div>
     </div>
   </section>
@@ -209,3 +228,58 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
     primaryText="Schedule Your Explore Call"
   />
 </TalleyPage>
+
+<style>
+  .tw-hero-rotator {
+    position: relative;
+    display: inline-block;
+    min-height: 1.45em;
+    min-width: min(100%, 360px);
+    overflow: hidden;
+    color: var(--color-accent);
+  }
+
+  .tw-hero-rotator__track {
+    display: flex;
+    flex-direction: column;
+    animation: tw-hero-rotate 11s infinite;
+  }
+
+  .tw-hero-rotator__track span {
+    display: block;
+    min-height: 1.45em;
+    white-space: nowrap;
+  }
+
+  @keyframes tw-hero-rotate {
+    0%,
+    16% {
+      transform: translateY(0);
+    }
+    20%,
+    36% {
+      transform: translateY(-1.45em);
+    }
+    40%,
+    56% {
+      transform: translateY(-2.9em);
+    }
+    60%,
+    76% {
+      transform: translateY(-4.35em);
+    }
+    80%,
+    96% {
+      transform: translateY(-5.8em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tw-hero-rotator__track {
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,164 @@
+---
+import TalleyPage from '../../../../components/talley-wealth/TalleyPage.astro';
+import CtaSection from '../../../../components/talley-wealth/CtaSection.astro';
+
+const primaryServices = [
+  {
+    title: 'Financial Planning',
+    href: '/services/financial-planning',
+    label: 'The full picture',
+    body: 'For the questions that cannot be answered well by looking at one account, one tax return, or one projection.',
+  },
+  {
+    title: 'Retirement Planning',
+    href: '/services/retirement-planning',
+    label: 'Work becomes optional',
+    body: 'For families trying to understand when retirement is realistic, how income will work, and what could change the answer.',
+  },
+  {
+    title: 'Tax Planning',
+    href: '/services/tax-planning',
+    label: 'Before the year is over',
+    body: 'For business profit, Roth windows, capital gains, equity comp, retirement income, and other decisions that should not wait until filing season.',
+  },
+  {
+    title: 'Investment Management',
+    href: '/services/investment-management',
+    label: 'Built around the plan',
+    body: 'For portfolios that need to support retirement income, tax strategy, concentration risk, cash flow, and the life the money is meant to fund.',
+  },
+  {
+    title: 'Business Owner Planning',
+    href: '/services/business-owner-planning',
+    label: 'Profit, taxes, and personal wealth',
+    body: 'For owners who want a thinking partner around tax strategy, owner pay, retirement plans, business cash flow, and money outside the company.',
+  },
+  {
+    title: 'The Keystone Method™',
+    href: '/how-we-work/keystone-method',
+    label: 'Where the work starts',
+    body: 'The structured planning engagement where the scattered questions become a plan strong enough to guide what happens next.',
+  },
+];
+
+const moments = [
+  'Retirement is close enough that "someday" has turned into a real decision.',
+  'The business is doing well, but the tax bill is starting to feel out of hand.',
+  'You inherited money and want a careful, plain-English plan before making big moves.',
+  'Equity compensation, benefits, or a concentrated position has made the tax and investment choices more complicated.',
+  'You have accounts, a CPA, maybe an old plan, but still feel like no one is helping you think through the whole decision.',
+];
+
+const planningAreas = [
+  'Retirement income',
+  'Tax strategy',
+  'Investment management',
+  'Business-owner decisions',
+  'Equity compensation',
+  'Estate and beneficiary review',
+  'Cash flow',
+  'Insurance and risk',
+  'Charitable giving',
+];
+---
+
+<TalleyPage
+  title="Services | Talley Wealth"
+  description="Financial planning, tax planning, retirement planning, investment management, and business-owner planning from Talley Wealth in Johnson City, TN."
+>
+  <section class="bg-muted/35">
+    <div class="section-container grid min-h-[620px] items-center gap-12 py-20 lg:grid-cols-[0.95fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Services</p>
+        <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
+          Advice for the financial decisions that need more than a quick answer.
+        </h1>
+        <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+          Most people do not reach out because they want a menu of services. They reach out because retirement is getting real, taxes are getting more visible, a business is changing, equity comp is vesting, or money decisions have started to feel too important to keep guessing on.
+        </p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-4 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
+          <a href="/how-we-work/keystone-method" class="inline-flex rounded-md border border-primary/20 bg-background px-6 py-4 font-bold text-primary transition hover:bg-card">See the planning process</a>
+        </div>
+      </div>
+      <div class="rounded-xl border border-border/40 bg-card p-7 shadow-elegant-lg">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">When people usually reach out</p>
+        <ul class="mt-6 space-y-4">
+          {moments.map((moment) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+              <span>{moment}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What we help with</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+          The service matters less than the decision it supports.
+        </h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          A retirement question can become a tax question. A tax question can become an investment question. A business question can become a family wealth question. The goal is to get the decision right, then make the right parts move.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {primaryServices.map((service) => (
+          <a href={service.href} class="group flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{service.label}</p>
+            <h3 class="mt-3 font-serif text-2xl font-bold text-primary transition group-hover:text-accent">{service.title}</h3>
+            <p class="mt-4 flex-1 leading-relaxed text-muted-foreground">{service.body}</p>
+            <span class="mt-6 inline-flex text-sm font-bold text-accent">Read more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card">
+    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.75fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning areas</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
+          The work is built around what your situation actually requires.
+        </h2>
+        <p class="mt-5 leading-relaxed text-muted-foreground">
+          Keystone is usually where this starts. We lay out the relevant decisions, decide what belongs in the plan, reshape what needs work, and build a practical sequence of next steps.
+        </p>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {planningAreas.map((area) => (
+          <div class="rounded-md border border-border bg-background p-4 text-sm font-semibold text-primary shadow-sm">{area}</div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary text-primary-foreground">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.75fr_1fr]">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Where to start</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight md:text-4xl">Start with the question that is already on your mind.</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-relaxed text-primary-foreground/78">
+        <p>You do not need to know which service page fits before reaching out. If there is enough going on that you want a real advisor conversation, the Explore Call is the simple first step.</p>
+        <p>If it looks like Keystone is the right next move, we will talk through that. If it is not a fit, David will say so directly.</p>
+        <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Want to see who this tends to fit?"
+    description="The services page explains the work. The Who We Help page is the better place to see the situations where that work usually becomes valuable."
+    primaryText="See Who We Help"
+    primaryHref="/who-we-help"
+    secondaryText="Review Pricing"
+    secondaryHref="/pricing"
+  />
+</TalleyPage>

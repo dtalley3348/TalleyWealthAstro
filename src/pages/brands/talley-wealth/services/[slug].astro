@@ -25,7 +25,7 @@ type ServicePage = {
   ctaBody: string;
 };
 
-const pages: Record<string, ServicePage> = {
+export const pages: Record<string, ServicePage> = {
   'individual-tax': {
     title: 'Individual Tax Preparation | Talley Wealth, Johnson City TN',
     description: 'Accurate, thorough individual tax preparation by local professionals who take the time to understand your situation.',
@@ -373,9 +373,6 @@ const canonicalPlanningPages: Record<string, ServicePage> = {
 
 Object.assign(pages, canonicalPlanningPages);
 
-export function getStaticPaths() {
-  return Object.keys(pages).map((slug) => ({ params: { slug } }));
-}
 
 const slug = Astro.params.slug ?? '';
 const page = pages[slug];

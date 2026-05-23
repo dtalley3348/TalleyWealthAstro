@@ -3,7 +3,7 @@ import type { BlogPost } from './site-content';
 export const blogPosts = [
   {
     "slug": "phantom-checkbox-roth-conversions",
-    "title": "The Phantom Checkbox: Why Most People Doing Roth Conversions Are Leaving the Strategy Half-Finished",
+    "title": "The Roth Conversion Checkbox Problem",
     "description": "Most people doing Roth conversions are barely doing them. The box feels checked. The lifetime math says otherwise.",
     "category": "Tax Planning",
     "date": "2026-04-03",
@@ -63,8 +63,8 @@ export const blogPosts = [
   },
   {
     "slug": "most-people-cant-name-a-single-tax-strategy",
-    "title": "Most People Can't Name a Single Tax Strategy They're Using",
-    "description": "Most people with a meaningful tax bill can't name what they're doing about it — or why. Here's what that gap looks like, and what closing it is actually worth.",
+    "title": "The Tax Strategy Gap",
+    "description": "Many people with meaningful tax bills cannot name the strategy behind them. Here is what that gap looks like and why closing it matters.",
     "category": "Tax Planning",
     "date": "2026-03-30",
     "image": "/brands/talley-wealth/blog/tax-planning-hero.jpg",
@@ -106,7 +106,7 @@ export const blogPosts = [
   },
   {
     "slug": "whats-your-number-retirement",
-    "title": "What's Your Number — And Do You Actually Know Where It Came From?",
+    "title": "What's Your Retirement Number Based On?",
     "description": "Most people approaching retirement have a number in mind. Almost none of them have a plan that produced it.",
     "category": "Retirement Planning",
     "date": "2026-03-17",
@@ -161,7 +161,7 @@ export const blogPosts = [
   {
     "slug": "retirement-risk-nobody-talks-about",
     "title": "The Retirement Risk Nobody Talks About",
-    "description": "Most people walk into retirement watching one risk. But the one standing quietly in the corner — and the tension between the two — is what makes getting retirement right genuinely hard.",
+    "description": "Retirement risk is not only market decline. Sequence, timing, withdrawals, and tax decisions can reshape the plan just as much.",
     "category": "Retirement Planning",
     "date": "2026-03-15",
     "image": "/brands/talley-wealth/blog/retirement-risk-hero.jpg",
@@ -215,8 +215,8 @@ export const blogPosts = [
   },
   {
     "slug": "what-tax-planning-actually-looks-like",
-    "title": "What Tax Planning Actually Is — And Why Most People Have Never Experienced It",
-    "description": "Most people think tax planning is what happens when their CPA calls in March. It's not. Here's what real, proactive tax planning actually looks like — and why the difference can be worth tens of thousands of dollars.",
+    "title": "What Real Tax Planning Looks Like",
+    "description": "Tax planning is not just March paperwork. Real planning coordinates income, investments, Roth conversions, and timing before the tax year is over.",
     "category": "Tax Planning",
     "date": "2026-03-12",
     "image": "/brands/talley-wealth/blog/tax-planning-hero.jpg",
@@ -309,7 +309,7 @@ export const blogPosts = [
   {
     "slug": "what-changes-as-financial-independence-gets-closer",
     "title": "What Changes as Financial Independence Gets Closer",
-    "description": "There's a point where the financial playbook shifts. Growth stops being the only goal. Coordination starts mattering more than contribution. Here's what that transition actually looks like.",
+    "description": "As financial independence gets closer, growth stops being the only goal. Coordination, tax timing, and risk control start to matter more.",
     "category": "Retirement Planning",
     "date": "2026-03-02",
     "image": "/brands/talley-wealth/blog/financial-independence-hero.jpg",
@@ -400,7 +400,7 @@ export const blogPosts = [
   {
     "slug": "tax-planning-high-income-w2-earners",
     "title": "Tax Planning for High-Income W-2 Earners",
-    "description": "Most tax strategy content is built around business owners. But if most of your income comes from a paycheck, here are the tax moves that are actually worth thinking about.",
+    "description": "High-income W-2 earners still have meaningful tax-planning options. Here are the moves most worth reviewing before year-end.",
     "category": "Tax Planning",
     "date": "2026-02-26",
     "image": "/brands/talley-wealth/blog/tax-planning-hero.jpg",

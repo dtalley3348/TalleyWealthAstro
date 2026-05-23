@@ -8,9 +8,13 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:preview": "astro dev --host 0.0.0.0 --port 5181",
     "build": "astro build",
+    "build:site": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:site": "astro check",
+    "preview:built": "HOST=0.0.0.0 PORT=5181 node dist/server/entry.mjs"
   },
   "dependencies": {
     "@astrojs/node": "^10.0.4",

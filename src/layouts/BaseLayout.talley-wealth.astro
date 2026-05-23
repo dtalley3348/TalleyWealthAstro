@@ -91,7 +91,7 @@ const jsonLdArray = [...defaultJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : json
     />
 
     {jsonLdArray.map((ld) => (
-      <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />
     ))}
 
     {/* Site-level head tracking code (GTM, GA4, Plausible, etc.) */}

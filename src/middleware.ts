@@ -25,7 +25,13 @@ export const onRequest = defineMiddleware((context, next) => {
     '/frequently-asked-questions': '/resources/learning-center',
     '/success-stories': '/how-we-work/success-stories',
     '/calculator': '/calculators',
+    '/services/keystone-plan': '/how-we-work/keystone-method',
   };
+
+  if (pathname.startsWith(TENANT_PREFIX) && !pathname.includes('.') && !context.url.searchParams.has('__tenant')) {
+    const publicPath = pathname.slice(TENANT_PREFIX.length) || '/';
+    return context.redirect(publicPath + context.url.search, 301);
+  }
 
   const redirectTarget = redirects[normalizedPath];
   if (redirectTarget) {
@@ -42,5 +48,8 @@ export const onRequest = defineMiddleware((context, next) => {
   }
 
   const target = pathname === '/' ? TENANT_PREFIX : `${TENANT_PREFIX}${pathname}`;
-  return context.rewrite(target + context.url.search);
+  const searchParams = new URLSearchParams(context.url.search);
+  searchParams.set('__tenant', '1');
+  const search = searchParams.toString();
+  return context.rewrite(search ? `${target}?${search}` : target);
 });

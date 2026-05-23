@@ -9,9 +9,6 @@ import { allSEORoutes, seoRedirects } from '../../../data/talley-wealth/seo/rout
 import { buildFAQPageSchema } from '../../../data/talley-wealth/seo/schema';
 import { AVERAGE_RATING, GOOGLE_REVIEWS_URL, TOTAL_REVIEW_COUNT } from '../../../data/talley-wealth/reviews';
 
-export function getStaticPaths() {
-  return allSEORoutes.map((route) => ({ params: { slug: route.slug } }));
-}
 
 const slug = Astro.params.slug ?? '';
 if (seoRedirects[slug]) return Astro.redirect(seoRedirects[slug], 301);
@@ -50,7 +47,7 @@ const page = route.type === 'persona' && persona
   : route.type === 'service-city' && city && service
     ? {
         title: `${service.name} in ${city.name}, ${city.state} | Talley Wealth`,
-        description: serviceOverride?.description ?? `${service.name} for clients in ${city.name}, ${city.state}.`,
+        description: serviceOverride?.description ?? `${service.name} in ${city.name}, ${city.state} with coordinated planning around taxes, investments, retirement timing, and year-round decisions.`,
         eyebrow: `${city.name}, ${city.state}`,
         heading: `${service.name} in ${city.name}, ${city.state}`,
         intro: serviceOverride?.description ?? service.description,

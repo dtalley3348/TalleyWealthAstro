@@ -20,7 +20,7 @@ export interface DirectusBlogPost {
 const DIRECTUS_URL = import.meta.env.DIRECTUS_URL || '';
 const ADMIN_TOKEN = import.meta.env.DIRECTUS_ADMIN_TOKEN || '';
 
-function headers() {
+function headers(): HeadersInit {
   return ADMIN_TOKEN ? { Authorization: `Bearer ${ADMIN_TOKEN}` } : {};
 }
 

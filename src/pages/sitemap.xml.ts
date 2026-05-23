@@ -26,7 +26,6 @@ const canonicalPaths = [
   '/calculators',
   '/services/individual-tax',
   '/services/business-services',
-  '/services/keystone-plan',
   '/services/financial-planning',
   '/services/retirement-planning',
   '/services/investment-management',

@@ -223,9 +223,18 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
     const withdrawalOut = document.querySelector<HTMLOutputElement>('[data-output="withdrawal"]');
     if (!form || !result || !note || !projectedEl || !needEl || !gapEl || !returnOut || !withdrawalOut) return;
 
+    const calcForm = form;
+    const resultText = result;
+    const noteText = note;
+    const projectedValue = projectedEl;
+    const needValue = needEl;
+    const gapValue = gapEl;
+    const returnValue = returnOut;
+    const withdrawalValue = withdrawalOut;
+
     const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
     function update() {
-      const data = new FormData(form);
+      const data = new FormData(calcForm);
       const assets = Number(data.get('assets') || 0);
       const years = Number(data.get('years') || 0);
       const savings = Number(data.get('savings') || 0);
@@ -246,19 +255,19 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
       const gap = projected - requiredPortfolio;
       const supportedIncome = projected * withdrawalRate;
 
-      returnOut.textContent = `${(annualReturn * 100).toFixed(2).replace(/\\.00$/, '')}%`;
-      withdrawalOut.textContent = `${(withdrawalRate * 100).toFixed(2).replace(/\\.00$/, '')}%`;
-      projectedEl.textContent = fmt.format(projected);
-      needEl.textContent = fmt.format(requiredPortfolio);
-      gapEl.textContent = gap >= 0 ? fmt.format(gap) : `-${fmt.format(Math.abs(gap))}`;
-      result.textContent = gap >= 0
+      returnValue.textContent = `${(annualReturn * 100).toFixed(2).replace(/\\.00$/, '')}%`;
+      withdrawalValue.textContent = `${(withdrawalRate * 100).toFixed(2).replace(/\\.00$/, '')}%`;
+      projectedValue.textContent = fmt.format(projected);
+      needValue.textContent = fmt.format(requiredPortfolio);
+      gapValue.textContent = gap >= 0 ? fmt.format(gap) : `-${fmt.format(Math.abs(gap))}`;
+      resultText.textContent = gap >= 0
         ? `This path could support about ${fmt.format(supportedIncome)} from the portfolio in year one.`
         : `This path shows an estimated ${fmt.format(Math.abs(gap))} portfolio shortfall.`;
-      note.textContent = gap >= 0
+      noteText.textContent = gap >= 0
         ? 'That does not mean the plan is finished. It means the next questions are taxes, account types, withdrawal order, Social Security timing, healthcare, and how the portfolio handles a bad early market.'
         : 'A shortfall does not automatically mean you cannot retire. It means the levers matter: timing, spending, savings, outside income, tax strategy, and portfolio design.';
     }
-    form.addEventListener('input', update);
+    calcForm.addEventListener('input', update);
     update();
   })();
 
@@ -280,6 +289,19 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
     const dots = chart?.querySelector<SVGGElement>('[data-dots]');
     const scenarioLine = chart?.querySelector<SVGPolylineElement>('[data-line="scenario"]');
     if (!portfolioInput || !withdrawalInput || !title || !average || !endingEl || !lowestEl || !lastsEl || !legendEl || !resultEl || !grid || !dots || !scenarioLine) return;
+
+    const seqPortfolioInput = portfolioInput;
+    const seqWithdrawalInput = withdrawalInput;
+    const seqTitle = title;
+    const seqAverage = average;
+    const seqEnding = endingEl;
+    const seqLowest = lowestEl;
+    const seqLasts = lastsEl;
+    const seqLegend = legendEl;
+    const seqResult = resultEl;
+    const seqGrid = grid;
+    const seqDots = dots;
+    const seqLine = scenarioLine;
 
     const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
     const scenarioReturnMap = {
@@ -348,7 +370,7 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
     function drawGrid(maxValue: number, years: number) {
       const plotWidth = chartBox.width - chartBox.left - chartBox.right;
       const plotHeight = chartBox.height - chartBox.top - chartBox.bottom;
-      grid.innerHTML = '';
+      seqGrid.innerHTML = '';
       for (let step = 0; step <= 4; step += 1) {
         const y = chartBox.top + (step / 4) * plotHeight;
         const value = maxValue * (1 - step / 4);
@@ -359,7 +381,7 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
         line.setAttribute('y2', String(y));
         line.setAttribute('stroke', '#d4dce2');
         line.setAttribute('stroke-width', '1');
-        grid.appendChild(line);
+        seqGrid.appendChild(line);
 
         const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         label.setAttribute('x', '0');
@@ -367,7 +389,7 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
         label.setAttribute('fill', '#53616e');
         label.setAttribute('font-size', '12');
         label.textContent = value >= 1000000 ? `$${(value / 1000000).toFixed(1)}M` : `$${Math.round(value / 1000)}k`;
-        grid.appendChild(label);
+        seqGrid.appendChild(label);
       }
 
       [0, Math.round(years / 2), years].forEach((year) => {
@@ -379,13 +401,13 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
         label.setAttribute('font-size', '12');
         label.setAttribute('text-anchor', 'middle');
         label.textContent = `Year ${year}`;
-        grid.appendChild(label);
+        seqGrid.appendChild(label);
       });
     }
 
     function update() {
-      const start = Math.max(0, Number(portfolioInput.value || 0));
-      const withdrawal = Math.max(0, Number(withdrawalInput.value || 0));
+      const start = Math.max(0, Number(seqPortfolioInput.value || 0));
+      const withdrawal = Math.max(0, Number(seqWithdrawalInput.value || 0));
       const years = 30;
 
       const badEarlyReturns = getReturns(years);
@@ -395,22 +417,22 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
       const scenarioCopy = scenarioContent[currentMode];
 
       drawGrid(maxValue * 1.08, years);
-      scenarioLine.setAttribute('points', pointString(scenario.balances, maxValue * 1.08));
-      scenarioLine.setAttribute('stroke', scenarioCopy.color);
-      dots.innerHTML = '';
+      seqLine.setAttribute('points', pointString(scenario.balances, maxValue * 1.08));
+      seqLine.setAttribute('stroke', scenarioCopy.color);
+      seqDots.innerHTML = '';
 
-      title.textContent = scenarioCopy.title;
-      average.textContent = `Average annual return: ${averageReturn.toFixed(1)}% after inflation over ${years} years. Only the order changes between scenarios.`;
-      legendEl.lastChild!.textContent = ` ${scenarioCopy.legend}`;
-      legendEl.querySelector('span')?.setAttribute('style', `background:${scenarioCopy.color}`);
-      endingEl.textContent = fmt.format(scenario.ending);
-      lowestEl.textContent = fmt.format(scenario.lowestBalance);
-      lastsEl.textContent = scenario.ranOutYear ? `Year ${scenario.ranOutYear}` : `${years} years`;
+      seqTitle.textContent = scenarioCopy.title;
+      seqAverage.textContent = `Average annual return: ${averageReturn.toFixed(1)}% after inflation over ${years} years. Only the order changes between scenarios.`;
+      seqLegend.lastChild!.textContent = ` ${scenarioCopy.legend}`;
+      seqLegend.querySelector('span')?.setAttribute('style', `background:${scenarioCopy.color}`);
+      seqEnding.textContent = fmt.format(scenario.ending);
+      seqLowest.textContent = fmt.format(scenario.lowestBalance);
+      seqLasts.textContent = scenario.ranOutYear ? `Year ${scenario.ranOutYear}` : `${years} years`;
 
       const timing = scenario.ranOutYear
         ? `The portfolio runs out in year ${scenario.ranOutYear}.`
         : `The portfolio lasts the full ${years} years and ends with ${fmt.format(scenario.ending)}.`;
-      resultEl.textContent = `${scenarioCopy.result} ${timing}`;
+      seqResult.textContent = `${scenarioCopy.result} ${timing}`;
     }
 
     sim.querySelectorAll<HTMLButtonElement>('[data-sequence-mode]').forEach((button) => {

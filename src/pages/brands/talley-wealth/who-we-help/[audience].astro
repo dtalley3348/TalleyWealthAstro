@@ -8,7 +8,7 @@ type Section = {
   bullets?: string[];
 };
 
-const pages: Record<string, {
+type AudiencePage = {
   title: string;
   description: string;
   heading: string;
@@ -18,7 +18,9 @@ const pages: Record<string, {
   imageAlt?: string;
   imagePosition?: string;
   sections: Section[];
-}> = {
+};
+
+export const pages: Record<string, AudiencePage> = {
   retirement: {
     title: 'Planning the Retirement Chapter | Talley Wealth',
     description: 'Coordinated retirement planning for the five to ten years on either side of leaving full-time work. Withdrawal sequence, Roth conversions, Social Security timing, and Medicare brackets in one plan.',
@@ -212,9 +214,6 @@ const pages: Record<string, {
   },
 };
 
-export function getStaticPaths() {
-  return Object.keys(pages).map((audience) => ({ params: { audience } }));
-}
 
 const page = pages[Astro.params.audience ?? ''];
 if (Astro.params.audience === 'retirement') {
@@ -248,7 +247,7 @@ if (!page) return new Response('Not found', { status: 404 });
     </div>
   </section>
 
-  {page.sections.map((section, index) => (
+  {page.sections.map((section) => (
     <section class:list={[section.tone === 'card' ? 'bg-card' : 'bg-background', 'py-20']}>
       <div class="section-container">
         <div class="mx-auto max-w-3xl">

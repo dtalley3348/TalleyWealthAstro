@@ -6,6 +6,8 @@
  * to the tenant-aware platform newsletter API.
  */
 
+type FooterLink = { title: string; href: string; external?: boolean };
+
 const howWeWork = [
   { title: 'The Keystone Method™', href: '/how-we-work/keystone-method' },
   { title: 'What to Expect', href: '/how-we-work/what-to-expect' },
@@ -22,7 +24,7 @@ const company = [
   { title: 'Contact Us', href: '/contact' },
 ];
 
-const resources = [
+const resources: FooterLink[] = [
   { title: 'Resources Home', href: '/resources' },
   { title: 'Blog', href: '/resources/blog' },
   { title: 'Learning Center', href: '/resources/learning-center' },

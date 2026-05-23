@@ -36,12 +36,12 @@ const heroAudiences = [
 
 <TalleyPage
   title="Talley Wealth | Financial Planning, Tax & Investing"
-  description="Talley Wealth is a Johnson City, TN financial planning firm helping families, business owners, and professionals make better decisions around retirement, taxes, investments, and what comes next."
+  description="Financial planning in Johnson City for retirement income, tax strategy, investments, and major financial transitions."
   heroTransparent
-  ogImage="/brands/talley-wealth/hero-bg.png"
+  ogImage="/brands/talley-wealth/hero-bg.webp"
 >
   <section class="relative flex min-h-[85vh] items-center overflow-hidden bg-primary pt-20 text-primary-foreground sm:pt-28">
-    <img decoding="async" src="/brands/talley-wealth/hero-bg.png" alt="" class="absolute inset-0 h-full w-full object-cover" loading="eager" />
+    <img decoding="async" src="/brands/talley-wealth/hero-bg.webp" alt="" class="absolute inset-0 h-full w-full object-cover" loading="eager" />
     <div class="absolute inset-0 bg-gradient-to-r from-primary from-40% via-primary/90 via-70% to-primary/60"></div>
 
     <div class="section-container relative z-10 w-full">
@@ -51,10 +51,9 @@ const heroAudiences = [
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
         </div>
         <h1 class="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl">
-          Financial planning in Johnson City for <span class="text-accent">retirement, taxes, and what comes next.</span>
+          Financial planning built for
         </h1>
-        <div class="mt-6 flex flex-col gap-2 text-lg font-semibold text-primary-foreground/90 sm:flex-row sm:items-center md:text-xl">
-          <span>Built for</span>
+        <div class="mt-5 text-3xl font-bold leading-tight text-accent md:text-4xl">
           <span class="tw-hero-rotator" aria-hidden="true">
             <span class="tw-hero-rotator__track">
               {heroAudiences.map((audience) => (
@@ -62,10 +61,10 @@ const heroAudiences = [
               ))}
             </span>
           </span>
-          <span class="sr-only">Built for {heroAudiences.join(', ')}.</span>
+          <span class="sr-only">{heroAudiences.join(', ')}.</span>
         </div>
         <p class="mt-5 text-lg leading-relaxed text-primary-foreground/80">
-          Talley Wealth helps turn retirement, tax, investment, and major money questions into a planning process that gives the next decision somewhere to stand.
+          Clearer decisions around retirement income, tax strategy, investments, and major financial transitions.
         </p>
         <div class="mt-8 flex flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-4 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
@@ -233,10 +232,12 @@ const heroAudiences = [
   .tw-hero-rotator {
     position: relative;
     display: inline-block;
-    min-height: 1.45em;
+    height: 1.45em;
+    line-height: 1.45;
     min-width: min(100%, 360px);
     overflow: hidden;
     color: var(--color-accent);
+    vertical-align: bottom;
   }
 
   .tw-hero-rotator__track {
@@ -247,7 +248,8 @@ const heroAudiences = [
 
   .tw-hero-rotator__track span {
     display: block;
-    min-height: 1.45em;
+    height: 1.45em;
+    line-height: 1.45;
     white-space: nowrap;
   }
 

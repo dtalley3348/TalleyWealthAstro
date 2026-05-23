@@ -124,7 +124,7 @@ export const personas: Record<string, PersonaData> = {
     ctaTitle: 'Bring the business question. We will look at the whole picture.',
     ctaDescription: "Schedule a 15-minute Explore Call. We will talk about what is happening in the business, what feels unresolved, and whether Keystone is the right way to coordinate the tax and planning work.",
     metaTitle: 'Financial Advisor for Business Owners | Talley Wealth',
-    metaDescription: 'Tax strategy and financial planning for business owners in the Tri-Cities. Talley Wealth helps coordinate owner compensation, retirement plan design, entity decisions, exit planning, and personal wealth.',
+    metaDescription: 'Tax strategy and financial planning for business owners coordinating compensation, retirement plans, entity decisions, exit planning, and personal wealth.',
     faqs: [
       {
         q: 'How do I know if I should switch from an LLC to an S-Corp?',
@@ -209,7 +209,7 @@ export const personas: Record<string, PersonaData> = {
     ctaTitle: 'Before you make the next move, get oriented.',
     ctaDescription: 'Schedule a 15-minute Explore Call. We will talk about what changed, what decisions are already in front of you, and whether Keystone is the right way to organize the next steps.',
     metaTitle: 'Financial Advisor for Inherited Wealth | Talley Wealth',
-    metaDescription: 'Financial planning for inherited wealth, inherited IRAs, family money, and aging-parent decisions. Talley Wealth helps coordinate tax, investment, estate, and retirement decisions.',
+    metaDescription: 'Planning for inherited wealth, inherited IRAs, family money, and aging-parent decisions across tax, investment, estate, and retirement choices.',
     faqs: [
       {
         q: 'What should I do first after receiving an inheritance?',
@@ -290,8 +290,8 @@ export const personas: Record<string, PersonaData> = {
     ],
     ctaTitle: 'Make the next vesting date part of a plan.',
     ctaDescription: 'Schedule a 15-minute Explore Call. We will talk through the equity decisions coming up, what feels unresolved, and whether Keystone is the right place to map the choices.',
-    metaTitle: 'Financial Advisor for Executives with Equity Compensation | Talley Wealth',
-    metaDescription: 'Financial planning for executives and professionals with RSUs, stock options, deferred compensation, bonuses, and concentrated company stock.',
+    metaTitle: 'Equity Compensation Financial Advisor | Talley Wealth',
+    metaDescription: 'Planning for executives with RSUs, stock options, deferred compensation, bonuses, and concentrated company stock.',
     faqs: [
       {
         q: 'Should I sell RSUs as soon as they vest?',
@@ -373,7 +373,7 @@ export const personas: Record<string, PersonaData> = {
     ctaTitle: 'Get clear before the next benefit decision.',
     ctaDescription: "Schedule a 15-minute Explore Call. We will talk about the decision in front of you and whether Keystone is the right way to build the full retirement and benefits picture.",
     metaTitle: 'Financial Planning for Kingsport Employer Benefits | Talley Wealth',
-    metaDescription: 'Financial planning for Kingsport professionals and retirees with employer-benefit decisions. Talley Wealth helps coordinate retirement timing, taxes, investments, and benefit choices.',
+    metaDescription: 'Planning for Kingsport professionals and retirees coordinating employer benefits, retirement timing, taxes, investments, and benefit choices.',
     faqs: [
       {
         q: 'Can you help me decide when I can retire from a major Kingsport employer?',
@@ -459,7 +459,7 @@ export const personas: Record<string, PersonaData> = {
     ctaTitle: 'Retirement is too important for a rough guess.',
     ctaDescription: "Schedule a 15-minute Explore Call. We will talk about your timeline, what feels unresolved, and whether Keystone is the right way to build the full retirement picture.",
     metaTitle: 'Financial Advisor for Pre-Retirees (55-65) | Talley Wealth',
-    metaDescription: 'Pre-retirement planning for ages 55-65 in the Tri-Cities. Talley Wealth helps coordinate retirement income, taxes, Roth conversions, Social Security timing, healthcare, investments, and lifestyle planning.',
+    metaDescription: 'Pre-retirement planning for ages 55-65: income, taxes, Roth conversions, Social Security timing, healthcare, investments, and lifestyle decisions.',
     faqs: [
       {
         q: 'How do I know if I can afford to retire?',
@@ -545,7 +545,7 @@ export const personas: Record<string, PersonaData> = {
     ctaTitle: 'Make the financial side easier to understand.',
     ctaDescription: "Schedule a 15-minute Explore Call. We will talk about what feels unresolved and whether Keystone is the right way to organize the financial side.",
     metaTitle: 'Financial Advisor for Healthcare Professionals | Talley Wealth',
-    metaDescription: 'Financial planning for healthcare professionals in the Tri-Cities. Talley Wealth helps coordinate taxes, student loans, benefits, insurance, investments, and retirement decisions.',
+    metaDescription: 'Planning for healthcare professionals coordinating taxes, student loans, benefits, insurance, investments, and retirement decisions.',
     faqs: [
       {
         q: 'Can you help with student loan and PSLF questions?',

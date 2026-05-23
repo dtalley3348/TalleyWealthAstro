@@ -69,16 +69,15 @@ function videoEmbedUrl(videoUrl?: string | null) {
   return null;
 }
 
-export async function getStaticPaths() {
-  const directusPosts = await getBlogPosts({ siteKey: 'talley-wealth' });
-  const slugs = directusPosts.length > 0 ? directusPosts.map((post: DirectusBlogPost) => post.slug) : blogPosts.map((post) => post.slug);
-  return slugs.map((slug) => ({ params: { slug } }));
-}
 
 const slug = Astro.params.slug ?? '';
-const directusPost = await getBlogPost(slug, 'talley-wealth');
+const directusPost = import.meta.env.DIRECTUS_URL || import.meta.env.DIRECTUS_PUBLIC_URL
+  ? await getBlogPost(slug, 'talley-wealth')
+  : null;
 const fallbackPost = blogPostMap.get(slug);
-const directusPosts = await getBlogPosts({ siteKey: 'talley-wealth' });
+const directusPosts = import.meta.env.DIRECTUS_URL || import.meta.env.DIRECTUS_PUBLIC_URL
+  ? await getBlogPosts({ siteKey: 'talley-wealth' })
+  : [];
 const relatedSourcePosts = directusPosts.length > 0
   ? directusPosts.map((post: DirectusBlogPost) => ({
       slug: post.slug,
@@ -115,8 +114,8 @@ const post = normalizeBlogPost({ slug, ...rawPost }, relatedSourcePosts);
 const strategy = blogStrategyBySlug[slug];
 const internalLinks = strategy?.links ?? getInternalLinks([post.category, post.title, post.description, ...post.tags], 4);
 const planningLinks = internalLinks.map((link) => ({
-  label: 'href' in link ? link.title : link.label,
-  href: 'href' in link ? link.href : link.path,
+  label: link.title,
+  href: link.href,
 }));
 const embedUrl = videoEmbedUrl(post.videoUrl);
 const canonicalUrl = new URL(`/resources/blog/${slug}`, Astro.site ?? Astro.url.origin).href;

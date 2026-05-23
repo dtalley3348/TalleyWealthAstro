@@ -1,11 +1,8 @@
 ---
 import TalleyPage from '../../../../../components/talley-wealth/TalleyPage.astro';
-import { wikiArticles, getArticleBySlug } from '../../../../../data/talley-wealth/wiki/articles';
+import { getArticleBySlug } from '../../../../../data/talley-wealth/wiki/articles';
 import { getCategoryBySlug } from '../../../../../data/talley-wealth/wiki/categories';
 
-export function getStaticPaths() {
-  return wikiArticles.map((article) => ({ params: { category: article.category, slug: article.slug } }));
-}
 
 const article = getArticleBySlug(Astro.params.slug ?? '');
 if (!article || article.category !== Astro.params.category) return new Response('Not found', { status: 404 });

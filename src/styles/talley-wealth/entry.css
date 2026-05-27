@@ -8,6 +8,7 @@
 @import "tailwindcss";
 
 @source "../../pages/brands/talley-wealth/**/*.{astro,ts,tsx}";
+@source "../../pages/404.astro";
 @source "../../components/talley-wealth/**/*.{astro,ts,tsx}";
 @source "../../layouts/BaseLayout.talley-wealth.astro";
 

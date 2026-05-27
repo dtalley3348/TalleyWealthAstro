@@ -38,6 +38,10 @@ export const onRequest = defineMiddleware((context, next) => {
     return context.redirect(redirectTarget, 301);
   }
 
+  if (normalizedPath === '/404') {
+    return next();
+  }
+
   if (
     pathname.startsWith(TENANT_PREFIX) ||
     pathname.startsWith('/api/') ||

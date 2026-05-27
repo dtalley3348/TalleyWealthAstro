@@ -1,0 +1,72 @@
+---
+import TalleyPage from '../components/talley-wealth/TalleyPage.astro';
+
+const helpfulLinks = [
+  { title: 'Financial Planning', href: '/services/financial-planning' },
+  { title: 'Retirement Planning', href: '/services/retirement-planning' },
+  { title: 'Tax Planning', href: '/services/tax-planning' },
+  { title: 'Investment Management', href: '/services/investment-management' },
+  { title: 'Who We Help', href: '/who-we-help' },
+  { title: 'The Keystone Method', href: '/how-we-work/keystone-method' },
+];
+---
+
+<TalleyPage
+  title="Page Not Found | Talley Wealth"
+  description="The page may have moved. Find the right Talley Wealth planning resource, return home, or schedule an Explore Call."
+  noindex
+>
+  <section class="bg-muted/35">
+    <div class="section-container grid min-h-[620px] items-center gap-12 py-20 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <div class="mb-6 flex items-center gap-3">
+          <div class="h-1 w-14 rounded-full bg-accent"></div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">404</p>
+        </div>
+        <h1 class="font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
+          This page isn't where it used to be.
+        </h1>
+        <div class="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
+          <p>
+            The link may have changed, or the page may have been moved. You can head back to the homepage,
+            schedule an Explore Call, or use the links below to find the right place.
+          </p>
+          <p class="text-base">
+            If you followed a link from an ad, email, or saved page, you're still in the right place. Start
+            here and we'll get you oriented.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/" class="inline-flex rounded-md bg-accent px-5 py-3 font-bold text-accent-foreground transition hover:brightness-95">
+            Go to Homepage
+          </a>
+          <a href="/get-started" class="inline-flex rounded-md border border-border bg-card px-5 py-3 font-bold text-primary transition hover:border-accent hover:text-accent">
+            Schedule an Explore Call
+          </a>
+        </div>
+      </div>
+
+      <aside class="rounded-lg border border-border bg-card p-6 shadow-elegant md:p-8" aria-labelledby="helpful-links-heading">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <h2 id="helpful-links-heading" class="font-serif text-2xl font-bold text-primary">Find the right page</h2>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">A few useful starting points from the site.</p>
+          </div>
+          <div class="hidden rounded-md bg-primary px-3 py-2 font-serif text-2xl font-bold text-primary-foreground sm:block">
+            404
+          </div>
+        </div>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          {helpfulLinks.map((link) => (
+            <a href={link.href} class="rounded-md border border-border bg-background px-4 py-3 text-sm font-bold text-foreground transition hover:border-accent hover:text-accent">
+              {link.title}
+            </a>
+          ))}
+        </div>
+        <div class="mt-6 border-t border-border pt-6">
+          <a href="/contact" class="text-sm font-bold text-accent hover:underline">Contact Talley Wealth</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</TalleyPage>

@@ -137,6 +137,7 @@ const { compact = false, animated = false } = Astro.props;
   html[data-tenant="talley-wealth"] .tw-arch .stone,
   html[data-tenant="talley-wealth"] .tw-arch .keystone-group {
     cursor: pointer;
+    transform-box: fill-box;
     transform-origin: center center;
     transition: transform 0.3s ease, filter 0.3s ease;
   }
@@ -207,20 +208,6 @@ const { compact = false, animated = false } = Astro.props;
   html[data-tenant="talley-wealth"] .tw-arch--animated .keystone-group path {
     animation: twKeystoneGlow 3s ease-in-out infinite;
   }
-  @keyframes twStoneSettle {
-    0% { opacity: 0.55; transform: translateY(7px) scale(0.985); }
-    45% { opacity: 1; transform: translateY(0) scale(1); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
-  }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone {
-    animation: twStoneSettle 4.8s ease both infinite;
-  }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--left-base { animation-delay: 0.1s; }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--left-mid { animation-delay: 0.25s; }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--left-top { animation-delay: 0.4s; }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--right-top { animation-delay: 0.55s; }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--right-mid { animation-delay: 0.7s; }
-  html[data-tenant="talley-wealth"] .tw-arch--animated .stone--right-base { animation-delay: 0.85s; }
   @media (max-width: 640px) {
     html[data-tenant="talley-wealth"] .tw-arch .rough-stones,
     html[data-tenant="talley-wealth"] .tw-arch .process-labels {

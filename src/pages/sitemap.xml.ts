@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { blogPosts } from '../data/talley-wealth/site-content';
+import { blogPosts, seoPages } from '../data/talley-wealth/site-content';
 
 const site = 'https://talleywealth.com';
 
@@ -46,10 +46,12 @@ const canonicalPaths = [
   '/financial-advisor-for-pre-retirees',
   '/financial-advisor-for-healthcare-professionals',
   ...blogPosts.map((post) => `/resources/blog/${post.slug}`),
+  ...seoPages.map((page) => `/${page.slug}`),
 ];
 
 export const GET: APIRoute = () => {
-  const urls = canonicalPaths.map((path) => `  <url><loc>${site}${path}</loc></url>`).join('\n');
+  const uniquePaths = [...new Set(canonicalPaths)];
+  const urls = uniquePaths.map((path) => `  <url><loc>${site}${path}</loc></url>`).join('\n');
   return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`, {
     headers: { 'Content-Type': 'application/xml; charset=utf-8' },
   });

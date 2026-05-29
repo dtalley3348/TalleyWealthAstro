@@ -32,6 +32,8 @@ const heroAudiences = [
   'executives with equity comp',
   'professionals with no time to waste',
 ];
+
+const heroAudienceLoop = [...heroAudiences, heroAudiences[0]];
 ---
 
 <TalleyPage
@@ -56,7 +58,7 @@ const heroAudiences = [
         <div class="mt-5 text-3xl font-bold leading-tight text-accent md:text-4xl">
           <span class="tw-hero-rotator" aria-hidden="true">
             <span class="tw-hero-rotator__track">
-              {heroAudiences.map((audience) => (
+              {heroAudienceLoop.map((audience) => (
                 <span>{audience}</span>
               ))}
             </span>
@@ -243,7 +245,8 @@ const heroAudiences = [
   .tw-hero-rotator__track {
     display: flex;
     flex-direction: column;
-    animation: tw-hero-rotate 11s infinite;
+    animation: tw-hero-rotate 8s cubic-bezier(0.45, 0, 0.25, 1) infinite;
+    will-change: transform;
   }
 
   .tw-hero-rotator__track span {
@@ -255,25 +258,30 @@ const heroAudiences = [
 
   @keyframes tw-hero-rotate {
     0%,
-    16% {
+    12% {
       transform: translateY(0);
     }
-    20%,
-    36% {
+    18%,
+    28% {
       transform: translateY(-1.45em);
     }
-    40%,
-    56% {
+    34%,
+    44% {
       transform: translateY(-2.9em);
     }
-    60%,
-    76% {
+    50%,
+    60% {
       transform: translateY(-4.35em);
     }
-    80%,
-    96% {
+    66%,
+    76% {
       transform: translateY(-5.8em);
     }
+    82%,
+    94% {
+      transform: translateY(-7.25em);
+    }
+    94.01%,
     100% {
       transform: translateY(0);
     }

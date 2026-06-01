@@ -127,6 +127,12 @@ const {
             body: JSON.stringify(payload),
           });
           if (!res.ok) throw new Error('submission failed');
+          if (typeof window.talleyTrackEvent === 'function') {
+            window.talleyTrackEvent('lead_form_submit', {
+              form_source: payload.source,
+              form_topic: payload.topic,
+            });
+          }
           form.reset();
           message.textContent = 'Thanks. We received it.';
           message.className = 'text-sm text-green-700';

@@ -1,5 +1,9 @@
 /// <reference types="astro/client" />
 
+interface Window {
+  talleyTrackEvent?: (name: string, params?: Record<string, unknown>) => void;
+}
+
 declare namespace App {
   interface Locals {
     site: {

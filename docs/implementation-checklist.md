@@ -11,6 +11,11 @@
 - [x] Article schema for blog/video-derived posts.
 - [ ] Metadata pass for all priority pages.
 - [x] Robots.txt review.
+- [x] Local sitemap crawl returns only direct `200` URLs.
+- [x] Search Console sample problem URLs redirect locally with `301 -> 200`.
+- [ ] Deployed sitemap crawl returns only canonical non-www direct `200` URLs.
+- [ ] Old `mytalleyfinancial.com` homepage redirects to `https://talleywealth.com/`.
+- [ ] High-value old-domain URLs redirect to current canonical pages.
 
 ## Local Priority Pages
 - [ ] Johnson City page upgrade.
@@ -40,6 +45,9 @@
 ## Measurement
 - [ ] Google Business Profile audit.
 - [ ] Search Console baseline export.
+- [ ] Search Console non-www sitemap resubmitted after deployment.
+- [ ] Search Console `www` sitemap removed or ignored after deployment.
+- [ ] 30-day website assurance watch started.
 - [ ] Bing Webmaster Tools setup/check.
 - [ ] Organic call/form tracking plan.
 - [ ] Monthly ranking and content refresh rhythm.

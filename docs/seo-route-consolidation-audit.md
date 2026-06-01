@@ -19,11 +19,11 @@ These pages should be treated as primary ranking assets.
 | `/services/investment-management` | Added | Canonical investment management page. |
 | `/services/tax-planning` | Added | Canonical tax planning page, tied to Keystone and tax preparation. |
 | `/services/business-owner-planning` | Added | Canonical business owner planning service page. |
+| `/services/irs-resolution` | Added | Real service page and indexable; should be in sitemap while the service remains public. |
 | `/financial-advisor-for-pre-retirees` | Keep and polish | Strong persona intent. |
 | `/financial-advisor-for-business-owners` | Keep and polish | Strong persona intent. |
-| `/financial-advisor-for-doctors` | Keep and compliance review | Strong persona intent; benefits and PSLF language should be reviewed. |
-| `/financial-advisor-for-eastman-employees` | Keep and compliance review | Strong employer intent; benefit details should be verified. |
-| `/financial-advisor-for-ballad-health` | Keep and compliance review | Strong employer intent; benefits and PSLF language should be verified. |
+| `/financial-advisor-for-healthcare-professionals` | Keep and polish | Broader healthcare persona page; old doctors and Ballad variants redirect here. |
+| `/financial-advisor-for-kingsport-employer-benefits` | Keep and polish | Employer-benefits page for Kingsport professionals; old Eastman variant redirects here. |
 
 ## Redirected or Corrected URLs
 
@@ -32,11 +32,14 @@ These URLs were already being referenced internally or are plausible legacy vari
 | URL | Action | Target |
 |---|---|---|
 | `/retirement-planning-johnson-city-tn` | 301 redirect | `/financial-advisor-johnson-city-tn` |
-| `/tax-planning-johnson-city-tn` | 301 redirect | `/services/keystone-plan` |
+| `/tax-planning-johnson-city-tn` | 301 redirect | `/services/tax-planning` |
 | `/business-financial-planning-johnson-city-tn` | 301 redirect | `/financial-advisor-for-business-owners` |
 | `/investment-management-johnson-city-tn` | 301 redirect | `/financial-advisor-johnson-city-tn` |
 | `/estate-planning-johnson-city-tn` | 301 redirect | `/financial-advisor-for-pre-retirees` |
-| `/financial-advisor-for-ballad-health-professionals` | 301 redirect | `/financial-advisor-for-ballad-health` |
+| `/financial-advisor-for-ballad-health-professionals` | 301 redirect | `/financial-advisor-for-healthcare-professionals` |
+| `/financial-advisor-for-ballad-health` | 301 redirect | `/financial-advisor-for-healthcare-professionals` |
+| `/financial-advisor-for-doctors` | 301 redirect | `/financial-advisor-for-healthcare-professionals` |
+| `/financial-advisor-for-eastman-employees` | 301 redirect | `/financial-advisor-for-kingsport-employer-benefits` |
 
 ## Existing City-Service Pages
 

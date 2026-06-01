@@ -12,7 +12,7 @@ export interface SEORoute {
 
 export const seoRedirects: Record<string, string> = {
   'retirement-planning-johnson-city-tn': '/financial-advisor-johnson-city-tn',
-  'tax-planning-johnson-city-tn': '/services/keystone-plan',
+  'tax-planning-johnson-city-tn': '/services/tax-planning',
   'business-financial-planning-johnson-city-tn': '/financial-advisor-for-business-owners',
   'investment-management-johnson-city-tn': '/financial-advisor-johnson-city-tn',
   'estate-planning-johnson-city-tn': '/financial-advisor-for-pre-retirees',

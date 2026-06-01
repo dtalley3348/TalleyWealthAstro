@@ -1,7 +1,12 @@
 import type { APIRoute } from 'astro';
-import { blogPosts, seoPages } from '../data/talley-wealth/site-content';
+import { blogPosts } from '../data/talley-wealth/site-content';
+import { allSEORoutes, seoRedirects } from '../data/talley-wealth/seo/routes';
 
 const site = 'https://talleywealth.com';
+
+const seoPaths = allSEORoutes
+  .filter((route) => !seoRedirects[route.slug])
+  .map((route) => `/${route.slug}`);
 
 const canonicalPaths = [
   '/',
@@ -26,6 +31,7 @@ const canonicalPaths = [
   '/calculators',
   '/services/individual-tax',
   '/services/business-services',
+  '/services/irs-resolution',
   '/services/financial-planning',
   '/services/retirement-planning',
   '/services/investment-management',
@@ -46,7 +52,7 @@ const canonicalPaths = [
   '/financial-advisor-for-pre-retirees',
   '/financial-advisor-for-healthcare-professionals',
   ...blogPosts.map((post) => `/resources/blog/${post.slug}`),
-  ...seoPages.map((page) => `/${page.slug}`),
+  ...seoPaths,
 ];
 
 export const GET: APIRoute = () => {

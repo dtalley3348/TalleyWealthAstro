@@ -1,6 +1,6 @@
 # Talley Wealth SEO URL Strategy Decisions
 
-_Last updated: May 23, 2026_
+_Last updated: June 1, 2026_
 
 ## Purpose
 
@@ -51,9 +51,11 @@ Use noindex when a page is useful to users but not intended to rank.
 
 Use a 404 or 410 only when the URL has no useful equivalent and should not be preserved.
 
-## Current Pass 1 Scope
+The old `mytalleyfinancial.com` domain should be treated as a migration asset, not a second website. Its homepage and high-value old URLs should 301 directly to `https://talleywealth.com` canonical pages. Do not leave a "we moved" page as the primary old-domain experience, and do not redirect old URLs into `www.talleywealth.com` or other redirect chains.
 
-This pass is intentionally conservative.
+## Current Assurance Scope
+
+This pass is intentionally conservative. The goal is to create a clean technical and indexing foundation, then watch Search Console for 30 days while the main growth effort shifts back to video and content.
 
 Do now:
 
@@ -64,6 +66,8 @@ Do now:
 - Redirect `/calculator` to `/calculators`.
 - Add direct tenant URL redirects where safe so `/brands/talley-wealth/...` does not create duplicate public pages.
 - Keep the sitemap focused and avoid adding borderline local pages.
+- Keep `https://talleywealth.com/sitemap.xml` as the canonical sitemap source.
+- Redirect old-domain `mytalleyfinancial.com` requests to current Talley Wealth pages if that domain is pointed at this app.
 
 Do not decide yet:
 
@@ -100,17 +104,17 @@ Possible headline direction:
 
 ## Near-Term Improvement Priorities
 
-After Pass 1:
+After the assurance pass:
 
-1. Decide whether `/about/our-commitment` should remain a real trust page. Current preference: yes, make it real if it supports confidence and fit.
-2. Build a real services hub with prospect-facing language.
-3. Review local pages one by one: Johnson City, Bristol, Kingsport, Tri-Cities first; then Southwest Virginia, Abingdon, Greeneville, Erwin.
-4. Upgrade selected Learning Center articles into David-voice answer pages before indexing them.
-5. Build focused content around business-owner tax planning, pre-retirement tax planning, inherited wealth, and equity compensation.
-6. Update or remove `/resources/key-dates`; if kept, it must stay current.
+1. Verify the deployed sitemap and redirects live.
+2. Clean up Search Console so the non-www sitemap is the active source.
+3. Complete old-domain redirect migration from `mytalleyfinancial.com`.
+4. Watch indexing, impressions, clicks, and old-domain consolidation for 30 days.
+5. Shift primary effort to the video system, with pre-retiree topics as the first strategic priority.
+6. Add new pages only when Search Console or content strategy shows a clear gap.
 
 ## Notes For Joe / CloudWise
 
-The current live site appears to be serving a broader sitemap than the intended local sitemap. Before submitting to Google Search Console or Bing Webmaster Tools, confirm the deployed build is using the same sitemap and middleware source as the approved local/GitHub version.
+Before submitting to Google Search Console or Bing Webmaster Tools, confirm the deployed build is using the same sitemap and middleware source as the approved local/GitHub version.
 
 The cleanup should be deployed first, then verified live, then submitted to search engines.

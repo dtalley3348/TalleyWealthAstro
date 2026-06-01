@@ -63,6 +63,25 @@ const wrapperClass = ['tw-journey-pathway', compact ? 'tw-journey-pathway--compa
     </svg>
   </div>
 
+  <div class="tw-journey-pathway__mobile" aria-label="A clear path from initial conversation to ongoing advisory">
+    <div class="tw-journey-pathway__mobile-step">
+      <span>1</span>
+      <p>Explore Call</p>
+    </div>
+    <div class="tw-journey-pathway__mobile-step">
+      <span>2</span>
+      <p>Strategy Session</p>
+    </div>
+    <div class="tw-journey-pathway__mobile-step tw-journey-pathway__mobile-step--keystone">
+      <span>3</span>
+      <p>Keystone Method™</p>
+    </div>
+    <div class="tw-journey-pathway__mobile-step">
+      <span>4</span>
+      <p>Ongoing Advisory</p>
+    </div>
+  </div>
+
   {compact ? (
     <p class="tw-journey-pathway__caption tw-journey-pathway__caption--compact">Your journey from first conversation to ongoing partnership</p>
   ) : (
@@ -78,6 +97,9 @@ const wrapperClass = ['tw-journey-pathway', compact ? 'tw-journey-pathway--compa
   html[data-tenant="talley-wealth"] .tw-journey-pathway__frame {
     margin-inline: auto;
     max-width: 42rem;
+  }
+  html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile {
+    display: none;
   }
   html[data-tenant="talley-wealth"] .tw-journey-pathway--compact .tw-journey-pathway__frame {
     max-width: 28rem;
@@ -180,6 +202,65 @@ const wrapperClass = ['tw-journey-pathway', compact ? 'tw-journey-pathway--compa
     html[data-tenant="talley-wealth"] .tw-journey-pathway__waypoint,
     html[data-tenant="talley-wealth"] .tw-journey-pathway__keystone {
       transition: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__frame {
+      display: none;
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile {
+      display: grid;
+      gap: 0.75rem;
+      margin-inline: auto;
+      max-width: 22rem;
+      position: relative;
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile::before {
+      content: '';
+      position: absolute;
+      left: 1.375rem;
+      top: 1.5rem;
+      bottom: 1.5rem;
+      width: 2px;
+      background: color-mix(in srgb, var(--color-accent) 32%, transparent);
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2.75rem 1fr;
+      align-items: center;
+      gap: 0.875rem;
+      border: 1px solid color-mix(in srgb, var(--color-accent) 28%, transparent);
+      background: color-mix(in srgb, var(--color-card) 92%, transparent);
+      border-radius: 0.5rem;
+      padding: 0.875rem 1rem;
+      box-shadow: var(--shadow-elegant);
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile-step span {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 9999px;
+      background: var(--color-accent);
+      color: var(--color-accent-foreground);
+      font-weight: 800;
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile-step p {
+      color: var(--color-primary);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile-step--keystone {
+      background: var(--color-primary);
+      border-color: var(--color-accent);
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__mobile-step--keystone p {
+      color: var(--color-primary-foreground);
+    }
+    html[data-tenant="talley-wealth"] .tw-journey-pathway__caption {
+      margin-top: 1rem;
     }
   }
 </style>

@@ -112,6 +112,7 @@
 @layer base {
   html[data-tenant="talley-wealth"] {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   html[data-tenant="talley-wealth"] body {
     background: var(--color-background);
@@ -119,6 +120,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
   }
   html[data-tenant="talley-wealth"] h1,
   html[data-tenant="talley-wealth"] h2,

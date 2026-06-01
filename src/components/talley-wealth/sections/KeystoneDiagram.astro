@@ -213,9 +213,13 @@ const { compact = false, animated = false } = Astro.props;
     html[data-tenant="talley-wealth"] .tw-arch .process-labels {
       display: none;
     }
-    html[data-tenant="talley-wealth"] .tw-arch__svg {
-      transform: translateX(-4%);
-      width: 108%;
+    html[data-tenant="talley-wealth"] .tw-arch__frame {
+      overflow: hidden;
+    }
+    html[data-tenant="talley-wealth"] .tw-arch__svg,
+    html[data-tenant="talley-wealth"] .tw-arch--compact .tw-arch__svg {
+      width: 100%;
+      transform: translateX(-20%);
     }
   }
 

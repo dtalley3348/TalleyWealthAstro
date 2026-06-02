@@ -28,9 +28,9 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
 const heroAudiences = [
   'families nearing retirement',
   'business owners with tax questions',
-  'people who inherited money',
+  'high earners with too many decisions',
   'executives with equity comp',
-  'professionals with no time to waste',
+  'families managing inherited wealth',
 ];
 ---
 
@@ -45,7 +45,7 @@ const heroAudiences = [
     <div class="absolute inset-0 bg-gradient-to-r from-primary from-40% via-primary/90 via-70% to-primary/60"></div>
 
     <div class="section-container relative z-10 w-full min-w-0">
-      <div class="tw-home-hero__copy max-w-xl min-w-0">
+      <div class="tw-home-hero__copy max-w-2xl min-w-0">
         <div class="mb-6 flex items-center gap-3">
           <div class="h-1 w-16 rounded-full bg-accent"></div>
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
@@ -233,7 +233,7 @@ const heroAudiences = [
     position: relative;
     display: block;
     max-width: 100%;
-    min-height: 2.9em;
+    min-height: 1.25em;
     line-height: 1.2;
     color: var(--color-accent);
     overflow-wrap: normal;
@@ -272,12 +272,12 @@ const heroAudiences = [
     }
 
     section:first-of-type h1 {
-      font-size: clamp(2rem, 10vw, 2.35rem);
+      font-size: clamp(1.85rem, 9vw, 2.25rem);
       text-wrap: auto;
     }
 
     .tw-hero-typewriter {
-      font-size: clamp(1.75rem, 8.75vw, 2rem);
+      font-size: clamp(1.65rem, 7.9vw, 1.95rem);
       min-height: 2.55em;
     }
   }
@@ -303,7 +303,7 @@ const heroAudiences = [
 
     const typeDelay = 62;
     const deleteDelay = 34;
-    const holdDelay = 1550;
+    const holdDelay = 1375;
     const nextPhraseDelay = 320;
 
     const tick = () => {

@@ -121,7 +121,7 @@ const embedUrl = videoEmbedUrl(post.videoUrl);
 const canonicalUrl = new URL(`/resources/blog/${slug}`, Astro.site ?? Astro.url.origin).href;
 const cta = strategy?.cta ?? (post.category.toLowerCase().includes('retirement')
   ? { eyebrow: 'Retirement guide', title: 'Want a clearer way to think about your number?', body: 'The retirement guide walks through the real inputs: spending, taxes, timing, risk, and the decisions that shape whether the plan holds up.', href: '/guide', label: 'Download the free guide' }
-  : { eyebrow: 'Next step', title: 'Want to see how this applies to your situation?', body: 'An Explore Call is a short conversation about what prompted you to reach out and whether our planning process is a fit.', href: '/get-started', label: 'Schedule an Explore Call' });
+  : { eyebrow: 'Next step', title: 'Want to see how this applies to your situation?', body: 'An Explore Call is a short conversation to understand what is on your mind and whether our planning process fits.', href: '/get-started', label: 'Schedule an Explore Call' });
 const tableOfContents = post.bodyBlocks
   .filter((block): block is Extract<BlogContentBlock, { type: 'heading' }> => block.type === 'heading' && block.level === 2)
   .map((block) => ({ text: block.text, id: headingId(block.text) }));

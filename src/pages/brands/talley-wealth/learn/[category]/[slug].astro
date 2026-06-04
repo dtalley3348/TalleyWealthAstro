@@ -1,42 +1,85 @@
 ---
 import TalleyPage from '../../../../../components/talley-wealth/TalleyPage.astro';
-import { getArticleBySlug } from '../../../../../data/talley-wealth/wiki/articles';
+import { getArticleBySlug, getRelatedArticles } from '../../../../../data/talley-wealth/wiki/articles';
 import { getCategoryBySlug } from '../../../../../data/talley-wealth/wiki/categories';
 
 
 const article = getArticleBySlug(Astro.params.slug ?? '');
 if (!article || article.category !== Astro.params.category) return new Response('Not found', { status: 404 });
 const category = getCategoryBySlug(article.category);
+const relatedArticles = getRelatedArticles(article);
 
 const renderBlocks = article.content
   .split(/\n{2,}/)
   .map((block) => block.trim())
   .filter(Boolean)
   .map((block) => {
-    const html = block
+    const escapeAndFormat = (text: string) => text
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-      .replace(/\n- /g, '<br />- ');
-    return html.startsWith('- ') ? `<p>${html.replace(/<br \/>/g, '<br />')}</p>` : `<p>${html}</p>`;
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+    if (block.startsWith('## ')) {
+      return `<h2 class="mt-12 font-serif text-3xl font-bold leading-tight text-primary">${escapeAndFormat(block.replace(/^## /, ''))}</h2>`;
+    }
+
+    if (block.startsWith('### ')) {
+      return `<h3 class="mt-8 font-serif text-2xl font-bold leading-tight text-primary">${escapeAndFormat(block.replace(/^### /, ''))}</h3>`;
+    }
+
+    const lines = block.split('\n');
+    if (lines.every((line) => line.startsWith('- '))) {
+      return `<ul class="my-6 list-disc space-y-2 rounded-lg border border-border bg-muted/35 p-6 pl-10">${lines.map((line) => `<li class="pl-1 leading-relaxed text-muted-foreground">${escapeAndFormat(line.replace(/^- /, ''))}</li>`).join('')}</ul>`;
+    }
+
+    return `<p class="my-5 text-lg leading-8 text-muted-foreground">${escapeAndFormat(block).replace(/\n/g, '<br />')}</p>`;
   });
 ---
 
-<TalleyPage title={`${article.question} | Talley Wealth`} description={article.quickAnswer} noindex>
+<TalleyPage title={`${article.question} | Talley Wealth`} description={article.quickAnswer}>
   <article class="bg-background">
-    <div class="section-container max-w-4xl py-20">
-      <a href={`/learn/${article.category}`} class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{category?.title ?? article.category}</a>
-      <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{article.question}</h1>
-      <div class="mt-8 rounded-lg border border-accent/20 bg-accent/10 p-6">
-        <p class="text-lg leading-relaxed text-primary">{article.quickAnswer}</p>
+    <div class="section-container grid min-w-0 gap-12 py-16 lg:grid-cols-[minmax(0,44rem)_18rem] lg:py-20">
+      <div class="min-w-0">
+        <a href={`/learn/${article.category}`} class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{category?.title ?? article.category}</a>
+        <h1 class="mt-5 break-words font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{article.question}</h1>
+        <div class="mt-8 rounded-lg border border-accent/20 bg-accent/10 p-6">
+          <p class="break-words text-lg leading-relaxed text-primary">{article.quickAnswer}</p>
+        </div>
+        <div class="mt-10 max-w-none">
+          {renderBlocks.map((block) => <Fragment set:html={block} />)}
+        </div>
+        <div class="mt-12 rounded-lg bg-primary p-7 text-primary-foreground">
+          <p class="font-serif text-2xl font-bold">Want to talk through your version of this?</p>
+          <p class="mt-3 leading-relaxed text-primary-foreground/80">The answer usually gets clearer once the tax, investment, income, and life pieces are all on the same table.</p>
+          <a href="/get-started" class="mt-5 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Start with an Explore Call</a>
+        </div>
+        <footer class="mt-8 border-t border-border pt-6 text-sm text-muted-foreground">
+          <p>Updated {article.lastUpdated} by {article.author}</p>
+        </footer>
       </div>
-      <div class="prose prose-lg mt-10 max-w-none prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-strong:text-primary">
-        {renderBlocks.map((block) => <Fragment set:html={block} />)}
-      </div>
-      <footer class="mt-12 border-t border-border pt-6 text-sm text-muted-foreground">
-        <p>Updated {article.lastUpdated} by {article.author}</p>
-      </footer>
+
+      <aside class="min-w-0 lg:pt-28">
+        <div class="sticky top-24 space-y-6">
+          {relatedArticles.length > 0 && (
+            <div class="rounded-lg border border-border bg-card p-5 shadow-elegant">
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Related Questions</p>
+              <div class="mt-4 space-y-3">
+                {relatedArticles.map((relatedArticle) => (
+                  <a href={`/learn/${relatedArticle.category}/${relatedArticle.slug}`} class="block rounded-md border border-border/50 bg-background p-3 text-sm font-semibold leading-snug text-primary transition hover:border-accent">
+                    {relatedArticle.question}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+          <div class="rounded-lg border border-border bg-muted/35 p-5">
+            <p class="font-serif text-xl font-bold text-primary">Learning Center</p>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">Short answers are useful. The deeper work is understanding how the pieces affect each other.</p>
+            <a href="/resources/learning-center" class="mt-4 inline-flex text-sm font-bold text-accent">Browse all topics -&gt;</a>
+          </div>
+        </div>
+      </aside>
     </div>
   </article>
 </TalleyPage>

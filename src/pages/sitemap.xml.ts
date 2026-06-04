@@ -1,5 +1,7 @@
 import type { APIRoute } from 'astro';
 import { blogPosts } from '../data/talley-wealth/site-content';
+import { wikiArticles } from '../data/talley-wealth/wiki/articles';
+import { wikiCategories } from '../data/talley-wealth/wiki/categories';
 import { allSEORoutes, seoRedirects } from '../data/talley-wealth/seo/routes';
 
 const site = 'https://talleywealth.com';
@@ -25,6 +27,8 @@ const canonicalPaths = [
   '/resources',
   '/resources/blog',
   '/resources/learning-center',
+  ...wikiCategories.map((category) => `/learn/${category.slug}`),
+  ...wikiArticles.map((article) => `/learn/${article.category}/${article.slug}`),
   '/resources/tools',
   '/resources/key-dates',
   '/guide',

@@ -2,7 +2,6 @@
 import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
 import CtaSection from '../../../components/talley-wealth/CtaSection.astro';
 import TestimonialsSection from '../../../components/talley-wealth/TestimonialsSection.astro';
-import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsProof.astro';
 
 const startingPoints = [
   {
@@ -28,7 +27,7 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
 const heroAudiences = [
   'families nearing retirement',
   'business owners with tax questions',
-  'high earners with too many decisions',
+  'high earners with no spare time',
   'executives with equity comp',
   'families managing inherited wealth',
 ];
@@ -59,7 +58,7 @@ const heroAudiences = [
             data-audiences={JSON.stringify(heroAudiences)}
             aria-hidden="true"
           >
-            <span class="tw-hero-typewriter__text">{heroAudiences[0]}</span><span class="tw-hero-typewriter__cursor"></span>
+            <span class="tw-hero-typewriter__text"></span><span class="tw-hero-typewriter__cursor"></span>
           </span>
           <span class="sr-only">{heroAudiences.join(', ')}.</span>
         </div>
@@ -219,11 +218,9 @@ const heroAudiences = [
 
   <TestimonialsSection />
 
-  <GoogleReviewsProof compact reviewSet="home" />
-
   <CtaSection
     title="Ready to talk through what is on your mind?"
-    description="The Explore Call is the next step. Fifteen minutes, no prep, no obligation. If it is a fit, we will talk about going further. If it is not, I will say so directly."
+    description="A short conversation to understand what is on your mind, whether Keystone fits, and what should happen next."
     primaryText="Schedule Your Explore Call"
   />
 </TalleyPage>
@@ -287,7 +284,7 @@ const heroAudiences = [
   (() => {
     const root = document.querySelector('[data-audiences]');
     const textEl = root?.querySelector('.tw-hero-typewriter__text');
-    if (!root || !textEl || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!root || !textEl) return;
 
     let audiences;
     try {
@@ -296,15 +293,20 @@ const heroAudiences = [
       audiences = [];
     }
     if (!Array.isArray(audiences) || audiences.length < 2) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      textEl.textContent = audiences[0];
+      return;
+    }
 
     let phraseIndex = 0;
-    let charIndex = audiences[0].length;
-    let deleting = true;
+    let charIndex = 0;
+    let deleting = false;
 
     const typeDelay = 62;
     const deleteDelay = 34;
     const holdDelay = 1375;
     const nextPhraseDelay = 320;
+    const initialDelay = 360;
 
     const tick = () => {
       const phrase = audiences[phraseIndex];
@@ -333,6 +335,6 @@ const heroAudiences = [
       window.setTimeout(tick, typeDelay);
     };
 
-    window.setTimeout(tick, holdDelay);
+    window.setTimeout(tick, initialDelay);
   })();
 </script>

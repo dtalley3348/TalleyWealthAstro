@@ -3,10 +3,26 @@
 ## How To Prioritize Keywords
 Score each opportunity by:
 1. Buyer intent.
-2. Fit with the actual best-fit client.
+2. Fit with the two primary lanes: near-retirees/retirement transition and business owners with tax/strategy complexity.
 3. Local priority.
 4. Ability to differentiate with planning + tax + investment coordination.
 5. Compliance-safe ability to answer clearly.
+
+## Target-Market Hierarchy
+
+Flagship persona pages:
+
+- /financial-advisor-for-pre-retirees
+- /financial-advisor-for-business-owners
+
+Support/search persona pages:
+
+- /financial-advisor-for-executives-equity-comp
+- /financial-advisor-for-healthcare-professionals
+- /financial-advisor-for-inherited-wealth
+- /financial-advisor-for-kingsport-employer-benefits
+
+Keep support pages indexed when they are strong, but use internal links and core-site copy to reinforce the two flagship pages first.
 
 ## Tier 1: Johnson City
 Primary pages:
@@ -80,4 +96,4 @@ These should become video/article clusters:
 - How to know if a financial advisor is planning-first.
 
 ## Initial Commitment
-The first campaign should prioritize Johnson City + Bristol + Kingsport + Eastman/Ballad/business-owner/persona pages. National/niche topical content should support those pages first, then expand later.
+The first campaign should prioritize Johnson City/Tri-Cities local relevance plus the two flagship persona pages: pre-retirees and business owners. Bristol, Kingsport, Eastman/Ballad, healthcare, equity-comp, and inherited-wealth pages remain useful support/search paths, but should not dilute the core hierarchy.

@@ -72,8 +72,9 @@ export function getInternalLinks(keywords: string[], max = 3): InternalLink[] {
   // If no matches found, return general links
   if (results.length === 0) {
     return [
-      { label: 'Financial Advisor in Johnson City, TN', path: '/financial-advisor-johnson-city-tn' },
-      { label: 'How We Work', path: '/how-we-work/what-to-expect' },
+      { label: 'Who We Help', path: '/who-we-help' },
+      { label: 'Financial Advisor for Pre-Retirees', path: '/financial-advisor-for-pre-retirees' },
+      { label: 'Financial Advisor for Business Owners', path: '/financial-advisor-for-business-owners' },
     ].slice(0, max);
   }
 

@@ -3,7 +3,7 @@ import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
 import CtaSection from '../../../components/talley-wealth/CtaSection.astro';
 import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsProof.astro';
 
-const startingQuestions = [
+const primaryQuestions = [
   {
     question: '"I am close to retirement, but I do not know which accounts to use first."',
     detail: "Retirement is close enough to feel real. Now the questions are about income, taxes, Social Security, Medicare, Roth conversions, and whether the plan still works if markets cooperate less than expected.",
@@ -16,6 +16,9 @@ const startingQuestions = [
     href: '/financial-advisor-for-business-owners',
     label: 'Business owners and professionals',
   },
+];
+
+const secondaryQuestions = [
   {
     question: "\"I inherited money and I'm afraid of making a permanent mistake.\"",
     detail: "A parent passes away, assets arrive, accounts need decisions, and the tax and family questions are suddenly yours to handle. You do not need to know every question before you ask for help.",
@@ -94,7 +97,7 @@ const notFit = [
 
 <TalleyPage
   title="Who We Help | Talley Wealth Financial Planning"
-  description="Planning for retirees, business owners, executives, healthcare professionals, and families with inherited wealth who need coordinated advice."
+  description="Planning for near-retirees and business owners first, with support for executives, healthcare professionals, inherited wealth, and other complex financial situations."
 >
   <section class="bg-muted/35">
     <div class="section-container py-20 text-center">
@@ -103,10 +106,10 @@ const notFit = [
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Who this is for</p>
       </div>
       <h1 class="mx-auto max-w-5xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl">
-        Financial planning for the moments when the pieces need to work together.
+        Two main paths. One connected way of thinking.
       </h1>
       <p class="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-        You may be nearing retirement, running a business, managing employer benefits, practicing medicine, settling an inheritance, or realizing your current advisor only talks about investments. The common thread is not one age or one net worth. It is that the decisions now work better when they are coordinated.
+        Talley Wealth is primarily built around households nearing retirement and business owners with tax and strategy questions. Other situations can still fit, but these are the two patterns where our planning, tax, and investment work most often has the greatest leverage.
       </p>
     </div>
   </section>
@@ -115,16 +118,16 @@ const notFit = [
     <div class="section-container">
       <div class="mx-auto max-w-3xl text-center">
         <h2 class="font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
-          Start with the situation that sounds most like your life right now.
+          Start with the two lanes we are built around.
         </h2>
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
-          These are not rigid boxes. They are the most common reasons people realize they need more than disconnected advice.
+          These are not rigid boxes. They are the most common reasons people realize the retirement, tax, investment, and business decisions need one clear strategy.
         </p>
       </div>
 
-      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {audiencePaths.map((item) => (
-          <a href={item.href} class="group flex h-full flex-col rounded-lg border border-border/40 bg-background p-7 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+      <div class="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2">
+        {audiencePaths.slice(0, 2).map((item) => (
+          <a href={item.href} class="group flex h-full flex-col rounded-lg border border-border/40 bg-background p-8 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <h3 class="font-serif text-xl font-bold text-primary">{item.title}</h3>
             <p class="mt-3 flex-1 leading-relaxed text-muted-foreground">{item.description}</p>
             <span class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-accent transition group-hover:gap-2">
@@ -134,6 +137,18 @@ const notFit = [
           </a>
         ))}
       </div>
+
+      <div class="mx-auto mt-10 max-w-5xl rounded-lg border border-border/40 bg-background p-6">
+        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">Other situations we may support</p>
+        <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {audiencePaths.slice(2).map((item) => (
+            <a href={item.href} class="group rounded-md border border-border/40 bg-card p-4 transition hover:border-accent/50">
+              <h3 class="font-serif text-base font-bold text-primary">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -142,15 +157,28 @@ const notFit = [
       <div class="mx-auto mb-16 max-w-3xl text-center">
         <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Questions that sound more like real life.</h2>
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
-          Most clients do not come in with a perfectly defined planning problem. They come in with a decision, a worry, a tax bill, a transition, or a sense that someone more capable needs to be looking at the whole picture.
+          The first two are the center of gravity. The others remain good reasons to reach out when the complexity justifies the work.
         </p>
       </div>
 
       <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
-        {startingQuestions.map((item) => (
+        {primaryQuestions.map((item) => (
           <article class="flex h-full flex-col rounded-lg border border-border/40 bg-card p-8 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <p class="font-serif text-lg font-bold italic text-primary">{item.question}</p>
             <p class="mt-3 flex-1 leading-relaxed text-muted-foreground">{item.detail}</p>
+            <a href={item.href} class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-accent transition hover:gap-2">
+              {item.label}
+              <span aria-hidden="true">-&gt;</span>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div class="mx-auto mt-8 grid max-w-5xl gap-5 md:grid-cols-2">
+        {secondaryQuestions.map((item) => (
+          <article class="flex h-full flex-col rounded-lg border border-border/40 bg-card/70 p-6 shadow-sm">
+            <p class="font-serif text-base font-bold italic text-primary">{item.question}</p>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{item.detail}</p>
             <a href={item.href} class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-accent transition hover:gap-2">
               {item.label}
               <span aria-hidden="true">-&gt;</span>
@@ -189,8 +217,8 @@ const notFit = [
       <div class="mx-auto max-w-3xl">
         <h2 class="text-center font-serif text-3xl font-bold text-primary md:text-4xl">Different situations. Same underlying problem.</h2>
         <div class="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
-          <p>The details change from person to person. A retiring couple may be focused on Roth conversions, Medicare brackets, and withdrawal timing. A business owner may be focused on tax strategy, owner compensation, and a possible sale. A long-tenured employee may be weighing pension, stock, deferred comp, and retirement timing.</p>
-          <p>But the risk is often the same: one advisor sees the investments, another sees the tax return, another drafted the estate documents, and no one is responsible for how those decisions interact.</p>
+          <p>The details change from person to person. A retiring couple may be focused on Roth conversions, Medicare brackets, and withdrawal timing. A business owner may be focused on tax strategy, owner compensation, and a possible sale.</p>
+          <p>But the risk is often the same: one advisor sees the investments, another sees the tax return, another drafted the estate documents, and the client is left trying to understand how those decisions interact.</p>
           <p>That is what Keystone is built to handle. Not to add more products or more accounts, but to give you one integrated view of the plan and the decisions that need to be made next.</p>
         </div>
       </div>

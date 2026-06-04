@@ -84,7 +84,7 @@ export const audiencePages: Record<string, BasicPage> = {
     description: 'Financial planning for physicians, executives, and professionals with complex compensation and tax decisions.',
     eyebrow: 'Who this is for',
     heading: 'Your career is producing options. The plan decides what those options become.',
-    intro: 'Professionals come to us when compensation, tax, retirement, insurance, and family goals need to be coordinated instead of handled one at a time.',
+    intro: 'Professionals remain a good fit when compensation, tax, retirement, insurance, and family goals are connected enough to justify deeper planning. This is a support lane, not the primary public positioning.',
     image: '/brands/talley-wealth/case-studies/professional.png',
     sections: [
       { title: 'Compensation strategy', body: 'Equity, bonuses, retirement plans, and cash flow mapped against real goals.' },
@@ -97,7 +97,7 @@ export const audiencePages: Record<string, BasicPage> = {
     description: 'Coordinated planning for business owners, families, and households with connected financial decisions.',
     eyebrow: 'Who this is for',
     heading: 'The closer you get, the more everything touches everything else.',
-    intro: 'Most clients have already done the hard part. They built, earned, saved, and carried responsibility. Now the pieces need to work together.',
+    intro: 'Complex situations remain a fit when more than one major transition is happening at once. The main public lanes are near-retirement and business-owner strategy; this support lane exists for situations that do not fit cleanly into either.',
     image: '/brands/talley-wealth/hero-team-meeting.jpg',
     sections: [
       { title: 'Business and personal planning', body: 'Owner compensation, retirement, taxes, succession, and liquidity viewed together.' },
@@ -256,10 +256,10 @@ export const seoPages: SeoPage[] = [
   ['entrepreneur-financial-planning-erwin-tn', 'Entrepreneur Financial Planning in Erwin, TN', 'Erwin, Tennessee', 'Business-owner planning'],
   ['entrepreneur-financial-planning-sevierville-tn', 'Entrepreneur Financial Planning in Sevierville, TN', 'Sevierville, Tennessee', 'Business-owner planning'],
   ['entrepreneur-financial-planning-southwest-virginia', 'Entrepreneur Financial Planning in Southwest Virginia', 'Southwest Virginia', 'Business-owner planning'],
+  ['financial-advisor-for-pre-retirees', 'Financial Advisor for Pre-Retirees', undefined, 'Retirement planning', 'Pre-retirees'],
   ['financial-advisor-for-business-owners', 'Financial Advisor for Business Owners', undefined, 'Business-owner planning', 'Business owners'],
   ['financial-advisor-for-inherited-wealth', 'Financial Advisor for Inherited Wealth', undefined, 'Financial planning', 'families with inherited wealth'],
   ['financial-advisor-for-executives-equity-comp', 'Financial Advisor for Executives with Equity Compensation', undefined, 'Equity compensation planning', 'executives and professionals with equity compensation'],
-  ['financial-advisor-for-pre-retirees', 'Financial Advisor for Pre-Retirees', undefined, 'Retirement planning', 'Pre-retirees'],
   ['financial-advisor-for-healthcare-professionals', 'Financial Advisor for Healthcare Professionals', undefined, 'Financial planning', 'healthcare professionals'],
   ['financial-advisor-for-kingsport-employer-benefits', 'Financial Planning for Kingsport Employer Benefits', undefined, 'Financial planning', 'Kingsport professionals with employer-benefit decisions'],
 ].map(([slug, heading, location, service, audience]) => ({

@@ -3,34 +3,40 @@ import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
 import CtaSection from '../../../components/talley-wealth/CtaSection.astro';
 import TestimonialsSection from '../../../components/talley-wealth/TestimonialsSection.astro';
 
-const startingPoints = [
+const primaryPaths = [
   {
-    quote: "\"Retirement is getting close, and I want to know whether we're actually going to be okay.\"",
-    detail: 'Nearing retirement',
+    quote: "\"You are close enough to retirement that taxes, income, investments, Medicare, Social Security, and estate decisions all start to matter at the same time.\"",
+    detail: 'Near retirement',
+    body: 'You are close enough to retirement that taxes, income, investments, Medicare, Social Security, and estate decisions all start to matter at the same time.',
+    href: '/financial-advisor-for-pre-retirees',
   },
   {
-    quote: "\"The business is finally doing well, but the taxes are starting to feel like a real problem.\"",
+    quote: "\"You have profit, tax questions, cash-flow decisions, and personal wealth goals, but no one clearly helping you think through all of it.\"",
     detail: 'Business owners',
+    body: 'You have profit, tax questions, cash-flow decisions, and personal wealth goals, but no one clearly helping you think through all of it.',
+    href: '/financial-advisor-for-business-owners',
+  },
+];
+
+const secondaryFits = [
+  {
+    quote: "\"My compensation is getting more complicated, and I do not have time to figure out every tax and timing decision myself.\"",
+    detail: 'Executives and equity comp',
+    href: '/financial-advisor-for-executives-equity-comp',
   },
   {
     quote: "\"I inherited money, and I do not want to make a mistake just because I don't know what to ask.\"",
     detail: 'Inherited wealth',
+    href: '/financial-advisor-for-inherited-wealth',
   },
   {
-    quote: "\"My compensation is getting more complicated, and I do not have time to figure out every tax and timing decision myself.\"",
-    detail: 'Executives and equity comp',
+    quote: "\"I make good money, but I want someone capable to help keep the important pieces moving.\"",
+    detail: 'Busy high earners',
+    href: '/financial-advisor-for-healthcare-professionals',
   },
 ];
 
 const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
-
-const heroAudiences = [
-  'families nearing retirement',
-  'business owners with tax questions',
-  'high earners with no spare time',
-  'executives with equity comp',
-  'families managing inherited wealth',
-];
 ---
 
 <TalleyPage
@@ -50,21 +56,20 @@ const heroAudiences = [
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
         </div>
         <h1 class="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl">
-          Financial planning built for
+          Financial planning built for retirement, tax, and business decisions.
         </h1>
-        <div class="mt-5 text-3xl font-bold leading-tight text-accent md:text-4xl">
-          <span
-            class="tw-hero-typewriter"
-            data-audiences={JSON.stringify(heroAudiences)}
-            aria-hidden="true"
-          >
-            <span class="tw-hero-typewriter__text"></span><span class="tw-hero-typewriter__cursor"></span>
-          </span>
-          <span class="sr-only">{heroAudiences.join(', ')}.</span>
-        </div>
         <p class="mt-5 max-w-full text-lg leading-relaxed text-primary-foreground/80">
-          Clearer decisions around retirement income, tax strategy, investments, and major financial transitions.
+          Talley Wealth helps retirees, business owners, and high-income households make clearer decisions across retirement, taxes, investments, and long-term strategy.
         </p>
+        <div class="mt-8 grid gap-3 sm:grid-cols-2">
+          {primaryPaths.map((item) => (
+            <a href={item.href} class="group rounded-lg border border-primary-foreground/25 bg-primary-foreground/10 p-4 text-left transition hover:-translate-y-0.5 hover:bg-primary-foreground/15">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.detail}</p>
+              <p class="mt-2 font-serif text-base font-bold italic leading-snug text-primary-foreground">{item.quote}</p>
+              <span class="mt-3 inline-flex text-xs font-bold text-primary-foreground/75 transition group-hover:text-accent">Start here <span aria-hidden="true">&nbsp;-&gt;</span></span>
+            </a>
+          ))}
+        </div>
         <div class="mt-8 flex min-w-0 flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex max-w-full justify-center rounded-md bg-accent px-6 py-4 text-center font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
           <a href="/how-we-work/what-to-expect" class="inline-flex max-w-full justify-center rounded-md border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-4 text-center font-bold text-primary-foreground transition hover:bg-primary-foreground/20">How We Work</a>
@@ -84,10 +89,10 @@ const heroAudiences = [
   <section class="border-b border-border/50 bg-card">
     <div class="section-container py-8">
       <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
+        <p><strong class="block font-serif text-lg text-primary">Retirement decisions</strong> Income, taxes, investments, Medicare, Social Security, and estate choices modeled together.</p>
+        <p><strong class="block font-serif text-lg text-primary">Business-owner strategy</strong> Tax, cash flow, owner pay, entity, retirement plan, and personal wealth decisions in one conversation.</p>
         <p><strong class="block font-serif text-lg text-primary">Plan first</strong> The advice starts with your life, not a product or portfolio model.</p>
-        <p><strong class="block font-serif text-lg text-primary">Tax-aware</strong> Tax strategy is part of the conversation before decisions are made.</p>
         <p><strong class="block font-serif text-lg text-primary">Founder-led</strong> You work directly with David, supported by a prepared team.</p>
-        <p><strong class="block font-serif text-lg text-primary">Clear next step</strong> Start with a short, no-pressure Explore Call.</p>
       </div>
     </div>
   </section>
@@ -112,9 +117,9 @@ const heroAudiences = [
           <div class="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>They have investment accounts. A CPA. Maybe an old retirement projection. Estate documents from years ago. A few good decisions made at different times by different people.</p>
             <blockquote class="border-l-4 border-accent py-2 pl-5">
-              <p class="font-serif text-2xl italic leading-snug text-primary">The problem is not usually a lack of effort. It is that no one is responsible for the whole picture.</p>
+              <p class="font-serif text-2xl italic leading-snug text-primary">The problem is not usually a lack of effort. It is that the moving parts are being handled in separate silos.</p>
             </blockquote>
-            <p>That matters when retirement is close, income is high, taxes are more visible, a business is changing, or an inheritance opens up new choices. In those moments, the best decisions usually need more context than one account, one tax return, or one projection can provide.</p>
+            <p>That matters most in the two lanes where our work usually has the most leverage: when retirement is close and when a business owner needs tax-aware strategy that connects the business to the family's personal wealth. Other situations can still fit, but those are the core patterns.</p>
             <p>Our work runs the other way around. We build the plan first, then let the plan guide the investment allocation, tax strategy, estate coordination, and ongoing decisions.</p>
           </div>
           <a href="/pricing" class="mt-8 inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">
@@ -133,19 +138,33 @@ const heroAudiences = [
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Sound Familiar?</span>
           <div class="h-1 w-16 rounded-full bg-accent"></div>
         </div>
-        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">People usually reach out when the decisions start feeling more real.</h2>
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Most people reach out through one of two doors.</h2>
         <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
           The details are different, but the feeling is familiar: there is enough going on now that a more thoughtful plan would feel useful.
         </p>
       </div>
 
       <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-        {startingPoints.map((item) => (
-          <article class="h-full rounded-lg border border-border/30 bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+        {primaryPaths.map((item) => (
+          <a href={item.href} class="group h-full rounded-lg border border-border/30 bg-card p-7 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.detail}</p>
             <p class="mt-4 font-serif text-lg font-bold italic text-primary">{item.quote}</p>
-          </article>
+            <p class="mt-4 leading-relaxed text-muted-foreground">{item.body}</p>
+            <span class="mt-5 inline-flex text-sm font-bold text-accent">Learn more <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          </a>
         ))}
+      </div>
+
+      <div class="mx-auto mt-10 max-w-5xl rounded-lg border border-border/40 bg-card/70 p-6">
+        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">Also a fit when the complexity justifies the work</p>
+        <div class="mt-5 grid gap-4 md:grid-cols-3">
+          {secondaryFits.map((item) => (
+            <a href={item.href} class="group rounded-md border border-border/40 bg-background p-4 transition hover:border-accent/50">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">{item.detail}</p>
+              <p class="mt-2 text-sm italic leading-relaxed text-primary">{item.quote}</p>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div class="mt-12 text-center">
@@ -164,7 +183,7 @@ const heroAudiences = [
         </div>
         <h2 class="font-serif text-3xl font-bold md:text-4xl">Keystone turns the questions into a plan.</h2>
         <p class="mt-6 text-lg leading-relaxed text-primary-foreground/80">
-          Most firms start by managing money and hope the rest of the picture works itself out. Keystone runs in the other order. It is a structured six-month engagement where we build the plan first, calibrate investments to it, and weave tax strategy through both. By the end, you have a plan that is actually yours, and decisions that get made instead of debated.
+          Most firms start by managing money and hope the rest of the picture works itself out. Keystone runs in the other order. It is a structured six-month engagement where we build the plan first, calibrate investments to it, and weave tax strategy through both. For retirement families, that usually means income, taxes, and investment decisions finally line up. For business owners, it means the business and personal plan stop being treated like separate projects.
         </p>
         <p class="mt-6 text-sm italic text-primary-foreground/70">Fully refundable at any point during the engagement, for any reason.</p>
         <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -192,8 +211,8 @@ const heroAudiences = [
           <h2 class="font-serif text-3xl font-bold text-primary">David Talley</h2>
           <p class="mt-2 font-bold text-accent">CFP®, ChFC®, EA, Founder & Lead Advisor</p>
           <div class="mt-6 space-y-5 leading-relaxed text-muted-foreground">
-            <p>The thing I see most often is successful people carrying more financial complexity than they want to carry alone. They are not careless. They are busy, thoughtful, and trying to make good decisions in areas where the answers can get technical quickly.</p>
-            <p>I built Talley Wealth to do that work differently. Every client works directly with me. The plan, the investments, and the tax strategy sit in one conversation. Stephenee keeps the operational side running so nothing falls between the cracks, and meetings actually feel prepared rather than improvised.</p>
+            <p>The thing I see most often is successful people carrying more financial complexity than they want to carry alone. For many, that shows up as retirement getting close. For others, it shows up as a business that is finally profitable enough for tax and strategy questions to matter in a different way.</p>
+            <p>I built Talley Wealth to do that work differently. Every client works directly with me. The plan, the investments, and the tax strategy sit in one conversation. Stephenee keeps the operational side running so the next steps stay visible, and meetings actually feel prepared rather than improvised.</p>
           </div>
           <a href="/about/meet-david-talley" class="mt-5 inline-flex text-sm font-bold text-muted-foreground transition hover:text-accent">The longer version of why I do this work</a>
           <div class="mt-8 flex flex-wrap gap-3">
@@ -226,42 +245,6 @@ const heroAudiences = [
 </TalleyPage>
 
 <style>
-  .tw-hero-typewriter {
-    position: relative;
-    display: block;
-    max-width: 100%;
-    min-height: 1.25em;
-    line-height: 1.2;
-    color: var(--color-accent);
-    overflow-wrap: normal;
-  }
-
-  .tw-hero-typewriter__text {
-    display: inline;
-    text-wrap: balance;
-  }
-
-  .tw-hero-typewriter__cursor {
-    display: inline-block;
-    width: 0.08em;
-    height: 0.9em;
-    margin-left: 0.08em;
-    translate: 0 0.1em;
-    background: currentColor;
-    animation: tw-hero-cursor 1s steps(1, end) infinite;
-  }
-
-  @keyframes tw-hero-cursor {
-    0%, 48% { opacity: 1; }
-    49%, 100% { opacity: 0; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .tw-hero-typewriter__cursor {
-      display: none;
-    }
-  }
-
   @media (max-width: 640px) {
     .tw-home-hero__copy {
       width: min(100%, calc(100vw - 2rem));
@@ -272,69 +255,5 @@ const heroAudiences = [
       font-size: clamp(1.85rem, 9vw, 2.25rem);
       text-wrap: auto;
     }
-
-    .tw-hero-typewriter {
-      font-size: clamp(1.65rem, 7.9vw, 1.95rem);
-      min-height: 2.55em;
-    }
   }
 </style>
-
-<script>
-  (() => {
-    const root = document.querySelector('[data-audiences]');
-    const textEl = root?.querySelector('.tw-hero-typewriter__text');
-    if (!root || !textEl) return;
-
-    let audiences;
-    try {
-      audiences = JSON.parse(root.getAttribute('data-audiences') || '[]');
-    } catch {
-      audiences = [];
-    }
-    if (!Array.isArray(audiences) || audiences.length < 2) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      textEl.textContent = audiences[0];
-      return;
-    }
-
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    const typeDelay = 62;
-    const deleteDelay = 34;
-    const holdDelay = 1375;
-    const nextPhraseDelay = 320;
-    const initialDelay = 360;
-
-    const tick = () => {
-      const phrase = audiences[phraseIndex];
-
-      if (deleting) {
-        charIndex -= 1;
-        textEl.textContent = phrase.slice(0, Math.max(0, charIndex));
-        if (charIndex === 0) {
-          deleting = false;
-          phraseIndex = (phraseIndex + 1) % audiences.length;
-          window.setTimeout(tick, nextPhraseDelay);
-          return;
-        }
-        window.setTimeout(tick, deleteDelay);
-        return;
-      }
-
-      const nextPhrase = audiences[phraseIndex];
-      charIndex += 1;
-      textEl.textContent = nextPhrase.slice(0, charIndex);
-      if (charIndex === nextPhrase.length) {
-        deleting = true;
-        window.setTimeout(tick, holdDelay);
-        return;
-      }
-      window.setTimeout(tick, typeDelay);
-    };
-
-    window.setTimeout(tick, initialDelay);
-  })();
-</script>

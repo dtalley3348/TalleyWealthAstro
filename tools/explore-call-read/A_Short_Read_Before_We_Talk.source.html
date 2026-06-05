@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talley Wealth - Before Our Explore Call</title>
+  <style>
+    :root {
+      --navy: #243445;
+      --gold: #bf8c4d;
+      --paper: #f4f1eb;
+      --panel: #eee9df;
+      --white: #ffffff;
+      --ink: #263241;
+      --muted: #626c78;
+      --pale: #8a929b;
+      --line: #dcd6cb;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Source Sans 3", "Source Sans Pro", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    .page {
+      position: relative;
+      width: 8.5in;
+      height: 11in;
+      overflow: hidden;
+      page-break-after: always;
+      background: var(--paper);
+      padding: 0.58in 0.74in 0.56in;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    .dark {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.35in;
+      color: var(--pale);
+      font-size: 0.105in;
+      font-weight: 800;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 0.11in;
+      white-space: nowrap;
+    }
+
+    .wordmark img {
+      display: none;
+    }
+
+    .dark .wordmark {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .cover-logo {
+      width: 1.9in;
+      height: auto;
+    }
+
+    .cover-corner {
+      position: absolute;
+      top: 0.62in;
+      right: 0.84in;
+      width: 1.2in;
+      height: 1.2in;
+      border-top: 1px solid rgba(191, 140, 77, 0.76);
+      border-right: 1px solid rgba(191, 140, 77, 0.76);
+    }
+
+    .cover-corner::before {
+      content: "";
+      position: absolute;
+      top: 0.14in;
+      right: 0;
+      width: 0.32in;
+      border-top: 1px solid rgba(191, 140, 77, 0.96);
+    }
+
+    .cover-copy {
+      position: absolute;
+      left: 0.82in;
+      right: 0.82in;
+      bottom: 2.18in;
+    }
+
+    .eyebrow,
+    .section-label,
+    .mini-label {
+      color: var(--gold);
+      font-size: 0.105in;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.16in;
+      font-size: 0.07in;
+      letter-spacing: 0.3em;
+      white-space: nowrap;
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.13;
+    }
+
+    h1 {
+      color: var(--white);
+      font-size: 0.55in;
+    }
+
+    h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .cover-copy p {
+      max-width: 5.1in;
+      margin: 0.26in 0 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.155in;
+      line-height: 1.45;
+    }
+
+    .cover-meta {
+      position: absolute;
+      left: 0.82in;
+      right: 0.82in;
+      bottom: 0.45in;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 0.54in;
+      gap: 0.4in;
+      align-items: end;
+      padding-top: 0.18in;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.1in;
+    }
+
+    .label-muted {
+      display: block;
+      margin-bottom: 0.06in;
+      color: rgba(255, 255, 255, 0.32);
+      font-size: 0.07in;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .folio {
+      position: absolute;
+      right: 0.74in;
+      bottom: 0.42in;
+      color: var(--pale);
+      font-size: 0.1in;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .footer-label {
+      position: absolute;
+      left: 0.74in;
+      bottom: 0.42in;
+      color: var(--pale);
+      font-size: 0.1in;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .section-label {
+      margin-top: 0.52in;
+    }
+
+    h2 {
+      max-width: 6.9in;
+      margin-top: 0.18in;
+      color: var(--ink);
+      font-size: 0.43in;
+    }
+
+    .lead {
+      max-width: 6.85in;
+      margin: 0.22in 0 0;
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.2in;
+      line-height: 1.46;
+    }
+
+    p {
+      margin: 0 0 0.15in;
+      color: var(--muted);
+      font-size: 0.135in;
+      line-height: 1.55;
+    }
+
+    .path {
+      margin-top: 0.34in;
+      border-top: 1px solid var(--line);
+    }
+
+    .path-row {
+      display: grid;
+      grid-template-columns: 0.75in 2.2in 1fr 0.24in;
+      gap: 0.18in;
+      align-items: start;
+      min-height: 1.05in;
+      padding: 0.22in 0 0.2in;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step {
+      color: var(--gold);
+      font-size: 0.115in;
+      font-weight: 800;
+      letter-spacing: 0.17em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .path-row h3 {
+      color: var(--ink);
+      font-size: 0.24in;
+    }
+
+    .path-row p {
+      margin: 0;
+      font-size: 0.14in;
+      line-height: 1.45;
+    }
+
+    .micro {
+      margin-top: 0.12in;
+      color: var(--pale);
+      font-size: 0.085in;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .diamond {
+      width: 0.12in;
+      height: 0.12in;
+      margin-top: 0.05in;
+      border: 1.5px solid var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .diamond.filled {
+      background: var(--gold);
+    }
+
+    .path-note {
+      margin-top: 0.22in;
+      color: var(--muted);
+      font-size: 0.145in;
+      font-style: italic;
+      line-height: 1.55;
+    }
+
+    .for-grid {
+      display: grid;
+      grid-template-columns: 1fr 3.05in;
+      gap: 0.48in;
+      margin-top: 0.22in;
+      align-items: start;
+    }
+
+    .decision-list {
+      margin-top: 0.24in;
+    }
+
+    .decision-item {
+      display: grid;
+      grid-template-columns: 0.2in 1fr;
+      gap: 0.12in;
+      padding: 0.125in 0;
+      border-bottom: 1px dotted var(--line);
+    }
+
+    .decision-item::before {
+      content: "";
+      width: 0.07in;
+      height: 0.07in;
+      margin-top: 0.08in;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .decision-item h3 {
+      color: var(--ink);
+      font-size: 0.18in;
+    }
+
+    .decision-item p {
+      margin: 0.04in 0 0;
+      font-size: 0.112in;
+      line-height: 1.42;
+    }
+
+    .quote-panel {
+      padding: 0.24in;
+      border-left: 2px solid var(--gold);
+      background: var(--panel);
+    }
+
+    .quote-panel .mini-label {
+      display: block;
+      margin-bottom: 0.18in;
+      font-size: 0.1in;
+    }
+
+    .quote-panel p {
+      margin: 0;
+      padding: 0.14in 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.155in;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .quote-panel p:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .not-box {
+      margin-top: 0.16in;
+      padding: 0.16in 0.24in;
+      border: 1px solid var(--line);
+    }
+
+    .not-box p {
+      margin: 0.08in 0 0;
+      font-size: 0.12in;
+      line-height: 1.5;
+    }
+
+    .expect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 0.46in;
+      border: 1px solid var(--line);
+    }
+
+    .expect-card {
+      min-height: 1.8in;
+      padding: 0.32in;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .expect-card:nth-child(2n) { border-right: 0; }
+    .expect-card:nth-child(n + 3) { border-bottom: 0; }
+
+    .expect-card h3 {
+      margin-top: 0.16in;
+      color: var(--ink);
+      font-size: 0.3in;
+    }
+
+    .expect-card p {
+      margin-top: 0.12in;
+      font-size: 0.135in;
+      line-height: 1.48;
+    }
+
+    .navy-callout {
+      display: grid;
+      grid-template-columns: 0.32in 1fr;
+      gap: 0.18in;
+      align-items: center;
+      margin-top: 0.34in;
+      padding: 0.28in 0.34in;
+      background: var(--navy);
+    }
+
+    .navy-callout p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.145in;
+      line-height: 1.55;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6in;
+      margin-top: 0.42in;
+    }
+
+    .person img {
+      width: 100%;
+      height: 3.55in;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .person h3 {
+      margin-top: 0.18in;
+      color: var(--ink);
+      font-size: 0.25in;
+    }
+
+    .person p {
+      margin-top: 0.12in;
+      font-size: 0.13in;
+      line-height: 1.48;
+    }
+
+    .letter h2 {
+      font-size: 0.36in;
+    }
+
+    .letter p {
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.16in;
+      line-height: 1.52;
+    }
+
+    .signature {
+      margin: 0.15in 0 0.02in;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.22in;
+      font-style: italic;
+    }
+
+    .sig-title {
+      color: var(--muted);
+      font-size: 0.1in;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.36in;
+      margin-top: 0.28in;
+      padding: 0.28in 0.32in;
+      background: var(--navy);
+    }
+
+    .contact-box .mini-label {
+      display: block;
+      margin-bottom: 0.14in;
+      font-size: 0.1in;
+    }
+
+    .contact-box p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.14in;
+      line-height: 1.42;
+    }
+
+    .contact-box strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.18in;
+      font-weight: 400;
+    }
+
+    .disclaimer {
+      position: absolute;
+      left: 0.74in;
+      right: 0.74in;
+      bottom: 0.62in;
+      padding-top: 0.12in;
+      border-top: 1px solid var(--line);
+    }
+
+    .disclaimer p {
+      margin: 0 0 0.08in;
+      color: var(--pale);
+      font-size: 0.072in;
+      font-style: italic;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="page dark">
+      <img class="cover-logo" src="../../public/brands/talley-wealth/logo-white.png" alt="Talley Wealth">
+      <div class="cover-corner" aria-hidden="true"></div>
+      <div class="cover-copy">
+        <p class="eyebrow">Prepared ahead of your Explore Call</p>
+        <h1>Before we <em>talk,</em><br>a little context.</h1>
+        <p>I'm glad you're exploring this. This short read is meant to make our first conversation feel familiar instead of cold, so we can spend our time on you rather than on logistics.</p>
+      </div>
+      <div class="cover-meta">
+        <div><span class="label-muted">Your Explore Call</span>Confirmed - calendar invite on its way</div>
+        <div><span class="label-muted">From</span>David Talley, CFP&reg;, EA</div>
+        <div>01 / 06</div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="brand-row">
+        <div class="wordmark"><img src="../../public/brands/talley-wealth/logo-dark.png" alt="">Talley Wealth</div>
+        <div>The path ahead</div>
+      </div>
+      <div class="section-label">Section 01 &middot; How we work together</div>
+      <h2>The path ahead, from first conversation to ongoing work.</h2>
+      <p class="lead">Most people want to know what they're walking into before they commit to anything. Here is the whole arc, in plain terms.</p>
+      <div class="path">
+        <div class="path-row">
+          <div class="step">Step<br>01</div>
+          <h3>Explore Call</h3>
+          <div>
+            <p>A short, no-pressure conversation to see if we're a good fit. You tell me what's on your mind. I tell you honestly whether I can help, and how.</p>
+            <div class="micro">You are here &middot; ~15 min &middot; no prep</div>
+          </div>
+          <div class="diamond filled" aria-hidden="true"></div>
+        </div>
+        <div class="path-row">
+          <div class="step">Step<br>02</div>
+          <h3>Strategy Session</h3>
+          <p>If it feels right on both sides, we go deeper. I review what you share in advance and we map the questions worth answering first.</p>
+          <div class="diamond" aria-hidden="true"></div>
+        </div>
+        <div class="path-row">
+          <div class="step">Step<br>03</div>
+          <h3>Keystone Method</h3>
+          <p>Our structured six-month engagement. Four to five working meetings, with analysis and coordination handled by our team between them. Decisions get made and put into motion.</p>
+          <div class="diamond" aria-hidden="true"></div>
+        </div>
+        <div class="path-row">
+          <div class="step">Step<br>04</div>
+          <h3>Ongoing Advisory</h3>
+          <p>An optional next chapter, if it makes sense after Keystone. Some clients want continued partnership. Others return only when life changes.</p>
+          <div class="diamond" aria-hidden="true"></div>
+        </div>
+      </div>
+      <p class="path-note">Each step is a decision point, not a funnel. You can step off at any stage, and plenty of good conversations end after Step 01.</p>
+      <div class="footer-label">Section 01 &middot; The path ahead</div>
+      <div class="folio">02 / 06</div>
+    </section>
+
+    <section class="page">
+      <div class="brand-row">
+        <div class="wordmark"><img src="../../public/brands/talley-wealth/logo-dark.png" alt="">Talley Wealth</div>
+        <div>Who this is for</div>
+      </div>
+      <div class="section-label">Section 02 &middot; The soft filter</div>
+      <h2>Who this is actually for.</h2>
+      <p class="lead">Families and business owners facing financial decisions that have started to overlap. Retirement, taxes, investments, business cash flow, and family planning are no longer separate conversations.</p>
+      <div class="for-grid">
+        <div>
+          <div class="mini-label">The decisions we help with</div>
+          <div class="decision-list">
+            <div class="decision-item">
+              <div>
+                <h3>Retirement income timing</h3>
+                <p>When to start drawing, from where, and in what order.</p>
+              </div>
+            </div>
+            <div class="decision-item">
+              <div>
+                <h3>Tax strategy</h3>
+                <p>Roth conversions, charitable timing, entity questions, and year-end moves that need to fit the plan.</p>
+              </div>
+            </div>
+            <div class="decision-item">
+              <div>
+                <h3>Business owner coordination</h3>
+                <p>Owner compensation, cash flow, retirement plans, estimated taxes, and the bridge from business profit to personal wealth.</p>
+              </div>
+            </div>
+            <div class="decision-item">
+              <div>
+                <h3>Estate and family coordination</h3>
+                <p>Making sure documents, beneficiaries, intentions, and future family decisions actually agree.</p>
+              </div>
+            </div>
+            <div class="decision-item">
+              <div>
+                <h3>Investments serving the plan</h3>
+                <p>Allocation, risk, and account structure based on what the money needs to do.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="quote-panel">
+          <span class="mini-label">Questions that tend to sound like yours</span>
+          <p>We're about five years from retirement and I think we're in good shape, but I honestly don't know how to turn what we've saved into an income we can count on.</p>
+          <p>The business is doing well, but the tax bills, retirement plan, cash reserves, and what we're actually building for our household all feel disconnected.</p>
+          <p>My mom passed and I've inherited more than I expected. I don't want to make a decision I'll regret just because I didn't know what I didn't know.</p>
+        </aside>
+      </div>
+      <div class="not-box">
+        <div class="mini-label">What Keystone isn't</div>
+        <p>Not a quick answer to a single question. Not a product conversation. And not, by default, an ongoing management relationship. It's a defined engagement with a beginning and an end.</p>
+      </div>
+      <div class="footer-label">Section 02 &middot; Who this is for</div>
+      <div class="folio">03 / 06</div>
+    </section>
+
+    <section class="page">
+      <div class="brand-row">
+        <div class="wordmark"><img src="../../public/brands/talley-wealth/logo-dark.png" alt="">Talley Wealth</div>
+        <div>What to expect</div>
+      </div>
+      <div class="section-label">Section 03 &middot; The Explore Call</div>
+      <h2>What to expect on the Explore Call.</h2>
+      <p class="lead">Short. Honest. Low stakes. A conversation, not a presentation. You don't need to arrive prepared, and nothing is expected of you afterward.</p>
+      <div class="expect-grid">
+        <div class="expect-card">
+          <div class="mini-label">Length</div>
+          <h3>Roughly 15 minutes</h3>
+          <p>Long enough to get the picture, short enough that it fits between the rest of your day.</p>
+        </div>
+        <div class="expect-card">
+          <div class="mini-label">Format</div>
+          <h3>Phone</h3>
+          <p>Usually the easiest way to see whether going further makes sense.</p>
+        </div>
+        <div class="expect-card">
+          <div class="mini-label">What to bring</div>
+          <h3>Nothing at all</h3>
+          <p>No financial documents. No statements. No spreadsheets. We don't need them yet, and the call doesn't depend on them.</p>
+        </div>
+        <div class="expect-card">
+          <div class="mini-label">Prep required</div>
+          <h3>None</h3>
+          <p>Showing up is enough. If something specific is on your mind, you can bring it, but the conversation works either way.</p>
+        </div>
+      </div>
+      <div class="navy-callout">
+        <div class="diamond filled" aria-hidden="true"></div>
+        <p>There is no pressure to move forward after the call. If it's a fit, we'll talk about next steps. If it isn't, I'll tell you that directly, and point you toward whatever looks more useful. Either ending is a good one.</p>
+      </div>
+      <div class="footer-label">Section 03 &middot; What to expect</div>
+      <div class="folio">04 / 06</div>
+    </section>
+
+    <section class="page">
+      <div class="brand-row">
+        <div class="wordmark"><img src="../../public/brands/talley-wealth/logo-dark.png" alt="">Talley Wealth</div>
+        <div>The people</div>
+      </div>
+      <div class="section-label">Section 04 &middot; The people</div>
+      <h2>The people you'll work with.</h2>
+      <p class="lead">These are the two people you'll primarily work with. David leads the strategy and the meetings. Stephenee keeps everything behind the scenes moving.</p>
+      <div class="people-grid">
+        <article class="person">
+          <img src="assets/david-talley-pdf.jpg" alt="David Talley">
+          <h3>David Talley</h3>
+          <div class="mini-label">CFP&reg;, EA &middot; Founder</div>
+          <p>Leads the strategy and the meetings. The person you're booking time with, and the one who owns the direction of your plan.</p>
+        </article>
+        <article class="person">
+          <img src="assets/stephenee-carberry-pdf.jpg" alt="Stephenee Carberry">
+          <h3>Stephenee</h3>
+          <div class="mini-label">Practice Manager</div>
+          <p>Keeps the engagement on the rails. Scheduling, onboarding, client experience, and the quiet coordination that makes every meeting feel prepared rather than improvised. The person who makes sure nothing falls through the cracks.</p>
+        </article>
+      </div>
+      <div class="footer-label">Section 04 &middot; The people</div>
+      <div class="folio">05 / 06</div>
+    </section>
+
+    <section class="page letter">
+      <div class="brand-row">
+        <div class="wordmark"><img src="../../public/brands/talley-wealth/logo-dark.png" alt="">Talley Wealth</div>
+        <div>A short note</div>
+      </div>
+      <div class="section-label">Section 05 &middot; In closing</div>
+      <h2>Why I do this work.</h2>
+      <p>The thing I see most often, and the thing that's hardest to watch, is successful people reaching an important financial chapter without the kind of clarity they've earned. They've done the saving. They've built the business. They've made responsible decisions for years. And then they reach the moment where all of that is supposed to turn into a life, a plan, or a next chapter, and nobody has sat them down and shown them how.</p>
+      <p>So they guess. Some guess low and under-live the plan. Others guess high and run out of room later. Business owners can build a strong company and still not be sure it is turning into personal wealth in the smartest way. Families can inherit money, sell a business, or approach retirement and still feel like the important pieces are being handled in separate rooms.</p>
+      <p>What gets in the way, usually, is that the pieces that matter most to the decision - income, the plan, the investments, the taxes, the business, and the estate picture - almost never get looked at together. Most of the industry lets the investments lead, hopes the math works, and treats tax as something to react to in April.</p>
+      <p>My work is the other way around. Start with the plan. Let the plan tell us what the investments need to do. Coordinate the tax strategy so it's a lever we use rather than a cost we absorb. That sequence sounds obvious when you say it. It's also genuinely rare.</p>
+      <p>That's the work. I'm glad you're thinking about it, and I'm looking forward to talking.</p>
+      <div class="signature">David</div>
+      <div class="sig-title">David Talley, CFP&reg;, EA &middot; Founder, Talley Wealth</div>
+      <div class="contact-box">
+        <div>
+          <span class="mini-label">Talley Wealth</span>
+          <p><strong>Johnson City, Tennessee</strong>By appointment, in person or remote</p>
+        </div>
+        <div>
+          <span class="mini-label">Reach us</span>
+          <p><strong>hello@talleywealth.com</strong>talleywealth.com &middot; (423) 617-0160</p>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <p>Securities offered through Registered Representatives of Cambridge Investment Research, Inc., a broker-dealer member FINRA/SIPC. Advisory services through Cambridge Investment Research Advisors, Inc., a Registered Investment Adviser. Cambridge and Talley Wealth are not affiliated. Cambridge does not offer tax or legal advice.</p>
+        <p>Financial Professionals may only conduct business with residents of the states or jurisdictions in which they are properly registered, licensed or exempt from registration. Testimonials reflect individual experiences and should not be considered a guarantee of future results.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

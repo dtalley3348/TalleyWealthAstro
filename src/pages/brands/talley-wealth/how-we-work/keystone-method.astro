@@ -19,7 +19,7 @@ const ownerOutcomes = [
   'Early succession or exit considerations surfaced, if relevant',
 ];
 
-const complexExamples = [
+const customExamples = [
   'Multi-entity analysis across related businesses and family trusts',
   'Cross-border tax coordination with outside international counsel',
   'Concentrated equity unwinding across multiple grants and lockups',
@@ -72,7 +72,7 @@ const faqItems = [
 
 <TalleyPage
   title="The Keystone Method™ | Talley Wealth"
-  description="Keystone is a six-month coordinated planning engagement for retirement-transition households, business owners, and complex financial situations."
+  description="Keystone is a six-month coordinated planning engagement for retirement-transition households, business owners, and unusually layered financial situations."
   heroTransparent
 >
   <section class="relative overflow-hidden bg-primary py-16 pt-28 text-primary-foreground sm:py-24 sm:pt-36">
@@ -203,7 +203,7 @@ const faqItems = [
           <ul>{personalOutcomes.map((item) => <li>{item}</li>)}</ul>
           <a href="/financial-advisor-for-pre-retirees">Read more about who this fits</a>
         </article>
-        <article class="tw-tier tw-tier--featured">
+        <article class="tw-tier">
           <h3>Keystone Owner</h3>
           <p class="tw-price">$12,000</p>
           <p class="tw-note">flat fee, six-month engagement</p>
@@ -213,13 +213,13 @@ const faqItems = [
           <a href="/financial-advisor-for-business-owners">Read more about who this fits</a>
         </article>
         <article class="tw-tier">
-          <h3>Keystone Complex</h3>
+          <h3>Keystone Custom</h3>
           <p class="tw-price">Starts at $20,000</p>
-          <p class="tw-note">scoped by complexity, six-month engagement</p>
-          <p>For genuinely complicated situations that go beyond the two primary lanes. Multiple entities, multi-state issues, concentrated equity, inheritance, or estate structures that span generations.</p>
+          <p class="tw-note">scoped individually, six-month engagement</p>
+          <p>For unusually layered situations where the standard scope does not quite fit. Multiple entities, multi-state issues, concentrated equity, inheritance, divorce, or estate structures that span generations.</p>
           <p class="tw-kicker">Typical examples:</p>
-          <ul>{complexExamples.map((item) => <li>{item}</li>)}</ul>
-          <a href="/financial-advisor-for-inherited-wealth">Read more about who this fits</a>
+          <ul>{customExamples.map((item) => <li>{item}</li>)}</ul>
+          <a href="/pricing">See full pricing details</a>
         </article>
       </div>
       <div class="mt-10 text-center">
@@ -233,7 +233,7 @@ const faqItems = [
       <div class="tw-copy mx-auto max-w-3xl">
         <h2>Which tier is me?</h2>
         <p>If the main question is retirement timing, income, taxes, investments, and the next chapter of life, Keystone Personal is almost certainly right. If you own a business, have meaningful K-1 income, or manage entities alongside personal wealth, Keystone Owner is the fit.</p>
-        <p>Keystone Complex is reserved for the cases where the usual frameworks don't quite stretch far enough, usually when multiple entities, cross-border considerations, or generational estate structures are involved.</p>
+        <p>Keystone Custom is reserved for unusually layered situations where the scope needs to be designed around the work, usually when multiple entities, cross-border considerations, a major transition, or generational estate structures are involved.</p>
         <p><a href="/get-started" class="font-bold text-accent">Schedule an Explore Call</a></p>
       </div>
     </div>
@@ -290,11 +290,6 @@ const faqItems = [
     background: var(--color-background);
     padding: 2rem;
     box-shadow: var(--shadow-elegant);
-  }
-  html[data-tenant="talley-wealth"] .tw-tier--featured {
-    background: var(--color-primary);
-    color: var(--color-primary-foreground);
-    box-shadow: var(--shadow-elegant-lg);
   }
   html[data-tenant="talley-wealth"] .tw-tier h3 {
     font-family: var(--font-serif);

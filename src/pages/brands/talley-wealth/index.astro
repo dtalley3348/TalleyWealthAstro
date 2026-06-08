@@ -36,7 +36,6 @@ const secondaryFits = [
   },
 ];
 
-const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
 ---
 
 <TalleyPage
@@ -56,10 +55,10 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
         </div>
         <h1 class="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl">
-          Financial planning built for retirement, tax, and business decisions.
+          When the pieces of your financial life need one clear plan.
         </h1>
         <p class="mt-5 max-w-full text-lg leading-relaxed text-primary-foreground/80">
-          Talley Wealth helps retirees, business owners, and high-income households make clearer decisions across retirement, taxes, investments, and long-term strategy.
+          Talley Wealth helps people approaching retirement and business owners connect the tax, investment, income, and estate decisions that should not be handled separately.
         </p>
         <div class="mt-8 grid gap-3 sm:grid-cols-2">
           {primaryPaths.map((item) => (
@@ -74,14 +73,6 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
           <a href="/get-started" class="inline-flex max-w-full justify-center rounded-md bg-accent px-6 py-4 text-center font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
           <a href="/how-we-work/what-to-expect" class="inline-flex max-w-full justify-center rounded-md border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-4 text-center font-bold text-primary-foreground transition hover:bg-primary-foreground/20">How We Work</a>
         </div>
-        <div class="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-primary-foreground/75">
-          {trustStats.map((stat) => (
-            <div class="flex items-center gap-2">
-              <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
-              <span>{stat}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   </section>
@@ -89,10 +80,10 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
   <section class="border-b border-border/50 bg-card">
     <div class="section-container py-8">
       <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
-        <p><strong class="block font-serif text-lg text-primary">Retirement decisions</strong> Income, taxes, investments, Medicare, Social Security, and estate choices modeled together.</p>
-        <p><strong class="block font-serif text-lg text-primary">Business-owner strategy</strong> Tax, cash flow, owner pay, entity, retirement plan, and personal wealth decisions in one conversation.</p>
-        <p><strong class="block font-serif text-lg text-primary">Plan first</strong> The advice starts with your life, not a product or portfolio model.</p>
-        <p><strong class="block font-serif text-lg text-primary">Founder-led</strong> You work directly with David, supported by a prepared team.</p>
+        <p><strong class="block font-serif text-lg text-primary">CFP®, ChFC®, EA</strong> Planning, tax, and investments in one conversation.</p>
+        <p><strong class="block font-serif text-lg text-primary">Founder-led advisory</strong> You work directly with David, supported by a prepared team.</p>
+        <p><strong class="block font-serif text-lg text-primary">Two primary planning lanes</strong> Retirement transition and business-owner strategy.</p>
+        <p><strong class="block font-serif text-lg text-primary">67 five-star Google reviews</strong> Clear explanations, follow-through, and personal attention.</p>
       </div>
     </div>
   </section>
@@ -156,7 +147,10 @@ const trustStats = ['CFP®, ChFC®, EA', '67 five-star Google reviews'];
       </div>
 
       <div class="mx-auto mt-10 max-w-5xl rounded-lg border border-border/40 bg-card/70 p-6">
-        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">Also a fit when the complexity justifies the work</p>
+        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">Specific situations that can still fit</p>
+        <p class="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
+          Some people enter through a more specific question. The fit depends on whether that question needs the same connected planning across taxes, investments, benefits, estate decisions, and timing.
+        </p>
         <div class="mt-5 grid gap-4 md:grid-cols-3">
           {secondaryFits.map((item) => (
             <a href={item.href} class="group rounded-md border border-border/40 bg-background p-4 transition hover:border-accent/50">

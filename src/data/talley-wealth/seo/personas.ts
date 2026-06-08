@@ -73,12 +73,12 @@ export const personas: Record<string, PersonaData> = {
     slug: 'business-owners',
     label: 'For Business Owners',
     heroTitle: 'When the business is working, the money decisions get bigger.',
-    heroDescription: "Most business owners do not first reach out because they want a generic financial plan. They reach out because the business is working, the tax bill feels out of hand, and they know there has to be a smarter way to make decisions.",
+    heroDescription: "Most business owners do not first reach out because they want a generic financial plan. They reach out because the business is working, the tax bill feels out of hand, and the business and personal decisions need one clear strategy.",
     heroImage: '/brands/talley-wealth/david-whiteboard-strategy.jpg',
     heroImageAlt: 'David Talley explaining financial planning strategy at a whiteboard',
     heroImagePosition: 'center 34%',
     recognitionTitle: 'Success creates a different kind of financial pressure.',
-    recognitionIntro: 'Business owners tend to look for solutions, not just problems. This page is for the owner who wants someone at the table who can think across tax, planning, investments, cash flow, and the business itself.',
+    recognitionIntro: 'Business-owner planning is one of the two primary lanes Talley Wealth is built around. This page is for the owner who wants someone at the table who can think across tax, planning, investments, cash flow, and the business itself.',
     recognitionCards: [
       {
         title: 'The tax bill feels wrong',
@@ -95,7 +95,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     problemTitle: 'Taxes may start the conversation. The real work goes wider.',
     problemDescription: "A business owner may come in asking for tax strategy, an entity review, or a better retirement plan. Those may be exactly the right issues to discuss. But the best work usually happens when those questions are connected to the owner's full financial life.",
-    problemDetail: "Talley Wealth helps Tri-Cities business owners build a more coordinated plan around the business and the family. That means tax planning before the year is over, investment decisions that reflect business risk, retirement planning that does not depend entirely on a future sale, and a clear process for decisions that used to live only in the owner's head.",
+    problemDetail: "Talley Wealth helps Tri-Cities business owners build a more coordinated plan around the business and the family. This is a primary planning lane, not a side specialty: tax planning before the year is over, investment decisions that reflect business risk, retirement planning that does not depend entirely on a future sale, and a clear process for decisions that used to live only in the owner's head.",
     bulletPoints: [
       'Proactive tax strategy before the year is already over',
       'Owner compensation strategy, salary, distributions, and estimated taxes',
@@ -158,12 +158,12 @@ export const personas: Record<string, PersonaData> = {
     slug: 'inherited-wealth',
     label: 'For Inherited Wealth',
     heroTitle: 'Inherited money can change the picture. The next decisions matter.',
-    heroDescription: 'An inheritance can open new possibilities. It can also put tax, investment, estate, and family decisions in front of you before you feel ready for them.',
+    heroDescription: 'An inheritance can open new possibilities. It can also put tax, investment, estate, retirement, and family decisions in front of you before you feel ready for them.',
     heroImage: '/brands/talley-wealth/stephenee-client-conversation.jpg',
     heroImageAlt: 'Talley Wealth team members in conversation at the office',
     heroImagePosition: 'center center',
     recognitionTitle: 'New money can create immediate responsibility.',
-    recognitionIntro: 'This page is for someone who has received money, expects to receive money, or has suddenly become the person helping an aging parent make financial decisions.',
+    recognitionIntro: 'Inherited wealth often starts as one specific concern, but the right decisions usually depend on the broader plan. This page is for someone who has received money, expects to receive money, or has suddenly become the person helping an aging parent make financial decisions.',
     recognitionCards: [
       {
         title: 'You do not want to make a permanent mistake',
@@ -180,7 +180,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     problemTitle: 'The portfolio can wait until the plan is clear.',
     problemDescription: "Most people assume the job is to find a good portfolio. That matters, but inherited wealth usually needs a planning sequence first: what has to be done now, what can wait, what is taxable, what belongs in the estate plan, and what this money actually changes.",
-    problemDetail: "Talley Wealth helps families slow the decision down enough to make the right first moves. We look at account types, beneficiary rules, inherited IRA timelines, cash needs, tax brackets, estate documents, existing investments, and the life options the inheritance may create.",
+    problemDetail: "Talley Wealth helps families slow the decision down enough to make the right first moves. We look at account types, beneficiary rules, inherited IRA timelines, cash needs, tax brackets, estate documents, existing investments, retirement timing, and the life options the inheritance may create.",
     bulletPoints: [
       'Inherited IRA and beneficiary account distribution rules',
       'Tax planning around inherited assets, basis, income, and timing',
@@ -207,7 +207,7 @@ export const personas: Record<string, PersonaData> = {
       },
     ],
     ctaTitle: 'Before you make the next move, get oriented.',
-    ctaDescription: 'Schedule a 15-minute Explore Call. We will talk about what changed, what decisions are already in front of you, and whether Keystone is the right way to organize the next steps.',
+    ctaDescription: 'Schedule a 15-minute Explore Call. We will talk about what changed, what decisions are already in front of you, and whether Keystone is the right way to connect the inheritance to the broader plan.',
     metaTitle: 'Financial Advisor for Inherited Wealth | Talley Wealth',
     metaDescription: 'Planning for inherited wealth, inherited IRAs, family money, and aging-parent decisions across tax, investment, estate, and retirement choices.',
     faqs: [
@@ -239,12 +239,12 @@ export const personas: Record<string, PersonaData> = {
     slug: 'executives-equity-comp',
     label: 'For Equity Comp',
     heroTitle: 'Equity compensation can make good income feel complicated.',
-    heroDescription: 'RSUs, stock options, deferred comp, bonuses, and concentrated company stock can create tax and timing decisions that should not be handled one grant at a time.',
+    heroDescription: 'RSUs, stock options, deferred comp, bonuses, and concentrated company stock can create tax and timing decisions that should be connected to the rest of your plan.',
     heroImage: '/brands/talley-wealth/david-stephenee-window.jpg',
     heroImageAlt: 'David Talley and Stephenee Carberry reviewing planning work at the Talley Wealth office',
     heroImagePosition: 'center center',
     recognitionTitle: 'This is not just a diversify-or-hold decision.',
-    recognitionIntro: 'This page is for the executive or professional whose compensation has become more complicated than a paycheck and a 401(k).',
+    recognitionIntro: 'Equity compensation often starts as one tax or timing question, but the right answer depends on the full financial picture. This page is for the executive or professional whose compensation has become more complicated than a paycheck and a 401(k).',
     recognitionCards: [
       {
         title: 'Vesting is creating a tax question',
@@ -261,7 +261,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     problemTitle: 'Equity decisions need context.',
     problemDescription: 'The usual advice is to diversify. Often that is right. Sometimes it is incomplete. A better process looks at grant type, vesting schedule, tax bracket, AMT exposure, cash needs, career risk, company risk, retirement goals, and the rest of the portfolio.',
-    problemDetail: 'Talley Wealth helps executives and professionals coordinate equity compensation with the broader plan. That can include tax projections, vesting calendars, sale plans, diversification frameworks, withholding review, charitable strategy, retirement contributions, and investment allocation.',
+    problemDetail: 'Talley Wealth helps executives and professionals coordinate equity compensation with the broader plan. That can include tax projections, vesting calendars, sale plans, diversification frameworks, withholding review, charitable strategy, retirement contributions, estate considerations, and investment allocation.',
     bulletPoints: [
       'RSU vesting, withholding, and sale planning',
       'ISO, NSO, and ESPP tax coordination',
@@ -289,7 +289,7 @@ export const personas: Record<string, PersonaData> = {
       },
     ],
     ctaTitle: 'Make the next vesting date part of a plan.',
-    ctaDescription: 'Schedule a 15-minute Explore Call. We will talk through the equity decisions coming up, what feels unresolved, and whether Keystone is the right place to map the choices.',
+    ctaDescription: 'Schedule a 15-minute Explore Call. We will talk through the equity decisions coming up, what feels unresolved, and whether Keystone is the right place to connect those choices to the full plan.',
     metaTitle: 'Equity Compensation Financial Advisor | Talley Wealth',
     metaDescription: 'Planning for executives with RSUs, stock options, deferred compensation, bonuses, and concentrated company stock.',
     faqs: [
@@ -327,7 +327,7 @@ export const personas: Record<string, PersonaData> = {
     heroImagePosition: 'center center',
     employerDisclosure: 'Talley Wealth is an independent firm and is not affiliated with, endorsed by, or sponsored by Eastman Chemical Company or any employer mentioned on this page.',
     recognitionTitle: 'The benefits are only useful if the choices fit your life.',
-    recognitionIntro: 'This page is for Kingsport-area employees and retirees who want pension, 401(k), tax, investment, and retirement timing decisions modeled together instead of handled one form at a time.',
+    recognitionIntro: 'Employer benefits often start as one election or rollover question, but the right answer depends on the full retirement picture. This page is for Kingsport-area employees and retirees who want pension, 401(k), tax, investment, and retirement timing decisions modeled together instead of handled one form at a time.',
     recognitionCards: [
       {
         title: 'Retirement timing is getting real',
@@ -344,7 +344,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     problemTitle: 'Good benefits still need good coordination.',
     problemDescription: "A strong benefits package can still leave you with hard questions. The issue is usually not whether a benefit is good. It is when to use it, how it affects taxes, how it changes retirement timing, and how it fits with the rest of the plan.",
-    problemDetail: "Talley Wealth helps Kingsport and Tri-Cities families coordinate employer benefits with retirement planning, tax strategy, investment management, and estate decisions. If your career involved a major local employer, the benefit package should be treated as part of the broader financial picture, not a separate checklist.",
+    problemDetail: "Talley Wealth helps Kingsport and Tri-Cities families coordinate employer benefits with retirement planning, tax strategy, investment management, and estate decisions. If your career involved a major local employer, the benefit package should be treated as part of the broader financial picture, not a separate checklist or one-time election.",
     bulletPoints: [
       'Retirement timing and employer-benefit coordination',
       'Pension, lump sum, or income-election analysis when available',
@@ -371,7 +371,7 @@ export const personas: Record<string, PersonaData> = {
       },
     ],
     ctaTitle: 'Get clear before the next benefit decision.',
-    ctaDescription: "Schedule a 15-minute Explore Call. We will talk about the decision in front of you and whether Keystone is the right way to build the full retirement and benefits picture.",
+    ctaDescription: "Schedule a 15-minute Explore Call. We will talk about the decision in front of you and whether Keystone is the right way to connect your benefits to the full retirement picture.",
     metaTitle: 'Financial Planning for Kingsport Employer Benefits | Talley Wealth',
     metaDescription: 'Planning for Kingsport professionals and retirees coordinating employer benefits, retirement timing, taxes, investments, and benefit choices.',
     faqs: [
@@ -412,7 +412,7 @@ export const personas: Record<string, PersonaData> = {
     heroImageAlt: 'David Talley in conversation at the Talley Wealth office',
     heroImagePosition: 'center center',
     recognitionTitle: 'Retirement is close enough that it is becoming the elephant in the room.',
-    recognitionIntro: 'This page is for the person who has saved, worked, and done many things right, but now wants a much more complete answer than a simple retirement number.',
+    recognitionIntro: 'Retirement transition is one of the two primary lanes Talley Wealth is built around. This page is for the person who has saved, worked, and done many things right, but now wants a much more complete answer than a simple retirement number.',
     recognitionCards: [
       {
         title: 'You want to know when',
@@ -429,7 +429,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     problemTitle: 'The closer retirement gets, the more the answer depends on the whole picture.',
     problemDescription: "Most people think the main question is, \"How much income can my investments create?\" That answer matters. But by itself, it can be misleading. The better question is how the plan behaves when taxes, market timing, healthcare, Social Security, spending, risk, and life on the other side of work all interact.",
-    problemDetail: "Talley Wealth helps Tri-Cities pre-retirees move from a rough retirement guess to a coordinated plan. Sometimes the biggest lever is not working two more years. It may be a tax strategy, withdrawal sequence, investment change, Roth conversion window, or a clearer understanding of what you actually want retirement to fund.",
+    problemDetail: "Talley Wealth helps Tri-Cities pre-retirees move from a rough retirement guess to a coordinated plan. This is a primary planning lane: the biggest lever may not be working two more years. It may be a tax strategy, withdrawal sequence, investment change, Roth conversion window, or a clearer understanding of what you actually want retirement to fund.",
     bulletPoints: [
       'Retirement income modeling across spending, taxes, healthcare, and inflation',
       'Social Security timing and spousal claiming analysis',
@@ -499,7 +499,7 @@ export const personas: Record<string, PersonaData> = {
     heroImagePosition: 'center center',
     employerDisclosure: 'Talley Wealth is an independent firm and is not affiliated with, endorsed by, or sponsored by Ballad Health or any healthcare employer mentioned on this page.',
     recognitionTitle: 'You may not need something complicated. You may need someone to make it coherent.',
-    recognitionIntro: 'This page is for physicians, advanced practice providers, and healthcare leaders who want the major decisions organized across taxes, benefits, investments, debt, insurance, and time.',
+    recognitionIntro: 'Healthcare careers create their own planning pressure: high income, limited time, benefits, debt, insurance, taxes, and the question of what work should look like over time. This page is for physicians, advanced practice providers, and healthcare leaders who want those decisions organized together.',
     recognitionCards: [
       {
         title: 'Your income changed faster than your plan',
@@ -543,7 +543,7 @@ export const personas: Record<string, PersonaData> = {
       },
     ],
     ctaTitle: 'Make the financial side easier to understand.',
-    ctaDescription: "Schedule a 15-minute Explore Call. We will talk about what feels unresolved and whether Keystone is the right way to organize the financial side.",
+    ctaDescription: "Schedule a 15-minute Explore Call. We will talk about what feels unresolved and whether Keystone is the right way to connect the financial side to the rest of your life.",
     metaTitle: 'Financial Advisor for Healthcare Professionals | Talley Wealth',
     metaDescription: 'Planning for healthcare professionals coordinating taxes, student loans, benefits, insurance, investments, and retirement decisions.',
     faqs: [

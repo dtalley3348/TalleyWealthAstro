@@ -1,6 +1,8 @@
 # Talley Wealth Target-Market Alignment Audit
 
-Last updated: June 4, 2026
+Last updated: June 8, 2026
+
+Source-of-truth relationship: this audit governs the public-positioning layer of Talley Wealth audience strategy. For the full layered model, use [Talley Wealth Market Architecture](./marketing/talley-wealth-market-architecture.md).
 
 ## Working Frame
 
@@ -55,6 +57,8 @@ Verdict: useful as a support strategy, not as the lead position. Broad support p
 
 ## Decision
 
+This decision is about the public center of gravity, not the entire operating model.
+
 Default hierarchy:
 
 - Primary: near-retirees and retirement-transition households, especially in Northeast Tennessee.
@@ -64,6 +68,17 @@ Default hierarchy:
 
 Tie-breaker: client fit and differentiation win unless revenue or SEO creates a strong dissent. No such dissent currently overrides the two-lane strategy.
 
+## Layering Rule
+
+Talley Wealth should not flatten every audience label into one target-market list.
+
+- Public center of gravity: near-retirees/retirees and business owners.
+- Operational service rhythms: retirement/retirees, business owners, and high earners/accumulators.
+- Entry points: specific SEO, referral, seminar, guide, and campaign pages nested under the relevant planning lens.
+- Keystone tiers: Personal, Owner, and likely Custom as scope/pricing language, not market identity.
+
+The public website can support many specific pages without implying that every niche is an equal center of the firm. Specificity belongs at the entry point. Clarity belongs at the center.
+
 ## Current-State Audit
 
 | Asset | Status | Direction |
@@ -72,7 +87,7 @@ Tie-breaker: client fit and differentiation win unless revenue or SEO creates a 
 | Who We Help | Good but needs hierarchy | Split primary paths from secondary situations. Keep secondary pages visible but clearly subordinate. |
 | Services | Good but needs hierarchy | Lead with connected decisions and primary lanes; keep service grid. |
 | Pricing | Aligned but needs language | Clarify Personal as retirement-transition lane and Owner as business-owner lane. |
-| Keystone | Aligned but needs hierarchy | Keep three tiers; make Personal/Owner examples map to primary lanes. |
+| Keystone | Aligned but needs hierarchy | Treat Personal/Owner/Custom as scope and pricing, not audience taxonomy. Rename Complex to Custom in planning docs before changing public copy. |
 | Get Started | Good but needs hierarchy | Name retirement and business/tax questions first; keep other good-fit situations. |
 | Persona SEO pages | Secondary SEO/support plus two flagships | Keep all strong pages; treat pre-retirees and business owners as flagship persona pages. |
 | Sitemap | Good | Keep support pages submitted, but reinforce flagship pages through copy and internal links. |
@@ -86,6 +101,9 @@ Tie-breaker: client fit and differentiation win unless revenue or SEO creates a 
 - Use "when the moving parts need one clear strategy" or "when decisions start affecting each other" instead of "piecemeal."
 - Do not list four or more target markets as equal on the homepage.
 - Preserve secondary audiences as "also fits" or support/search paths so good prospects do not feel unwelcome.
+- Nest specific pages under a planning lens instead of presenting them as new equal markets.
+- Treat high earners/accumulators as a real service rhythm but not an equal homepage lane unless David explicitly changes the public positioning.
+- Treat Keystone tiers as engagement scope and pricing language, not target-market labels.
 - Keep "coordination" as a supporting concept, not the only public pain.
 
 ## Execution Order

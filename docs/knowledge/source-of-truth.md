@@ -5,13 +5,21 @@ Use this hierarchy whenever sources conflict.
 ## Process And Positioning
 
 1. The current Astro website and this knowledge hub are canonical for how Talley Wealth works now.
-2. The target-market hierarchy below governs public positioning, website copy, social prompts, SEO page priority, referral assets, and lead magnets.
-3. Existing repo docs are supporting context unless a knowledge-hub file promotes them to canonical status.
-4. Older Google Drive material and old project folders are archival unless David explicitly says a file is current.
+2. The [Talley Wealth Market Architecture](../marketing/talley-wealth-market-architecture.md) governs how public positioning, service rhythms, entry points, and Keystone scope/pricing relate to each other.
+3. The target-market hierarchy below governs public positioning, website copy, social prompts, SEO page priority, referral assets, and lead magnets inside that layered architecture.
+4. Existing repo docs are supporting context unless a knowledge-hub file promotes them to canonical status.
+5. Older Google Drive material and old project folders are archival unless David explicitly says a file is current.
 
 ## Target-Market Hierarchy
 
 Talley Wealth helps people make clearer decisions when retirement, taxes, investments, and business strategy all start affecting each other.
+
+Use layered audience architecture, not one flat market list:
+
+- Public center of gravity: two primary lanes.
+- Operational service rhythms: retirement/retirees, business owners, and high earners/accumulators.
+- Entry points: specific search, referral, guide, seminar, and campaign pages nested under a planning lens.
+- Keystone tiers: engagement scope and pricing language, not target-market identity.
 
 Use two primary lanes unless David explicitly changes the strategy:
 
@@ -29,8 +37,8 @@ When sources conflict, preserve this hierarchy. Keep secondary audiences visible
 ## Public Language Rules
 
 - Current preferred homepage formulation:
-  - H1: "Financial planning built for retirement, tax, and business decisions."
-  - Supporting line: "Talley Wealth helps retirees, business owners, and high-income households make clearer decisions across retirement, taxes, investments, and long-term strategy."
+  - H1: "When the pieces of your financial life need one clear plan."
+  - Supporting line: "Talley Wealth helps people approaching retirement and business owners connect the tax, investment, income, and estate decisions that should not be handled separately."
   - Near-retirement path card: "You are close enough to retirement that taxes, income, investments, Medicare, Social Security, and estate decisions all start to matter at the same time."
   - Business-owner path card: "You have profit, tax questions, cash-flow decisions, and personal wealth goals, but no one clearly helping you think through all of it."
 - Lead with clearer decisions, connected decisions, tax-aware planning, plain-English strategy, and the way retirement, taxes, investments, and business decisions affect each other.

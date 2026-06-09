@@ -87,16 +87,16 @@ export const blogStrategyBySlug: Record<string, BlogStrategy> = {
     supportingIntents: ['Tax planning', 'Keystone Method', 'Business owners'],
     links: [
       { title: 'Tax Planning', href: '/services/tax-planning', description: 'What year-round planning looks like at Talley Wealth.' },
+      { title: 'Tax Membership', href: '/tax-membership', description: 'How Talley Tax organizes preparation and planning across the year.' },
       { title: 'The Keystone Method', href: '/how-we-work/keystone-method', description: 'How tax decisions get coordinated with the rest of the plan.' },
       { title: 'Business Owner Planning', href: '/services/business-owner-planning', description: 'Tax and planning decisions for owners with growing profits.' },
-      { title: 'Pricing', href: '/pricing', description: 'How planning and ongoing advisory fees work.' },
     ],
     cta: {
       eyebrow: 'Tax planning is a process',
-      title: 'Want to see what proactive tax planning could look like for you?',
-      body: 'The first step is not a huge commitment. It is a conversation about what is changing, what you are paying, and whether planning could create enough value.',
-      href: '/get-started',
-      label: 'Schedule an Explore Call',
+      title: 'Want to see how tax planning can run through the year?',
+      body: 'Tax Membership is the Talley Tax model for pairing accurate preparation with planning touchpoints before the year is already over.',
+      href: '/tax-membership',
+      label: 'See the Tax Membership rhythm',
     },
   },
   'what-changes-as-financial-independence-gets-closer': {

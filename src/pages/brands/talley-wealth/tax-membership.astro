@@ -1,0 +1,293 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+
+const taxLevels = [
+  {
+    label: 'Level 1',
+    title: 'DIY tax software',
+    body: 'You prepare and file the return yourself. The software helps with reporting, but it does not know what should have happened in October.',
+  },
+  {
+    label: 'Level 2',
+    title: 'Professional tax preparation',
+    body: 'A professional prepares and files the return accurately. A clean return matters, but many prep relationships are not built to help you make decisions before December 31.',
+  },
+  {
+    label: 'Level 3',
+    title: 'Tax Membership',
+    body: 'The return still gets prepared, but the relationship is organized around the full year: filing, post-tax-season review, withholding and estimate updates, projections, fall strategy, and year-end action.',
+  },
+];
+
+const rhythm = [
+  {
+    timing: 'January-April',
+    title: 'Prepare + Notice',
+    body: 'Prepare and file the return, then identify the patterns, surprises, estimate issues, withholding gaps, and planning themes the return revealed.',
+    prevents: 'Prevents the return from becoming a dead-end document.',
+  },
+  {
+    timing: 'Spring / early summer',
+    title: 'Reset',
+    body: 'Review what changed, update withholding or estimated payments, and make sure the current tax year is not already drifting off course.',
+    prevents: 'Prevents avoidable underpayment surprises and stale assumptions.',
+  },
+  {
+    timing: 'Summer',
+    title: 'Projection',
+    body: 'Build a current-year projection once the year has taken shape: income, bonuses, business profit, retirement contributions, estimates, and major changes.',
+    prevents: 'Prevents flying blind while there is still time to adjust.',
+  },
+  {
+    timing: 'Fall',
+    title: 'Strategy',
+    body: 'Run planning while there is still time to act: retirement contributions, Roth conversions, charitable giving, entity decisions, capital gains or losses, equipment purchases, and estimate adjustments.',
+    prevents: 'Prevents missed windows before the year is locked in.',
+  },
+  {
+    timing: 'Year-end',
+    title: 'Execute',
+    body: 'Finalize the decisions that need to happen before December 31 and set up the next filing season with fewer surprises.',
+    prevents: 'Prevents "we should have done that last year" conversations.',
+  },
+];
+
+const entryWindows = [
+  {
+    timing: 'January-April',
+    title: 'Start with filing',
+    body: 'We begin with preparation, filing, and identifying the planning themes that should not wait until next year.',
+  },
+  {
+    timing: 'May-July',
+    title: 'Start with the reset',
+    body: 'We review the filed return, update withholding or estimates, and clarify what is changing in the current year.',
+  },
+  {
+    timing: 'August-October',
+    title: 'Start with projection',
+    body: 'We build the current-year picture and look for decisions that still have time to matter before year-end.',
+  },
+  {
+    timing: 'November-December',
+    title: 'Start with year-end',
+    body: 'We focus on urgent year-end strategy first, then use what we learn to set up the next year properly.',
+  },
+];
+
+const fitItems = [
+  'High-income households with bonuses, equity compensation, charitable giving, or changing deductions',
+  'Business owners with profit, owner pay, estimated tax, entity, or retirement plan decisions',
+  'Real estate investors with rentals, depreciation, property sales, or multi-state reporting',
+  'Pre-retirees and retirees looking at Roth conversions, RMDs, QCDs, Medicare brackets, or withdrawal timing',
+  'Talley Wealth ongoing advisory clients who want tax preparation and planning to stay connected, while still understanding that Talley Tax is a separate service',
+];
+
+const watchItems = [
+  'Withholding or estimated tax gaps',
+  'Business profit changes',
+  'Roth conversion windows',
+  'Charitable giving timing',
+  'Capital gains or losses',
+  'Retirement plan contribution opportunities',
+  'Rental, K-1, or multi-state surprises',
+  'Income changes that could affect the next planning decision',
+];
+
+const faqs = [
+  {
+    q: 'Is this different from tax preparation?',
+    a: 'Yes. Tax preparation is still part of it, but Tax Membership is organized around the year. The goal is to prepare the return accurately and also look forward while there is still time to make useful decisions.',
+  },
+  {
+    q: 'What if my return has already been filed?',
+    a: 'That is fine. We can start by reviewing what the return revealed, updating withholding or estimated payments, and building a current-year projection.',
+  },
+  {
+    q: 'Can I join midyear?',
+    a: 'Yes. The rhythm is built so clients can enter where the year actually is. In summer we usually start with projection work. In fall we usually start with strategy before year-end deadlines arrive.',
+  },
+  {
+    q: 'Do I have to be a Talley Wealth client?',
+    a: 'No. Talley Tax is a separate tax preparation business. Some Talley Wealth clients choose to add Talley Tax, but tax preparation is optional and priced separately.',
+  },
+  {
+    q: 'What if I already have a CPA?',
+    a: 'You may be best served by keeping that relationship. The question is whether you are also getting proactive planning before the year closes. If you are, great. If not, that is the gap Tax Membership is designed to address.',
+  },
+  {
+    q: 'Is this unlimited tax advice?',
+    a: 'No. The membership is structured around preparation, planning touchpoints, projections, and questions that fit the scope of the relationship. If something requires a separate project or another professional, we will say that clearly.',
+  },
+];
+---
+
+<TalleyPage
+  title="Tax Membership | Talley Tax"
+  description="See how Talley Tax Membership turns tax preparation into a year-round rhythm: filing, post-tax-season review, withholding and estimate updates, projections, fall strategy, and year-end execution."
+  heroTransparent
+>
+  <section class="bg-primary pt-32 pb-20 text-primary-foreground sm:pt-40">
+    <div class="section-container">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Talley Tax Membership</p>
+        <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-white md:text-6xl">Tax planning should not wait until tax season.</h1>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-primary-foreground/82">
+          Tax preparation records what happened. Tax Membership keeps the year from becoming a surprise by pairing accurate preparation with planning touchpoints while there is still time to act.
+        </p>
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="https://talleytax.com" class="inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:brightness-95">Visit Talley Tax</a>
+          <a href="/resources/blog/what-tax-planning-actually-looks-like" class="inline-flex rounded-md border border-white/35 px-6 py-3 font-bold text-white transition hover:border-accent hover:text-accent">Read the tax planning article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border/50 bg-card">
+    <div class="section-container py-8">
+      <p class="mx-auto max-w-4xl text-center leading-relaxed text-muted-foreground">
+        Tax Membership is provided through <strong class="font-bold text-primary">Talley Tax</strong>, a separate tax preparation business operated by David Talley. Talley Tax is separate from Talley Wealth, but the philosophy is the same: decisions are easier when someone is looking forward with you. Tax preparation is optional for Talley Wealth clients and priced separately.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">The Difference</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Three very different tax experiences.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">The goal is not to make normal tax preparation sound bad. Accurate filing matters. The difference is whether anyone is looking forward with you before the year is already over.</p>
+      </div>
+      <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+        {taxLevels.map((level) => (
+          <article class="flex h-full flex-col rounded-lg border border-border/50 bg-card p-7 shadow-elegant">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{level.label}</p>
+            <h3 class="mt-4 font-serif text-2xl font-bold leading-tight text-primary">{level.title}</h3>
+            <p class="mt-4 flex-1 leading-relaxed text-muted-foreground">{level.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-14 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">The Annual Rhythm</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The tax year has more than one deadline.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">Filing season is part of the work. The planning value comes from using the rest of the year before the useful windows close.</p>
+      </div>
+      <div class="mx-auto max-w-5xl space-y-5">
+        {rhythm.map((item, index) => (
+          <article class="grid gap-6 rounded-lg border border-border/50 bg-background p-6 shadow-elegant md:grid-cols-[0.25fr_0.75fr] md:p-8">
+            <div>
+              <p class="font-serif text-4xl font-bold text-accent">{String(index + 1).padStart(2, '0')}</p>
+              <p class="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">{item.timing}</p>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-primary">{item.title}</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
+              <p class="mt-4 rounded-md border border-accent/25 bg-accent/8 p-4 text-sm font-bold leading-relaxed text-primary">{item.prevents}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary py-24 text-primary-foreground">
+    <div class="section-container">
+      <div class="mx-auto max-w-5xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Enter Anytime</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-white md:text-4xl">Real tax work should not depend on what month you happen to ask for help.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-primary-foreground/82">If the return is already filed, there is still a current tax year to shape. If year-end is getting close, there are still decisions to review before the window closes. The point is not to wait for the next filing season. The point is to start treating taxes like something that can be managed during the year, not just reported after it is over.</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          {entryWindows.map((window) => (
+            <article class="rounded-lg border border-white/15 bg-white/8 p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{window.timing}</p>
+              <h3 class="mt-3 font-serif text-xl font-bold text-white">{window.title}</h3>
+              <p class="mt-3 leading-relaxed text-primary-foreground/78">{window.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What We Look For</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The details that usually get noticed too late.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">This is where tax work starts to feel different. The return is not only a filing requirement. It is evidence. It shows what should be watched before the next year is already over.</p>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {watchItems.map((item) => (
+            <div class="rounded-md border border-border/50 bg-background p-4 text-sm font-bold leading-relaxed text-primary shadow-elegant">{item}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Who It Fits</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Best for tax lives with moving parts.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">Tax Membership is most useful when income is meaningful, changing, or connected to decisions that should happen before the return is prepared.</p>
+        </div>
+        <ul class="space-y-4">
+          {fitItems.map((item) => (
+            <li class="flex gap-4 rounded-lg border border-border/50 bg-card p-5 shadow-elegant">
+              <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+              <span class="leading-relaxed text-muted-foreground">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Common Questions</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Short answers before you decide whether this fits.</h2>
+        </div>
+        <div class="divide-y divide-border/70 rounded-lg border border-border/50 bg-background shadow-elegant">
+          {faqs.map((faq) => (
+            <article class="p-6 md:p-7">
+              <h3 class="font-serif text-xl font-bold leading-snug text-primary">{faq.q}</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">{faq.a}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-8 rounded-lg border border-border/50 bg-card p-8 shadow-elegant md:grid-cols-[1.2fr_0.8fr] md:p-10">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Next Step</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary">See whether Talley Tax Membership fits.</h2>
+          <p class="mt-5 leading-relaxed text-muted-foreground">Talley Tax is the current tax-business front door. This page explains the model; Talley Tax is where the membership itself lives.</p>
+        </div>
+        <div class="flex flex-col justify-center gap-3">
+          <a href="https://talleytax.com" class="inline-flex justify-center rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:brightness-95">Talk with Talley Tax</a>
+          <a href="/resources/blog/what-tax-planning-actually-looks-like" class="inline-flex justify-center rounded-md border border-accent/50 px-6 py-3 font-bold text-accent transition hover:bg-accent hover:text-accent-foreground">Read the article</a>
+        </div>
+      </div>
+      <p class="mx-auto mt-8 max-w-4xl text-center text-xs leading-relaxed text-muted-foreground">
+        Securities and advisory services are offered through Cambridge entities as described in the site footer. Tax Membership is separate and provided through Talley Tax. Talley Wealth advisory services do not include tax preparation unless a separate Talley Tax relationship is established.
+      </p>
+    </div>
+  </section>
+</TalleyPage>

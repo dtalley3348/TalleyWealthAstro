@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tax Membership | Talley Tax Preview</title>
+    <style>
+      :root {
+        --primary: #263747;
+        --accent: #b98547;
+        --background: #ecebe8;
+        --card: #ffffff;
+        --muted: #58616a;
+        --border: #d6d2cb;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--primary);
+        font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      .section { padding: 88px 24px; }
+      .container { max-width: 1120px; margin: 0 auto; }
+      .narrow { max-width: 820px; margin: 0 auto; text-align: center; }
+      .hero {
+        background: var(--primary);
+        color: white;
+        padding: 120px 24px 88px;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      h1, h2, h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        margin: 0;
+        line-height: 1.15;
+      }
+      h1 { margin-top: 22px; font-size: clamp(40px, 7vw, 68px); }
+      h2 { margin-top: 16px; font-size: clamp(30px, 4vw, 44px); }
+      h3 { font-size: 24px; }
+      p { line-height: 1.7; color: var(--muted); }
+      .hero p { color: rgba(255,255,255,0.82); font-size: 20px; }
+      .button-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        padding: 13px 22px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+      .button.primary { background: var(--accent); color: var(--primary); }
+      .button.secondary { border: 1px solid rgba(255,255,255,0.4); color: white; }
+      .note {
+        background: var(--card);
+        border-bottom: 1px solid var(--border);
+        padding: 28px 24px;
+      }
+      .note p { max-width: 920px; margin: 0 auto; text-align: center; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .split { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: start; }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 28px;
+        box-shadow: 0 5px 14px rgba(38,55,71,0.07);
+      }
+      .card p { margin-bottom: 0; }
+      .rhythm-card {
+        display: grid;
+        grid-template-columns: 0.25fr 0.75fr;
+        gap: 28px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 5px 14px rgba(38,55,71,0.07);
+      }
+      .number {
+        color: var(--accent);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 42px;
+        font-weight: 800;
+      }
+      .timing {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .prevents {
+        margin-top: 16px;
+        border: 1px solid rgba(185,133,71,0.28);
+        border-radius: 6px;
+        background: rgba(185,133,71,0.08);
+        padding: 14px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1.55;
+      }
+      .dark { background: var(--primary); color: white; }
+      .dark h2, .dark h3 { color: white; }
+      .dark p { color: rgba(255,255,255,0.78); }
+      .dark-card {
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 8px;
+        background: rgba(255,255,255,0.08);
+        padding: 26px;
+      }
+      .fit-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+      .fit-list li { display: flex; gap: 14px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; color: var(--muted); line-height: 1.6; }
+      .dot { width: 8px; height: 8px; margin-top: 9px; border-radius: 99px; background: var(--accent); flex: 0 0 auto; }
+      .watch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .watch-item {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--background);
+        padding: 16px;
+        color: var(--primary);
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 1.55;
+        box-shadow: 0 5px 14px rgba(38,55,71,0.05);
+      }
+      .faq { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 14px rgba(38,55,71,0.07); }
+      .faq article { padding: 26px; border-bottom: 1px solid var(--border); }
+      .faq article:last-child { border-bottom: 0; }
+      .cta {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 5px 14px rgba(38,55,71,0.07);
+        padding: 36px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .disclaimer { max-width: 900px; margin: 28px auto 0; text-align: center; font-size: 13px; color: var(--muted); }
+      @media (max-width: 820px) {
+        .grid-3, .grid-2, .split, .cta, .rhythm-card, .watch-grid { grid-template-columns: 1fr; }
+        .section { padding: 64px 18px; }
+        .hero { padding: 96px 18px 72px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="narrow">
+          <div class="eyebrow">Talley Tax Membership</div>
+          <h1>Tax planning should not wait until tax season.</h1>
+          <p>Tax preparation records what happened. Tax Membership keeps the year from becoming a surprise by pairing accurate preparation with planning touchpoints while there is still time to act.</p>
+          <div class="button-row">
+            <a class="button primary" href="https://talleytax.com">Visit Talley Tax</a>
+            <a class="button secondary" href="/resources/blog/what-tax-planning-actually-looks-like">Read the tax planning article</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="note">
+        <p>Tax Membership is provided through <strong>Talley Tax</strong>, a separate tax preparation business operated by David Talley. Talley Tax is separate from Talley Wealth, but the philosophy is the same: decisions are easier when someone is looking forward with you. Tax preparation is optional for Talley Wealth clients and priced separately.</p>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="narrow">
+            <div class="eyebrow">The Difference</div>
+            <h2>Three very different tax experiences.</h2>
+            <p>The goal is not to make normal tax preparation sound bad. Accurate filing matters. The difference is whether anyone is looking forward with you before the year is already over.</p>
+          </div>
+          <div class="grid-3" style="margin-top: 48px;">
+            <article class="card"><div class="eyebrow">Level 1</div><h3>DIY tax software</h3><p>You prepare and file the return yourself. The software helps with reporting, but it does not know what should have happened in October.</p></article>
+            <article class="card"><div class="eyebrow">Level 2</div><h3>Professional tax preparation</h3><p>A professional prepares and files the return accurately. A clean return matters, but many prep relationships are not built to help you make decisions before December 31.</p></article>
+            <article class="card"><div class="eyebrow">Level 3</div><h3>Tax Membership</h3><p>The return still gets prepared, but the relationship is organized around the full year: filing, post-tax-season review, withholding and estimate updates, projections, fall strategy, and year-end action.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:#fff;">
+        <div class="container">
+          <div class="narrow">
+            <div class="eyebrow">The Annual Rhythm</div>
+            <h2>The tax year has more than one deadline.</h2>
+            <p>Filing season is part of the work. The planning value comes from using the rest of the year before the useful windows close.</p>
+          </div>
+          <div style="margin-top: 48px; display: grid; gap: 18px;">
+            <article class="rhythm-card"><div><div class="number">01</div><div class="timing">January-April</div></div><div><h3>Prepare + Notice</h3><p>Prepare and file the return, then identify the patterns, surprises, estimate issues, withholding gaps, and planning themes the return revealed.</p><div class="prevents">Prevents the return from becoming a dead-end document.</div></div></article>
+            <article class="rhythm-card"><div><div class="number">02</div><div class="timing">Spring / early summer</div></div><div><h3>Reset</h3><p>Review what changed, update withholding or estimated payments, and make sure the current tax year is not already drifting off course.</p><div class="prevents">Prevents avoidable underpayment surprises and stale assumptions.</div></div></article>
+            <article class="rhythm-card"><div><div class="number">03</div><div class="timing">Summer</div></div><div><h3>Projection</h3><p>Build a current-year projection once the year has taken shape: income, bonuses, business profit, retirement contributions, estimates, and major changes.</p><div class="prevents">Prevents flying blind while there is still time to adjust.</div></div></article>
+            <article class="rhythm-card"><div><div class="number">04</div><div class="timing">Fall</div></div><div><h3>Strategy</h3><p>Run planning while there is still time to act: retirement contributions, Roth conversions, charitable giving, entity decisions, capital gains or losses, equipment purchases, and estimate adjustments.</p><div class="prevents">Prevents missed windows before the year is locked in.</div></div></article>
+            <article class="rhythm-card"><div><div class="number">05</div><div class="timing">Year-end</div></div><div><h3>Execute</h3><p>Finalize the decisions that need to happen before December 31 and set up the next filing season with fewer surprises.</p><div class="prevents">Prevents "we should have done that last year" conversations.</div></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark">
+        <div class="container">
+          <div style="max-width: 760px;">
+            <div class="eyebrow">Enter Anytime</div>
+            <h2>Real tax work should not depend on what month you happen to ask for help.</h2>
+            <p>If the return is already filed, there is still a current tax year to shape. If year-end is getting close, there are still decisions to review before the window closes. The point is not to wait for the next filing season. The point is to start treating taxes like something that can be managed during the year, not just reported after it is over.</p>
+          </div>
+          <div class="grid-2" style="margin-top: 40px;">
+            <article class="dark-card"><div class="eyebrow">January-April</div><h3>Start with filing</h3><p>We begin with preparation, filing, and identifying the planning themes that should not wait until next year.</p></article>
+            <article class="dark-card"><div class="eyebrow">May-July</div><h3>Start with the reset</h3><p>We review the filed return, update withholding or estimates, and clarify what is changing in the current year.</p></article>
+            <article class="dark-card"><div class="eyebrow">August-October</div><h3>Start with projection</h3><p>We build the current-year picture and look for decisions that still have time to matter before year-end.</p></article>
+            <article class="dark-card"><div class="eyebrow">November-December</div><h3>Start with year-end</h3><p>We focus on urgent year-end strategy first, then use what we learn to set up the next year properly.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <div class="eyebrow">What We Look For</div>
+            <h2>The details that usually get noticed too late.</h2>
+            <p>This is where tax work starts to feel different. The return is not only a filing requirement. It is evidence. It shows what should be watched before the next year is already over.</p>
+          </div>
+          <div class="watch-grid">
+            <div class="watch-item">Withholding or estimated tax gaps</div>
+            <div class="watch-item">Business profit changes</div>
+            <div class="watch-item">Roth conversion windows</div>
+            <div class="watch-item">Charitable giving timing</div>
+            <div class="watch-item">Capital gains or losses</div>
+            <div class="watch-item">Retirement plan contribution opportunities</div>
+            <div class="watch-item">Rental, K-1, or multi-state surprises</div>
+            <div class="watch-item">Income changes that could affect the next planning decision</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <div class="eyebrow">Who It Fits</div>
+            <h2>Best for tax lives with moving parts.</h2>
+            <p>Tax Membership is most useful when income is meaningful, changing, or connected to decisions that should happen before the return is prepared.</p>
+          </div>
+          <ul class="fit-list">
+            <li><span class="dot"></span><span>High-income households with bonuses, equity compensation, charitable giving, or changing deductions</span></li>
+            <li><span class="dot"></span><span>Business owners with profit, owner pay, estimated tax, entity, or retirement plan decisions</span></li>
+            <li><span class="dot"></span><span>Real estate investors with rentals, depreciation, property sales, or multi-state reporting</span></li>
+            <li><span class="dot"></span><span>Pre-retirees and retirees looking at Roth conversions, RMDs, QCDs, Medicare brackets, or withdrawal timing</span></li>
+            <li><span class="dot"></span><span>Talley Wealth ongoing advisory clients who want tax preparation and planning to stay connected, while still understanding that Talley Tax is a separate service</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" style="background:#fff;">
+        <div class="container split">
+          <div>
+            <div class="eyebrow">Common Questions</div>
+            <h2>Short answers before you decide whether this fits.</h2>
+          </div>
+          <div class="faq">
+            <article><h3>Is this different from tax preparation?</h3><p>Yes. Tax preparation is still part of it, but Tax Membership is organized around the year. The goal is to prepare the return accurately and also look forward while there is still time to make useful decisions.</p></article>
+            <article><h3>What if my return has already been filed?</h3><p>That is fine. We can start by reviewing what the return revealed, updating withholding or estimated payments, and building a current-year projection.</p></article>
+            <article><h3>Can I join midyear?</h3><p>Yes. The rhythm is built so clients can enter where the year actually is. In summer we usually start with projection work. In fall we usually start with strategy before year-end deadlines arrive.</p></article>
+            <article><h3>Do I have to be a Talley Wealth client?</h3><p>No. Talley Tax is a separate tax preparation business. Some Talley Wealth clients choose to add Talley Tax, but tax preparation is optional and priced separately.</p></article>
+            <article><h3>What if I already have a CPA?</h3><p>You may be best served by keeping that relationship. The question is whether you are also getting proactive planning before the year closes. If you are, great. If not, that is the gap Tax Membership is designed to address.</p></article>
+            <article><h3>Is this unlimited tax advice?</h3><p>No. The membership is structured around preparation, planning touchpoints, projections, and questions that fit the scope of the relationship. If something requires a separate project or another professional, we will say that clearly.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <div class="eyebrow">Next Step</div>
+              <h2>See whether Talley Tax Membership fits.</h2>
+              <p>Talley Tax is the current tax-business front door. This page explains the model; Talley Tax is where the membership itself lives.</p>
+            </div>
+            <div class="button-row" style="justify-content: stretch; flex-direction: column;">
+              <a class="button primary" href="https://talleytax.com">Talk with Talley Tax</a>
+              <a class="button" style="border:1px solid var(--accent); color:var(--accent);" href="/resources/blog/what-tax-planning-actually-looks-like">Read the article</a>
+            </div>
+          </div>
+          <p class="disclaimer">Securities and advisory services are offered through Cambridge entities as described in the site footer. Tax Membership is separate and provided through Talley Tax. Talley Wealth advisory services do not include tax preparation unless a separate Talley Tax relationship is established.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

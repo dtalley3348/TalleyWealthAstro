@@ -1,0 +1,109 @@
+---
+import TalleyPage from '../../../../../components/talley-wealth/TalleyPage.astro';
+import CtaSection from '../../../../../components/talley-wealth/CtaSection.astro';
+import { ongoingRhythms, seasonOrder } from '../../../../../data/talley-wealth/ongoing-advisory';
+
+const rhythmLinks = [
+  { ...ongoingRhythms[0], href: '/how-we-work/ongoing-advisory/retirement' },
+  { ...ongoingRhythms[1], href: '/how-we-work/ongoing-advisory/business-owners' },
+  { ...ongoingRhythms[2], href: '/how-we-work/ongoing-advisory/high-earners' },
+];
+---
+
+<TalleyPage
+  title="Ongoing Advisory After Keystone | Talley Wealth"
+  description="See how Talley Wealth keeps planning decisions current after Keystone, with annual advisory rhythms for retirement households, business owners, and high earners."
+  heroTransparent
+>
+  <section class="bg-primary pt-32 pb-20 text-primary-foreground sm:pt-40">
+    <div class="section-container">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">After Keystone</p>
+        <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-white md:text-6xl">The plan becomes a rhythm.</h1>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-primary-foreground/82">
+          Keystone builds the initial plan. Ongoing advisory is how the right decisions stay visible as tax years close, markets move, business decisions change, and life keeps happening.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border/50 bg-card">
+    <div class="section-container py-8">
+      <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
+        <p><strong class="block font-serif text-lg text-primary">Annual Planning Meeting</strong>The core yearly planning session every ongoing advisory client should expect.</p>
+        <p><strong class="block font-serif text-lg text-primary">Strategy Session</strong>A second planned touchpoint for year-end, tax, or decision-heavy seasons.</p>
+        <p><strong class="block font-serif text-lg text-primary">Work Between Meetings</strong>Analysis, coordination, and implementation keep moving without making every item a meeting.</p>
+        <p><strong class="block font-serif text-lg text-primary">Different Emphasis</strong>The structure stays consistent; the decisions change based on what life and money are asking of you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Ongoing advisory is not just "checking in."</h2>
+        <div class="mt-6 space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <p>Most of the useful work happens outside the meeting itself: reviewing tax patterns, watching deadlines, coordinating with other professionals, keeping the portfolio aligned to the plan, and making sure decisions are not waiting until they become urgent.</p>
+          <p>The meetings still matter because proactive planning depends on knowing what changed, what matters now, and which decisions deserve attention next.</p>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-14 grid max-w-6xl gap-6 lg:grid-cols-3">
+        {rhythmLinks.map((rhythm) => (
+          <a href={rhythm.href} class="group flex h-full flex-col rounded-lg border border-border/50 bg-card p-7 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{rhythm.eyebrow}</p>
+            <h3 class="mt-4 font-serif text-2xl font-bold leading-tight text-primary">{rhythm.shortTitle}</h3>
+            <p class="mt-4 flex-1 leading-relaxed text-muted-foreground">{rhythm.description}</p>
+            <span class="mt-6 inline-flex text-sm font-bold text-accent transition group-hover:translate-x-1">See the rhythm <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">The same four windows show up every year.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">The exact work changes by household. The rhythm gives the work a place to live.</p>
+      </div>
+      <div class="mx-auto grid max-w-5xl gap-5 md:grid-cols-4">
+        {seasonOrder.map((season, index) => (
+          <article class="rounded-lg border border-border/50 bg-background p-6 shadow-elegant">
+            <p class="font-serif text-3xl font-bold text-accent">{String(index + 1).padStart(2, '0')}</p>
+            <h3 class="mt-4 font-serif text-xl font-bold text-primary">{season}</h3>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">How It Feels</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Prepared, not meeting-heavy.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">The goal is to do as much as possible without requiring you to meet. But the scheduled meetings still matter because proactive planning depends on knowing you well.</p>
+        </div>
+        <div class="space-y-5">
+          {[
+            'You should not have to remember every planning deadline yourself.',
+            'You should not need to translate between the portfolio, the tax return, the estate plan, and the business.',
+            'You should know which decisions are already handled, which are waiting, and which ones are not worth your attention right now.',
+          ].map((item) => (
+            <article class="rounded-lg border border-border/50 bg-card p-6 shadow-elegant">
+              <p class="leading-relaxed text-muted-foreground">{item}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Keystone builds the plan. Ongoing advisory keeps it alive."
+    description="If you are reviewing Talley Wealth as a possible fit, this is the next chapter the initial planning work is designed to make possible."
+    primaryText="Schedule an Explore Call"
+  />
+</TalleyPage>

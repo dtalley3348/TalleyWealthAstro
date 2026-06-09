@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { blogPosts } from '../data/talley-wealth/site-content';
+import { ongoingRhythmPaths } from '../data/talley-wealth/ongoing-advisory';
 import { wikiArticles } from '../data/talley-wealth/wiki/articles';
 import { wikiCategories } from '../data/talley-wealth/wiki/categories';
 import { allSEORoutes, seoRedirects } from '../data/talley-wealth/seo/routes';
@@ -17,6 +18,8 @@ const canonicalPaths = [
   '/who-we-help',
   '/how-we-work/keystone-method',
   '/how-we-work/what-to-expect',
+  '/how-we-work/ongoing-advisory',
+  ...ongoingRhythmPaths,
   '/how-we-work/success-stories',
   '/about',
   '/meet-the-team',

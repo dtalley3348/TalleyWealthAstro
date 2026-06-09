@@ -58,6 +58,14 @@ Generated drafts should carry source warnings when records are thin or uneven. D
 
 For example: if the only transcript is about estate planning, that does not mean estate planning was what brought the client into Keystone or the main value of the engagement.
 
+## Public Website Publishing Rules
+
+When adding a new public Talley Wealth page, confirm three things before calling the page ready:
+
+1. The page inherits the shared Talley layout, including global analytics/tracking injection, canonical metadata, Open Graph/Twitter metadata, and default JSON-LD.
+2. The page is included in the sitemap unless it is intentionally `noindex` or purely private/internal.
+3. The page has tasteful internal links from natural parent pages, footer/header navigation when appropriate, and at least one relevant path back toward Explore Call, Keystone, Pricing, or Who We Help.
+
 ## Private Material
 
 Client-specific generated inputs and outputs may live locally inside tool folders if they are gitignored. Do not commit client packets, transcripts, generated drafts, or private planning summaries unless David explicitly asks for a sanitized artifact.

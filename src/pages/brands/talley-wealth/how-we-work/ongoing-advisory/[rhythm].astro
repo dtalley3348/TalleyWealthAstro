@@ -1,0 +1,175 @@
+---
+import TalleyPage from '../../../../../components/talley-wealth/TalleyPage.astro';
+import CtaSection from '../../../../../components/talley-wealth/CtaSection.astro';
+import { getOngoingRhythm, ongoingRhythms } from '../../../../../data/talley-wealth/ongoing-advisory';
+
+const rhythm = getOngoingRhythm(Astro.params.rhythm ?? '');
+if (!rhythm) return new Response('Not found', { status: 404 });
+
+const relatedRhythms = ongoingRhythms.filter((item) => item.slug !== rhythm.slug);
+const whoWeHelpHref =
+  rhythm.slug === 'business-owners'
+    ? '/who-we-help/business-owners-executives'
+    : rhythm.slug === 'retirement'
+      ? '/who-we-help/retirement-transition'
+      : '/who-we-help/business-owners-executives';
+---
+
+<TalleyPage
+  title={rhythm.metaTitle}
+  description={rhythm.metaDescription}
+  heroTransparent
+>
+  <section class="bg-primary pt-32 pb-20 text-primary-foreground sm:pt-40">
+    <div class="section-container">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">{rhythm.eyebrow}</p>
+        <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-white md:text-6xl">{rhythm.title}</h1>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-primary-foreground/82">{rhythm.clientProblem}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-16">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Ongoing Advisory</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{rhythm.questionHeading}</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">{rhythm.questionBody}</p>
+        </div>
+        <div class="rounded-lg border border-border/50 bg-background p-7 shadow-elegant">
+          <h3 class="font-serif text-xl font-bold text-primary">What we keep connected</h3>
+          <ul class="mt-5 space-y-3">
+            {rhythm.primaryWork.map((item) => (
+              <li class="flex gap-3 leading-relaxed text-muted-foreground">
+                <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-5xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What We Watch For</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The decisions that tend to sneak up on people.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">{rhythm.watchIntro}</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          {rhythm.watchItems.map((item) => (
+            <article class="rounded-lg border border-border/50 bg-card p-6 shadow-elegant">
+              <h3 class="font-serif text-xl font-bold text-primary">{item.title}</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto mb-14 max-w-3xl text-center">
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">The annual rhythm</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">The meetings are important, but they are not the whole relationship. They give the work structure while analysis, coordination, and implementation keep moving between them.</p>
+      </div>
+
+      <div class="mx-auto max-w-5xl space-y-6">
+        {rhythm.seasons.map((season, index) => (
+          <article class="grid gap-6 rounded-lg border border-border/50 bg-card p-6 shadow-elegant md:grid-cols-[0.28fr_0.72fr] md:p-8">
+            <div>
+              <p class="font-serif text-4xl font-bold text-accent">{String(index + 1).padStart(2, '0')}</p>
+              <p class="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">{season.timing}</p>
+              {season.meeting && <p class="mt-3 inline-flex rounded-md bg-accent/10 px-3 py-2 text-xs font-bold text-accent">{season.meeting}</p>}
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-primary">{season.label}</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">{season.body}</p>
+              <ul class="mt-5 grid gap-3 md:grid-cols-3">
+                {season.work.map((item) => (
+                  <li class="rounded-md border border-border/50 bg-background p-4 text-sm leading-relaxed text-muted-foreground">{item}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-24">
+    <div class="section-container">
+      <div class="mx-auto max-w-5xl">
+        <div class="mb-10 max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Why It Matters</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The point is fewer decisions drifting until they become urgent.</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          {rhythm.proofPoints.map((item) => (
+            <article class="rounded-lg border border-border/50 bg-background p-6 shadow-elegant">
+              <p class="leading-relaxed text-muted-foreground">{item}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-24">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Common Questions</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Short answers, because the details depend on the facts.</h2>
+          <p class="mt-5 leading-relaxed text-muted-foreground">These are the kinds of questions the ongoing relationship is meant to keep visible. The answer is not always complicated, but it should be answered before the deadline has already passed.</p>
+        </div>
+        <div class="divide-y divide-border/70 rounded-lg border border-border/50 bg-card shadow-elegant">
+          {rhythm.faqs.map((faq) => (
+            <article class="p-6 md:p-7">
+              <h3 class="font-serif text-xl font-bold leading-snug text-primary">{faq.q}</h3>
+              <p class="mt-3 leading-relaxed text-muted-foreground">{faq.a}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Where This Fits</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary">Part of the same planning system.</h2>
+          <p class="mt-4 leading-relaxed text-muted-foreground">Keystone builds the initial plan. Ongoing advisory keeps the right decisions visible as the year unfolds.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/how-we-work/keystone-method" class="inline-flex rounded-md border border-accent/50 px-4 py-2 text-sm font-bold text-accent transition hover:bg-accent hover:text-accent-foreground">Keystone Method</a>
+            <a href="/pricing#ongoing" class="inline-flex rounded-md border border-accent/50 px-4 py-2 text-sm font-bold text-accent transition hover:bg-accent hover:text-accent-foreground">Ongoing Pricing</a>
+            <a href={whoWeHelpHref} class="inline-flex rounded-md border border-accent/50 px-4 py-2 text-sm font-bold text-accent transition hover:bg-accent hover:text-accent-foreground">Who We Help</a>
+          </div>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          {relatedRhythms.map((item) => (
+            <a href={`/how-we-work/ongoing-advisory/${item.slug}`} class="group rounded-lg border border-border/50 bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">{item.eyebrow}</p>
+              <p class="mt-2 font-serif text-lg font-bold text-primary">{item.shortTitle}</p>
+              <span class="mt-3 inline-flex text-sm font-bold text-muted-foreground transition group-hover:text-accent">View rhythm <span aria-hidden="true">&nbsp;-&gt;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="This is what the ongoing relationship is built to do."
+    description="If you are trying to decide whether Talley Wealth is the right fit, the Explore Call is a simple place to start."
+    primaryText="Schedule an Explore Call"
+  />
+</TalleyPage>

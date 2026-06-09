@@ -4,7 +4,7 @@ Last updated: 2026-06-08
 
 This file connects Talley Wealth's client service model to marketing strategy. It explains what we actually help each major service rhythm with and when that work naturally shows up during the year.
 
-Source-of-truth relationship: this file governs the operational service-rhythm layer. For the full layered audience model, use [Talley Wealth Market Architecture](./talley-wealth-market-architecture.md).
+Source-of-truth relationship: this file governs the operational service-rhythm layer. For the full layered audience model, use [Talley Wealth Market Architecture](./talley-wealth-market-architecture.md). For the website page audit, audience-intent research, and David-voice Q&A bank, use [Ongoing Advisory Page Research Audit](./ongoing-advisory-page-research-audit-2026-06-08.md).
 
 ## Shared Operating Model
 

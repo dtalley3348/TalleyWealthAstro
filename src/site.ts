@@ -1,5 +1,6 @@
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || 'G-PMB7EVR4G6';
 const clarityProjectId = import.meta.env.PUBLIC_CLARITY_PROJECT_ID?.trim() || 'x0aqtyazy9';
+const metaPixelId = import.meta.env.PUBLIC_META_PIXEL_ID?.trim() || '2408956706235160';
 
 const analyticsHeadInject = [
   gaMeasurementId
@@ -14,8 +15,38 @@ const analyticsHeadInject = [
 </script>
 <script>
   window.talleyTrackEvent = function(name, params) {
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', name, params || {});
+    var eventParams = params || {};
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, eventParams);
+    }
+
+    if (typeof window.fbq === 'function') {
+      if (name === 'lead_form_submit') {
+        window.fbq('track', 'Lead', {
+          content_name: 'Website contact form',
+          form_source: eventParams.form_source,
+          form_topic: eventParams.form_topic
+        });
+        return;
+      }
+
+      if (name === 'explore_call_scheduled') {
+        window.fbq('track', 'Lead', {
+          content_name: 'Explore Call scheduled',
+          event_category: eventParams.event_category,
+          event_label: eventParams.event_label
+        });
+        return;
+      }
+
+      if (name === 'explore_call_click') {
+        window.fbq('trackCustom', 'ExploreCallClick', {
+          link_url: eventParams.link_url,
+          link_text: eventParams.link_text
+        });
+      }
+    }
   };
 
   document.addEventListener('click', function(event) {
@@ -41,6 +72,22 @@ const analyticsHeadInject = [
   }, { capture: true });
 </script>`.trim()
     : '',
+  metaPixelId
+    ? `
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '${metaPixelId}');
+  fbq('track', 'PageView');
+</script>`.trim()
+    : '',
   clarityProjectId
     ? `
 <!-- Microsoft Clarity -->
@@ -54,11 +101,19 @@ const analyticsHeadInject = [
     : '',
 ].filter(Boolean).join('\n\n');
 
+const analyticsBodyStartInject = [
+  metaPixelId
+    ? `
+<!-- Meta Pixel noscript fallback -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1" alt="" /></noscript>`.trim()
+    : '',
+].filter(Boolean).join('\n\n');
+
 export const talleySite = {
   id: 'talley-wealth',
   tenantKey: 'talley-wealth',
   name: 'Talley Wealth',
   siteUrl: 'https://talleywealth.com',
   headInject: analyticsHeadInject,
-  bodyStartInject: '',
+  bodyStartInject: analyticsBodyStartInject,
 };

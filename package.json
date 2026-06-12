@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "dev:preview": "astro dev --host 0.0.0.0 --port 5181",
+    "preview:local": "./scripts/preview-local.sh",
     "build": "astro build",
     "build:site": "astro build",
     "preview": "astro preview",

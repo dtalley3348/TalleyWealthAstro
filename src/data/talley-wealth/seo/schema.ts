@@ -164,6 +164,88 @@ export function buildFAQPageSchema(faqs: Array<{ q: string; a: string }>): JsonL
   };
 }
 
+export function buildSEOLandingPageSchema({
+  slug,
+  title,
+  description,
+  pageType,
+  city,
+  serviceName,
+  audienceName,
+  relatedLinks = [],
+}: {
+  slug: string;
+  title: string;
+  description: string;
+  pageType: 'city' | 'service-city' | 'local-audience' | 'persona' | 'decision-cluster';
+  city?: { name: string; state: string; county?: string } | null;
+  serviceName?: string | null;
+  audienceName?: string | null;
+  relatedLinks?: Array<{ title: string; href: string }>;
+}): JsonLd {
+  const url = `${siteUrl}/${slug}`;
+  const areaServed = city
+    ? {
+        '@type': 'City',
+        name: city.name,
+        addressRegion: city.state,
+        ...(city.county ? { containedInPlace: { '@type': 'AdministrativeArea', name: city.county } } : {}),
+      }
+    : undefined;
+
+  const serviceType = serviceName
+    ?? (pageType === 'local-audience' && audienceName
+      ? `${audienceName} financial planning`
+      : pageType === 'decision-cluster'
+        ? 'Decision-specific financial planning'
+        : 'Financial planning');
+
+  const graph: JsonLd[] = [
+    {
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: serviceType,
+      description,
+      provider: { '@id': organizationId },
+      mainEntityOfPage: `${url}#webpage`,
+      ...(areaServed ? { areaServed } : {}),
+      ...(audienceName ? { audience: { '@type': 'Audience', audienceType: audienceName } } : {}),
+      serviceType,
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${url}#seo-page`,
+      url,
+      name: title,
+      description,
+      isPartOf: { '@id': websiteId },
+      about: { '@id': `${url}#service` },
+      provider: { '@id': organizationId },
+      inLanguage: 'en-US',
+      ...(areaServed ? { contentLocation: areaServed } : {}),
+    },
+  ];
+
+  if (relatedLinks.length) {
+    graph.push({
+      '@type': 'ItemList',
+      '@id': `${url}#related-next-steps`,
+      name: 'Related next steps',
+      itemListElement: relatedLinks.map((link, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: link.title,
+        url: `${siteUrl}${link.href}`,
+      })),
+    });
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  };
+}
+
 export function buildBlogPostingSchema({
   title,
   description,

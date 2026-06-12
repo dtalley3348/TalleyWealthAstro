@@ -5,23 +5,68 @@ import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsP
 import { cities } from '../../../data/talley-wealth/seo/cities';
 import { services } from '../../../data/talley-wealth/seo/services';
 import { personas } from '../../../data/talley-wealth/seo/personas';
+import { decisionClusters } from '../../../data/talley-wealth/seo/decision-clusters';
 import { allSEORoutes, seoRedirects } from '../../../data/talley-wealth/seo/routes';
-import { buildFAQPageSchema } from '../../../data/talley-wealth/seo/schema';
+import { buildFAQPageSchema, buildSEOLandingPageSchema } from '../../../data/talley-wealth/seo/schema';
 import { AVERAGE_RATING, GOOGLE_REVIEWS_URL, TOTAL_REVIEW_COUNT } from '../../../data/talley-wealth/reviews';
 
+type RelatedLink = { title: string; body: string; href: string };
+type PathGuidance = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  primaryLinks: RelatedLink[];
+  localLinks?: RelatedLink[];
+  fallbackLink?: RelatedLink;
+};
 
 const slug = Astro.params.slug ?? '';
 if (seoRedirects[slug]) return Astro.redirect(seoRedirects[slug], 301);
 
 const route = allSEORoutes.find((item) => item.slug === slug);
 if (!route) return new Response('Not found', { status: 404 });
+const seoRoute = route;
 
-const city = route.cityKey ? cities[route.cityKey] : null;
-const service = route.serviceKey ? services[route.serviceKey] : null;
-const persona = route.personaKey ? personas[route.personaKey] : null;
-const serviceOverride = city && route.serviceKey ? city.serviceOverrides?.[route.serviceKey] : null;
+const city = seoRoute.cityKey ? cities[seoRoute.cityKey] : null;
+const service = seoRoute.serviceKey ? services[seoRoute.serviceKey] : null;
+const persona = seoRoute.personaKey ? personas[seoRoute.personaKey] : null;
+const decisionCluster = seoRoute.decisionClusterKey ? decisionClusters[seoRoute.decisionClusterKey] : null;
+const serviceOverride = city && seoRoute.serviceKey && service
+  ? (city.serviceOverrides?.[seoRoute.serviceKey] ?? city.serviceOverrides?.[service.slug])
+  : null;
+const localAudiencePage = city && seoRoute.audienceKey ? city.localAudiencePages?.[seoRoute.audienceKey] : null;
 
-const page = route.type === 'persona' && persona
+const page = seoRoute.type === 'decision-cluster' && decisionCluster
+  ? {
+      title: decisionCluster.metaTitle,
+      description: decisionCluster.metaDescription,
+      eyebrow: decisionCluster.eyebrow,
+      heading: decisionCluster.heading,
+      intro: decisionCluster.intro,
+      image: decisionCluster.heroImage,
+      imageAlt: decisionCluster.heroImageAlt,
+      imagePosition: 'center top',
+      employerDisclosure: null,
+      recognitionTitle: null,
+      recognitionIntro: null,
+      recognitionCards: null,
+      bullets: decisionCluster.bulletPoints,
+      sectionLabel: decisionCluster.sectionLabel,
+      sectionTitle: decisionCluster.sectionTitle,
+      sectionBody: decisionCluster.sectionBody,
+      proofTitle: decisionCluster.proofTitle,
+      proofBody: decisionCluster.proofBody,
+      cards: decisionCluster.cards,
+      answerSummary: decisionCluster.answerSummary,
+      localProof: decisionCluster.localProof,
+      decisionDepth: decisionCluster.decisionDepth,
+      faqs: decisionCluster.faqs,
+      scenario: decisionCluster.scenario,
+      ctaTitle: decisionCluster.ctaTitle,
+      ctaDescription: decisionCluster.ctaDescription,
+      relatedLinks: decisionCluster.relatedLinks,
+    }
+  : seoRoute.type === 'persona' && persona
   ? {
       title: persona.metaTitle,
       description: persona.metaDescription,
@@ -36,15 +81,22 @@ const page = route.type === 'persona' && persona
       recognitionIntro: persona.recognitionIntro,
       recognitionCards: persona.recognitionCards,
       bullets: persona.bulletPoints,
+      sectionLabel: 'What changes',
       sectionTitle: persona.problemTitle,
       sectionBody: [persona.problemDescription, persona.problemDetail],
+      proofTitle: 'Local proof',
+      proofBody: `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.`,
       cards: persona.differentiators.map((item) => ({ title: item.title, body: item.desc })),
+      answerSummary: null,
+      localProof: null,
+      decisionDepth: null,
       faqs: persona.faqs ?? [],
       scenario: persona.scenario,
       ctaTitle: persona.ctaTitle,
       ctaDescription: persona.ctaDescription,
+      relatedLinks: null,
     }
-  : route.type === 'service-city' && city && service
+  : seoRoute.type === 'service-city' && city && service
     ? {
         title: `${service.name} in ${city.name}, ${city.state} | Talley Wealth`,
         description: serviceOverride?.description ?? `${service.name} in ${city.name}, ${city.state} with coordinated planning around taxes, investments, retirement timing, and year-round decisions.`,
@@ -56,25 +108,62 @@ const page = route.type === 'persona' && persona
         imagePosition: 'center center',
         employerDisclosure: null,
         bullets: serviceOverride?.bulletPoints ?? service.bulletPoints,
-        sectionTitle: `Why ${service.shortName.toLowerCase()} is local here`,
+        sectionLabel: 'The local wrinkle',
+        sectionTitle: `When ${service.shortName.toLowerCase()} needs local context`,
         sectionBody: [city.whyLocal],
+        proofTitle: 'Local proof',
+        proofBody: `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.`,
         cards: [
           { title: 'Local context', body: city.angle },
-          { title: 'Employers and life patterns', body: city.employers.join(', ') },
+          { title: 'Local life patterns', body: city.strategyBrief?.localTruth ?? city.angle },
           { title: 'Planning scope', body: service.description },
         ],
+        answerSummary: null,
+        localProof: null,
+        decisionDepth: null,
         faqs: serviceOverride?.faqs ?? service.faqs ?? [],
         scenario: serviceOverride?.scenario ?? city.scenario,
         ctaTitle: `Talk through ${service.shortName.toLowerCase()} in context.`,
         ctaDescription: `The Explore Call is a short way to see whether this work fits your situation in ${city.name}.`,
+        relatedLinks: null,
       }
+    : seoRoute.type === 'local-audience' && city && localAudiencePage
+      ? {
+          title: localAudiencePage.metaTitle,
+          description: localAudiencePage.metaDescription,
+          eyebrow: localAudiencePage.eyebrow,
+          heading: localAudiencePage.heading,
+          intro: localAudiencePage.intro,
+          image: city.heroImage ?? '/brands/talley-wealth/cities/johnson-city-downtown.webp',
+          imageAlt: city.heroImageAlt ?? `${city.name}, ${city.state}`,
+          imagePosition: 'center center',
+          employerDisclosure: null,
+          recognitionTitle: null,
+          recognitionIntro: null,
+          recognitionCards: null,
+          bullets: localAudiencePage.bulletPoints,
+          sectionLabel: localAudiencePage.sectionLabel,
+          sectionTitle: localAudiencePage.sectionTitle,
+          sectionBody: localAudiencePage.sectionBody,
+          proofTitle: localAudiencePage.proofTitle,
+          proofBody: localAudiencePage.proofBody,
+          cards: localAudiencePage.cards,
+          answerSummary: localAudiencePage.answerSummary,
+          localProof: localAudiencePage.localProof,
+          decisionDepth: localAudiencePage.decisionDepth,
+          faqs: localAudiencePage.faqs,
+          scenario: localAudiencePage.scenario,
+          ctaTitle: localAudiencePage.ctaTitle,
+          ctaDescription: localAudiencePage.ctaDescription,
+          relatedLinks: null,
+        }
     : city
       ? {
           title: city.metaTitle,
           description: city.metaDescription,
           eyebrow: `${city.county} · ${city.state}`,
-          heading: `Financial Advisor in ${city.name}, ${city.state}`,
-          intro: city.whyLocal,
+          heading: city.cityPage?.heading ?? `Financial Advisor in ${city.name}, ${city.state}`,
+          intro: city.cityPage?.intro ?? city.whyLocal,
           image: city.heroImage ?? '/brands/talley-wealth/cities/johnson-city-downtown.webp',
           imageAlt: city.heroImageAlt ?? `${city.name}, ${city.state}`,
           imagePosition: 'center center',
@@ -83,35 +172,136 @@ const page = route.type === 'persona' && persona
           recognitionIntro: null,
           recognitionCards: null,
           bullets: city.bulletPoints,
-          sectionTitle: `Planning for ${city.name} lives, not generic households.`,
-          sectionBody: [
-            `The financial decisions around ${city.name} families often cross tax, retirement, employer benefits, business ownership, estate planning, and investment management.`,
-            'Talley Wealth is built around coordinating those decisions instead of treating them as separate services.',
+          sectionLabel: city.cityPage?.sectionLabel ?? 'Why people reach out',
+          sectionTitle: city.cityPage?.sectionTitle ?? 'The local details matter when they change the decision.',
+          sectionBody: city.cityPage?.sectionBody ?? [
+            `The financial decisions around ${city.name} often start with a specific question: retirement timing, tax strategy, employer benefits, business ownership, estate planning, or investment management.`,
+            'Talley Wealth uses the local context to understand the question, then builds the plan around the decisions that actually need to be made.',
           ],
-          cards: [
-            { title: 'Local employers', body: city.employers.join(', ') },
+          proofTitle: city.cityPage?.proofTitle ?? 'Local proof',
+          proofBody: city.cityPage?.proofBody ?? `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.`,
+          cards: city.cityPage?.cards ?? [
+            { title: 'Local life patterns', body: city.strategyBrief?.localTruth ?? city.angle },
             { title: 'Local landmarks', body: city.landmarks.join(', ') },
             { title: 'Community context', body: city.angle },
           ],
+          answerSummary: city.cityPage?.answerSummary,
+          localProof: city.cityPage?.localProof,
+          decisionDepth: city.cityPage?.decisionDepth,
           faqs: city.faqs ?? [],
           scenario: city.scenario,
           ctaTitle: `Start with the real decisions in ${city.name}.`,
           ctaDescription: 'Bring the question that is on your mind. We will use the call to see whether the full Keystone process is useful.',
+          relatedLinks: null,
         }
       : null;
 
 if (!page) return new Response('Not found', { status: 404 });
 
-const personaRelatedLinks: Record<string, Array<{ title: string; body: string; href: string }>> = {
+const defaultAnswerSummary = city && seoRoute.type === 'city' && city.strategyBrief
+  ? {
+      title: 'Who this page is for',
+      body: city.strategyBrief.whoThisIsReallyFor,
+      fitItems: [
+        city.strategyBrief.whatTheyAreProbablyFeeling,
+        city.bestFitAudience ?? city.whyLocal,
+      ],
+      localContext: city.livedLocalProof ?? city.strategyBrief.localTruth,
+      betterFit: 'If the question is mainly retirement or business ownership, use the situation-specific path below instead of treating location as the whole answer.',
+    }
+  : city && seoRoute.type === 'local-audience' && localAudiencePage?.strategyBrief
+    ? {
+        title: 'Who this page is for',
+        body: localAudiencePage.strategyBrief.identity,
+        fitItems: [
+          localAudiencePage.strategyBrief.businessStage,
+          localAudiencePage.strategyBrief.taxPressure,
+          localAudiencePage.strategyBrief.cashFlowReality,
+          localAudiencePage.strategyBrief.familyLayer,
+          localAudiencePage.strategyBrief.retirementOrExitLayer,
+        ].filter(Boolean) as string[],
+        localContext: city.livedLocalProof ?? city.strategyBrief?.localTruth ?? city.whyLocal,
+        betterFit: localAudiencePage.strategyBrief.controlTension,
+      }
+    : null;
+
+const answerSummary = page.answerSummary ?? defaultAnswerSummary;
+const isDecisionCluster = seoRoute.type === 'decision-cluster';
+
+const defaultLocalProof = city && (seoRoute.type === 'city' || seoRoute.type === 'local-audience')
+  ? {
+      title: 'Local proof and service area',
+      body: 'Talley Wealth is based in Johnson City and serves households and business owners across the Tri-Cities through local and virtual planning conversations.',
+      items: [
+        'Office: 203 Broyles Drive, Suite 301, Johnson City, TN 37601.',
+        city.slug === 'tri-cities'
+          ? 'Primary service area: Johnson City, Bristol, Kingsport, and nearby Tri-Cities communities.'
+          : `This page is written for ${city.name} context while still connecting back to the broader Tri-Cities planning system.`,
+        'Public Google reviews are used only as public proof of client experience themes, not as a promise of future results.',
+      ],
+    }
+  : null;
+
+const localProofBlock = page.localProof ?? defaultLocalProof;
+
+const localAudienceLabels = {
+  preRetirees: 'Pre-retirees and retirees',
+  businessOwners: 'Business owners',
+} as const;
+
+const localAudienceLinkText = {
+  preRetirees: {
+    title: 'Retirement planning here',
+    body: 'Go deeper on retirement timing, income, taxes, healthcare, and withdrawal decisions in this market.',
+  },
+  businessOwners: {
+    title: 'Business-owner planning here',
+    body: 'Go deeper on owner pay, tax strategy, business cash flow, retirement plans, and personal wealth.',
+  },
+} as const;
+
+function cityHubLinks(): RelatedLink[] {
+  if (!city) return [];
+
+  const localLinks: RelatedLink[] = [];
+  for (const audienceKey of ['preRetirees', 'businessOwners'] as const) {
+    const localPage = city.localAudiencePages?.[audienceKey];
+    if (!localPage) continue;
+    const text = localAudienceLinkText[audienceKey];
+    localLinks.push({
+      title: text.title,
+      body: text.body,
+      href: `/${localPage.slug}`,
+    });
+  }
+
+  if (city.slug === 'tri-cities') {
+    return [
+      { title: 'Johnson City', body: 'Home base for Talley Wealth and the strongest starting point for local retirement or owner planning.', href: '/financial-advisor-johnson-city-tn' },
+      { title: 'Bristol', body: 'A local starting point for Bristol and SWVA families, especially where the TN/VA line or local roots matter.', href: '/financial-advisor-bristol-tn-va' },
+      { title: 'Kingsport', body: 'A local starting point for Kingsport families, long-career professionals, and business owners.', href: '/financial-advisor-kingsport-tn' },
+    ];
+  }
+
+  return localLinks.length
+    ? localLinks
+    : [
+        { title: 'Who we help', body: 'Start with the situation that sounds most like your life right now.', href: '/who-we-help' },
+        { title: 'Pre-retirees', body: 'For households approaching the retirement transition.', href: '/financial-advisor-for-pre-retirees' },
+        { title: 'Business owners', body: 'For owners whose taxes and planning need to catch up to the business.', href: '/financial-advisor-for-business-owners' },
+      ];
+}
+
+const personaRelatedLinks: Record<string, RelatedLink[]> = {
   'pre-retirees': [
-    { title: 'Run the retirement calculator', body: 'See the rough math, then use the result as a planning prompt.', href: '/calculators' },
-    { title: 'Get the retirement guide', body: 'A framework for retirement timing, income, taxes, and market risk.', href: '/guide' },
-    { title: 'Read about sequence risk', body: 'See why the order of returns can matter after withdrawals begin.', href: '/resources/blog/retirement-risk-nobody-talks-about' },
+    { title: 'Johnson City retirement', body: 'A local doorway for retirement timing, income, taxes, and investment decisions in Johnson City.', href: '/retirement-planning-johnson-city-tn' },
+    { title: 'Bristol retirement', body: 'A local doorway for Bristol retirement planning where the TN/VA line may affect the numbers.', href: '/retirement-planning-bristol-tn-va' },
+    { title: 'Kingsport retirement', body: 'A local doorway for long-career families, benefit decisions, and retirement timing in Kingsport.', href: '/retirement-planning-kingsport-tn' },
   ],
   'business-owners': [
-    { title: 'Business owner planning', body: 'How owner income, taxes, retirement plans, and exit questions fit together.', href: '/services/business-owner-planning' },
-    { title: 'Tax planning', body: 'A closer look at proactive tax planning before the year is already over.', href: '/services/tax-planning' },
-    { title: 'Pricing', body: 'See how the Keystone planning engagement is structured.', href: '/pricing' },
+    { title: 'Johnson City owners', body: 'A local doorway for owner pay, tax planning, business cash flow, and personal wealth in Johnson City.', href: '/financial-planning-for-johnson-city-business-owners' },
+    { title: 'Bristol owners', body: 'A local doorway for Bristol owners where tax strategy, owner decisions, and the TN/VA line may overlap.', href: '/financial-planning-for-bristol-business-owners' },
+    { title: 'Kingsport owners', body: 'A local doorway for Kingsport owners coordinating tax, cash flow, retirement plans, and household wealth.', href: '/financial-planning-for-kingsport-business-owners' },
   ],
   'inherited-wealth': [
     { title: 'Financial planning', body: 'How accounts, taxes, estate documents, and investments fit into one plan.', href: '/services/financial-planning' },
@@ -135,19 +325,139 @@ const personaRelatedLinks: Record<string, Array<{ title: string; body: string; h
   ],
 };
 
-const relatedLinks = route.type === 'persona' && persona
+const relatedLinks = seoRoute.type === 'decision-cluster' && page.relatedLinks
+  ? page.relatedLinks
+  : seoRoute.type === 'persona' && persona
   ? (personaRelatedLinks[persona.slug] ?? [])
-  : route.type === 'city'
+  : seoRoute.type === 'local-audience' && seoRoute.audienceKey === 'preRetirees'
     ? [
-        { title: 'Who we help', body: 'Start with the situation that sounds most like your life right now.', href: '/who-we-help' },
-        { title: 'Pre-retirees', body: 'For households approaching the retirement transition.', href: '/financial-advisor-for-pre-retirees' },
-        { title: 'Business owners', body: 'For owners whose taxes and planning need to catch up to the business.', href: '/financial-advisor-for-business-owners' },
+        { title: city ? `${city.name} financial advisor` : 'Local financial advisor', body: 'Return to the local hub for the broader advisor page in this market.', href: city ? `/${city.customPath ?? `financial-advisor-${city.slug}-${city.state.toLowerCase()}`}` : '/who-we-help' },
+        { title: 'Pre-retirees', body: 'A broader look at who this retirement planning work tends to fit.', href: '/financial-advisor-for-pre-retirees' },
+        { title: 'How Keystone works', body: 'See how the six-month planning engagement turns retirement questions into decisions.', href: '/how-we-work/keystone-method' },
       ]
+    : seoRoute.type === 'local-audience' && seoRoute.audienceKey === 'businessOwners'
+      ? [
+          { title: city ? `${city.name} financial advisor` : 'Local financial advisor', body: 'Return to the local hub for the broader advisor page in this market.', href: city ? `/${city.customPath ?? `financial-advisor-${city.slug}-${city.state.toLowerCase()}`}` : '/who-we-help' },
+          { title: 'Business owners', body: 'A broader look at who this owner-planning work tends to fit.', href: '/financial-advisor-for-business-owners' },
+          { title: 'How Keystone Owner works', body: 'See how owner tax, cash flow, retirement, and personal wealth decisions get organized.', href: '/how-we-work/keystone-method' },
+        ]
+  : seoRoute.type === 'city'
+    ? cityHubLinks()
     : [
         { title: 'How Keystone works', body: 'See how the six-month planning engagement is structured.', href: '/how-we-work/keystone-method' },
         { title: 'Pricing', body: 'Review flat planning fees and ongoing advisory structure.', href: '/pricing' },
         { title: 'Schedule an Explore Call', body: 'Talk through whether this fits your situation.', href: '/get-started' },
       ];
+
+const triCitiesPathGuidance: PathGuidance = {
+  eyebrow: 'Choose a starting point',
+  title: 'Start with the situation creating the pressure.',
+  intro: 'A person can be both nearing retirement and in Bristol. An owner in Kingsport may also be thinking about exit or retirement. Start with the decision that is creating the most pressure, then use the local page for context.',
+  primaryLinks: [
+    {
+      title: 'Retirement is the main question',
+      body: 'Start here if the question is timing, income, taxes, Social Security, healthcare, or whether work can become optional.',
+      href: '/financial-advisor-for-pre-retirees',
+    },
+    {
+      title: 'The business is driving the complexity',
+      body: 'Start here if the company is shaping tax, cash flow, owner pay, retirement plan, sale, succession, or personal-wealth decisions.',
+      href: '/financial-advisor-for-business-owners',
+    },
+  ],
+  localLinks: [
+    {
+      title: 'Johnson City',
+      body: 'Start with the Johnson City hub if location is the main filter or you want the closest local context.',
+      href: '/financial-advisor-johnson-city-tn',
+    },
+    {
+      title: 'Bristol',
+      body: 'Start with Bristol if the state line, SWVA roots, or a Bristol-area household is the clearest local context.',
+      href: '/financial-advisor-bristol-tn-va',
+    },
+    {
+      title: 'Kingsport',
+      body: 'Start with Kingsport if the question is tied to Kingsport, long-career families, employer benefits, or owner decisions there.',
+      href: '/financial-advisor-kingsport-tn',
+    },
+  ],
+  fallbackLink: {
+    title: "I'm both, not sure, or something else",
+    body: 'Use Who We Help if your situation overlaps categories or sounds more like inherited money, equity comp, healthcare, or another specific entry point.',
+    href: '/who-we-help',
+  },
+};
+
+function localCityPathGuidance(): PathGuidance | null {
+  if (!city || seoRoute.type !== 'city' || city.slug === 'tri-cities') return null;
+  const localRetirementPage = city.localAudiencePages?.preRetirees;
+  const localOwnerPage = city.localAudiencePages?.businessOwners;
+
+  return {
+    eyebrow: 'Choose a starting point',
+    title: 'Choose by the decision, not by a perfect label.',
+    intro: `Someone can be a ${city.name} household, a business owner, and close to retirement at the same time. The right starting point is the issue that needs a decision next.`,
+    primaryLinks: [
+      ...(localRetirementPage ? [{
+        title: 'Retirement is the main question',
+        body: 'Start here if retirement timing, income, taxes, Social Security, healthcare, or withdrawals are the main concern.',
+        href: `/${localRetirementPage.slug}`,
+      }] : []),
+      ...(localOwnerPage ? [{
+        title: 'The business is driving the complexity',
+        body: 'Start here if the company, tax return, cash flow, retirement plan, or eventual exit is driving the question.',
+        href: `/${localOwnerPage.slug}`,
+      }] : []),
+    ],
+    fallbackLink: {
+      title: "I'm both, not sure, or something else",
+      body: 'Use Who We Help if the two main lanes do not describe the whole situation cleanly.',
+      href: '/who-we-help',
+    },
+  };
+}
+
+function localAudiencePathGuidance(): PathGuidance | null {
+  if (!city || seoRoute.type !== 'local-audience') return null;
+  const otherAudienceKey = seoRoute.audienceKey === 'businessOwners' ? 'preRetirees' : 'businessOwners';
+  const otherPage = city.localAudiencePages?.[otherAudienceKey];
+  const currentLane = seoRoute.audienceKey === 'businessOwners' ? 'business-owner' : 'retirement';
+  const otherLane = seoRoute.audienceKey === 'businessOwners' ? 'retirement' : 'business-owner';
+
+  return {
+    eyebrow: 'If you are between categories',
+    title: `Use this page if the ${currentLane} question is driving the next decision.`,
+    intro: 'The categories are meant to orient you, not box you in. Many households have overlapping issues. The right starting point is the page that best explains the decision you are trying to make next.',
+    primaryLinks: [
+      ...(otherPage ? [{
+        title: `${otherLane[0].toUpperCase()}${otherLane.slice(1)} planning here`,
+        body: seoRoute.audienceKey === 'businessOwners'
+          ? 'Use this instead if retirement timing, income, taxes, Social Security, or work optionality is the main issue.'
+          : 'Use this instead if the company, tax return, cash flow, retirement plan, or owner wealth is the main issue.',
+        href: `/${otherPage.slug}`,
+      }] : []),
+      {
+        title: city ? `${city.name} local hub` : 'Local hub',
+        body: 'Return to the broader local page if location matters more than the audience label.',
+        href: city ? `/${city.customPath ?? `financial-advisor-${city.slug}-${city.state.toLowerCase()}`}` : '/financial-advisor-tri-cities-tn',
+      },
+    ],
+    fallbackLink: {
+      title: 'Who We Help',
+      body: 'Use this if neither of the two main lanes describes the situation clearly.',
+      href: '/who-we-help',
+    },
+  };
+}
+
+const pathGuidance = seoRoute.type === 'city' && city?.slug === 'tri-cities'
+  ? triCitiesPathGuidance
+  : seoRoute.type === 'city'
+    ? localCityPathGuidance()
+    : seoRoute.type === 'local-audience'
+      ? localAudiencePathGuidance()
+      : null;
 
 const personaReviewSet: Record<string, 'business' | 'retirement' | 'tax' | 'inherited' | 'equity' | 'default'> = {
   'business-owners': 'business',
@@ -158,17 +468,81 @@ const personaReviewSet: Record<string, 'business' | 'retirement' | 'tax' | 'inhe
   'ballad-health': 'tax',
 };
 
-const reviewSet = route.type === 'persona' && persona
+const reviewSet = seoRoute.type === 'persona' && persona
   ? (personaReviewSet[persona.slug] ?? 'default')
-  : route.type === 'service-city' && route.serviceKey === 'tax-planning'
+  : seoRoute.type === 'local-audience' && seoRoute.audienceKey === 'businessOwners'
+    ? 'business'
+    : seoRoute.type === 'local-audience' && seoRoute.audienceKey === 'preRetirees'
+      ? 'retirement'
+  : seoRoute.type === 'service-city' && seoRoute.serviceKey === 'tax-planning'
     ? 'tax'
-    : route.type === 'service-city' && route.serviceKey === 'retirement-planning'
+    : seoRoute.type === 'service-city' && seoRoute.serviceKey === 'retirement-planning'
       ? 'retirement'
       : 'default';
+
+const faqSchema = buildFAQPageSchema(page.faqs);
+const pageSchema = buildSEOLandingPageSchema({
+  slug,
+  title: page.title,
+  description: page.description,
+  pageType: seoRoute.type,
+  city,
+  serviceName: service?.name ?? null,
+  audienceName: seoRoute.type === 'local-audience' && seoRoute.audienceKey
+    ? localAudienceLabels[seoRoute.audienceKey]
+    : seoRoute.type === 'persona' && persona
+      ? persona.name
+      : seoRoute.type === 'decision-cluster' && decisionCluster
+        ? decisionCluster.heading
+      : null,
+  relatedLinks,
+});
+
+const jsonLd = [pageSchema, ...(faqSchema ? [faqSchema] : [])];
+
+const pageChrome = seoRoute.type === 'decision-cluster'
+  ? {
+      heroClass: 'border-b border-border/70 bg-background',
+      cardsClass: 'bg-muted/30',
+      detailsClass: 'bg-background',
+      relatedHeading: 'Keep going from this decision.',
+      detailsHeading: 'The owner decisions to coordinate before year-end.',
+      faqHeading: 'Business-owner tax questions worth sorting out early.',
+    }
+  : seoRoute.type === 'city'
+  ? {
+      heroClass: 'bg-muted/35',
+      cardsClass: 'bg-background',
+      detailsClass: 'bg-card',
+      relatedHeading: 'Choose the page that fits the question.',
+      detailsHeading: 'Use the local page to find the real planning lane.',
+      faqHeading: 'Local questions worth asking before you choose an advisor.',
+    }
+  : seoRoute.type === 'local-audience'
+    ? {
+        heroClass: 'border-b border-border/70 bg-background',
+        cardsClass: 'bg-muted/30',
+        detailsClass: 'bg-background',
+        relatedHeading: 'Go deeper from this local starting point.',
+        detailsHeading: seoRoute.audienceKey === 'businessOwners'
+          ? 'The owner decisions usually touch each other.'
+          : 'The retirement details need to be sequenced.',
+        faqHeading: seoRoute.audienceKey === 'businessOwners'
+          ? 'Business-owner questions worth sorting out early.'
+          : 'Retirement questions worth sorting out early.',
+      }
+    : {
+        heroClass: 'bg-muted/35',
+        cardsClass: 'bg-card',
+        detailsClass: 'bg-background',
+        relatedHeading: 'Keep going from here.',
+        detailsHeading: 'The useful details are connected.',
+        faqHeading: 'Questions worth asking before you choose an advisor.',
+      };
 ---
 
-<TalleyPage title={page.title} description={page.description} jsonLd={buildFAQPageSchema(page.faqs)}>
-  <section class="bg-muted/35">
+<TalleyPage title={page.title} description={page.description} jsonLd={jsonLd}>
+  <section class={pageChrome.heroClass}>
     <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.9fr_1fr]">
       <div>
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.eyebrow}</p>
@@ -204,48 +578,216 @@ const reviewSet = route.type === 'persona' && persona
     </section>
   )}
 
+  {answerSummary && (
+    <section class="bg-background">
+      {isDecisionCluster ? (
+        <div class="section-container max-w-6xl py-16">
+          <div class="grid gap-10 lg:grid-cols-[0.82fr_1fr]">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">Fit</p>
+              <h2 class="mt-3 font-serif text-4xl font-bold leading-tight text-primary">{answerSummary.title}</h2>
+              <p class="mt-5 text-xl leading-relaxed text-primary">{answerSummary.body}</p>
+              {answerSummary.betterFit && (
+                <p class="mt-8 border-l-4 border-accent pl-5 text-base leading-relaxed text-muted-foreground">{answerSummary.betterFit}</p>
+              )}
+            </div>
+            <div>
+              <p class="text-sm font-bold text-primary">Best-fit situations</p>
+              <ul class="mt-5 divide-y divide-border border-y border-border">
+                {answerSummary.fitItems.map((item) => (
+                  <li class="py-4 text-base leading-relaxed text-primary">{item}</li>
+                ))}
+              </ul>
+              <p class="mt-6 text-sm leading-relaxed text-muted-foreground">{answerSummary.localContext}</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div class="section-container py-14">
+          <div class="rounded-lg border border-border bg-card p-5 shadow-sm md:p-7">
+            <div class="grid gap-8 lg:grid-cols-[0.7fr_1fr]">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">Fit</p>
+                <h2 class="mt-3 font-serif text-3xl font-bold leading-tight text-primary">{answerSummary.title}</h2>
+                <p class="mt-4 text-base leading-relaxed text-muted-foreground">{answerSummary.body}</p>
+              </div>
+              <div class="space-y-5">
+                <div>
+                  <p class="text-sm font-bold text-primary">Best-fit situations</p>
+                  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    {answerSummary.fitItems.map((item) => (
+                      <li class="rounded-md border border-border bg-background p-4 text-sm leading-relaxed text-primary">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="rounded-md border border-border bg-background p-4">
+                  <p class="text-sm font-bold text-primary">Local context</p>
+                  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{answerSummary.localContext}</p>
+                </div>
+                {answerSummary.betterFit && (
+                  <p class="text-sm leading-relaxed text-muted-foreground">{answerSummary.betterFit}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  )}
+
   <section class="bg-background">
-    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.8fr_1fr]">
-      <div>
-        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Connected planning</p>
-        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{page.sectionTitle}</h2>
-      </div>
-      <div class="space-y-5 text-lg leading-relaxed text-muted-foreground">
-        {page.sectionBody.map((paragraph) => <p>{paragraph}</p>)}
-        <div class="mt-8 rounded-lg border border-border bg-card p-5 shadow-sm">
-          <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">Local proof</p>
-          <p class="mt-3 text-base leading-relaxed text-primary">
-            Talley Wealth has earned {TOTAL_REVIEW_COUNT}+ public Google reviews with a {AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.
-          </p>
-          <a href={GOOGLE_REVIEWS_URL} class="mt-4 inline-flex text-sm font-bold text-accent hover:text-accent/80" target="_blank" rel="noreferrer">Read public reviews</a>
+    <div class="section-container py-20">
+      <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.sectionLabel}</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{page.sectionTitle}</h2>
+        </div>
+        <div class="space-y-5 text-lg leading-relaxed text-muted-foreground">
+          {page.sectionBody.map((paragraph) => <p>{paragraph}</p>)}
+          <div class="mt-8 rounded-lg border border-border bg-card p-5 shadow-sm">
+            <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">{page.proofTitle}</p>
+            <p class="mt-3 text-base leading-relaxed text-primary">
+              {page.proofBody}
+            </p>
+            <a href={GOOGLE_REVIEWS_URL} class="mt-4 inline-flex text-sm font-bold text-accent hover:text-accent/80" target="_blank" rel="noreferrer">Read public reviews</a>
+          </div>
         </div>
       </div>
+      {pathGuidance && pathGuidance.primaryLinks.length > 0 && (
+        <div class="mt-14 rounded-lg border border-border bg-card p-5 shadow-sm md:p-7">
+          <div class="grid gap-8 lg:grid-cols-[0.72fr_1fr]">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">{pathGuidance.eyebrow}</p>
+              <h3 class="mt-3 font-serif text-3xl font-bold leading-tight text-primary">{pathGuidance.title}</h3>
+              <p class="mt-4 text-base leading-relaxed text-muted-foreground">{pathGuidance.intro}</p>
+            </div>
+            <div>
+              <div class="grid gap-4 md:grid-cols-2">
+                {pathGuidance.primaryLinks.map((item) => (
+                  <a href={item.href} class="group rounded-md border border-accent/35 bg-background p-5 transition hover:border-accent/70 hover:shadow-sm">
+                    <span class="font-serif text-xl font-bold text-primary">{item.title}</span>
+                    <span class="mt-3 block text-sm leading-relaxed text-muted-foreground">{item.body}</span>
+                    <span class="mt-4 inline-flex text-sm font-bold text-accent transition group-hover:gap-2">Start here <span aria-hidden="true">-&gt;</span></span>
+                  </a>
+                ))}
+              </div>
+              {pathGuidance.localLinks && pathGuidance.localLinks.length > 0 && (
+                <div class="mt-6">
+                  <p class="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">Local context</p>
+                  <div class="mt-3 grid gap-3 md:grid-cols-3">
+                    {pathGuidance.localLinks.map((item) => (
+                      <a href={item.href} class="group rounded-md border border-border/70 bg-background/70 p-4 transition hover:border-accent/60 hover:bg-background">
+                        <span class="font-serif text-lg font-bold text-primary">{item.title}</span>
+                        <span class="mt-2 block text-sm leading-relaxed text-muted-foreground">{item.body}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {pathGuidance.fallbackLink && (
+                <a href={pathGuidance.fallbackLink.href} class="mt-5 block rounded-md border border-dashed border-border bg-muted/30 p-4 transition hover:border-accent/60">
+                  <span class="font-bold text-primary">{pathGuidance.fallbackLink.title}</span>
+                  <span class="mt-1 block text-sm leading-relaxed text-muted-foreground">{pathGuidance.fallbackLink.body}</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   </section>
 
-  <section class="bg-card">
-    <div class="section-container grid gap-6 py-20 md:grid-cols-3">
-      {page.cards.map(({ title, body }) => (
-        <article class="rounded-lg border border-border bg-card p-6 shadow-elegant">
-          <h2 class="font-serif text-2xl font-bold text-primary">{title}</h2>
-          <p class="mt-3 text-muted-foreground">{body}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="bg-background">
-    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.72fr_1fr]">
-      <div>
-        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What we coordinate</p>
-        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The useful details are connected.</h2>
+  <section class={pageChrome.cardsClass}>
+    {isDecisionCluster ? (
+      <div class="section-container max-w-6xl py-16">
+        <div class="grid gap-8 md:grid-cols-3">
+          {page.cards.map(({ title, body }) => (
+            <article class="border-t-2 border-accent pt-5">
+              <h2 class="font-serif text-2xl font-bold text-primary">{title}</h2>
+              <p class="mt-4 text-base leading-relaxed text-muted-foreground">{body}</p>
+            </article>
+          ))}
+        </div>
       </div>
-      <ul class="grid gap-3 sm:grid-cols-2">
-        {page.bullets.map((item) => (
-          <li class="rounded-md border border-border bg-card p-4 text-sm font-semibold leading-relaxed text-primary shadow-sm">{item}</li>
+    ) : (
+      <div class="section-container grid gap-6 py-20 md:grid-cols-3">
+        {page.cards.map(({ title, body }) => (
+          <article class="rounded-lg border border-border bg-card p-6 shadow-elegant">
+            <h2 class="font-serif text-2xl font-bold text-primary">{title}</h2>
+            <p class="mt-3 text-muted-foreground">{body}</p>
+          </article>
         ))}
-      </ul>
-    </div>
+      </div>
+    )}
+  </section>
+
+  {page.decisionDepth && (
+    <section class={isDecisionCluster ? 'bg-primary text-primary-foreground' : 'bg-background'}>
+      {isDecisionCluster ? (
+        <div class="section-container max-w-6xl py-20">
+          <div class="max-w-3xl">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.decisionDepth.eyebrow}</p>
+            <h2 class="mt-4 font-serif text-4xl font-bold leading-tight md:text-5xl">{page.decisionDepth.title}</h2>
+            <p class="mt-6 text-xl leading-relaxed text-white/75">{page.decisionDepth.intro}</p>
+          </div>
+          <div class="mt-12 divide-y divide-white/15 border-y border-white/15">
+            {page.decisionDepth.items.map((item, index) => (
+              <article class="grid gap-4 py-7 md:grid-cols-[4rem_0.55fr_1fr] md:items-start">
+                <p class="font-serif text-3xl font-bold text-accent">{String(index + 1).padStart(2, '0')}</p>
+                <h3 class="font-serif text-2xl font-bold">{item.title}</h3>
+                <p class="text-base leading-relaxed text-white/72">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.7fr_1fr]">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.decisionDepth.eyebrow}</p>
+            <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{page.decisionDepth.title}</h2>
+            <p class="mt-5 text-lg leading-relaxed text-muted-foreground">{page.decisionDepth.intro}</p>
+          </div>
+          <div class="grid gap-4">
+            {page.decisionDepth.items.map((item) => (
+              <article class="rounded-md border border-border bg-card p-5 shadow-sm">
+                <h3 class="font-serif text-xl font-bold text-primary">{item.title}</h3>
+                <p class="mt-2 leading-relaxed text-muted-foreground">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+  )}
+
+  <section class={pageChrome.detailsClass}>
+    {isDecisionCluster ? (
+      <div class="section-container max-w-6xl py-20">
+        <div class="grid gap-10 lg:grid-cols-[0.72fr_1fr]">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What we coordinate</p>
+            <h2 class="mt-4 font-serif text-4xl font-bold leading-tight text-primary">{pageChrome.detailsHeading}</h2>
+          </div>
+          <ul class="columns-1 gap-10 space-y-3 md:columns-2">
+            {page.bullets.map((item) => (
+              <li class="break-inside-avoid border-l-2 border-accent/50 pl-4 text-base font-semibold leading-relaxed text-primary">{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ) : (
+      <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.72fr_1fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What we coordinate</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">{pageChrome.detailsHeading}</h2>
+        </div>
+        <ul class="grid gap-3 sm:grid-cols-2">
+          {page.bullets.map((item) => (
+            <li class="rounded-md border border-border bg-card p-4 text-sm font-semibold leading-relaxed text-primary shadow-sm">{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
   </section>
 
   {page.scenario && (
@@ -270,7 +812,26 @@ const reviewSet = route.type === 'persona' && persona
     </section>
   )}
 
-  {route.type === 'persona' && (
+  {localProofBlock && (
+    <section class="bg-card">
+      <div class="section-container py-16">
+        <div class="grid gap-8 lg:grid-cols-[0.7fr_1fr]">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Local proof</p>
+            <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary">{localProofBlock.title}</h2>
+            <p class="mt-4 text-base leading-relaxed text-muted-foreground">{localProofBlock.body}</p>
+          </div>
+          <ul class="grid gap-3">
+            {localProofBlock.items.map((item) => (
+              <li class="rounded-md border border-border bg-background p-4 text-sm leading-relaxed text-primary">{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {seoRoute.type === 'persona' && (
     <GoogleReviewsProof
       compact
       reviewSet={reviewSet}
@@ -284,7 +845,7 @@ const reviewSet = route.type === 'persona' && persona
       <div class="section-container py-20">
         <div class="mx-auto max-w-3xl text-center">
           <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Related next steps</p>
-          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">Keep going from here.</h2>
+          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{pageChrome.relatedHeading}</h2>
         </div>
         <div class="mt-10 grid gap-5 md:grid-cols-3">
           {relatedLinks.map((item) => (
@@ -303,7 +864,7 @@ const reviewSet = route.type === 'persona' && persona
     <section class="bg-muted/30">
       <div class="section-container max-w-4xl py-20">
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Common questions</p>
-        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Questions worth asking before you choose an advisor.</h2>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">{pageChrome.faqHeading}</h2>
         <div class="tw-faq-list mt-10" data-reveal>
           {page.faqs.map((faq) => (
             <details class="tw-faq-item">

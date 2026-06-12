@@ -3,6 +3,7 @@ import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
 import { cities } from '../../../data/talley-wealth/seo/cities';
 import { services } from '../../../data/talley-wealth/seo/services';
 import { personas } from '../../../data/talley-wealth/seo/personas';
+import { decisionClusters } from '../../../data/talley-wealth/seo/decision-clusters';
 import { allSEORoutes } from '../../../data/talley-wealth/seo/routes';
 
 function labelFor(slug: string) {
@@ -19,6 +20,9 @@ function labelFor(slug: string) {
   }
   if (route.type === 'persona' && route.personaKey) {
     return personas[route.personaKey].heroTitle;
+  }
+  if (route.type === 'decision-cluster' && route.decisionClusterKey) {
+    return decisionClusters[route.decisionClusterKey].heading;
   }
   return slug;
 }

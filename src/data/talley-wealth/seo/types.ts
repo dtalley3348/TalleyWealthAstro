@@ -12,6 +12,143 @@ export interface Scenario {
   disclosure?: string;
 }
 
+export interface LocalPageCard {
+  title: string;
+  body: string;
+}
+
+export interface LocalPageStrategyBrief {
+  localTruth: string;
+  whoThisIsReallyFor: string;
+  whatTheyAreProbablyFeeling: string;
+  whatNotToOverdo: string;
+  voiceNotes: string;
+}
+
+export interface LocalAudienceStrategyBrief {
+  identity: string;
+  businessStage?: string;
+  taxPressure?: string;
+  cashFlowReality?: string;
+  familyLayer?: string;
+  controlTension?: string;
+  retirementOrExitLayer?: string;
+  voiceNotes: string;
+}
+
+export interface AnswerSummary {
+  title: string;
+  body: string;
+  fitItems: string[];
+  localContext: string;
+  betterFit?: string;
+}
+
+export interface DecisionDepth {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  items: LocalPageCard[];
+}
+
+export interface LocalProofBlock {
+  title: string;
+  body: string;
+  items: string[];
+}
+
+export interface LocalPageQualityGate {
+  approvedForIndex: boolean;
+  score: number;
+  uniqueLocalDecision: string;
+  specificFit: string;
+  specificNonFit: string;
+  proofStandard: string;
+  reviewNotes: string[];
+}
+
+export interface DecisionClusterStrategyBrief {
+  decisionQuestion: string;
+  sourceMethod: 'ramble-first' | 'existing-material-synthesis' | 'expert-draft';
+  whoThisIsFor: string;
+  surfaceQuestion: string;
+  realQuestion: string;
+  commonMisunderstanding: string;
+  talleyPointOfView: string;
+  badFitBoundary: string;
+  davidPhrases: string[];
+  whatToAvoid: string[];
+  localRelevanceRule: string;
+  voiceNotes: string;
+}
+
+export interface CityLocalPage {
+  heading?: string;
+  intro: string;
+  sectionLabel: string;
+  sectionTitle: string;
+  sectionBody: string[];
+  proofTitle: string;
+  proofBody: string;
+  cards: LocalPageCard[];
+  answerSummary?: AnswerSummary;
+  localProof?: LocalProofBlock;
+  decisionDepth?: DecisionDepth;
+}
+
+export interface LocalAudiencePage {
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  sectionLabel: string;
+  sectionTitle: string;
+  sectionBody: string[];
+  proofTitle: string;
+  proofBody: string;
+  bulletPoints: string[];
+  cards: LocalPageCard[];
+  faqs: FAQ[];
+  scenario: Scenario;
+  ctaTitle: string;
+  ctaDescription: string;
+  strategyBrief?: LocalAudienceStrategyBrief;
+  answerSummary?: AnswerSummary;
+  localProof?: LocalProofBlock;
+  decisionDepth?: DecisionDepth;
+  qualityGate?: LocalPageQualityGate;
+}
+
+export interface DecisionClusterPage {
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  heroImage: string;
+  heroImageAlt: string;
+  sectionLabel: string;
+  sectionTitle: string;
+  sectionBody: string[];
+  proofTitle: string;
+  proofBody: string;
+  bulletPoints: string[];
+  cards: LocalPageCard[];
+  faqs: FAQ[];
+  scenario: Scenario;
+  ctaTitle: string;
+  ctaDescription: string;
+  strategyBrief: DecisionClusterStrategyBrief;
+  answerSummary: AnswerSummary;
+  localProof: LocalProofBlock;
+  decisionDepth: DecisionDepth;
+  relatedLinks: Array<LocalPageCard & { href: string }>;
+  qualityGate: LocalPageQualityGate;
+}
+
 export interface CityData {
   name: string;
   state: 'TN' | 'VA' | 'NC';
@@ -22,6 +159,16 @@ export interface CityData {
   population?: string;
   county: string;
   whyLocal: string;
+  localThesis?: string;
+  bestFitAudience?: string;
+  livedLocalProof?: string;
+  strategyBrief?: LocalPageStrategyBrief;
+  qualityGate?: LocalPageQualityGate;
+  cityPage?: CityLocalPage;
+  localAudiencePages?: {
+    preRetirees?: LocalAudiencePage;
+    businessOwners?: LocalAudiencePage;
+  };
   bulletPoints: string[];
   metaTitle: string;
   metaDescription: string;
@@ -38,6 +185,7 @@ export interface CityData {
     scenario?: Scenario;
     bulletPoints?: string[];
     description?: string;
+    qualityGate?: LocalPageQualityGate;
   }>;
   personalStory?: {
     title: string;

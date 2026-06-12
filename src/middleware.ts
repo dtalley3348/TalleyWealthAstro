@@ -13,7 +13,6 @@ const oldServiceLocationRedirects: { pattern: RegExp; target: string }[] = [
   { pattern: /^\/proactive-tax-planning-[a-z0-9-]+$/, target: '/services/tax-planning' },
   { pattern: /^\/entrepreneur-financial-planning-[a-z0-9-]+$/, target: '/services/business-owner-planning' },
   { pattern: /^\/business-financial-planning-[a-z0-9-]+$/, target: '/financial-advisor-for-business-owners' },
-  { pattern: /^\/financial-advisor-(?!for-)[a-z0-9-]+$/, target: '/financial-advisor-tri-cities-tn' },
 ];
 
 const oldDomainRedirects: Record<string, string> = {
@@ -73,9 +72,9 @@ export const onRequest = defineMiddleware((context, next) => {
     '/locations/johnson-city': '/financial-advisor-johnson-city-tn',
     '/locations/kingsport': '/financial-advisor-kingsport-tn',
     '/locations/bristol': '/financial-advisor-bristol-tn-va',
-    '/locations/erwin': '/financial-advisor-erwin-tn',
-    '/locations/greeneville': '/financial-advisor-greeneville-tn',
-    '/locations/abingdon': '/financial-advisor-abingdon-va',
+    '/locations/erwin': '/financial-advisor-tri-cities-tn',
+    '/locations/greeneville': '/financial-advisor-tri-cities-tn',
+    '/locations/abingdon': '/financial-advisor-tri-cities-tn',
     '/meet-david-talley': '/about/meet-david-talley',
     '/who-we-are': '/about',
     '/our-purpose': '/about',

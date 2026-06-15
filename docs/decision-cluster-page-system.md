@@ -88,6 +88,7 @@ This work is usually not the right first step for brand-new, low-profit, low-bra
 - Do not name local employers.
 - Use local context only when it changes the decision, reveals the person, or builds trust.
 - Use flat-fee planning language only where Keystone or pricing naturally belongs.
+- Avoid the repeated AI-sounding contrast pattern: "X, not Y" or "X, not a Y." Use it only when David would naturally say it. Prefer direct phrasing that says what the thing does, who it helps, and where the limit is without the rhetorical comma-not construction.
 
 ## Publishing Gate
 

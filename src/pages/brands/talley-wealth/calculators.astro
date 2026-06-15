@@ -3,18 +3,22 @@ import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
 import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro';
 ---
 
-<TalleyPage title="Retirement Calculators | Talley Wealth" description="Retirement planning calculators and decision tools from Talley Wealth.">
+<TalleyPage title="Planning Tools and Calculators | Talley Wealth" description="Educational calculators, visual explainers, and decision tools from Talley Wealth.">
   <section class="bg-muted/35">
     <div class="section-container py-20">
-      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Calculators</p>
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning Tools</p>
       <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Start with the math. Then look at what the math leaves out.</h1>
       <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-        These tools are intentionally educational. They are built to surface better questions about retirement income, taxes, timing, inflation, and risk, not to replace a coordinated plan.
+        These tools are intentionally educational. Some are calculators and some are visual explainers. They are built to surface better questions about retirement income, taxes, timing, cash flow, and risk. A coordinated plan still has to connect those answers.
       </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#retirement-calculator" class="rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Retirement calculator</a>
+        <a href="#business-owner-tools" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Business owner tools</a>
+      </div>
     </div>
   </section>
 
-  <section class="bg-background">
+  <section id="retirement-calculator" class="bg-background">
     <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.72fr_1fr]">
       <div>
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Retirement number</p>
@@ -194,6 +198,36 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="business-owner-tools" class="bg-card">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.72fr_1fr] lg:items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Business owner tools</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">S-Corp planning is not a one-button answer.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          The S-Corp visual is a software-style explainer for seeing where payroll-tax savings can appear, why reasonable compensation matters, and why Tennessee can change the decision.
+        </p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <a href="/learn/s-corp-tax-savings-explained" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Interactive explainer</p>
+          <h3 class="mt-3 font-serif text-2xl font-bold text-primary">S-Corp Tax Savings Visual</h3>
+          <p class="mt-4 leading-relaxed text-muted-foreground">
+            See how the self-employment/payroll-tax layer can change when profit above reasonable compensation is treated as distributions.
+          </p>
+          <span class="mt-6 inline-flex font-bold text-accent">Open visual <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+        <a href="/resources/blog/should-i-elect-s-corp-status" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Companion article</p>
+          <h3 class="mt-3 font-serif text-2xl font-bold text-primary">Should I Elect S-Corp Status?</h3>
+          <p class="mt-4 leading-relaxed text-muted-foreground">
+            Walk through owner pay, reasonable compensation, Tennessee nuance, fit, cash flow, and why this decision needs context.
+          </p>
+          <span class="mt-6 inline-flex font-bold text-accent">Read article <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
       </div>
     </div>
   </section>

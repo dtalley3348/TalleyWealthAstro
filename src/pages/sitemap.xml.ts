@@ -33,6 +33,7 @@ const canonicalPaths = [
   '/resources/learning-center',
   ...wikiCategories.map((category) => `/learn/${category.slug}`),
   ...wikiArticles.map((article) => `/learn/${article.category}/${article.slug}`),
+  '/learn/s-corp-tax-savings-explained',
   '/resources/tools',
   '/resources/key-dates',
   '/guide',

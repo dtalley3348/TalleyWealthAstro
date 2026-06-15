@@ -14,6 +14,23 @@ export type BlogStrategy = {
 };
 
 export const blogStrategyBySlug: Record<string, BlogStrategy> = {
+  'should-i-elect-s-corp-status': {
+    primaryIntent: 'S-Corp election, owner compensation, and business-owner tax planning',
+    supportingIntents: ['Business owner tax planning', 'Reasonable compensation', 'Tennessee S-Corp planning'],
+    links: [
+      { title: 'S-Corp Tax Savings Visual', href: '/learn/s-corp-tax-savings-explained', description: 'An interactive explainer showing where payroll-tax savings can appear.' },
+      { title: 'Business Owner Tax Planning in the Tri-Cities', href: '/business-owner-tax-planning-tri-cities-tn', description: 'How owner tax decisions fit into broader local planning.' },
+      { title: 'Business Owner Planning', href: '/services/business-owner-planning', description: 'Planning for the overlap between the business, household, taxes, and cash flow.' },
+      { title: 'Tax Planning', href: '/services/tax-planning', description: 'Year-round planning before the tax year is already over.' },
+    ],
+    cta: {
+      eyebrow: 'S-Corp planning needs context',
+      title: 'The election is not the plan. The owner-pay decision is part of the plan.',
+      body: 'An Explore Call can help clarify whether there is enough profit, complexity, and tax exposure to justify deeper planning around owner compensation and entity structure.',
+      href: '/get-started',
+      label: 'Schedule an Explore Call',
+    },
+  },
   'phantom-checkbox-roth-conversions': {
     primaryIntent: 'Roth conversion strategy inside retirement and tax planning',
     supportingIntents: ['Tax planning', 'Retirement income planning', 'Keystone Method'],

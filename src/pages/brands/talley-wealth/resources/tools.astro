@@ -10,47 +10,54 @@ const tools = [
     label: 'Open calculator',
   },
   {
-    eyebrow: 'Coming next',
-    title: 'Retirement Readiness Assessment',
-    body: 'A short assessment for people who want to know what questions still need answered before they retire.',
-    href: '/guide',
-    label: 'Start with the guide',
+    eyebrow: 'Interactive explainer',
+    title: 'S-Corp Tax Savings Visual',
+    body: 'See where S-Corp payroll-tax savings can appear, why reasonable compensation matters, and why Tennessee can change the answer.',
+    href: '/learn/s-corp-tax-savings-explained',
+    label: 'Open visual',
+  },
+  {
+    eyebrow: 'Article',
+    title: 'Should I Elect S-Corp Status?',
+    body: 'Read the plain-English companion piece on owner pay, Tennessee nuance, fit, cash flow, and why the decision is rarely automatic.',
+    href: '/resources/blog/should-i-elect-s-corp-status',
+    label: 'Read article',
   },
 ];
 
 const relatedLinks = [
   {
+    title: 'Business owner tax planning',
+    body: 'See how entity, owner pay, tax, and household decisions fit together for local owners.',
+    href: '/business-owner-tax-planning-tri-cities-tn',
+  },
+  {
     title: 'Retirement guide',
-    body: 'A fuller framework for the questions the calculators are meant to surface.',
+    body: 'A fuller framework for the retirement questions the calculators are meant to surface.',
     href: '/guide',
   },
   {
-    title: 'Retirement risk article',
-    body: 'Read more about why the order of returns matters once withdrawals begin.',
-    href: '/resources/blog/retirement-risk-nobody-talks-about',
-  },
-  {
-    title: 'Pre-retirement planning',
-    body: 'See how these concepts fit into the broader retirement transition.',
-    href: '/financial-advisor-for-pre-retirees',
+    title: 'Learning Center',
+    body: 'Short answer-first explainers for retirement, tax, investing, and planning questions.',
+    href: '/resources/learning-center',
   },
 ];
 ---
 
-<TalleyPage title="Planning Tools | Talley Wealth" description="Interactive retirement calculators, assessments, and planning tools from Talley Wealth.">
+<TalleyPage title="Planning Tools | Talley Wealth" description="Interactive calculators, visual explainers, and planning tools from Talley Wealth.">
   <section class="bg-muted/35">
     <div class="section-container py-20">
       <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning Tools</p>
       <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Tools for seeing the planning question more clearly.</h1>
       <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-        These are educational starting points. They are built to surface better questions, not replace a coordinated plan.
+        Some are calculators. Some are visual explainers. All of them are educational starting points built to surface better questions. A coordinated plan still has to connect those answers.
       </p>
     </div>
   </section>
 
   <section class="bg-background">
     <div class="section-container py-20">
-      <div class="grid gap-5 md:grid-cols-2">
+      <div class="grid gap-5 md:grid-cols-3">
         {tools.map((tool) => (
           <a href={tool.href} class="rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{tool.eyebrow}</p>

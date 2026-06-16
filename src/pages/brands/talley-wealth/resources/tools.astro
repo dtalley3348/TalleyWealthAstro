@@ -10,11 +10,18 @@ const tools = [
     label: 'Open calculator',
   },
   {
-    eyebrow: 'Interactive explainer',
-    title: 'S-Corp Tax Savings Visual',
-    body: 'See where S-Corp payroll-tax savings can appear, why reasonable compensation matters, and why Tennessee can change the answer.',
-    href: '/learn/s-corp-tax-savings-explained',
+    eyebrow: 'Decision guide',
+    title: 'Roth Conversion Threshold Visual',
+    body: 'See how a Roth conversion plan can fill available tax space before it crosses brackets, Medicare thresholds, or other planning lines.',
+    href: '/roth-conversions-before-retirement-tri-cities-tn',
     label: 'Open visual',
+  },
+  {
+    eyebrow: 'Decision guide',
+    title: 'S-Corp Planning in the Tri-Cities',
+    body: 'Start with the owner-pay decision, then use the visual to see where payroll-tax savings can appear.',
+    href: '/s-corp-planning-tri-cities-tn',
+    label: 'Open guide',
   },
   {
     eyebrow: 'Article',
@@ -57,7 +64,7 @@ const relatedLinks = [
 
   <section class="bg-background">
     <div class="section-container py-20">
-      <div class="grid gap-5 md:grid-cols-3">
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {tools.map((tool) => (
           <a href={tool.href} class="rounded-lg border border-border bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">{tool.eyebrow}</p>

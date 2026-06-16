@@ -13,6 +13,8 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="#retirement-calculator" class="rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Retirement calculator</a>
+        <a href="#retirement-tax-tools" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Retirement tax tools</a>
+        <a href="/can-i-retire-before-65-tri-cities-tn" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Retire before 65</a>
         <a href="#business-owner-tools" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Business owner tools</a>
       </div>
     </div>
@@ -26,12 +28,13 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
           Start with the core retirement math: assets, savings, time, expected return, income needs, outside income, and withdrawal rate. Then use the result as a planning prompt.
         </p>
-        <div class="mt-8 rounded-lg border border-border bg-muted/35 p-5">
-          <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">What it does not solve</p>
-          <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
-            This does not model tax brackets, Roth conversion windows, IRMAA, survivor benefits, long-term care, estate goals, or sequence risk. Those are exactly why the calculator is a starting point instead of a plan.
-          </p>
-        </div>
+          <div class="mt-8 rounded-lg border border-border bg-muted/35 p-5">
+            <p class="text-sm font-bold uppercase tracking-[0.14em] text-accent">What it does not solve</p>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">
+              This does not model tax brackets, Roth conversion windows, IRMAA, survivor benefits, long-term care, estate goals, or sequence risk. Those are exactly why the calculator is a starting point instead of a plan.
+            </p>
+            <a href="/can-i-retire-before-65-tri-cities-tn" class="mt-4 inline-flex text-sm font-bold text-accent">Retiring before 65? Start with the bridge period <span aria-hidden="true">&nbsp;-&gt;</span></a>
+          </div>
       </div>
       <div class="rounded-lg border border-border bg-card p-6 shadow-elegant md:p-8">
         <form id="tw-retirement-calc" class="grid gap-5">
@@ -202,23 +205,53 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
     </div>
   </section>
 
+  <section id="retirement-tax-tools" class="bg-card">
+    <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.72fr_1fr] lg:items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Retirement tax tools</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Roth conversion planning is usually about pacing.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          The Roth threshold visual shows how a conversion can fill available tax space before it crosses brackets, Medicare thresholds, or other planning lines.
+        </p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <a href="/roth-conversions-before-retirement-tri-cities-tn" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Interactive visual</p>
+          <h3 class="mt-3 font-serif text-2xl font-bold text-primary">Roth Conversion Threshold Visual</h3>
+          <p class="mt-4 leading-relaxed text-muted-foreground">
+            Start with one planning-income number, then see how much room may exist before a selected planning threshold.
+          </p>
+          <span class="mt-6 inline-flex font-bold text-accent">Open visual <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+        <a href="/resources/blog/phantom-checkbox-roth-conversions" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Companion article</p>
+          <h3 class="mt-3 font-serif text-2xl font-bold text-primary">The Roth Conversion Checkbox Problem</h3>
+          <p class="mt-4 leading-relaxed text-muted-foreground">
+            Read why small, comfortable conversions often miss the actual lifetime tax question.
+          </p>
+          <span class="mt-6 inline-flex font-bold text-accent">Read article <span aria-hidden="true">&nbsp;-&gt;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section id="business-owner-tools" class="bg-card">
     <div class="section-container grid gap-10 py-20 lg:grid-cols-[0.72fr_1fr] lg:items-start">
       <div>
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Business owner tools</p>
-        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">S-Corp planning is not a one-button answer.</h2>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">S-Corp planning starts with owner pay.</h2>
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
           The S-Corp visual is a software-style explainer for seeing where payroll-tax savings can appear, why reasonable compensation matters, and why Tennessee can change the decision.
         </p>
       </div>
       <div class="grid gap-5 md:grid-cols-2">
-        <a href="/learn/s-corp-tax-savings-explained" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
-          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Interactive explainer</p>
-          <h3 class="mt-3 font-serif text-2xl font-bold text-primary">S-Corp Tax Savings Visual</h3>
+        <a href="/s-corp-planning-tri-cities-tn" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Decision guide</p>
+          <h3 class="mt-3 font-serif text-2xl font-bold text-primary">S-Corp Planning in the Tri-Cities</h3>
           <p class="mt-4 leading-relaxed text-muted-foreground">
-            See how the self-employment/payroll-tax layer can change when profit above reasonable compensation is treated as distributions.
+            Start with the owner-pay decision, reasonable compensation, Tennessee tax, and whether the structure is worth the added work.
           </p>
-          <span class="mt-6 inline-flex font-bold text-accent">Open visual <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          <span class="mt-6 inline-flex font-bold text-accent">Open guide <span aria-hidden="true">&nbsp;-&gt;</span></span>
         </a>
         <a href="/resources/blog/should-i-elect-s-corp-status" class="rounded-lg border border-border bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
           <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Companion article</p>

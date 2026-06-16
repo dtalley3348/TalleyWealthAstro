@@ -2,6 +2,8 @@
 import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
 import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro';
 import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsProof.astro';
+import SCorpTaxBandsExplainer from '../../../components/talley-wealth/sections/SCorpTaxBandsExplainer';
+import RothConversionThresholdMap from '../../../components/talley-wealth/sections/RothConversionThresholdMap';
 import { cities } from '../../../data/talley-wealth/seo/cities';
 import { services } from '../../../data/talley-wealth/seo/services';
 import { personas } from '../../../data/talley-wealth/seo/personas';
@@ -31,6 +33,8 @@ const city = seoRoute.cityKey ? cities[seoRoute.cityKey] : null;
 const service = seoRoute.serviceKey ? services[seoRoute.serviceKey] : null;
 const persona = seoRoute.personaKey ? personas[seoRoute.personaKey] : null;
 const decisionCluster = seoRoute.decisionClusterKey ? decisionClusters[seoRoute.decisionClusterKey] : null;
+const showSCorpExplainer = seoRoute.decisionClusterKey === 's-corp-planning';
+const showRothConversionMap = seoRoute.decisionClusterKey === 'roth-conversions-before-retirement';
 const serviceOverride = city && seoRoute.serviceKey && service
   ? (city.serviceOverrides?.[seoRoute.serviceKey] ?? city.serviceOverrides?.[service.slug])
   : null;
@@ -85,7 +89,7 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
       sectionTitle: persona.problemTitle,
       sectionBody: [persona.problemDescription, persona.problemDetail],
       proofTitle: 'Local proof',
-      proofBody: `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.`,
+      proofBody: `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point. They do not promise future results, but they do show that local families are willing to put their names behind the experience.`,
       cards: persona.differentiators.map((item) => ({ title: item.title, body: item.desc })),
       answerSummary: null,
       localProof: null,
@@ -112,7 +116,7 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
         sectionTitle: `When ${service.shortName.toLowerCase()} needs local context`,
         sectionBody: [city.whyLocal],
         proofTitle: 'Local proof',
-        proofBody: `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.`,
+        proofBody: `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point. They do not promise future results, but they do show that local families are willing to put their names behind the experience.`,
         cards: [
           { title: 'Local context', body: city.angle },
           { title: 'Local life patterns', body: city.strategyBrief?.localTruth ?? city.angle },
@@ -179,7 +183,7 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
             'Talley Wealth uses the local context to understand the question, then builds the plan around the decisions that actually need to be made.',
           ],
           proofTitle: city.cityPage?.proofTitle ?? 'Local proof',
-          proofBody: city.cityPage?.proofBody ?? `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point, not a promise of future results, but they do show that local families are willing to put their names behind the experience.`,
+          proofBody: city.cityPage?.proofBody ?? `Talley Wealth has earned ${TOTAL_REVIEW_COUNT}+ public Google reviews with a ${AVERAGE_RATING.toFixed(1)} average rating. Reviews are one proof point. They do not promise future results, but they do show that local families are willing to put their names behind the experience.`,
           cards: city.cityPage?.cards ?? [
             { title: 'Local life patterns', body: city.strategyBrief?.localTruth ?? city.angle },
             { title: 'Local landmarks', body: city.landmarks.join(', ') },
@@ -237,7 +241,7 @@ const defaultLocalProof = city && (seoRoute.type === 'city' || seoRoute.type ===
         city.slug === 'tri-cities'
           ? 'Primary service area: Johnson City, Bristol, Kingsport, and nearby Tri-Cities communities.'
           : `This page is written for ${city.name} context while still connecting back to the broader Tri-Cities planning system.`,
-        'Public Google reviews are used only as public proof of client experience themes, not as a promise of future results.',
+        'Public Google reviews are used only as public proof of client experience themes. They are not a promise of future results.',
       ],
     }
   : null;
@@ -500,14 +504,35 @@ const pageSchema = buildSEOLandingPageSchema({
 
 const jsonLd = [pageSchema, ...(faqSchema ? [faqSchema] : [])];
 
+const decisionClusterChrome: Record<string, { detailsHeading: string; faqHeading: string }> = {
+  'business-owner-tax-planning': {
+    detailsHeading: 'The owner decisions to coordinate before year-end.',
+    faqHeading: 'Business-owner tax questions worth sorting out early.',
+  },
+  's-corp-planning': {
+    detailsHeading: 'The S-Corp decision has to coordinate more than the election.',
+    faqHeading: 'S-Corp questions worth sorting out before you file.',
+  },
+  'retire-before-65': {
+    detailsHeading: 'The bridge-period details need to work together.',
+    faqHeading: 'Early-retirement questions worth sorting out before you leave work.',
+  },
+  'roth-conversions-before-retirement': {
+    detailsHeading: 'The conversion variables to coordinate by year.',
+    faqHeading: 'Roth conversion questions worth sorting out before income drops.',
+  },
+};
+
+const activeDecisionChrome = seoRoute.decisionClusterKey ? decisionClusterChrome[seoRoute.decisionClusterKey] : null;
+
 const pageChrome = seoRoute.type === 'decision-cluster'
   ? {
       heroClass: 'border-b border-border/70 bg-background',
       cardsClass: 'bg-muted/30',
       detailsClass: 'bg-background',
       relatedHeading: 'Keep going from this decision.',
-      detailsHeading: 'The owner decisions to coordinate before year-end.',
-      faqHeading: 'Business-owner tax questions worth sorting out early.',
+      detailsHeading: activeDecisionChrome?.detailsHeading ?? 'The useful details need to work together.',
+      faqHeading: activeDecisionChrome?.faqHeading ?? 'Questions worth sorting out before you decide.',
     }
   : seoRoute.type === 'city'
   ? {
@@ -697,6 +722,21 @@ const pageChrome = seoRoute.type === 'decision-cluster'
     </div>
   </section>
 
+  {showRothConversionMap && (
+    <section class="bg-background">
+      <div class="section-container py-16">
+        <div class="mb-10 max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning visual</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">See the lines a conversion plan has to respect.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+            The page answer is usually simple. The pacing is where the real planning lives: brackets, Medicare thresholds, liquidity, portfolio growth, and estate goals all touch the same conversion decision.
+          </p>
+        </div>
+        <RothConversionThresholdMap client:visible />
+      </div>
+    </section>
+  )}
+
   <section class={pageChrome.cardsClass}>
     {isDecisionCluster ? (
       <div class="section-container max-w-6xl py-16">
@@ -757,6 +797,21 @@ const pageChrome = seoRoute.type === 'decision-cluster'
           </div>
         </div>
       )}
+    </section>
+  )}
+
+  {showSCorpExplainer && (
+    <section class="bg-background">
+      <div class="section-container py-20">
+        <div class="mb-10 max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Interactive visual</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">See where the payroll-tax layer can change.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+            The visual below shows why the S-Corp question usually comes back to reasonable compensation, profit above that salary, and the state tax drag that may show up in Tennessee.
+          </p>
+        </div>
+        <SCorpTaxBandsExplainer client:visible />
+      </div>
     </section>
   )}
 

@@ -14,14 +14,31 @@ export type BlogStrategy = {
 };
 
 export const blogStrategyBySlug: Record<string, BlogStrategy> = {
+  'health-insurance-options-before-age-65': {
+    primaryIntent: 'Health insurance planning for retirement before Medicare',
+    supportingIntents: ['Retiring before 65', 'Healthcare bridge', 'Retirement income planning'],
+    links: [
+      { title: 'Can I Retire Before 65?', href: '/can-i-retire-before-65-tri-cities-tn', description: 'The broader decision page for the bridge period before Medicare.' },
+      { title: 'Retirement Calculator', href: '/calculators', description: 'Start with rough spending, portfolio, withdrawal, and sequence-risk math.' },
+      { title: 'Pre-Retirement Planning', href: '/financial-advisor-for-pre-retirees', description: 'Planning for the years when work may become optional.' },
+      { title: 'What Is Your Retirement Number?', href: '/resources/blog/whats-your-number-retirement', description: 'Why the retirement number needs taxes, income sources, and lifestyle built in.' },
+    ],
+    cta: {
+      eyebrow: 'Before Medicare',
+      title: 'Retiring before 65 starts with the healthcare bridge.',
+      body: 'The health insurance choice needs to be coordinated with taxes, portfolio withdrawals, Roth conversions, Social Security timing, and the life you want retirement to support.',
+      href: '/can-i-retire-before-65-tri-cities-tn',
+      label: 'See the early-retirement guide',
+    },
+  },
   'should-i-elect-s-corp-status': {
     primaryIntent: 'S-Corp election, owner compensation, and business-owner tax planning',
     supportingIntents: ['Business owner tax planning', 'Reasonable compensation', 'Tennessee S-Corp planning'],
     links: [
+      { title: 'S-Corp Planning in the Tri-Cities', href: '/s-corp-planning-tri-cities-tn', description: 'The decision page for owner pay, reasonable compensation, Tennessee tax, and S-Corp fit.' },
       { title: 'S-Corp Tax Savings Visual', href: '/learn/s-corp-tax-savings-explained', description: 'An interactive explainer showing where payroll-tax savings can appear.' },
       { title: 'Business Owner Tax Planning in the Tri-Cities', href: '/business-owner-tax-planning-tri-cities-tn', description: 'How owner tax decisions fit into broader local planning.' },
       { title: 'Business Owner Planning', href: '/services/business-owner-planning', description: 'Planning for the overlap between the business, household, taxes, and cash flow.' },
-      { title: 'Tax Planning', href: '/services/tax-planning', description: 'Year-round planning before the tax year is already over.' },
     ],
     cta: {
       eyebrow: 'S-Corp planning needs context',
@@ -35,17 +52,17 @@ export const blogStrategyBySlug: Record<string, BlogStrategy> = {
     primaryIntent: 'Roth conversion strategy inside retirement and tax planning',
     supportingIntents: ['Tax planning', 'Retirement income planning', 'Keystone Method'],
     links: [
+      { title: 'Roth Conversions Before Retirement?', href: '/roth-conversions-before-retirement-tri-cities-tn', description: 'The decision guide for timing conversions before or after work income drops.' },
       { title: 'Tax Planning', href: '/services/tax-planning', description: 'How proactive tax planning fits into the broader plan.' },
       { title: 'Retirement Planning', href: '/services/retirement-planning', description: 'How Roth decisions connect to income, RMDs, and Social Security.' },
       { title: 'The Keystone Method', href: '/how-we-work/keystone-method', description: 'The planning process that coordinates tax, investments, retirement, and estate decisions.' },
-      { title: 'Financial Advisor for Pre-Retirees', href: '/financial-advisor-for-pre-retirees', description: 'Planning for the years when retirement is getting close.' },
     ],
     cta: {
       eyebrow: 'Roth conversions belong in a plan',
       title: 'Want to know whether Roth conversions actually fit your situation?',
       body: 'The answer depends on your lifetime tax picture, income timing, retirement date, Medicare thresholds, and withdrawal plan. That is exactly the kind of work Keystone is built to organize.',
-      href: '/how-we-work/keystone-method',
-      label: 'See the Keystone Method',
+      href: '/roth-conversions-before-retirement-tri-cities-tn',
+      label: 'See the Roth conversion guide',
     },
   },
   'most-people-cant-name-a-single-tax-strategy': {
@@ -69,10 +86,10 @@ export const blogStrategyBySlug: Record<string, BlogStrategy> = {
     primaryIntent: 'Retirement number and retirement readiness planning',
     supportingIntents: ['Retirement planning', 'Pre-retirees', 'Johnson City retirement planning'],
     links: [
+      { title: 'Can I Retire Before 65?', href: '/can-i-retire-before-65-tri-cities-tn', description: 'The decision page for health insurance, spending, taxes, Social Security, and the bridge before Medicare.' },
       { title: 'Retirement Planning', href: '/services/retirement-planning', description: 'Turn a retirement number into income, tax, and investment decisions.' },
       { title: 'Financial Advisor for Pre-Retirees', href: '/financial-advisor-for-pre-retirees', description: 'Planning for people within sight of retirement.' },
       { title: 'Retirement Calculator', href: '/calculators', description: 'Run a rough estimate of projected portfolio, income need, and gap.' },
-      { title: 'Retirement Guide', href: '/guide', description: 'A worksheet-style guide for thinking through retirement readiness.' },
     ],
     cta: {
       eyebrow: 'Retirement guide',
@@ -86,10 +103,10 @@ export const blogStrategyBySlug: Record<string, BlogStrategy> = {
     primaryIntent: 'Sequence risk, inflation risk, and retirement portfolio structure',
     supportingIntents: ['Retirement planning', 'Investment management', 'Pre-retirees'],
     links: [
+      { title: 'Can I Retire Before 65?', href: '/can-i-retire-before-65-tri-cities-tn', description: 'Stress-test the bridge period before Medicare begins.' },
       { title: 'Retirement Planning', href: '/services/retirement-planning', description: 'Plan income before withdrawals begin.' },
       { title: 'Investment Management', href: '/services/investment-management', description: 'Build the portfolio around the plan instead of the other way around.' },
       { title: 'Retirement Calculator', href: '/calculators', description: 'Stress-test the number before treating it like the plan.' },
-      { title: 'Financial Advisor for Pre-Retirees', href: '/financial-advisor-for-pre-retirees', description: 'Help for the transition years before retirement.' },
     ],
     cta: {
       eyebrow: 'Risk needs structure',

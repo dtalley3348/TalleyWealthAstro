@@ -2,7 +2,12 @@
 
 Decision-cluster pages explain the real planning decisions Talley Wealth helps people make. They are not generic service pages and they are not city-name keyword swaps.
 
-The first prototype is `business-owner-tax-planning-tri-cities-tn`.
+Current prototypes:
+
+- `business-owner-tax-planning-tri-cities-tn`
+- `s-corp-planning-tri-cities-tn`
+- `can-i-retire-before-65-tri-cities-tn`
+- `roth-conversions-before-retirement-tri-cities-tn`
 
 ## Core Rule
 
@@ -59,6 +64,27 @@ Every approved decision-cluster page should render:
 - `Common questions`
 - Related next steps back into persona, local, and Keystone pages
 
+## Visual Explainers
+
+Some decision clusters need a reusable visual. Use a visual when the real issue is hard to understand from paragraphs alone.
+
+Good visual topics:
+
+- payroll-tax layers and S-Corp reasonable compensation
+- Roth conversion threshold maps
+- retirement bridge-period timing
+- withdrawal order across taxable, tax-deferred, and Roth accounts
+- owner-decision webs where tax, liquidity, estate, and investment planning all touch
+
+Rules:
+
+- Make the visual explain the decision shape.
+- Label whether it is a planning frame, explainer, or calculator.
+- Do not present a planning frame as a personalized calculation.
+- Do not put exact annual thresholds in a visual unless the source and review year are clear.
+- If thresholds use different income definitions, say so. Taxable income, AGI, and MAGI are different planning measures.
+- Use the same visual component in related blogs or tools pages only when it truly helps the reader understand the decision.
+
 ## Business Owner Tax Planning Prototype
 
 The core point of view:
@@ -77,6 +103,32 @@ Important David-language:
 Bad-fit boundary:
 
 This work is usually not the right first step for brand-new, low-profit, low-bracket, or cash-constrained businesses where the tax leverage and complexity do not yet justify the planning fee.
+
+## Roth Conversion Before Retirement Prototype
+
+The core point of view:
+
+For many high-earning pre-retirees, the best answer before retirement is usually patience. The real planning work is building a year-by-year conversion pace for the years after earned income drops and before RMDs, Social Security, Medicare thresholds, or future tax brackets reduce flexibility.
+
+Important David-language:
+
+- "The conversion amount needs a target."
+- "The better question is pacing."
+- "The planning depth is the differentiator."
+- "You are trying to lower cumulative lifetime tax, not just this April."
+
+Planning targets to consider:
+
+- federal bracket room
+- senior deduction or other AGI-sensitive lines
+- IRMAA and Medicare MAGI thresholds
+- 22% and 24% bracket tops when future RMD pressure may justify using them
+- outside cash available to pay the conversion tax
+- investment growth and estate goals
+
+Bad-fit boundary:
+
+This is usually weak for households still in peak earning years with no future tax projection, little tax-deferred money, no liquidity to pay taxes, or no practical reason to accelerate taxable income.
 
 ## Compliance And Voice Guardrails
 

@@ -115,6 +115,12 @@ const jsonLdArray = [...defaultJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : json
       }
       html[data-tenant="talley-wealth"] body.js-reveal [data-reveal="left"]:not(.is-in)  { transform: translateX(-20px); }
       html[data-tenant="talley-wealth"] body.js-reveal [data-reveal="right"]:not(.is-in) { transform: translateX(20px); }
+      @media (max-width: 640px) {
+        html[data-tenant="talley-wealth"] body.js-reveal [data-reveal="left"]:not(.is-in),
+        html[data-tenant="talley-wealth"] body.js-reveal [data-reveal="right"]:not(.is-in) {
+          transform: translateY(20px);
+        }
+      }
       html[data-tenant="talley-wealth"] [data-reveal] {
         transition:
           opacity 0.6s var(--ease-smooth) var(--reveal-delay, 0ms),

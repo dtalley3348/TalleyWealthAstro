@@ -5,7 +5,7 @@
  * utilities + tokens ship only on Talley pages. Other tenants are
  * unaffected.
  */
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 
 @source "../../pages/brands/talley-wealth/**/*.{astro,ts,tsx}";
 @source "../../pages/404.astro";
@@ -136,6 +136,18 @@
   html[data-tenant="talley-wealth"] img {
     max-width: 100%;
     display: block;
+    height: auto;
+  }
+  html[data-tenant="talley-wealth"] iframe,
+  html[data-tenant="talley-wealth"] video,
+  html[data-tenant="talley-wealth"] canvas,
+  html[data-tenant="talley-wealth"] svg {
+    max-width: 100%;
+  }
+  html[data-tenant="talley-wealth"] *,
+  html[data-tenant="talley-wealth"] *::before,
+  html[data-tenant="talley-wealth"] *::after {
+    min-width: 0;
   }
 }
 
@@ -253,11 +265,34 @@
   html[data-tenant="talley-wealth"] p,
   html[data-tenant="talley-wealth"] li {
     text-wrap: pretty;
+    overflow-wrap: anywhere;
   }
 
   html[data-tenant="talley-wealth"] h1,
-  html[data-tenant="talley-wealth"] h2 {
+  html[data-tenant="talley-wealth"] h2,
+  html[data-tenant="talley-wealth"] h3,
+  html[data-tenant="talley-wealth"] a,
+  html[data-tenant="talley-wealth"] button {
     text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+
+  html[data-tenant="talley-wealth"] section,
+  html[data-tenant="talley-wealth"] article,
+  html[data-tenant="talley-wealth"] aside,
+  html[data-tenant="talley-wealth"] header,
+  html[data-tenant="talley-wealth"] footer,
+  html[data-tenant="talley-wealth"] nav {
+    max-width: 100%;
+  }
+
+  html[data-tenant="talley-wealth"] [class*="grid"],
+  html[data-tenant="talley-wealth"] [class*="flex"] {
+    min-width: 0;
+  }
+
+  html[data-tenant="talley-wealth"] .section-container > * {
+    min-width: 0;
   }
 
   @media (max-width: 767px) {
@@ -274,6 +309,43 @@
     }
     html[data-tenant="talley-wealth"] .p-8 {
       padding: 1.5rem;
+    }
+    html[data-tenant="talley-wealth"] .section-container {
+      width: 100%;
+    }
+    html[data-tenant="talley-wealth"] h1,
+    html[data-tenant="talley-wealth"] h2,
+    html[data-tenant="talley-wealth"] h3,
+    html[data-tenant="talley-wealth"] p,
+    html[data-tenant="talley-wealth"] li,
+    html[data-tenant="talley-wealth"] a,
+    html[data-tenant="talley-wealth"] button {
+      max-width: min(100%, 18.5rem) !important;
+      text-wrap: auto !important;
+      overflow-wrap: anywhere !important;
+    }
+    html[data-tenant="talley-wealth"] h1,
+    html[data-tenant="talley-wealth"] h2,
+    html[data-tenant="talley-wealth"] h3,
+    html[data-tenant="talley-wealth"] p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    html[data-tenant="talley-wealth"] h1 {
+      font-size: clamp(1.9rem, 8vw, 2.45rem) !important;
+      line-height: 1.08 !important;
+    }
+    html[data-tenant="talley-wealth"] h2 {
+      font-size: clamp(1.7rem, 7vw, 2.1rem) !important;
+      line-height: 1.12 !important;
+    }
+    html[data-tenant="talley-wealth"] h3 {
+      font-size: clamp(1.35rem, 6vw, 1.75rem) !important;
+      line-height: 1.16 !important;
+    }
+    html[data-tenant="talley-wealth"] [class*="w-["],
+    html[data-tenant="talley-wealth"] [class*="min-w-["] {
+      max-width: 100%;
     }
   }
 

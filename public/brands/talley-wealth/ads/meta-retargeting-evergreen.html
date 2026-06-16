@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talley Wealth Meta Retargeting Ads</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #182635;
+      --muted: #5d6876;
+      --gold: #bf8c4d;
+      --paper: #f7f4ef;
+      --line: #d9d2c7;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #111820;
+      color: var(--ink);
+      font-family: "Source Sans 3", Arial, sans-serif;
+    }
+
+    main {
+      display: grid;
+      gap: 48px;
+      padding: 32px;
+    }
+
+    .sheet-header {
+      max-width: 1080px;
+      color: var(--white);
+    }
+
+    .sheet-header p {
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 36px;
+    }
+
+    .ad-group {
+      display: grid;
+      gap: 18px;
+    }
+
+    .format-label {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .ad-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .ad-card {
+      position: relative;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      overflow: hidden;
+      width: min(100%, 540px);
+      aspect-ratio: 1;
+      background: var(--paper);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .ad-card.vertical {
+      aspect-ratio: 4 / 5;
+    }
+
+    .photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(24, 38, 53, 0.06) 0%, rgba(24, 38, 53, 0.52) 48%, rgba(24, 38, 53, 0.94) 100%);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      align-content: end;
+      gap: 18px;
+      min-height: 100%;
+      padding: 36px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .headline {
+      max-width: 440px;
+      margin: 0;
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.12;
+    }
+
+    .subhead {
+      max-width: 430px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 19px;
+      line-height: 1.42;
+    }
+
+    .brand-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 10px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .brand-name {
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .cta {
+      border-radius: 6px;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 11px 15px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .copy-panel {
+      width: min(100%, 540px);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffaf4;
+      padding: 20px;
+    }
+
+    .copy-panel h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .copy-panel p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .copy-panel dl {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 12px;
+      margin: 18px 0 0;
+      font-size: 14px;
+    }
+
+    .copy-panel dt {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .copy-panel dd {
+      margin: 0;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 18px;
+      }
+
+      .content {
+        padding: 26px;
+      }
+
+      .copy-panel dl {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="sheet-header">
+      <h1>Talley Wealth Meta Retargeting Ads</h1>
+      <p>Launch creative previews for a low-maintenance website visitor retargeting campaign. Use these as design direction, copy archive, and screenshot/export references for Meta Ads Manager.</p>
+    </header>
+
+    <section class="ad-group">
+      <div class="format-label">Ad 1 / Connected Planning</div>
+      <div class="ad-row">
+        <article class="ad-card vertical">
+          <img class="photo" src="/brands/talley-wealth/david-stephenee-office-conversation-018.jpg" alt="" />
+          <div class="photo-overlay"></div>
+          <div class="content">
+            <div class="eyebrow">Connected Planning</div>
+            <h2 class="headline">Planning that connects the pieces</h2>
+            <p class="subhead">Retirement, taxes, investments, business decisions, and family transitions should not run in separate boxes.</p>
+            <div class="brand-line">
+              <div class="brand-name">Talley Wealth</div>
+              <div class="cta">Learn More</div>
+            </div>
+          </div>
+        </article>
+        <aside class="copy-panel">
+          <h2>Connected Planning</h2>
+          <p>Financial decisions rarely happen in separate boxes. Retirement, taxes, investments, business decisions, and family transitions tend to affect each other. Talley Wealth helps bring those moving parts into one coordinated plan.</p>
+          <dl>
+            <dt>Headline</dt><dd>Planning that connects the pieces</dd>
+            <dt>Description</dt><dd>Tax-aware wealth planning in Johnson City.</dd>
+            <dt>CTA</dt><dd>Learn More</dd>
+            <dt>Destination</dt><dd>/how-we-work?utm_source=meta&amp;utm_medium=retargeting&amp;utm_campaign=evergreen_website_visitors&amp;utm_content=connected_planning</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ad-group">
+      <div class="format-label">Ad 2 / Retirement Transition</div>
+      <div class="ad-row">
+        <article class="ad-card">
+          <img class="photo" src="/brands/talley-wealth/david-whiteboard-strategy.jpg" alt="" />
+          <div class="photo-overlay"></div>
+          <div class="content">
+            <div class="eyebrow">Retirement Transition</div>
+            <h2 class="headline">Retirement planning with tax context</h2>
+            <p class="subhead">A steadier way to think through income, taxes, investments, Social Security, and the next chapter.</p>
+            <div class="brand-line">
+              <div class="brand-name">Talley Wealth</div>
+              <div class="cta">Learn More</div>
+            </div>
+          </div>
+        </article>
+        <aside class="copy-panel">
+          <h2>Retirement Transition</h2>
+          <p>The years around retirement can come with a lot of decisions at once: income, taxes, Social Security, investments, Medicare, estate details, and whether the plan still feels right. We help people slow that down and see the whole picture.</p>
+          <dl>
+            <dt>Headline</dt><dd>Retirement planning with tax context</dd>
+            <dt>Description</dt><dd>A steadier way to approach the transition.</dd>
+            <dt>CTA</dt><dd>Learn More</dd>
+            <dt>Destination</dt><dd>/retirement?utm_source=meta&amp;utm_medium=retargeting&amp;utm_campaign=evergreen_website_visitors&amp;utm_content=retirement_transition</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ad-group">
+      <div class="format-label">Ad 3 / Business Owner Planning</div>
+      <div class="ad-row">
+        <article class="ad-card vertical">
+          <img class="photo" src="/brands/talley-wealth/david-stephenee-standing-desk.jpg" alt="" />
+          <div class="photo-overlay"></div>
+          <div class="content">
+            <div class="eyebrow">Business Owners</div>
+            <h2 class="headline">Planning for business owners</h2>
+            <p class="subhead">Coordinate the personal and business side of income, tax, retirement, investments, and transition decisions.</p>
+            <div class="brand-line">
+              <div class="brand-name">Talley Wealth</div>
+              <div class="cta">Learn More</div>
+            </div>
+          </div>
+        </article>
+        <aside class="copy-panel">
+          <h2>Business Owner Planning</h2>
+          <p>For business owners, personal wealth decisions and business decisions are often the same conversation. Talley Wealth helps coordinate planning across income, taxes, retirement, investments, and the next chapter of the business.</p>
+          <dl>
+            <dt>Headline</dt><dd>Planning for business owners</dd>
+            <dt>Description</dt><dd>Coordinate the personal and business side.</dd>
+            <dt>CTA</dt><dd>Learn More</dd>
+            <dt>Destination</dt><dd>/business-owner-financial-planning?utm_source=meta&amp;utm_medium=retargeting&amp;utm_campaign=evergreen_website_visitors&amp;utm_content=business_owner</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

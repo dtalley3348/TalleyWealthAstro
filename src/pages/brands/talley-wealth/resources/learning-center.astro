@@ -14,6 +14,34 @@ const featuredSlugs = [
 const featuredArticles = featuredSlugs
   .map((slug) => getArticleBySlug(slug))
   .filter((article): article is (typeof wikiArticles)[number] => Boolean(article));
+
+const retirementQuestions = [
+  {
+    q: 'Can I actually stop working, and what changes if I wait?',
+    a: 'Retirement timing can change healthcare, Social Security, taxes, withdrawals, cash reserves, and flexibility in the first few years.',
+    href: '/learn/retirement-planning/when-can-i-afford-to-retire',
+  },
+  {
+    q: 'Where does my paycheck come from after my paycheck stops?',
+    a: 'The practical work is turning savings into a paycheck: which dollars come out first, which stay invested, and how much cash should stay available.',
+    href: '/learn/retirement-planning/when-can-i-afford-to-retire',
+  },
+  {
+    q: 'What should my 401(k) be doing now that retirement is close?',
+    a: 'The job changes from accumulation to income, guardrails, tax awareness, and protection against bad timing early in retirement.',
+    href: '/learn/investment-basics/how-should-i-invest-in-retirement',
+  },
+  {
+    q: 'What tax decisions should I see before they are gone?',
+    a: 'Roth conversions, charitable giving, withholding, HSA strategy, Social Security taxation, Medicare brackets, and withdrawal order are easier to evaluate before the calendar closes.',
+    href: '/learn/tax-planning/roth-conversion-should-i',
+  },
+  {
+    q: 'Would my spouse or family know what to do if I could not explain it?',
+    a: 'Estate planning is not only documents. Accounts, beneficiaries, assets, and the documents need to line up before the family has to rely on them.',
+    href: '/learn/estate-planning/what-estate-documents-do-i-need',
+  },
+];
 ---
 
 <TalleyPage
@@ -27,6 +55,35 @@ const featuredArticles = featuredSlugs
       <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
         Start with the question on your mind. The useful answer is often not a rule of thumb, but seeing how taxes, investments, retirement income, estate planning, and real life affect each other.
       </p>
+    </div>
+  </section>
+
+  <section class="bg-background">
+    <div class="section-container grid gap-12 border-b border-border/70 py-20 lg:grid-cols-[0.68fr_1fr] lg:items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Retirement starting point</p>
+        <h2 class="mt-4 max-w-xl font-serif text-3xl font-bold leading-tight text-primary md:text-5xl">Five questions that usually decide whether retirement feels ready.</h2>
+        <p class="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
+          If retirement is within sight, start here. Each question opens into a deeper answer, but the questions belong together because the decisions affect each other.
+        </p>
+        <a href="/financial-advisor-for-pre-retirees" class="mt-7 inline-flex text-sm font-bold text-accent transition hover:text-accent/80">
+          See how we help pre-retirees -&gt;
+        </a>
+      </div>
+      <ol class="divide-y divide-border">
+        {retirementQuestions.map((item, index) => (
+          <li>
+            <a href={item.href} class="group grid gap-4 py-5 first:pt-0 last:pb-0 sm:grid-cols-[48px_1fr]">
+              <span class="font-serif text-2xl font-bold leading-none text-accent/85">{String(index + 1).padStart(2, '0')}</span>
+              <span>
+                <span class="block font-serif text-xl font-bold leading-tight text-primary transition group-hover:text-accent">{item.q}</span>
+                <span class="mt-2 block text-sm leading-relaxed text-muted-foreground">{item.a}</span>
+                <span class="mt-3 inline-flex text-sm font-bold text-accent transition group-hover:translate-x-1">Read the deeper answer -&gt;</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 

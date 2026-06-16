@@ -54,6 +54,7 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
       recognitionTitle: null,
       recognitionIntro: null,
       recognitionCards: null,
+      decisionQuestions: null,
       bullets: decisionCluster.bulletPoints,
       sectionLabel: decisionCluster.sectionLabel,
       sectionTitle: decisionCluster.sectionTitle,
@@ -84,6 +85,7 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
       recognitionTitle: persona.recognitionTitle,
       recognitionIntro: persona.recognitionIntro,
       recognitionCards: persona.recognitionCards,
+      decisionQuestions: persona.decisionQuestions,
       bullets: persona.bulletPoints,
       sectionLabel: 'What changes',
       sectionTitle: persona.problemTitle,
@@ -145,7 +147,8 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
           recognitionTitle: null,
           recognitionIntro: null,
           recognitionCards: null,
-          bullets: localAudiencePage.bulletPoints,
+          decisionQuestions: null,
+      bullets: localAudiencePage.bulletPoints,
           sectionLabel: localAudiencePage.sectionLabel,
           sectionTitle: localAudiencePage.sectionTitle,
           sectionBody: localAudiencePage.sectionBody,
@@ -175,7 +178,8 @@ const page = seoRoute.type === 'decision-cluster' && decisionCluster
           recognitionTitle: null,
           recognitionIntro: null,
           recognitionCards: null,
-          bullets: city.bulletPoints,
+          decisionQuestions: null,
+      bullets: city.bulletPoints,
           sectionLabel: city.cityPage?.sectionLabel ?? 'Why people reach out',
           sectionTitle: city.cityPage?.sectionTitle ?? 'The local details matter when they change the decision.',
           sectionBody: city.cityPage?.sectionBody ?? [
@@ -599,6 +603,31 @@ const pageChrome = seoRoute.type === 'decision-cluster'
             </article>
           ))}
         </div>
+      </div>
+    </section>
+  )}
+
+  {page.decisionQuestions && (
+    <section class="bg-background">
+      <div class="section-container grid gap-12 border-b border-border/70 py-20 lg:grid-cols-[0.68fr_1fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.decisionQuestions.eyebrow}</p>
+          <h2 class="mt-4 max-w-xl font-serif text-3xl font-bold leading-tight text-primary md:text-5xl">{page.decisionQuestions.title}</h2>
+          <p class="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">{page.decisionQuestions.intro}</p>
+        </div>
+        <ol class="divide-y divide-border">
+          {page.decisionQuestions.questions.map((item, index) => (
+            <li>
+              <div class="grid gap-4 py-5 first:pt-0 last:pb-0 sm:grid-cols-[48px_1fr]">
+                <span class="font-serif text-2xl font-bold leading-none text-accent/85">{String(index + 1).padStart(2, '0')}</span>
+                <span>
+                  <span class="block font-serif text-xl font-bold leading-tight text-primary">{item.q}</span>
+                  <span class="mt-2 block text-sm leading-relaxed text-muted-foreground">{item.a}</span>
+                </span>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )}

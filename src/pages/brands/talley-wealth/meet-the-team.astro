@@ -9,7 +9,7 @@ const teamMembers = [
     role: 'Founder & Lead Advisor',
     image: '/brands/talley-wealth/david-talley.webp',
     bio: [
-      "David leads Talley Wealth with a calm, practical approach that helps people make sense of life's biggest financial decisions. He believes good planning should feel clear, connected, and stress-free.",
+      "David leads the strategy and advice at Talley Wealth: recommendations, tax planning, investment alignment, and the major decisions that shape the work. His role is to help clients understand the tradeoffs clearly enough to make confident decisions.",
       'A Johnson City native, David combines more than a decade of experience in wealth and tax strategy with a genuine love for helping others build confidence in their financial lives. Outside the office, he enjoys golf, time outdoors with his family, and good books that challenge how he thinks.',
     ],
   },
@@ -18,16 +18,8 @@ const teamMembers = [
     role: 'Practice Manager',
     image: '/brands/talley-wealth/stephenee-carberry.webp',
     bio: [
-      "Stephenee joined Talley Wealth in 2024, bringing with her a background in Business Management and a growing expertise in the financial industry. She's known for her genuine dedication to helping others and takes pride in creating an experience that leaves every client feeling clear and confident about their next steps.",
-      "Outside of work, Stephenee enjoys time with her husband, her high school sweetheart, and rarely misses a Tennessee football game (Go Vols!). She's happiest during the summer months, loves to travel, and is steadily working her way through a very long bucket list of destinations.",
-    ],
-  },
-  {
-    name: 'Daisy',
-    role: 'Chief of Morale',
-    image: '/brands/talley-wealth/daisy.webp',
-    bio: [
-      "Daisy keeps everyone at the office smiling. Whether she's greeting visitors, curling up under a desk, or reminding the team it's time for a break, she brings energy and warmth to every day. Clients know her as the friendly face that makes financial planning feel just a little lighter.",
+      "Stephenee helps keep the planning experience organized and responsive between meetings. She is often the best place to begin when clients have a question, need to schedule time, are sending documents, or want to understand what happens next.",
+      "Originally from Johnson City and now based in Scottsdale, Arizona, Stephenee brings warmth, organization, and follow-through to the relationship. Her work helps clients feel that the details are being handled and the next step is clear.",
     ],
   },
 ];
@@ -36,19 +28,40 @@ const credentials = [
   { abbr: 'CFP®', full: 'Certified Financial Planner' },
   { abbr: 'ChFC®', full: 'Chartered Financial Consultant' },
   { abbr: 'EA', full: 'Enrolled Agent' },
+  { abbr: 'FPQP', full: 'Financial Paraplanner Qualified Professional' },
 ];
+
 ---
 
 <TalleyPage
-  title="Our Team | Talley Wealth Financial Advisors"
-  description="Meet the Talley Wealth team: experienced financial professionals dedicated to helping Tri-Cities families achieve financial clarity."
+  title="Meet the Team | Talley Wealth"
+  description="Meet David Talley and Stephenee Carberry, the Talley Wealth team helping clients receive thoughtful advice and a well-run planning experience."
   ogImage="/brands/talley-wealth/hero-team-meeting.jpg"
 >
   <PageHero
     label="Our Team"
-    title="Meet the People Behind Talley Wealth"
-    description="A small team dedicated to helping you find clarity in your financial life."
+    title="Meet the Team"
+    description="A small team built around thoughtful advice, careful follow-through, and a planning relationship that feels personal and well run."
   />
+
+  <section class="bg-background">
+    <div class="section-container py-24">
+      <div class="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[0.72fr_1fr]">
+        <div data-reveal="left">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">How the relationship works</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Small on purpose.</h2>
+        </div>
+        <div class="space-y-5 text-lg leading-relaxed text-muted-foreground" data-reveal="right">
+          <p>
+            Talley Wealth is not built like a large advisory office where clients move from person to person and hope the details stay connected. The team is intentionally small so the work can stay personal, thoughtful, and easier to keep track of.
+          </p>
+          <p>
+            David leads the strategy and advice. Stephenee helps make sure the experience around that advice is clear, organized, and responsive. That combination is what lets a small firm feel personal without feeling improvised.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="bg-card">
     <div class="section-container py-24">
@@ -74,17 +87,34 @@ const credentials = [
     </div>
   </section>
 
+  <section class="bg-card">
+    <div class="section-container pb-24">
+      <div class="mx-auto flex max-w-3xl flex-col items-center gap-6 border-t border-border pt-10 text-center md:flex-row md:items-center md:text-left" data-reveal>
+        <div class="w-28 flex-shrink-0 overflow-hidden rounded-xl bg-background p-1 shadow-elegant md:w-32">
+          <img decoding="async" src="/brands/talley-wealth/daisy.webp" alt="Daisy at the Talley Wealth office" class="aspect-[2/3] h-full w-full rounded-lg object-contain" loading="lazy" />
+        </div>
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Around the office</p>
+          <h2 class="mt-2 font-serif text-2xl font-bold text-primary">You may also meet Daisy.</h2>
+          <p class="mt-3 leading-relaxed text-muted-foreground">
+            Daisy is often nearby in the Johnson City office, usually ready to greet visitors or settle into a quiet spot while the planning work happens.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-background">
     <div class="section-container py-24">
       <div class="mx-auto max-w-3xl text-center">
         <div data-reveal>
           <h2 class="font-serif text-3xl font-bold text-primary">Professional Credentials</h2>
           <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Our team holds respected professional designations and maintains ongoing education to serve you better.
+            Credentials are not a substitute for good advice or good service, but they matter. They reflect ongoing education and a shared responsibility to keep the work careful, current, and useful.
           </p>
         </div>
 
-        <div class="mt-12 grid grid-cols-2 gap-6 md:grid-cols-3">
+        <div class="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
           {credentials.map((cred) => (
             <article class="rounded-lg border border-border bg-card p-6 text-center shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg" data-reveal>
               <p class="font-serif text-2xl font-bold text-accent">{cred.abbr}</p>
@@ -101,7 +131,7 @@ const credentials = [
       <div class="mx-auto max-w-3xl text-center" data-reveal>
         <h2 class="font-serif text-3xl font-bold text-primary">Our Fiduciary Commitment</h2>
         <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
-          As fiduciary advisors, we are legally and ethically bound to act in your best interest at all times. Most of our clients pay a clear, flat fee, and we always provide full transparency about how we're compensated, ensuring our advice is never conflicted.
+          When providing fiduciary advice, we are legally and ethically bound to act in your best interest. We also explain pricing and compensation before you decide whether to move forward, so the business side of the relationship is clear from the beginning.
         </p>
       </div>
     </div>

@@ -219,6 +219,15 @@ export interface PersonaData {
     title: string;
     body: string;
   }>;
+  decisionQuestions?: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    questions: Array<{
+      q: string;
+      a: string;
+    }>;
+  };
   problemTitle: string;
   problemDescription: string;
   problemDetail: string;

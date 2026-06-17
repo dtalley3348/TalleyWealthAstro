@@ -12,9 +12,15 @@ const linkMap: Record<string, InternalLink[]> = {
   retirement: [
     { label: 'Retirement Planning', path: '/services/retirement-planning' },
     { label: 'Financial Advisor for Pre-Retirees', path: '/financial-advisor-for-pre-retirees' },
+    { label: 'Roth Conversion Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
+  ],
+  roth: [
+    { label: 'Roth Conversion Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
+    { label: 'Financial Advisor for Pre-Retirees', path: '/financial-advisor-for-pre-retirees' },
   ],
   tax: [
     { label: 'Tax Planning', path: '/services/tax-planning' },
+    { label: 'Roth Conversion Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
     { label: 'Financial Advisor in Johnson City, TN', path: '/financial-advisor-johnson-city-tn' },
   ],
   business: [

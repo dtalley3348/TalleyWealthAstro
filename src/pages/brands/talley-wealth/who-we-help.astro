@@ -5,16 +5,22 @@ import GoogleReviewsProof from '../../../components/talley-wealth/GoogleReviewsP
 
 const primaryQuestions = [
   {
-    question: '"I am close to retirement, but I do not know which accounts to use first."',
-    detail: "Retirement is close enough to feel real. Now the questions are about income, taxes, Social Security, Medicare, Roth conversions, and whether the plan still works if markets cooperate less than expected.",
+    question: '"Retirement is close enough that I need more than a rough answer."',
+    detail: "Now the questions are about income, taxes, Social Security, Medicare, Roth conversions, account sequencing, and whether the plan still works if markets cooperate less than expected.",
     href: '/financial-advisor-for-pre-retirees',
-    label: 'Retirement planning',
+    label: 'Tax-smart retirement planning',
   },
   {
-    question: "\"My business is profitable, but I'm not sure the tax strategy is keeping up.\"",
-    detail: "The business is working. The personal plan may not be. Owner pay, retirement plan design, entity structure, cash flow, and eventual transition decisions all start to matter more.",
+    question: "\"The business is profitable, but I'm not sure the owner plan is keeping up.\"",
+    detail: "The business is working. The personal plan may not be. Owner pay, retirement plan design, entity structure, cash flow, tax strategy, and eventual transition decisions all start to matter more.",
     href: '/financial-advisor-for-business-owners',
-    label: 'Business owners and professionals',
+    label: 'Business owner profit-to-wealth planning',
+  },
+  {
+    question: '"I keep hearing about Roth conversions, but I do not know what to actually do."',
+    detail: "The Roth question is not just whether conversions are good. It is whether the timing, tax bracket, Medicare threshold, RMD pressure, cash flow, and estate goals make the conversion worth doing now.",
+    href: '/roth-conversions-before-retirement-tri-cities-tn',
+    label: 'Roth conversion and tax-window planning',
   },
 ];
 
@@ -33,7 +39,7 @@ const secondaryQuestions = [
   },
   {
     question: "\"My employer benefits are valuable, but I don't know how they fit into retirement.\"",
-    detail: "A good benefits package can still create decisions that are too connected to handle casually. Pension choices, 401(k), deferred compensation, stock, taxes, and timing need to be modeled together.",
+    detail: "A good benefits package can still create decisions with too many side effects to handle casually. Pension choices, 401(k), deferred compensation, stock, taxes, and timing need to be modeled together.",
     href: '/financial-advisor-for-kingsport-employer-benefits',
     label: 'Kingsport employer-benefit planning',
   },
@@ -47,14 +53,19 @@ const secondaryQuestions = [
 
 const audiencePaths = [
   {
-    title: 'Nearing retirement',
-    description: 'You are close enough that the decisions are no longer theoretical: when to stop working, claim Social Security, draw from accounts, convert to Roth, and avoid tax surprises.',
+    title: 'Tax-smart retirement planning',
+    description: 'For the five years before and after retirement, when income, taxes, Medicare, Social Security, estate details, and investments all start changing at once.',
     href: '/financial-advisor-for-pre-retirees',
   },
   {
-    title: 'Business owners with tax complexity',
-    description: 'The business is doing well. Now taxes, owner pay, retirement plan design, cash flow, and a possible future sale need more than scattered decisions.',
+    title: 'Business owner profit-to-wealth planning',
+    description: 'For owners whose business is working, but whose tax strategy, owner pay, retirement plan, reserves, and personal wealth plan need to catch up.',
     href: '/financial-advisor-for-business-owners',
+  },
+  {
+    title: 'Roth conversion and retirement tax windows',
+    description: 'For households with meaningful pre-tax retirement balances who need a paced Roth conversion plan before RMDs, Medicare thresholds, and future tax brackets reduce flexibility.',
+    href: '/roth-conversions-before-retirement-tri-cities-tn',
   },
   {
     title: 'Executives and professionals with equity comp',
@@ -81,8 +92,9 @@ const audiencePaths = [
 const reachOutMoments = [
   'Retirement gets close enough to put a date on it.',
   'A business starts producing enough profit that taxes feel different.',
+  'Roth conversions, RMDs, Medicare thresholds, or withdrawal timing move from idea to decision.',
   'An inheritance, power of attorney role, or family transition puts new decisions in front of you.',
-  'Employer benefits, stock, deferred comp, pension, or rollover decisions become too connected to handle casually.',
+  'Employer benefits, stock, deferred comp, pension, or rollover decisions become too layered to handle casually.',
   'You realize investment management alone is not answering the questions that matter most.',
 ];
 
@@ -90,44 +102,44 @@ const notFit = [
   'You only need a quick second opinion on one isolated decision.',
   'You want to pick your own investments and simply need a place to hold accounts.',
   'You are looking for market predictions or stock picks.',
-  'Your financial life is simple enough that coordinated planning would be more depth than you need.',
+  'Your financial life is simple enough that deeper planning would be more depth than you need.',
   'You are not comfortable sharing tax returns, estate documents, benefits details, and the full financial picture.',
 ];
 ---
 
 <TalleyPage
-  title="Who We Help | Talley Wealth Financial Planning"
-  description="Planning for near-retirees and business owners first, with specific entry points for executives, healthcare professionals, inherited wealth, and employer-benefit decisions."
+  title="Planning Focus | Talley Wealth Financial Planning"
+  description="Tax-smart retirement planning, business owner profit-to-wealth planning, Roth conversion tax-window planning, and other situations where deeper planning may fit."
 >
   <section class="bg-muted/35">
     <div class="section-container py-20 text-center">
       <div class="mb-6 flex items-center justify-center gap-3">
         <span class="gold-line"></span>
-        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Who this is for</p>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning Focus</p>
       </div>
       <h1 class="mx-auto max-w-5xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl">
-        Two main paths. One connected way of thinking.
+        Three places our work usually has the most leverage.
       </h1>
       <p class="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-        Talley Wealth is primarily built around households nearing retirement and business owners with tax and strategy questions. Other situations can still fit, but these are the two patterns where our planning, tax, and investment work most often has the greatest leverage.
+        Talley Wealth is most visibly built around tax-smart retirement planning, business-owner profit-to-wealth planning, and Roth conversion or retirement tax-window decisions. Other situations can still fit when the stakes justify this level of planning.
       </p>
     </div>
   </section>
 
-  <section class="bg-card py-24">
+  <section class="bg-card py-20">
     <div class="section-container">
       <div class="mx-auto max-w-3xl text-center">
         <h2 class="font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">
-          Start with the two lanes we are built around.
+          Start with the decisions we are built around.
         </h2>
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
-          These are not rigid boxes. They are the most common reasons people realize the retirement, tax, investment, and business decisions need one clear strategy.
+          These are not rigid boxes. They are the most common reasons people realize the old way of handling the decisions is getting too light.
         </p>
       </div>
 
-      <div class="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2">
-        {audiencePaths.slice(0, 2).map((item) => (
-          <a href={item.href} class="group flex h-full flex-col rounded-lg border border-border/40 bg-background p-8 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
+      <div class="mx-auto mt-12 grid max-w-6xl gap-5 md:grid-cols-3">
+        {audiencePaths.slice(0, 3).map((item) => (
+          <a href={item.href} class="group flex h-full flex-col rounded-lg border border-border/40 bg-background p-6 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg md:p-5 lg:p-8">
             <h3 class="font-serif text-xl font-bold text-primary">{item.title}</h3>
             <p class="mt-3 flex-1 leading-relaxed text-muted-foreground">{item.description}</p>
             <span class="mt-5 inline-flex items-center gap-1 text-sm font-bold text-accent transition group-hover:gap-2">
@@ -139,12 +151,12 @@ const notFit = [
       </div>
 
       <div class="mx-auto mt-10 max-w-5xl rounded-lg border border-border/40 bg-background p-6">
-        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">Specific entry points into the same planning system</p>
+        <p class="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">Other situations can still fit</p>
         <p class="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
-          These are not separate markets competing for attention. They are common ways people arrive when a specific decision needs to be connected to the broader plan.
+          These are not separate markets competing for attention. They are common ways people arrive when a specific decision is big enough to affect taxes, investments, benefits, estate details, or timing.
         </p>
         <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {audiencePaths.slice(2).map((item) => (
+          {audiencePaths.slice(3).map((item) => (
             <a href={item.href} class="group rounded-md border border-border/40 bg-card p-4 transition hover:border-accent/50">
               <h3 class="font-serif text-base font-bold text-primary">{item.title}</h3>
               <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
@@ -155,16 +167,16 @@ const notFit = [
     </div>
   </section>
 
-  <section class="bg-background py-24">
+  <section class="bg-background py-20">
     <div class="section-container">
-      <div class="mx-auto mb-16 max-w-3xl text-center">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
         <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">Questions that sound more like real life.</h2>
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
-          The first two are the center of gravity. The others are specific entry points when the decision needs to be connected to taxes, investments, benefits, estate details, or timing.
+          The first three are the center of gravity. The others are specific entry points when the decision is too expensive or too consequential to wing.
         </p>
       </div>
 
-      <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-3">
         {primaryQuestions.map((item) => (
           <article class="flex h-full flex-col rounded-lg border border-border/40 bg-card p-8 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <p class="font-serif text-lg font-bold italic text-primary">{item.question}</p>
@@ -195,9 +207,9 @@ const notFit = [
   <section class="bg-card py-24">
     <div class="section-container">
       <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div>
-          <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">People usually reach out when something changes.</h2>
-          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-primary md:text-4xl">People usually reach out when something changes.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
           Sometimes the change is obvious. Sometimes it is just a quiet realization that the old way of handling money questions feels too light for the next chapter.
           </p>
         </div>
@@ -218,11 +230,11 @@ const notFit = [
   <section class="bg-background py-24">
     <div class="section-container">
       <div class="mx-auto max-w-3xl">
-        <h2 class="text-center font-serif text-3xl font-bold text-primary md:text-4xl">Different situations. Same underlying problem.</h2>
+        <h2 class="text-center font-serif text-3xl font-bold text-primary md:text-4xl">The fit is less about labels than decision depth.</h2>
         <div class="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p>The details change from person to person. A retiring couple may be focused on Roth conversions, Medicare brackets, and withdrawal timing. A business owner may be focused on tax strategy, owner compensation, and a possible sale.</p>
           <p>But the risk is often the same: one advisor sees the investments, another sees the tax return, another drafted the estate documents, and the client is left trying to understand how those decisions interact.</p>
-          <p>That is what Keystone is built to handle. Not to add more products or more accounts, but to give you one integrated view of the plan and the decisions that need to be made next.</p>
+          <p>That is what Keystone is built to handle. Not to add more products or more accounts, but to put the major decisions in order and make the next steps clear.</p>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 ## How To Prioritize Keywords
 Score each opportunity by:
 1. Buyer intent.
-2. Fit with the two primary lanes: near-retirees/retirement transition and business owners with tax/strategy complexity.
+2. Fit with the public focus: tax-smart retirement planning, business-owner profit-to-wealth planning, and Roth conversion or retirement tax-window planning.
 3. Local priority.
 4. Ability to differentiate with planning + tax + investment coordination.
 5. Compliance-safe ability to answer clearly.
@@ -14,6 +14,7 @@ Flagship persona pages:
 
 - /financial-advisor-for-pre-retirees
 - /financial-advisor-for-business-owners
+- /roth-conversions-before-retirement-tri-cities-tn
 
 Support/search persona pages:
 
@@ -22,7 +23,7 @@ Support/search persona pages:
 - /financial-advisor-for-inherited-wealth
 - /financial-advisor-for-kingsport-employer-benefits
 
-Keep support pages indexed when they are strong, but use internal links and core-site copy to reinforce the two flagship pages first.
+Keep support pages indexed when they are strong, but use internal links and core-site copy to reinforce the retirement, business-owner, and Roth/tax-window doors first.
 
 ## Tier 1: Johnson City
 Primary pages:

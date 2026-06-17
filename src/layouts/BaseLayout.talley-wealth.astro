@@ -101,13 +101,28 @@ const jsonLdArray = [...defaultJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : json
     {/* Site-level body-start injection (GTM noscript fallback) */}
     {site?.bodyStartInject && <Fragment set:html={site.bodyStartInject} />}
     <slot name="header" />
-    <main id="main" class={heroTransparent ? '' : 'pt-28 sm:pt-32'}>
+    <main id="main" class={heroTransparent ? '' : 'tw-page-main'}>
       <slot />
     </main>
     <slot name="footer" />
 
     <!-- Global scroll-reveal: content visible by default; JS opts into the fade/slide on intersection. -->
     <style is:global>
+      html[data-tenant="talley-wealth"] {
+        --tw-fixed-header-offset: 6.5rem;
+        scroll-padding-top: calc(var(--tw-fixed-header-offset) + 1rem);
+      }
+      @media (min-width: 640px) {
+        html[data-tenant="talley-wealth"] {
+          --tw-fixed-header-offset: 8.75rem;
+        }
+      }
+      html[data-tenant="talley-wealth"] body:not(.has-transparent-header) .tw-page-main {
+        padding-top: var(--tw-fixed-header-offset);
+      }
+      html[data-tenant="talley-wealth"] [id] {
+        scroll-margin-top: calc(var(--tw-fixed-header-offset) + 1rem);
+      }
       html[data-tenant="talley-wealth"] body.js-reveal [data-reveal]:not(.is-in) {
         opacity: 0;
         transform: translateY(20px);

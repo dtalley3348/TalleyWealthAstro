@@ -72,13 +72,13 @@ export const personas: Record<string, PersonaData> = {
     name: 'Business Owners',
     slug: 'business-owners',
     label: 'For Business Owners',
-    heroTitle: 'When the business is working, the money decisions get bigger.',
+    heroTitle: 'Business owner planning for turning profit into personal wealth.',
     heroDescription: "Most owners do not need someone to explain that taxes matter. They need help deciding what to do next: how much to pay themselves, what to keep in the business, what to move into personal wealth, and which tax ideas are actually worth the trouble.",
     heroImage: '/brands/talley-wealth/david-whiteboard-strategy.jpg',
     heroImageAlt: 'David Talley explaining financial planning strategy at a whiteboard',
     heroImagePosition: 'center 34%',
     recognitionTitle: 'The business can be healthy while the owner plan is still too improvised.',
-    recognitionIntro: 'Business-owner planning is one of the two primary lanes Talley Wealth is built around. This page is for the owner who wants the business, tax return, personal balance sheet, retirement plan, and family goals in the same conversation.',
+    recognitionIntro: 'Business-owner profit-to-wealth planning is one of the core client situations Talley Wealth is built around. This page is for the owner who wants the business, tax return, personal balance sheet, retirement plan, and family goals in the same conversation.',
     recognitionCards: [
       {
         title: 'The tax bill keeps getting your attention',
@@ -124,7 +124,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     ctaTitle: 'Bring the business question. We will look at the whole picture.',
     ctaDescription: "Schedule a 15-minute Explore Call. We will talk about what is happening in the business, what feels unresolved, and whether Keystone is the right way to coordinate the tax and planning work.",
-    metaTitle: 'Financial Advisor for Business Owners | Talley Wealth',
+    metaTitle: 'Business Owner Profit-to-Wealth Planning | Talley Wealth',
     metaDescription: 'Tax strategy and financial planning for business owners coordinating compensation, retirement plans, entity decisions, exit planning, and personal wealth.',
     faqs: [
       {
@@ -407,13 +407,13 @@ export const personas: Record<string, PersonaData> = {
     name: 'Pre-Retirees (55-65)',
     slug: 'pre-retirees',
     label: 'For Pre-Retirees',
-    heroTitle: 'Retirement planning for the years when it stops being theoretical.',
+    heroTitle: 'Tax-smart retirement planning for the years when it stops being theoretical.',
     heroDescription: "At some point retirement stops being a someday idea and becomes a decision with a date attached to it. You want to know what happens if you stop working, what changes if you wait, and which tax, investment, healthcare, and lifestyle choices matter before the window closes.",
     heroImage: '/brands/talley-wealth/david-conversation.jpg',
     heroImageAlt: 'David Talley in conversation at the Talley Wealth office',
     heroImagePosition: 'center center',
     recognitionTitle: 'Retirement is close enough that a rough answer is no longer satisfying.',
-    recognitionIntro: 'Retirement transition is one of the two primary lanes Talley Wealth is built around. This page is for the person who has saved, worked, and done many things right, but now wants to see how the pieces behave together.',
+    recognitionIntro: 'Tax-smart retirement planning is one of the core client situations Talley Wealth is built around. This page is for the person who has saved, worked, and done many things right, but now wants to see how the pieces behave together.',
     recognitionCards: [
       {
         title: 'You want to know what the date changes',
@@ -457,7 +457,7 @@ export const personas: Record<string, PersonaData> = {
     },
     problemTitle: 'The closer retirement gets, the more the answer depends on sequencing.',
     problemDescription: "The question is rarely just, \"Do I have enough?\" It is which account to use first, when to claim Social Security, how to bridge healthcare, whether Roth conversions help, how much risk the portfolio should carry, and what tax surprises can be handled before they arrive.",
-    problemDetail: "Talley Wealth helps pre-retirees move from a rough retirement guess to a coordinated plan. The biggest lever may not be working two more years. It may be a tax strategy, withdrawal sequence, investment change, Roth conversion window, or a clearer understanding of what retirement actually needs to fund.",
+    problemDetail: "Talley Wealth helps pre-retirees move from a rough retirement guess to a year-by-year plan. The biggest lever may not be working two more years. It may be a tax strategy, withdrawal sequence, investment change, Roth conversion window, or a clearer understanding of what retirement actually needs to fund.",
     bulletPoints: [
       'Retirement income modeling across spending, taxes, healthcare, and inflation',
       'Social Security timing and spousal claiming analysis',
@@ -487,7 +487,7 @@ export const personas: Record<string, PersonaData> = {
     ],
     ctaTitle: 'Retirement is too important for a rough guess.',
     ctaDescription: "Schedule a 15-minute Explore Call. We will talk about your timeline, what feels unresolved, and whether Keystone is the right way to build the full retirement picture.",
-    metaTitle: 'Financial Advisor for Pre-Retirees (55-65) | Talley Wealth',
+    metaTitle: 'Tax-Smart Retirement Planning Before Retirement | Talley Wealth',
     metaDescription: 'Pre-retirement planning for ages 55-65: income, taxes, Roth conversions, Social Security timing, healthcare, investments, and lifestyle decisions.',
     faqs: [
       {

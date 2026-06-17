@@ -21,7 +21,7 @@ const calendlyUrl = 'https://calendly.com/talleywealth/explore-call?hide_event_t
       {description && <p>{description}</p>}
     </div>
   )}
-  <div class="calendly-inline-widget" data-url={calendlyUrl} style="min-width:320px;height:700px;"></div>
+  <div class="calendly-inline-widget" data-url={calendlyUrl} style="min-width:0;width:100%;height:700px;"></div>
 </div>
 
 <script is:inline type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -53,5 +53,9 @@ const calendlyUrl = 'https://calendly.com/talleywealth/explore-call?hide_event_t
     color: var(--color-muted-foreground);
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  html[data-tenant="talley-wealth"] .tw-calendly-embed .calendly-inline-widget {
+    max-width: 100%;
   }
 </style>

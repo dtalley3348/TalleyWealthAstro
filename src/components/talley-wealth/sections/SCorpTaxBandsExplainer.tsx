@@ -39,10 +39,10 @@ export const TAX_FACTS = {
   mfjIncomeBrackets: [
     { upTo: 24_800, rate: 0.1 },
     { upTo: 100_800, rate: 0.12 },
-    { upTo: 214_900, rate: 0.22 },
-    { upTo: 410_300, rate: 0.24 },
-    { upTo: 520_900, rate: 0.32 },
-    { upTo: 782_000, rate: 0.35 },
+    { upTo: 211_400, rate: 0.22 },
+    { upTo: 403_550, rate: 0.24 },
+    { upTo: 512_450, rate: 0.32 },
+    { upTo: 768_700, rate: 0.35 },
     { upTo: Number.POSITIVE_INFINITY, rate: 0.37 },
   ],
   /** Tennessee franchise tax: 0.25% of Tennessee net worth. */
@@ -145,11 +145,11 @@ function DollarSlider({
   const fillPct = ((value - min) / (max - min)) * 100;
   return (
     <div>
-      <div className="flex items-baseline justify-between gap-3">
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
         <label htmlFor={id} className="text-sm font-semibold text-foreground">
           {label}
         </label>
-        <output htmlFor={id} className="text-sm font-semibold tabular-nums text-accent">
+        <output htmlFor={id} className="text-sm font-semibold tabular-nums text-accent sm:text-right">
           {usd(value)}
         </output>
       </div>
@@ -863,13 +863,16 @@ const SCOPED_CSS = `
   appearance: none;
   display: block;
   width: 100%;
-  height: 4px;
+  min-height: 2.75rem;
   border-radius: 2px;
   background: linear-gradient(
     to right,
     var(--color-accent) var(--fill, 0%),
     var(--color-border) var(--fill, 0%)
   );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
   cursor: pointer;
 }
 .scorp-tool .scorp-range::-webkit-slider-thumb {

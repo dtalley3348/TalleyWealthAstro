@@ -12,21 +12,22 @@ Use this hierarchy whenever sources conflict.
 
 ## Target-Market Hierarchy
 
-Talley Wealth helps people make clearer decisions when retirement, taxes, investments, and business strategy all start affecting each other.
+Talley Wealth helps people make clearer tax, retirement, investment, and business-owner decisions when the old way of handling each piece separately starts feeling too light.
 
 Use layered audience architecture, not one flat market list:
 
-- Public center of gravity: two primary lanes.
+- Public center of gravity: two core client situations plus one high-intent specialty door.
 - Operational service rhythms: retirement/retirees, business owners, and high earners/accumulators.
 - Entry points: specific search, referral, guide, seminar, and campaign pages nested under a planning lens.
 - Keystone tiers: engagement scope and pricing language, not target-market identity.
 
-Use two primary lanes unless David explicitly changes the strategy:
+Use this public front door unless David explicitly changes the strategy:
 
-1. Near-retirees and retirement-transition households, especially in Northeast Tennessee, usually with $1M-$5M in investable assets.
-2. Business owners with tax, cash-flow, owner-compensation, retirement-plan, entity, exit, and personal-wealth strategy questions.
+1. Tax-smart retirement planning for the five years before and after retirement, especially in Northeast Tennessee, usually with $1M-$5M in investable assets.
+2. Business owner planning for turning profit into personal wealth: tax, cash flow, owner compensation, retirement plans, entity, exit, and family-wealth strategy.
+3. Roth conversion and retirement tax-window planning as a high-intent specialty door for households with meaningful tax-deferred retirement balances.
 
-Secondary audiences remain legitimate but should not be presented as equal to the two primary lanes on the homepage or core conversion pages:
+Secondary audiences remain legitimate but should not be presented as equal public markets on the homepage or core conversion pages:
 
 - Executives with equity compensation.
 - Busy high earners such as physicians, attorneys, sales professionals, and other professionals who want capable delegation.
@@ -37,14 +38,15 @@ When sources conflict, preserve this hierarchy. Keep secondary audiences visible
 ## Public Language Rules
 
 - Current preferred homepage formulation:
-  - H1: "When the pieces of your financial life need one clear plan."
-  - Supporting line: "Talley Wealth helps people approaching retirement and business owners connect the tax, investment, income, and estate decisions that should not be handled separately."
-  - Near-retirement path card: "You are close enough to retirement that taxes, income, investments, Medicare, Social Security, and estate decisions all start to matter at the same time."
-  - Business-owner path card: "You have profit, tax questions, cash-flow decisions, and personal wealth goals, but no one clearly helping you think through all of it."
-- Lead with clearer decisions, connected decisions, tax-aware planning, plain-English strategy, and the way retirement, taxes, investments, and business decisions affect each other.
+  - H1: "Tax-smart planning for retirement, business owners, and Roth conversion windows."
+  - Supporting line: "Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversions, and the wealth they are trying to build."
+  - Retirement path: "Tax-Smart Retirement Planning"
+  - Business-owner path: "Business Owner Profit-to-Wealth Planning"
+  - Roth specialty path: "Roth Conversion + Retirement Tax Windows"
+- Lead with clearer decisions, tax-smart planning, plain-English strategy, and specific planning pressure around retirement dates, tax windows, owner pay, Roth conversions, Medicare, Social Security, cash flow, and investments.
 - Avoid using "piecemeal" as a primary phrase. Prefer "scattered," "handled in separate silos," "moving parts," or "decisions that affect each other."
 - Treat "coordination" as supporting language. Prospects usually feel tax pain, retirement uncertainty, business complexity, decision fatigue, or a desire for clarity before they ask for "coordination."
-- Do not imply Talley Wealth only serves the two primary lanes. Do make clear those are the main lanes the firm is built around.
+- Do not imply Talley Wealth only serves the three public doors. Do make clear those are the places where the firm is most visibly built to be useful.
 
 ## Client-Specific Facts
 

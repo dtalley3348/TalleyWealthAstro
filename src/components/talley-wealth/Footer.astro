@@ -8,6 +8,14 @@
 
 type FooterLink = { title: string; href: string; external?: boolean };
 
+const planningFocus = [
+  { title: 'Tax-Smart Retirement Planning', href: '/financial-advisor-for-pre-retirees' },
+  { title: 'Business Owner Profit-to-Wealth Planning', href: '/financial-advisor-for-business-owners' },
+  { title: 'Roth Conversion Planning', href: '/roth-conversions-before-retirement-tri-cities-tn' },
+  { title: 'Can I Retire Before 65?', href: '/can-i-retire-before-65-tri-cities-tn' },
+  { title: 'Other Planning Situations', href: '/who-we-help' },
+];
+
 const howWeWork = [
   { title: 'The Keystone Method™', href: '/how-we-work/keystone-method' },
   { title: 'What to Expect', href: '/how-we-work/what-to-expect' },
@@ -146,13 +154,13 @@ const year = new Date().getFullYear();
 
   <!-- Link columns -->
   <div class="section-container py-12">
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_repeat(4,minmax(0,1fr))]">
       <div class="lg:col-span-1">
         <div class="mb-6">
           <img decoding="async" src="/brands/talley-wealth/logo.webp" alt="Talley Wealth" class="h-10 w-auto"  loading="lazy" />
         </div>
         <p class="mb-6 text-sm leading-relaxed text-white/70">
-          Financial planning for clearer decisions when retirement, taxes, investments, and business strategy start affecting each other.
+          Planning for retirement tax windows, business-owner profit, Roth conversions, investments, and the decisions that should not be guessed at separately.
         </p>
         <div class="flex items-center gap-2 text-sm text-white/70">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -161,7 +169,18 @@ const year = new Date().getFullYear();
       </div>
 
       <div>
-        <h4 class="mb-5 font-serif font-bold">How We Work</h4>
+        <h4 class="mb-5 font-serif font-bold">Planning Focus</h4>
+        <ul class="space-y-2.5">
+          {planningFocus.map((item) => (
+            <li>
+              <a href={item.href} class="tw-footer-link">{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="mb-5 font-serif font-bold">Keystone Method</h4>
         <ul class="space-y-2.5">
           {howWeWork.map((item) => (
             <li>

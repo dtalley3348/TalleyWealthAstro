@@ -9,13 +9,13 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
       <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Planning Tools</p>
       <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">Start with the math. Then look at what the math leaves out.</h1>
       <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-        These tools are intentionally educational. Some are calculators and some are visual explainers. They are built to surface better questions about retirement income, taxes, timing, cash flow, and risk. A coordinated plan still has to connect those answers.
+        These tools are intentionally educational. Some are calculators and some are visual explainers. They are built to surface better questions about retirement income, taxes, timing, cash flow, and risk. A real plan still has to decide which answers matter, what comes first, and what tradeoffs are worth making.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#retirement-calculator" class="rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Retirement calculator</a>
-        <a href="#retirement-tax-tools" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Retirement tax tools</a>
-        <a href="/can-i-retire-before-65-tri-cities-tn" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Retire before 65</a>
-        <a href="#business-owner-tools" class="rounded-md border border-border bg-card px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">Business owner tools</a>
+        <a href="#retirement-calculator" class="inline-flex min-h-11 items-center rounded-md bg-accent px-4 py-3 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Retirement calculator</a>
+        <a href="#retirement-tax-tools" class="inline-flex min-h-11 items-center rounded-md border border-border bg-card px-4 py-3 text-sm font-bold text-primary transition hover:border-accent">Retirement tax tools</a>
+        <a href="/can-i-retire-before-65-tri-cities-tn" class="inline-flex min-h-11 items-center rounded-md border border-border bg-card px-4 py-3 text-sm font-bold text-primary transition hover:border-accent">Retire before 65</a>
+        <a href="#business-owner-tools" class="inline-flex min-h-11 items-center rounded-md border border-border bg-card px-4 py-3 text-sm font-bold text-primary transition hover:border-accent">Business owner tools</a>
       </div>
     </div>
   </section>
@@ -41,36 +41,36 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
           <div class="grid gap-4 md:grid-cols-2">
             <label class="grid gap-2 text-sm font-bold text-foreground">
               Current investable assets
-              <input name="assets" type="number" min="0" step="1000" value="1000000" class="rounded-md border border-border px-3 py-2 font-normal" />
+              <input name="assets" type="number" min="0" step="1000" value="1000000" class="min-h-11 rounded-md border border-border px-3 py-2 font-normal" />
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground">
               Years until retirement
-              <input name="years" type="number" min="0" max="50" value="7" class="rounded-md border border-border px-3 py-2 font-normal" />
+              <input name="years" type="number" min="0" max="50" value="7" class="min-h-11 rounded-md border border-border px-3 py-2 font-normal" />
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground">
               Monthly savings until retirement
-              <input name="savings" type="number" min="0" step="100" value="2500" class="rounded-md border border-border px-3 py-2 font-normal" />
+              <input name="savings" type="number" min="0" step="100" value="2500" class="min-h-11 rounded-md border border-border px-3 py-2 font-normal" />
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground">
               Expected annual return before retirement
-              <div class="grid grid-cols-[1fr_76px] gap-3">
-                <input name="return" type="range" min="0" max="10" step="0.25" value="5.5" class="w-full accent-[var(--color-accent)]" />
-                <output data-output="return" class="rounded-md border border-border bg-background px-3 py-2 text-center font-normal">5.5%</output>
+              <div class="grid grid-cols-[minmax(0,1fr)_4.75rem] gap-3">
+                <input name="return" type="range" min="0" max="10" step="0.25" value="5.5" class="min-h-11 w-full accent-[var(--color-accent)]" />
+                <output data-output="return" class="flex min-h-11 items-center justify-center rounded-md border border-border bg-background px-3 py-2 text-center font-normal">5.5%</output>
               </div>
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground">
               Monthly retirement spending goal
-              <input name="monthly" type="number" min="0" step="100" value="9000" class="rounded-md border border-border px-3 py-2 font-normal" />
+              <input name="monthly" type="number" min="0" step="100" value="9000" class="min-h-11 rounded-md border border-border px-3 py-2 font-normal" />
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground">
               Monthly Social Security / pension income
-              <input name="outsideIncome" type="number" min="0" step="100" value="4500" class="rounded-md border border-border px-3 py-2 font-normal" />
+              <input name="outsideIncome" type="number" min="0" step="100" value="4500" class="min-h-11 rounded-md border border-border px-3 py-2 font-normal" />
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground md:col-span-2">
               Starting withdrawal rate
-              <div class="grid grid-cols-[1fr_76px] gap-3">
-                <input name="withdrawal" type="range" min="2.5" max="6" step="0.25" value="4" class="w-full accent-[var(--color-accent)]" />
-                <output data-output="withdrawal" class="rounded-md border border-border bg-background px-3 py-2 text-center font-normal">4.0%</output>
+              <div class="grid grid-cols-[minmax(0,1fr)_4.75rem] gap-3">
+                <input name="withdrawal" type="range" min="2.5" max="6" step="0.25" value="4" class="min-h-11 w-full accent-[var(--color-accent)]" />
+                <output data-output="withdrawal" class="flex min-h-11 items-center justify-center rounded-md border border-border bg-background px-3 py-2 text-center font-normal">4.0%</output>
               </div>
             </label>
           </div>
@@ -78,15 +78,15 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
         <div class="mt-8 grid gap-4 md:grid-cols-3">
           <div class="rounded-lg bg-primary p-5 text-primary-foreground">
             <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Projected portfolio</p>
-            <p id="tw-projected" class="mt-3 font-serif text-3xl font-bold">$0</p>
+            <p id="tw-projected" class="mt-3 font-serif text-2xl font-bold leading-tight sm:text-3xl">$0</p>
           </div>
           <div class="rounded-lg border border-border bg-background p-5">
             <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Portfolio need</p>
-            <p id="tw-need" class="mt-3 font-serif text-3xl font-bold text-primary">$0</p>
+            <p id="tw-need" class="mt-3 font-serif text-2xl font-bold leading-tight text-primary sm:text-3xl">$0</p>
           </div>
           <div class="rounded-lg border border-border bg-background p-5">
             <p id="tw-gap-label" class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Surplus / gap</p>
-            <p id="tw-gap" class="mt-3 font-serif text-3xl font-bold text-primary">$0</p>
+            <p id="tw-gap" class="mt-3 font-serif text-2xl font-bold leading-tight text-primary sm:text-3xl">$0</p>
           </div>
         </div>
         <div class="mt-5 rounded-lg bg-muted/50 p-5">
@@ -127,7 +127,7 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
               <span class="text-xs font-normal text-muted-foreground">Portfolio value at retirement</span>
               <span class="grid grid-cols-[auto_1fr] items-center rounded-md border border-border bg-card shadow-sm focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20">
                 <span class="border-r border-border px-3 text-muted-foreground">$</span>
-                <input name="seqPortfolio" type="number" min="100000" step="25000" value="1000000" class="w-full border-0 bg-transparent px-3 py-2 font-normal outline-none" />
+                <input name="seqPortfolio" type="number" min="100000" step="25000" value="1000000" class="min-h-11 w-full border-0 bg-transparent px-3 py-2 font-normal outline-none" />
               </span>
             </label>
             <label class="grid gap-2 text-sm font-bold text-foreground">
@@ -135,24 +135,24 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
               <span class="text-xs font-normal text-muted-foreground">Amount withdrawn in year one</span>
               <span class="grid grid-cols-[auto_1fr] items-center rounded-md border border-border bg-card shadow-sm focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20">
                 <span class="border-r border-border px-3 text-muted-foreground">$</span>
-                <input name="seqWithdrawal" type="number" min="0" step="5000" value="50000" class="w-full border-0 bg-transparent px-3 py-2 font-normal outline-none" />
+                <input name="seqWithdrawal" type="number" min="0" step="5000" value="50000" class="min-h-11 w-full border-0 bg-transparent px-3 py-2 font-normal outline-none" />
               </span>
             </label>
             <div class="grid gap-2 text-sm font-bold text-foreground">
               Years shown
               <span class="text-xs font-normal text-muted-foreground">Fixed for this illustration</span>
-              <div class="rounded-md border border-border bg-muted/40 px-3 py-2 font-normal text-primary">30 years</div>
+              <div class="flex min-h-11 items-center rounded-md border border-border bg-muted/40 px-3 py-2 font-normal text-primary">30 years</div>
             </div>
           </div>
 
           <div class="mt-5 flex flex-wrap gap-3">
-            <button type="button" data-sequence-mode="steady" class="rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition hover:brightness-95">
+            <button type="button" data-sequence-mode="steady" class="min-h-11 rounded-md bg-accent px-4 py-3 text-sm font-bold text-accent-foreground transition hover:brightness-95">
               Steady 5% after inflation
             </button>
-            <button type="button" data-sequence-mode="bear" class="rounded-md border border-border bg-background px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">
+            <button type="button" data-sequence-mode="bear" class="min-h-11 rounded-md border border-border bg-background px-4 py-3 text-sm font-bold text-primary transition hover:border-accent">
               Retire into a bear market
             </button>
-            <button type="button" data-sequence-mode="bull" class="rounded-md border border-border bg-background px-4 py-2 text-sm font-bold text-primary transition hover:border-accent">
+            <button type="button" data-sequence-mode="bull" class="min-h-11 rounded-md border border-border bg-background px-4 py-3 text-sm font-bold text-primary transition hover:border-accent">
               Retire into a bull market
             </button>
           </div>
@@ -167,7 +167,7 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
                 <span id="tw-seq-legend" class="inline-flex items-center gap-2 text-primary"><span class="h-2 w-5 rounded-full bg-primary"></span> Selected path</span>
               </div>
             </div>
-            <svg id="tw-seq-chart" viewBox="0 0 720 340" role="img" aria-labelledby="tw-seq-title" class="h-auto w-full overflow-visible">
+            <svg id="tw-seq-chart" viewBox="0 0 720 340" role="img" aria-labelledby="tw-seq-title" class="h-auto w-full overflow-hidden">
               <g data-grid></g>
               <polyline data-line="scenario" fill="none" stroke="#243445" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></polyline>
               <g data-dots></g>
@@ -177,15 +177,15 @@ import CalendlyEmbed from '../../../components/talley-wealth/CalendlyEmbed.astro
           <div class="mt-5 grid gap-4 md:grid-cols-3">
             <div class="rounded-lg bg-primary p-5 text-primary-foreground">
               <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Ending portfolio</p>
-              <p id="tw-seq-ending" class="mt-3 font-serif text-3xl font-bold">$0</p>
+              <p id="tw-seq-ending" class="mt-3 font-serif text-2xl font-bold leading-tight sm:text-3xl">$0</p>
             </div>
             <div class="rounded-lg border border-border bg-background p-5">
               <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Lowest balance</p>
-              <p id="tw-seq-lowest" class="mt-3 font-serif text-3xl font-bold text-primary">$0</p>
+              <p id="tw-seq-lowest" class="mt-3 font-serif text-2xl font-bold leading-tight text-primary sm:text-3xl">$0</p>
             </div>
             <div class="rounded-lg border border-border bg-background p-5">
               <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Money lasts</p>
-              <p id="tw-seq-lasts" class="mt-3 font-serif text-3xl font-bold text-primary">30 years</p>
+              <p id="tw-seq-lasts" class="mt-3 font-serif text-2xl font-bold leading-tight text-primary sm:text-3xl">30 years</p>
             </div>
           </div>
 

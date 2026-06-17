@@ -61,7 +61,7 @@ Use these for video-led content, short-form prompts, repurposing transcripts, le
 - [Content Engine](./content-engine.md)
 - [Social Content Principles](./knowledge/social-content-principles.md)
 - [Talley Wealth Market Architecture](./marketing/talley-wealth-market-architecture.md)
-- [Two-Lane Marketing System](./marketing/two-lane-marketing-system.md)
+- [Core Marketing Focus System](./marketing/two-lane-marketing-system.md)
 - [Client Service Market Rhythm](./marketing/client-service-market-rhythm.md)
 - [Email Marketing Plan](./email-marketing-plan.md)
 - [Compliance Content Workflow](./compliance-content-workflow.md)

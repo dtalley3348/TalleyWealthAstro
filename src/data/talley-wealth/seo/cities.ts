@@ -381,7 +381,7 @@ export const cities: Record<string, CityData> = {
       approvedForIndex: true,
       score: 8,
       uniqueLocalDecision: 'Kingsport page focused on long-career benefit decisions, practical retirement timing, and owner-planning pressure.',
-      specificFit: 'Kingsport households and owners whose employer benefits, retirement timing, tax, or owner decisions need connected planning.',
+      specificFit: 'Kingsport households and owners whose employer benefits, retirement timing, tax, or owner decisions need deeper modeling.',
       specificNonFit: 'Someone seeking employer-specific benefit advice based only on an employer name.',
       proofStandard: 'Alludes to major-employer and long-career patterns without naming employers or implying affiliation.',
       reviewNotes: ['First-cluster hub page', 'No direct employer-name targeting', 'No fee-only language'],

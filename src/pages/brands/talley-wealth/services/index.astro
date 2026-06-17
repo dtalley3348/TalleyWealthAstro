@@ -6,37 +6,43 @@ const primaryServices = [
   {
     title: 'Financial Planning',
     href: '/services/financial-planning',
-    label: 'The full picture',
+    label: 'Integrated plan',
     body: 'For the questions that cannot be answered well by looking at one account, one tax return, or one projection.',
   },
   {
     title: 'Retirement Planning',
     href: '/services/retirement-planning',
-    label: 'Primary lane',
+    label: 'Retirement',
     body: 'For families trying to understand when retirement is realistic, how income will work, and what could change the answer.',
   },
   {
     title: 'Tax Planning',
     href: '/services/tax-planning',
-    label: 'Before the year is over',
+    label: 'Year-round tax',
     body: 'For business profit, Roth windows, capital gains, equity comp, retirement income, and other decisions that should not wait until filing season.',
+  },
+  {
+    title: 'Roth Conversion Planning',
+    href: '/roth-conversions-before-retirement-tri-cities-tn',
+    label: 'Roth windows',
+    body: 'For deciding whether conversions belong before retirement, after income drops, or before RMDs and Medicare thresholds tighten the window.',
   },
   {
     title: 'Investment Management',
     href: '/services/investment-management',
-    label: 'Built around the plan',
+    label: 'Portfolio',
     body: 'For portfolios that need to support retirement income, tax strategy, concentration risk, cash flow, and the life the money is meant to fund.',
   },
   {
     title: 'Business Owner Planning',
     href: '/services/business-owner-planning',
-    label: 'Primary lane',
+    label: 'Owner planning',
     body: 'For owners who want a thinking partner around tax strategy, owner pay, retirement plans, business cash flow, and money outside the company.',
   },
   {
     title: 'The Keystone Method™',
     href: '/how-we-work/keystone-method',
-    label: 'Where the work starts',
+    label: 'Keystone',
     body: 'The structured planning engagement where the scattered questions become a plan strong enough to guide what happens next.',
   },
 ];
@@ -64,24 +70,24 @@ const planningAreas = [
 
 <TalleyPage
   title="Services | Talley Wealth"
-  description="Retirement planning, business-owner planning, tax planning, investment management, and connected financial advice from Talley Wealth in Johnson City, TN."
+  description="Retirement planning, business-owner planning, Roth conversion planning, tax planning, and investment management from Talley Wealth in Johnson City, TN."
 >
   <section class="bg-muted/35">
-    <div class="section-container grid min-h-[620px] items-center gap-12 py-20 lg:grid-cols-[0.95fr_1fr]">
+    <div class="section-container grid items-center gap-10 py-14 md:grid-cols-[0.95fr_0.82fr] md:gap-8 md:py-14 lg:min-h-[620px] lg:grid-cols-[0.95fr_1fr] lg:py-20">
       <div>
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Services</p>
-        <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">
-          Advice for retirement and business decisions that need more than a quick answer.
+        <h1 class="mt-5 max-w-4xl font-serif text-4xl font-bold leading-tight text-primary md:text-4xl lg:text-5xl">
+          Planning for retirement, business owners, and Roth conversion windows.
         </h1>
         <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Most people do not reach out because they want a menu of services. They reach out because retirement is getting real, a business tax question is becoming strategic, or the financial decisions have started affecting each other.
+          Most people do not reach out because they want a menu of services. They reach out because retirement is getting real, a business tax question is becoming strategic, or Roth conversion and tax-window decisions are starting to feel too expensive to guess at.
         </p>
         <div class="mt-8 flex flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-4 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
           <a href="/how-we-work/keystone-method" class="inline-flex rounded-md border border-primary/20 bg-background px-6 py-4 font-bold text-primary transition hover:bg-card">See the planning process</a>
         </div>
       </div>
-      <div class="rounded-xl border border-border/40 bg-card p-7 shadow-elegant-lg">
+      <div class="rounded-xl border border-border/40 bg-card p-5 shadow-elegant-lg md:p-6 lg:p-7">
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">When people usually reach out</p>
         <ul class="mt-6 space-y-4">
           {moments.map((moment) => (
@@ -103,7 +109,7 @@ const planningAreas = [
           The service matters less than the decision it supports.
         </h2>
         <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
-          The two primary lanes are retirement planning and business-owner planning. The supporting services matter because a retirement question can become a tax question, and a business question can become an investment or family wealth question.
+          The most visible entry points are retirement planning, business-owner planning, and Roth conversion tax-window planning. The supporting services matter because a retirement question can become a tax question, and a business question can become an investment or family wealth question.
         </p>
       </div>
 

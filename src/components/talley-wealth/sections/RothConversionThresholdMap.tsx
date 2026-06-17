@@ -119,6 +119,10 @@ export default function RothConversionThresholdMap() {
   const selectedY = yForAmount(selectedTarget.amount);
   const fillTopY = Math.max(CHART.top, Math.min(currentY, selectedY) - 0.75);
   const fillHeight = CHART.bottom - fillTopY;
+  const currentPct = clamp((planningIncome / CHART_MAX) * 100, 0, 100);
+  const targetPct = clamp((selectedTarget.amount / CHART_MAX) * 100, 0, 100);
+  const mobileFillBottom = Math.min(currentPct, targetPct);
+  const mobileFillHeight = overTarget ? 0 : Math.max(0, targetPct - currentPct);
 
   const summary = overTarget
     ? `You are already above this planning line by about ${money(Math.abs(rawRoom))}.`
@@ -131,6 +135,7 @@ export default function RothConversionThresholdMap() {
 
   return (
     <div className="space-y-8">
+      <style>{ROTH_SCOPED_CSS}</style>
       <section className="overflow-hidden rounded-lg border border-border bg-card shadow-elegant">
         <div className="border-b border-border bg-background p-5 sm:p-6">
           <div className="grid gap-5 lg:grid-cols-[1fr_0.95fr_auto] lg:items-end">
@@ -162,7 +167,7 @@ export default function RothConversionThresholdMap() {
                 value={planningIncome}
                 aria-valuetext={money(planningIncome)}
                 onChange={(event) => setPlanningIncome(Number(event.currentTarget.value))}
-                className="tw-roth-range mt-3"
+                className="tw-roth-range mt-3 w-full"
                 style={{ ['--fill' as string]: `${(planningIncome / CHART_MAX) * 100}%` }}
               />
               <div className="mt-1 flex justify-between text-xs tabular-nums text-muted-foreground">
@@ -201,12 +206,77 @@ export default function RothConversionThresholdMap() {
               </p>
             </div>
 
-              <div className="mt-7 overflow-x-auto rounded-md bg-muted/35 p-4">
+              <div className="mt-7 grid gap-4 md:hidden">
+                <div className="grid gap-2" role="group" aria-label="Select Roth conversion planning line">
+                  {TARGETS.map((target) => {
+                    const active = target.id === selectedTarget.id;
+                    return (
+                      <button
+                        key={target.id}
+                        type="button"
+                        aria-pressed={active}
+                        onClick={() => setSelectedTargetId(target.id)}
+                        className={`min-h-11 rounded-md border px-3 py-2 text-left text-sm transition ${
+                          active
+                            ? 'border-accent bg-accent text-accent-foreground shadow-elegant'
+                            : 'border-border bg-card text-primary hover:border-accent/70'
+                        }`}
+                      >
+                        <span className="flex items-center justify-between gap-2">
+                          <span className="font-bold leading-tight">{target.label}</span>
+                          <span className="shrink-0 text-xs font-bold tabular-nums">{compactMoney(target.amount)}</span>
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="rounded-md border border-border bg-card p-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted-foreground">Current income</p>
+                      <p className="mt-1 font-serif text-xl font-bold tabular-nums text-primary">{money(planningIncome)}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-muted-foreground">Selected line</p>
+                      <p className="mt-1 font-serif text-xl font-bold tabular-nums text-primary">{money(selectedTarget.amount)}</p>
+                    </div>
+                  </div>
+                  <div className="relative mt-5 h-64 rounded-md border border-border bg-background p-5">
+                    <div className="relative h-full rounded-md bg-muted" aria-hidden="true">
+                      <div
+                        className="absolute inset-x-0 rounded-md bg-accent/85"
+                        style={{ bottom: `${mobileFillBottom}%`, height: `${mobileFillHeight}%` }}
+                      />
+                      <div
+                        className="absolute -left-2 -right-2 border-t-2 border-primary"
+                        style={{ bottom: `${currentPct}%` }}
+                      >
+                        <span className="absolute -top-3 left-0 rounded-sm bg-primary px-2 py-1 text-[11px] font-bold text-primary-foreground">
+                          Current
+                        </span>
+                      </div>
+                      <div
+                        className="absolute -left-2 -right-2 border-t-2 border-accent"
+                        style={{ bottom: `${targetPct}%` }}
+                      >
+                        <span className="absolute -top-3 right-0 rounded-sm bg-accent px-2 py-1 text-[11px] font-bold text-accent-foreground">
+                          Target
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{summary}</p>
+                </div>
+              </div>
+
+              <div className="relative mt-7 hidden md:block">
+                <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 rounded-r-md bg-gradient-to-l from-muted/70 to-transparent" aria-hidden="true" />
+                <div className="overflow-x-auto rounded-md bg-muted/35 p-4">
                 <svg
                   role="img"
                   aria-label={`Roth conversion room chart. ${selectedTargetLabel}. ${summary}`}
                   viewBox={`0 0 ${CHART.width} ${CHART.height}`}
-                  className="min-w-[980px] overflow-visible"
+                  className="min-w-[820px] overflow-visible sm:min-w-[980px]"
                 >
                   <rect x={CHART.plotX} y={CHART.top} width={CHART.plotWidth} height={CHART.bottom - CHART.top} rx="10" fill="hsl(210 14% 91%)" stroke="hsl(214 20% 82%)" />
                   <rect x={CHART.plotX} y={fillTopY} width={CHART.plotWidth} height={fillHeight} rx="0" fill="hsl(34 46% 65%)" opacity="0.9" />
@@ -282,6 +352,7 @@ export default function RothConversionThresholdMap() {
                     </div>
                   </foreignObject>
                 </svg>
+                </div>
               </div>
 
               <div className="mt-6 grid gap-4 lg:grid-cols-4">
@@ -329,3 +400,43 @@ export default function RothConversionThresholdMap() {
     </div>
   );
 }
+
+const ROTH_SCOPED_CSS = `
+.tw-roth-range {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  min-height: 2.75rem;
+  border-radius: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-accent) var(--fill, 0%),
+    var(--color-border) var(--fill, 0%)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 4px;
+  cursor: pointer;
+}
+.tw-roth-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-card);
+  border-radius: 9999px;
+  background: var(--color-primary);
+  box-shadow: 0 1px 4px hsl(211 32% 21% / 0.35);
+}
+.tw-roth-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-card);
+  border-radius: 9999px;
+  background: var(--color-primary);
+  box-shadow: 0 1px 4px hsl(211 32% 21% / 0.35);
+}
+.tw-roth-range:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 4px;
+}
+`;

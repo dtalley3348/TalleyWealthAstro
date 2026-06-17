@@ -40,22 +40,24 @@ Final video titles should usually come from the edited video and transcript. Pre
 
 Current homepage expression to preserve in future content strategy:
 
-- "Financial planning built for retirement, tax, and business decisions."
-- "Talley Wealth helps retirees, business owners, and high-income households make clearer decisions across retirement, taxes, investments, and long-term strategy."
+- "Tax-smart planning for retirement, business owners, and Roth conversion windows."
+- "Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversions, and the wealth they are trying to build."
 
-1. Retirement-transition planning for near-retirees, especially in Northeast Tennessee.
-2. Business owner tax strategy and turning business profit into personal wealth.
-3. Planning-first advice.
-4. Retirement income, Roth conversions, Medicare, Social Security, tax windows, and withdrawal sequencing.
-5. Owner compensation, entity decisions, cash flow, retirement-plan design, and exit readiness.
-6. Secondary support topics: equity comp, healthcare/high-income professionals, inherited wealth, and employer benefits.
-7. How advisory relationships should work.
-8. Stories about disconnected advice and what better coordination looks like.
+1. Tax-smart retirement planning for the five years before and after retirement, especially in Northeast Tennessee.
+2. Business owner planning for turning profit into personal wealth.
+3. Roth conversion and retirement tax-window planning.
+4. Planning-first advice.
+5. Retirement income, Medicare, Social Security, tax windows, and withdrawal sequencing.
+6. Owner compensation, entity decisions, cash flow, retirement-plan design, and exit readiness.
+7. Secondary support topics: equity comp, healthcare/high-income professionals, inherited wealth, and employer benefits.
+8. How advisory relationships should work.
+9. Stories about scattered advice and what better sequencing looks like.
 
 Default content allocation:
 
-- 45-50% retirement-transition topics.
-- 30-35% business-owner and tax-strategy topics.
+- 40-45% retirement-transition topics.
+- 25-30% business-owner and tax-strategy topics.
+- 15-20% Roth conversion, retirement tax-window, Medicare/IRMAA, RMD, and withdrawal-sequencing topics.
 - 10-15% secondary high-earner, equity-comp, healthcare, inherited-wealth, or employer-benefit topics.
 - The remainder for David POV, Keystone, implementation, and advisory relationship themes.
 

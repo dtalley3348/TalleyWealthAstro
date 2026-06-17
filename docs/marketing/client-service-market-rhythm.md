@@ -1,6 +1,6 @@
 # Client Service Market Rhythm
 
-Last updated: 2026-06-08
+Last updated: 2026-06-17
 
 This file connects Talley Wealth's client service model to marketing strategy. It explains what we actually help each major service rhythm with and when that work naturally shows up during the year.
 
@@ -9,7 +9,7 @@ Source-of-truth relationship: this file governs the operational service-rhythm l
 ## Shared Operating Model
 
 - Operational service rhythms: Retirees and retirement-transition households, Business owners, High earners and accumulators.
-- Public center of gravity remains two primary lanes: retirement/retirees and business owners.
+- Public center of gravity now emphasizes two core client situations plus one high-intent specialty door: tax-smart retirement planning, business-owner profit-to-wealth planning, and Roth conversion or retirement tax-window planning.
 - High earners and accumulators are a real service-model category, but should usually appear on central marketing pages as a supporting fit or nested entry point rather than a third equal homepage lane.
 - Client-facing asset: Your Talley Wealth Annual Planning Rhythm.
 - Core annual meeting: Annual Planning Meeting.
@@ -22,7 +22,7 @@ Source-of-truth relationship: this file governs the operational service-rhythm l
 - Use this to align website pages, email topics, seminar ideas, referral language, and CRM/client-service tags.
 - Each service rhythm sees money through a different lens, so the same planning rhythm should be explained through the problems they actually feel.
 - Content should sound practical and connected to decisions, not like a generic wealth-management menu.
-- Do not turn these three service rhythms into a flat public target-market list. Central website pages should preserve the two-lane public center of gravity, while entry-point pages can speak directly to more specific situations.
+- Do not turn these three service rhythms into a flat public target-market list. Central website pages should preserve the focused public center of gravity, while entry-point pages can speak directly to more specific situations.
 
 ## Entry-Point Map
 

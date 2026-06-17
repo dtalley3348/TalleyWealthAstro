@@ -7,12 +7,20 @@
  * mobile open are handled by a tiny inline script at the bottom.
  */
 
+const planningFocus = [
+  { title: 'Tax-Smart Retirement Planning', href: '/financial-advisor-for-pre-retirees', description: 'For the five years before and after retirement' },
+  { title: 'Business Owner Profit-to-Wealth Planning', href: '/financial-advisor-for-business-owners', description: 'For turning business profit into personal wealth' },
+  { title: 'Roth Conversion + Retirement Tax Windows', href: '/roth-conversions-before-retirement-tri-cities-tn', description: 'For pacing conversions before RMDs and Medicare thresholds tighten' },
+  { title: 'Can I Retire Before 65?', href: '/can-i-retire-before-65-tri-cities-tn', description: 'For healthcare, income, and tax decisions before Medicare' },
+  { title: 'Other Planning Situations', href: '/who-we-help', description: 'Inherited wealth, equity comp, employer benefits, and more' },
+];
+
 const howWeWork = [
-  { title: 'The Keystone Method™', href: '/how-we-work/keystone-method', description: 'Why we plan before we manage, and how it works' },
+  { title: 'The Keystone Method™', href: '/how-we-work/keystone-method', description: 'The six-month planning engagement where the work starts' },
   { title: 'What to Expect', href: '/how-we-work/what-to-expect', description: 'Step by step, from Explore Call to ongoing guidance' },
   { title: 'Ongoing Advisory', href: '/how-we-work/ongoing-advisory', description: 'How the plan stays current after Keystone' },
   { title: 'Services', href: '/services', description: 'Retirement and business-owner planning, supported by tax and investment advice' },
-  { title: 'Planning Examples', href: '/how-we-work/success-stories', description: 'Composite examples of coordinated planning decisions' },
+  { title: 'Planning Examples', href: '/how-we-work/success-stories', description: 'Composite examples of how decisions get sorted out' },
 ];
 
 const about = [
@@ -75,14 +83,30 @@ const { transparentOverHero = false } = Astro.props;
 
       <!-- Desktop nav -->
       <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
-        <a
-          href="/who-we-help"
-          class="tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors"
-        >Who We Help</a>
+        <div class="tw-dropdown">
+          <a href="/who-we-help" class="tw-dropdown__trigger tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors">
+            Planning Focus
+            <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="ml-1 tw-chev"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="tw-dropdown__panel">
+            <div class="tw-dropdown__surface">
+              <ul class="grid w-[440px] gap-1 p-3">
+                {planningFocus.map((item) => (
+                  <li>
+                    <a href={item.href} class="tw-dropdown__item block rounded-md p-3">
+                      <div class="text-sm font-medium text-primary">{item.title}</div>
+                      <p class="mt-1 text-xs text-muted-foreground line-clamp-2">{item.description}</p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <div class="tw-dropdown">
           <a href="/how-we-work/what-to-expect" class="tw-dropdown__trigger tw-nav-link inline-flex h-9 items-center rounded-md px-4 text-sm font-medium transition-colors">
-            How We Work
+            Keystone Method
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="ml-1 tw-chev"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <div class="tw-dropdown__panel">
@@ -167,7 +191,7 @@ const { transparentOverHero = false } = Astro.props;
       <!-- Mobile menu trigger -->
       <button
         id="tw-mobile-trigger"
-        class="lg:hidden p-2 rounded-md transition-colors"
+        class="flex h-11 w-11 items-center justify-center rounded-md transition-colors lg:hidden"
         aria-label="Open menu"
         aria-controls="tw-mobile-panel"
         aria-expanded="false"
@@ -186,47 +210,54 @@ const { transparentOverHero = false } = Astro.props;
 >
   <div class="flex items-center justify-between p-4 border-b border-border">
     <img decoding="async" src="/brands/talley-wealth/logo-dark.png" alt="Talley Wealth" class="h-12 w-auto"  loading="lazy" />
-    <button id="tw-mobile-close" class="p-2 rounded-md text-primary" aria-label="Close menu">
+    <button id="tw-mobile-close" class="flex h-11 w-11 items-center justify-center rounded-md text-primary" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
   <nav class="p-6 flex flex-col gap-6 overflow-y-auto h-[calc(100vh-72px)]" aria-label="Mobile primary">
-    <a href="/who-we-help" class="font-serif font-bold text-primary hover:text-accent transition-colors">Who We Help</a>
+    <div>
+      <a href="/who-we-help" class="mb-3 flex min-h-11 items-center font-serif font-bold text-primary transition-colors hover:text-accent">Planning Focus</a>
+      <div class="flex flex-col gap-2 pl-4 border-l border-border">
+        {planningFocus.map((item) => (
+          <a href={item.href} class="flex min-h-11 items-center text-sm text-muted-foreground transition-colors hover:text-primary">{item.title}</a>
+        ))}
+      </div>
+    </div>
 
     <div>
-      <a href="/how-we-work/what-to-expect" class="font-serif font-bold text-primary hover:text-accent transition-colors mb-3 block">How We Work</a>
+      <a href="/how-we-work/keystone-method" class="mb-3 flex min-h-11 items-center font-serif font-bold text-primary transition-colors hover:text-accent">Keystone Method</a>
       <div class="flex flex-col gap-2 pl-4 border-l border-border">
         {howWeWork.map((item) => (
-          <a href={item.href} class="text-sm text-muted-foreground hover:text-primary transition-colors">{item.title}</a>
+          <a href={item.href} class="flex min-h-11 items-center text-sm text-muted-foreground transition-colors hover:text-primary">{item.title}</a>
         ))}
       </div>
     </div>
 
     <div>
-      <a href="/about" class="font-serif font-bold text-primary hover:text-accent transition-colors mb-3 block">About</a>
+      <a href="/about" class="mb-3 flex min-h-11 items-center font-serif font-bold text-primary transition-colors hover:text-accent">About</a>
       <div class="flex flex-col gap-2 pl-4 border-l border-border">
         {about.map((item) => (
-          <a href={item.href} class="text-sm text-muted-foreground hover:text-primary transition-colors">{item.title}</a>
+          <a href={item.href} class="flex min-h-11 items-center text-sm text-muted-foreground transition-colors hover:text-primary">{item.title}</a>
         ))}
       </div>
     </div>
 
-    <a href="/pricing" class="font-serif font-bold text-primary hover:text-accent transition-colors">Pricing</a>
+    <a href="/pricing" class="flex min-h-11 items-center font-serif font-bold text-primary transition-colors hover:text-accent">Pricing</a>
 
     <div>
-      <a href="/resources" class="font-serif font-bold text-primary hover:text-accent transition-colors mb-3 block">Resources</a>
+      <a href="/resources" class="mb-3 flex min-h-11 items-center font-serif font-bold text-primary transition-colors hover:text-accent">Resources</a>
       <div class="flex flex-col gap-2 pl-4 border-l border-border">
         {resources.map((item) => (
-          <a href={item.href} class="text-sm text-muted-foreground hover:text-primary transition-colors">{item.title}</a>
+          <a href={item.href} class="flex min-h-11 items-center text-sm text-muted-foreground transition-colors hover:text-primary">{item.title}</a>
         ))}
       </div>
     </div>
 
     <div class="pt-4 border-t border-border flex flex-col gap-4">
-      <a href="/get-started" class="block text-center rounded-md bg-accent py-3 px-4 font-medium text-accent-foreground">
+      <a href="/get-started" class="flex min-h-11 items-center justify-center rounded-md bg-accent px-4 py-3 text-center font-medium text-accent-foreground">
         Schedule an Explore Call
       </a>
-      <a href="tel:+14236170160" class="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+      <a href="tel:+14236170160" class="flex min-h-11 items-center justify-center gap-2 text-sm text-muted-foreground">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>(423) 617-0160</span>
       </a>
@@ -321,10 +352,6 @@ const { transparentOverHero = false } = Astro.props;
     display: block;
   }
 
-  /* Push body content below fixed header on pages without transparent hero */
-  html[data-tenant="talley-wealth"] body:not(.has-transparent-header) main {
-    padding-top: 8rem;
-  }
 </style>
 
 <script>

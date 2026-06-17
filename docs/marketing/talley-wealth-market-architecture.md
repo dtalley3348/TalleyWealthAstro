@@ -1,6 +1,6 @@
 # Talley Wealth Market Architecture
 
-Last updated: 2026-06-08
+Last updated: 2026-06-17
 
 This is the master rule for Talley Wealth audience structure. Use it before changing homepage copy, Who We Help pages, Keystone language, service rhythm assets, Slant tags, PDFs, email segmentation, or future SEO/AI landing pages.
 
@@ -8,20 +8,21 @@ Talley Wealth should not use one flat list of target markets. The firm needs lay
 
 ## Core Promise
 
-Talley Wealth helps people make clearer decisions when retirement, taxes, investments, business, and life decisions affect each other.
+Talley Wealth helps people make clearer tax, retirement, investment, and business-owner decisions when the old way of handling each piece separately starts feeling too light.
 
-This is the center that should hold across every page, PDF, email, and client-service asset. The details can change by audience, but the underlying promise should stay the same: connected planning for decisions that should not be handled in separate silos.
+This is the center that should hold across every page, PDF, email, and client-service asset. The details can change by audience, but the underlying promise should stay the same: plain-English planning for decisions with real tax, timing, investment, cash-flow, estate, or business side effects.
 
 ## Layer 1: Public Center Of Gravity
 
-Use two primary public lanes on central marketing pages:
+Use two core client situations plus one high-intent specialty door on central marketing pages:
 
-- Retirement transition and retirees
-- Business owners
+- Tax-smart retirement planning for the five years before and after retirement
+- Business owner planning for turning profit into personal wealth
+- Roth conversion and retirement tax-window planning
 
-These are the clearest "this firm is for me" doors. They should remain dominant on the homepage, Who We Help, navigation-level pages, flagship lead magnets, and broad referral language.
+These are the clearest "this firm is for me" doors. They should remain dominant on the homepage, Planning Focus/Who We Help, navigation-level pages, flagship lead magnets, and broad referral language.
 
-This does not mean Talley Wealth only serves two kinds of people. It means the central website should not make every possible good-fit situation feel equal. Focus creates trust. Specificity can expand at the entry-point layer.
+This does not mean Talley Wealth only serves three kinds of situations. It means the central website should not make every possible good-fit situation feel equal. Focus creates trust. Specificity can expand at the entry-point layer.
 
 ## Layer 2: Operational Service Rhythms
 
@@ -37,7 +38,7 @@ The high earner/accumulator category is real and useful operationally. It should
 
 ## Layer 3: Nested Entry Points
 
-Entry points are specific doors into the planning system. They are not equal target-market declarations.
+Entry points are specific doors into the planning work. They are not equal target-market declarations.
 
 Future SEO, AI-search, referral, seminar, guide, and campaign pages should be nested under one of the service lenses below, or intentionally marked as cross-lens.
 
@@ -46,7 +47,7 @@ Future SEO, AI-search, referral, seminar, guide, and campaign pages should be ne
 - Pre-retirees asking "can I retire?"
 - Already retired households needing income, tax, RMD, Medicare, or estate coordination
 - Employer-benefit, pension, rollover, or deferred-compensation decisions near retirement
-- Roth conversion planning
+- Roth conversion planning beyond the flagship Roth/tax-window specialty page
 - Withdrawal-order planning
 - Medicare, IRMAA, Social Security, and healthcare transition decisions
 - Surviving-spouse readiness, estate organization, and key-contact planning
@@ -98,7 +99,7 @@ Important context: the higher tier also has a legitimate pricing-architecture ro
 
 ## Routing Rules
 
-- Central pages should lead with the core promise and the two public lanes.
+- Central pages should lead with the core promise, the two core client situations, and the Roth/tax-window specialty door.
 - Who We Help can show supporting situations, but it should make hierarchy obvious.
 - Service rhythm pages and PDFs can use the three operating lenses because they are about client service, not broad public positioning.
 - SEO and AI-search pages can become highly specific as long as each page routes back into the architecture.
@@ -109,9 +110,9 @@ Important context: the higher tier also has a legitimate pricing-architecture ro
 
 Use:
 
-- "People arrive through specific situations, but enter one connected planning system."
+- "People arrive through specific situations, but the work still has to account for the full tax, investment, income, business, and estate picture."
 - "Specificity is good at the entry point; clarity is better at the center."
-- "Two primary public lanes, three service rhythms, many entry points."
+- "Two core client situations, one high-intent specialty door, three service rhythms, many entry points."
 - "Planning lens" or "service rhythm" for ongoing advisory categories.
 - "Entry point" for SEO, referral, guide, campaign, and situational pages.
 - "Scope" or "tier" for Keystone pricing.
@@ -120,12 +121,13 @@ Avoid:
 
 - Presenting 4+ audiences as equal on central pages.
 - Treating high earners/accumulators as a third equal homepage market.
+- Treating Roth conversion planning as a separate demographic instead of a decision-specific specialty door.
 - Treating Keystone Custom/Complex as a public audience category.
 - Creating niche pages that do not clearly route into a broader planning lens.
 
 ## Immediate Implications
 
-- Preserve the two-lane public strategy in the Target-Market Alignment Audit, but clarify that it is the public-positioning layer.
+- Preserve the focused public strategy in the Target-Market Alignment Audit, but update it from two public lanes to two core client situations plus the Roth/tax-window specialty door.
 - Preserve the three-category service rhythm model, but clarify that it is operational and client-service oriented.
 - Review homepage, Who We Help, Keystone, and pricing language through this architecture before building additional service-rhythm or entry-point pages.
 - When creating future landing pages, assign each page to a primary lens and entry-point type before drafting copy.

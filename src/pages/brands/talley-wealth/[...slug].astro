@@ -565,14 +565,14 @@ const pageChrome = seoRoute.type === 'decision-cluster'
         cardsClass: 'bg-card',
         detailsClass: 'bg-background',
         relatedHeading: 'Keep going from here.',
-        detailsHeading: 'The useful details are connected.',
+        detailsHeading: 'The useful details need to be sequenced.',
         faqHeading: 'Questions worth asking before you choose an advisor.',
       };
 ---
 
 <TalleyPage title={page.title} description={page.description} jsonLd={jsonLd}>
   <section class={pageChrome.heroClass}>
-    <div class="section-container grid gap-12 py-20 lg:grid-cols-[0.9fr_1fr]">
+    <div class="section-container grid gap-10 py-16 md:grid-cols-[0.95fr_0.85fr] md:items-center md:py-20 lg:grid-cols-[0.9fr_1fr]">
       <div>
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.eyebrow}</p>
         <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{page.heading}</h1>
@@ -589,7 +589,7 @@ const pageChrome = seoRoute.type === 'decision-cluster'
 
   {page.recognitionCards && page.recognitionCards.length > 0 && (
     <section class="bg-card">
-      <div class="section-container py-20">
+      <div class:list={['section-container', page.decisionQuestions ? 'pt-16 pb-12 md:pt-20 md:pb-14' : 'py-20']}>
         <div class="mx-auto max-w-3xl text-center">
           <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">You may be here because</p>
           <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">{page.recognitionTitle}</h2>
@@ -609,7 +609,7 @@ const pageChrome = seoRoute.type === 'decision-cluster'
 
   {page.decisionQuestions && (
     <section class="bg-background">
-      <div class="section-container grid gap-12 border-b border-border/70 py-20 lg:grid-cols-[0.68fr_1fr] lg:items-start">
+      <div class="section-container grid gap-10 border-b border-border/70 pt-12 pb-16 md:pt-14 md:pb-20 lg:grid-cols-[0.68fr_1fr] lg:items-start">
         <div>
           <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.decisionQuestions.eyebrow}</p>
           <h2 class="mt-4 max-w-xl font-serif text-3xl font-bold leading-tight text-primary md:text-5xl">{page.decisionQuestions.title}</h2>

@@ -29,14 +29,15 @@ Default durable-belief sources:
 
 ## Audience Strategy
 
-Talley Wealth has more than one market, but the public strategy is no longer an equal-weighted list of audiences. The two primary lanes are near-retirees/retirement-transition households and business owners with tax and strategy complexity.
+Talley Wealth has more than one market, but the public strategy is no longer an equal-weighted list of audiences. The main public focus is tax-smart retirement planning, business owner profit-to-wealth planning, and Roth conversion or retirement tax-window planning as a high-intent specialty door.
 
 For now, keep the social presence unified and organize content by pillars instead of splitting into separate channels. Separate channels add operational drag before there is enough posting volume and audience data to justify the complexity.
 
 Use this default allocation for prompt batches unless David changes the emphasis:
 
-- 45-50% near-retirees and retirement-transition households.
-- 30-35% business owners, owner tax strategy, cash flow, exit readiness, and turning business profit into personal wealth.
+- 40-45% near-retirees and retirement-transition households.
+- 25-30% business owners, owner tax strategy, cash flow, exit readiness, and turning business profit into personal wealth.
+- 15-20% Roth conversion, retirement tax-window, RMD, Medicare/IRMAA, and withdrawal-sequencing topics.
 - 10-15% executives, equity comp, healthcare/high-income professionals, and busy delegators.
 - Remaining space for general David POV, Keystone, planning philosophy, implementation, and client-experience themes.
 
@@ -48,11 +49,11 @@ Use content pillars to keep the message clear:
 - families with estate, inheritance, charitable giving, or multi-generation planning decisions
 - people who are financially successful but still feel uncertain, disorganized, or under-advised
 
-These pillars should stay visible over time: retirement confidence, coordination, sequencing, implementation, tax timing, business-owner planning, inherited wealth, and plan-before-portfolio.
+These pillars should stay visible over time: retirement confidence, sequencing, implementation, tax timing, Roth conversion pacing, business-owner planning, inherited wealth, and plan-before-portfolio.
 
 Each individual video should speak to one audience and one tension. The overall feed can serve multiple markets as long as each post is specific.
 
-Do not let a batch feel like Talley Wealth is equally built for six different markets. A good secondary-audience prompt is welcome, but the batch should still make the two primary lanes visible.
+Do not let a batch feel like Talley Wealth is equally built for six different markets. A good secondary-audience prompt is welcome, but the batch should still make the retirement, business-owner, and Roth/tax-window focus visible.
 
 Broad audience labels are not enough. "Business owners" or "near-retirees" can be the lane, but they are not yet a prompt. Before writing the opening situation, create a required Micro-Audience Brief:
 

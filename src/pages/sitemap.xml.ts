@@ -26,6 +26,7 @@ const canonicalPaths = [
   '/about/meet-david-talley',
   '/about/our-commitment',
   '/pricing',
+  '/advisory-fees',
   '/tax-membership',
   '/services',
   '/resources',

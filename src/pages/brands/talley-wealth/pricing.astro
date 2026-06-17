@@ -34,8 +34,8 @@ const customFitItems = [
 const ongoingDetails = [
   {
     eyebrow: 'Investment advisory fee',
-    primary: '1.00% on the first $1M',
-    note: 'Declining brackets above $1M. Tiered so larger relationships pay proportionally less.',
+    primary: '1.00% on the first $2M',
+    note: 'Declining brackets above $2M. Tiered so larger relationships pay proportionally less.',
   },
   {
     eyebrow: 'Annual minimum',
@@ -72,7 +72,7 @@ const pricingFAQs = [
   },
   {
     q: 'Do fees get discounted for larger portfolios?',
-    a: 'Yes. The advisory fee brackets decline above $1M in managed assets. The exact schedule gets shared before you make any decision about moving forward.',
+    a: 'Yes. The advisory fee brackets decline above $2M in managed assets. The full schedule is public, and it is also reviewed before you make any decision about ongoing advisory.',
   },
 ];
 ---
@@ -224,9 +224,40 @@ const pricingFAQs = [
             </article>
           ))}
         </div>
+        <div class="mb-10 rounded-lg border border-border/60 bg-background p-7 shadow-elegant md:p-8">
+          <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent">After Keystone</p>
+              <h3 class="mt-4 font-serif text-2xl font-bold leading-tight text-primary md:text-3xl">Ongoing advisory is the price of keeping the plan owned.</h3>
+              <p class="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
+                Keystone builds the plan. Ongoing advisory is for clients who want investment management, tax-aware decisions, retirement income, business-owner planning, and implementation follow-through kept in one rhythm after the initial work is complete.
+              </p>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-3 lg:w-[28rem]">
+              <div class="rounded-md border border-border/60 bg-card p-4">
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">First $2M</p>
+                <p class="mt-2 font-serif text-2xl font-bold text-primary">1.00%</p>
+              </div>
+              <div class="rounded-md border border-border/60 bg-card p-4">
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">$4M-$10M</p>
+                <p class="mt-2 font-serif text-2xl font-bold text-primary">0.50%</p>
+              </div>
+              <div class="rounded-md border border-border/60 bg-card p-4">
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">At $10M</p>
+                <p class="mt-2 font-serif text-2xl font-bold text-primary">0.65%</p>
+                <p class="mt-1 text-xs text-muted-foreground">blended</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-col gap-3 border-t border-border/60 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-sm leading-relaxed text-muted-foreground">The full schedule is public for transparency, but the decision to continue comes after the plan is built.</p>
+            <a href="/advisory-fees" class="inline-flex justify-center rounded-md bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Review ongoing advisory fees</a>
+          </div>
+        </div>
         <p class="mx-auto max-w-3xl text-center leading-relaxed text-muted-foreground">Tax preparation through Talley Tax is optional and priced separately. Most ongoing clients add it, because when strategy, investments, and the return itself are all coordinated inside one engagement, the planning gets tighter and the surprises get fewer.</p>
         <div class="mt-8 text-center">
           <div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
+            <a href="/advisory-fees" class="inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">See the advisory fee schedule <span aria-hidden="true">-&gt;</span></a>
             <a href="/how-we-work/ongoing-advisory" class="inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">See the ongoing advisory rhythm <span aria-hidden="true">-&gt;</span></a>
             <a href="/tax-membership" class="inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">See the Tax Membership rhythm <span aria-hidden="true">-&gt;</span></a>
           </div>

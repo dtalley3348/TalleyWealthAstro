@@ -1,0 +1,474 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+
+const feeTiers = [
+  { label: 'First $2M', rate: '1.00%', detail: 'Applied to managed assets up to $2,000,000' },
+  { label: 'Next $2M', rate: '0.75%', detail: 'Applied to managed assets from $2,000,001 to $4,000,000' },
+  { label: '$4M-$10M', rate: '0.50%', detail: 'Applied to managed assets from $4,000,001 to $10,000,000' },
+  { label: 'Above $10M', rate: 'Negotiable', detail: 'Scoped around household complexity, service needs, and fit' },
+];
+
+const fitWindows = [
+  {
+    label: 'Retirement transition',
+    title: 'The fee has to support decisions before they become permanent.',
+    body: 'For pre-retirees and new retirees, the work is often Social Security timing, Roth conversion windows, withdrawal sequencing, Medicare and IRMAA, beneficiary cleanup, and keeping portfolio risk tied to the income plan.',
+  },
+  {
+    label: 'Business owner household',
+    title: 'The portfolio is only one part of the balance sheet.',
+    body: 'For owners, ongoing advisory often means coordinating owner pay, retirement plan design, estimated taxes, business cash flow, entity decisions, succession questions, and the family plan around the same facts.',
+  },
+  {
+    label: 'Complex wealth',
+    title: 'The real value is coordination across moving parts.',
+    body: 'For families with concentrated positions, inherited assets, charitable intent, estate questions, multiple accounts, or several professionals involved, the work is keeping decisions aligned instead of scattered.',
+  },
+];
+
+const advisoryOutcomes = [
+  {
+    label: 'A plan that stays alive',
+    title: 'Someone is responsible for keeping the moving pieces connected.',
+    body: 'The plan is not filed away after Keystone. Ongoing advisory keeps tax windows, portfolio risk, retirement income, business decisions, and family priorities visible as the facts change.',
+  },
+  {
+    label: 'Decisions with context',
+    title: 'Investment management is tied to the rest of the household.',
+    body: 'The portfolio is managed around the tax return, cash needs, withdrawal sequencing, concentrated risk, business income, estate intent, and what the money is actually supposed to do.',
+  },
+  {
+    label: 'Follow-through',
+    title: 'The quiet work between meetings has a home.',
+    body: 'Ongoing advisory gives recurring decisions a rhythm: what to review, what to update, what to coordinate with other professionals, and what can safely wait.',
+  },
+];
+
+const scopeRows = [
+  ['Investment management', 'Portfolio design, rebalancing, tax-aware allocation, cash needs, risk alignment'],
+  ['Tax-aware planning', 'Roth conversion pacing, capital gains, charitable strategy, withdrawal order, year-end decisions'],
+  ['Retirement income', 'Distribution sequencing, Social Security, pension elections, Medicare thresholds, spending stress tests'],
+  ['Business-owner planning', 'Owner compensation, entity-level cash flow, retirement plans, estimated taxes, exit-readiness'],
+  ['Coordination', 'CPA, attorney, custodian, insurance, employer benefits, beneficiary and estate-document follow-through'],
+];
+---
+
+<TalleyPage
+  title="Ongoing Advisory Fees | Talley Wealth"
+  description="See how Talley Wealth ongoing advisory fees support investment management connected to tax planning, retirement income, business-owner planning, and implementation follow-through."
+>
+  <section class="bg-primary pt-24 pb-16 text-primary-foreground md:pt-28">
+    <div class="section-container">
+      <div class="grid gap-10 lg:grid-cols-[1fr_0.86fr] lg:items-end">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Ongoing advisory fees</p>
+          <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-white md:text-6xl">
+            The cost of keeping the plan owned.
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/82">
+            Ongoing advisory begins after Keystone when the planning work moves from build mode into stewardship. The fee pays for investment management, but the relationship is really about keeping tax, retirement, business, estate, and cash-flow decisions tied to one working plan.
+          </p>
+        </div>
+        <div class="rounded-lg border border-white/12 bg-white/[0.07] p-6 shadow-elegant-lg backdrop-blur">
+          <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">What the fee supports</p>
+          <h2 class="mt-4 font-serif text-2xl font-bold leading-tight text-white">Portfolio management inside a broader planning rhythm.</h2>
+          <p class="mt-5 text-sm leading-relaxed text-primary-foreground/72">
+            The schedule is public because costs should be clear. The value comes from the work the fee makes possible: year-round planning ownership, decision support, and coordination when money decisions overlap.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-20">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What you are paying for</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">Not a portfolio in isolation. A planning relationship with ownership.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          The advisory fee is easiest to understand when it is tied to the work it supports: keeping the plan alive after the initial Keystone engagement, and making sure the next decision is not made in a vacuum.
+        </p>
+      </div>
+      <div class="mx-auto mt-12 grid max-w-6xl gap-6 lg:grid-cols-3">
+        {advisoryOutcomes.map((item) => (
+          <article class="rounded-lg border border-border/60 bg-background p-7 shadow-elegant">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.label}</p>
+            <h3 class="mt-4 font-serif text-2xl font-bold leading-tight text-primary">{item.title}</h3>
+            <p class="mt-4 leading-relaxed text-muted-foreground">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border/60 bg-background py-14">
+    <div class="section-container">
+      <div class="mx-auto mb-8 max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">The fee schedule</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The math should be simple to see.</h2>
+      </div>
+      <div class="grid gap-5 md:grid-cols-4">
+        {feeTiers.map((tier) => (
+          <article class="rounded-lg border border-border/60 bg-card p-5 shadow-elegant">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{tier.label}</p>
+            <h2 class="mt-3 font-serif text-2xl font-bold text-primary">{tier.rate}</h2>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{tier.detail}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Transparency in dollars</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">See what the ongoing relationship would cost.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          The calculator is here so the fee does not have to be guessed at. The schedule is tiered, so the first dollars are billed at the first bracket and later dollars are billed at lower brackets.
+        </p>
+      </div>
+
+      <div class="tw-fee-console mx-auto mt-12 max-w-6xl" data-fee-calculator>
+        <div class="tw-fee-console__main">
+          <div class="tw-fee-console__control">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">Managed assets</p>
+              <p class="mt-2 font-serif text-4xl font-bold text-primary md:text-5xl" data-assets-display>$5,000,000</p>
+            </div>
+            <input class="tw-fee-range" data-assets-input type="range" min="500000" max="12000000" step="50000" value="5000000" aria-label="Managed assets" />
+            <div class="flex items-center justify-between text-xs font-bold uppercase tracking-[0.12em] text-muted-foreground">
+              <span>$500K</span>
+              <span>$12M</span>
+            </div>
+          </div>
+
+          <div class="tw-fee-console__metrics">
+            <article>
+              <span>Estimated annual advisory fee</span>
+              <strong data-fee-display>$40,000</strong>
+            </article>
+            <article>
+              <span>Effective blended rate</span>
+              <strong data-blended-display>0.80%</strong>
+            </article>
+            <article>
+              <span>Reference point</span>
+              <strong>1.05%</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="tw-fee-visual" aria-label="Blended advisory fee comparison chart">
+          <div class="tw-fee-visual__head">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">Blended rate curve</p>
+              <h3 class="mt-2 font-serif text-2xl font-bold text-primary">The larger the relationship, the lower the blended percentage becomes.</h3>
+            </div>
+            <div class="tw-fee-legend">
+              <span><i class="tw-fee-legend__talley"></i>Talley Wealth</span>
+              <span><i class="tw-fee-legend__benchmark"></i>Public benchmark</span>
+            </div>
+          </div>
+          <svg class="tw-fee-chart" viewBox="0 0 720 300" role="img" aria-labelledby="fee-chart-title">
+            <title id="fee-chart-title">Talley Wealth blended fee compared with a 1.05 percent public benchmark</title>
+            <line x1="56" y1="46" x2="690" y2="46" class="tw-fee-chart__benchmark" />
+            <path data-chart-path class="tw-fee-chart__path" d="" />
+            <circle data-chart-dot r="8" cx="0" cy="0" class="tw-fee-chart__dot" />
+            <g class="tw-fee-chart__axis">
+              <line x1="56" y1="250" x2="690" y2="250" />
+              <text x="56" y="276">$500K</text>
+              <text x="258" y="276">$4M</text>
+              <text x="470" y="276">$8M</text>
+              <text x="650" y="276">$12M</text>
+              <text x="12" y="52">1.05%</text>
+              <text x="18" y="255">0.5%</text>
+            </g>
+          </svg>
+          <p class="mt-4 text-sm leading-relaxed text-muted-foreground">
+            The 1.05% reference is a public human-advisor AUM benchmark cited by WSJ Buy Side from Envestnet data. It is included as context only; advisory relationships vary meaningfully in scope, planning depth, conflicts, and service model.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-20">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">The target-market lens</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">At higher asset levels, the comparison is not just the percentage.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+          A lower fee can still be expensive if the work does not address the decisions that actually move the plan. A higher fee can be hard to justify if all it buys is a portfolio and a meeting. The right comparison is fee, scope, complexity, and follow-through together.
+        </p>
+      </div>
+      <div class="mx-auto mt-12 grid max-w-6xl gap-6 lg:grid-cols-3">
+        {fitWindows.map((item) => (
+          <article class="rounded-lg border border-border/60 bg-background p-7 shadow-elegant">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.label}</p>
+            <h3 class="mt-4 font-serif text-2xl font-bold leading-tight text-primary">{item.title}</h3>
+            <p class="mt-4 leading-relaxed text-muted-foreground">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What the fee covers</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">The portfolio is managed inside the plan, not beside it.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted-foreground">
+            Some firms include broad planning with investment management. Some do not. When comparing fees, ask what work is included, how often the plan is refreshed, and who owns the follow-through when tax, legal, business, and investment decisions overlap.
+          </p>
+        </div>
+        <div class="overflow-hidden rounded-lg border border-border/60 bg-card shadow-elegant">
+          {scopeRows.map(([label, detail]) => (
+            <div class="grid gap-2 border-b border-border/60 p-5 last:border-b-0 md:grid-cols-[0.42fr_1fr]">
+              <h3 class="font-serif text-lg font-bold text-primary">{label}</h3>
+              <p class="leading-relaxed text-muted-foreground">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-20">
+    <div class="section-container">
+      <div class="mx-auto max-w-4xl rounded-lg border border-border/60 bg-background p-8 shadow-elegant md:p-10">
+        <h2 class="font-serif text-2xl font-bold text-primary">Important disclosure notes.</h2>
+        <div class="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p>This page is intended as a plain-English summary of Talley Wealth's ongoing advisory fee schedule. Actual fees, services, billing terms, conflicts, and limitations are governed by the advisory agreement and current disclosure documents.</p>
+          <p>Advisory fees are separate from underlying investment expenses, fund expense ratios, custodian fees, product costs, tax preparation fees, legal fees, and other third-party professional fees unless specifically stated otherwise.</p>
+          <p>References to public industry benchmarks are included for general comparison only. Advisory firms vary widely in services, minimums, investment approach, planning depth, credentials, conflicts, and client experience.</p>
+        </div>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a href="/pricing" class="inline-flex justify-center rounded-md border border-border bg-card px-5 py-3 text-sm font-bold text-primary transition hover:border-accent">See Keystone pricing</a>
+          <a href="/get-started" class="inline-flex justify-center rounded-md bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .tw-fee-console {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .tw-fee-console__main,
+    .tw-fee-visual {
+      border: 1px solid color-mix(in srgb, var(--color-border) 68%, transparent);
+      border-radius: 0.5rem;
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--color-card) 92%, var(--color-accent)) 0%, var(--color-card) 48%, color-mix(in srgb, var(--color-card) 94%, var(--color-primary)) 100%);
+      box-shadow: var(--shadow-elegant-lg);
+    }
+
+    .tw-fee-console__main {
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .tw-fee-console__control {
+      display: grid;
+      gap: 1.25rem;
+      border-radius: 0.5rem;
+      background: color-mix(in srgb, var(--color-background) 72%, transparent);
+      padding: 1.25rem;
+    }
+
+    .tw-fee-range {
+      width: 100%;
+      accent-color: var(--color-accent);
+    }
+
+    .tw-fee-console__metrics {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .tw-fee-console__metrics article {
+      border-radius: 0.5rem;
+      background: var(--color-primary);
+      padding: 1.1rem;
+      color: var(--color-primary-foreground);
+    }
+
+    .tw-fee-console__metrics span {
+      display: block;
+      color: color-mix(in srgb, var(--color-primary-foreground) 72%, transparent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .tw-fee-console__metrics strong {
+      display: block;
+      margin-top: 0.45rem;
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 4vw, 2.55rem);
+      line-height: 1;
+    }
+
+    .tw-fee-visual {
+      padding: 1.25rem;
+    }
+
+    .tw-fee-visual__head {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .tw-fee-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      color: var(--color-muted-foreground);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .tw-fee-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tw-fee-legend i {
+      display: inline-block;
+      height: 0.2rem;
+      width: 1.6rem;
+      border-radius: 999px;
+    }
+
+    .tw-fee-legend__talley {
+      background: var(--color-accent);
+    }
+
+    .tw-fee-legend__benchmark {
+      border-top: 2px dashed var(--color-primary);
+      background: transparent;
+    }
+
+    .tw-fee-chart {
+      margin-top: 1.25rem;
+      min-height: 230px;
+      overflow: visible;
+    }
+
+    .tw-fee-chart__path {
+      fill: none;
+      stroke: var(--color-accent);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 6;
+    }
+
+    .tw-fee-chart__benchmark {
+      stroke: color-mix(in srgb, var(--color-primary) 52%, transparent);
+      stroke-dasharray: 10 10;
+      stroke-width: 3;
+    }
+
+    .tw-fee-chart__dot {
+      fill: var(--color-primary);
+      stroke: var(--color-card);
+      stroke-width: 4;
+    }
+
+    .tw-fee-chart__axis line {
+      stroke: color-mix(in srgb, var(--color-border) 86%, transparent);
+      stroke-width: 2;
+    }
+
+    .tw-fee-chart__axis text {
+      fill: var(--color-muted-foreground);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    @media (min-width: 820px) {
+      .tw-fee-console__main {
+        grid-template-columns: 1.15fr 0.85fr;
+        padding: 1.25rem;
+      }
+
+      .tw-fee-visual {
+        padding: 1.5rem;
+      }
+
+      .tw-fee-visual__head {
+        grid-template-columns: 1fr auto;
+        align-items: start;
+      }
+    }
+  </style>
+
+  <script>
+    (() => {
+      const root = document.querySelector('[data-fee-calculator]');
+      if (!root) return;
+
+      const input = root.querySelector('[data-assets-input]');
+      const assetsDisplay = root.querySelector('[data-assets-display]');
+      const feeDisplay = root.querySelector('[data-fee-display]');
+      const blendedDisplay = root.querySelector('[data-blended-display]');
+      const path = root.querySelector('[data-chart-path]');
+      const dot = root.querySelector('[data-chart-dot]');
+
+      if (
+        !(input instanceof HTMLInputElement) ||
+        !assetsDisplay ||
+        !feeDisplay ||
+        !blendedDisplay
+      ) return;
+
+      const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+
+      const calculateFee = (assets: number) => {
+        const first = Math.min(assets, 2000000) * 0.01;
+        const second = Math.max(Math.min(assets, 4000000) - 2000000, 0) * 0.0075;
+        const third = Math.max(Math.min(assets, 10000000) - 4000000, 0) * 0.005;
+        const above = Math.max(assets - 10000000, 0) * 0.005;
+        return first + second + third + above;
+      };
+
+      const xFor = (assets: number) => 56 + ((assets - 500000) / 11500000) * 634;
+      const yFor = (rate: number) => 250 - ((rate - 0.005) / 0.006) * 204;
+
+      const chartPoints = Array.from({ length: 58 }, (_, index) => {
+        const assets = 500000 + index * 200000;
+        const rate = calculateFee(assets) / assets;
+        return [xFor(assets), yFor(rate)];
+      });
+
+      if (path) {
+        path.setAttribute('d', chartPoints.map(([x, y], index) => `${index === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`).join(' '));
+      }
+
+      const update = () => {
+        const assets = Number(input.value);
+        const fee = calculateFee(assets);
+        const blended = fee / assets;
+
+        assetsDisplay.textContent = money.format(assets);
+        feeDisplay.textContent = money.format(fee);
+        blendedDisplay.textContent = `${(blended * 100).toFixed(2)}%`;
+
+        if (dot) {
+          dot.setAttribute('cx', xFor(assets).toFixed(1));
+          dot.setAttribute('cy', yFor(blended).toFixed(1));
+        }
+      };
+
+      input.addEventListener('input', update);
+      update();
+    })();
+  </script>
+</TalleyPage>

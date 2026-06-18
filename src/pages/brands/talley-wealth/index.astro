@@ -18,16 +18,14 @@ const coreFocus = [
     body: 'Owner pay, tax strategy, reserves, retirement plans, cash flow, and money outside the business need a rhythm that does not depend on last-minute decisions.',
     href: '/financial-advisor-for-business-owners',
   },
-  {
-    title: 'Roth Conversion + Retirement Tax Windows',
-    quote: '"You keep hearing about Roth conversions, but the real question is timing and pacing."',
-    detail: 'A high-intent specialty door',
-    body: 'The best conversion window often opens after work income drops and before RMDs, Social Security, Medicare thresholds, and future tax rates tighten the room.',
-    href: '/roth-conversions-before-retirement-tri-cities-tn',
-  },
 ];
 
 const secondaryFits = [
+  {
+    quote: '"You keep hearing about Roth conversions, but the real question is timing and pacing."',
+    detail: 'Retirement tax windows',
+    href: '/roth-conversions-before-retirement-tri-cities-tn',
+  },
   {
     quote: "\"My compensation is getting more complicated, and I do not have time to figure out every tax and timing decision myself.\"",
     detail: 'Executives and equity comp',
@@ -64,16 +62,16 @@ const secondaryFits = [
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
         </div>
         <h1 class="font-serif text-4xl font-bold leading-tight text-primary-foreground md:text-5xl">
-          Tax-smart planning for retirement, business owners, and Roth conversion windows.
+          Tax-smart planning for retirement decisions and business-owner wealth.
         </h1>
         <p class="mt-5 max-w-full text-lg leading-relaxed text-primary-foreground/80">
-          Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversions, and the wealth they are trying to build.
+          Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversion windows, and the wealth they are trying to build.
         </p>
         <div class="mt-8 flex min-w-0 flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex max-w-full justify-center rounded-md bg-accent px-6 py-4 text-center font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
           <a href="/how-we-work/what-to-expect" class="inline-flex max-w-full justify-center rounded-md border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-4 text-center font-bold text-primary-foreground transition hover:bg-primary-foreground/20">How We Work</a>
         </div>
-        <div class="mt-8 grid gap-3 md:grid-cols-3">
+        <div class="mt-8 grid gap-3 md:grid-cols-2">
           {coreFocus.map((item) => (
             <a href={item.href} class="group rounded-lg border border-primary-foreground/25 bg-primary-foreground/10 p-4 text-left transition hover:-translate-y-0.5 hover:bg-primary-foreground/15">
               <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.detail}</p>
@@ -92,7 +90,7 @@ const secondaryFits = [
       <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
         <p><strong class="block font-serif text-lg text-primary">CFP®, ChFC®, EA</strong> Planning, tax, and investments in one conversation.</p>
         <p><strong class="block font-serif text-lg text-primary">Founder-led advisory</strong> You work directly with David, supported by a prepared team.</p>
-        <p><strong class="block font-serif text-lg text-primary">Three clear entry points</strong> Retirement transition, business-owner strategy, and Roth/tax windows.</p>
+        <p><strong class="block font-serif text-lg text-primary">Two clear planning lanes</strong> Retirement transition and business-owner strategy, with Roth/tax windows inside the retirement work.</p>
         <p><strong class="block font-serif text-lg text-primary">67 five-star Google reviews</strong> Clear explanations, follow-through, and personal attention.</p>
       </div>
     </div>
@@ -120,7 +118,7 @@ const secondaryFits = [
             <blockquote class="border-l-4 border-accent py-2 pl-5">
               <p class="font-serif text-2xl italic leading-snug text-primary">The problem is not usually a lack of effort. It is that each decision was made before the next one became visible.</p>
             </blockquote>
-            <p>That matters most when retirement is close, when business profit is changing the family's personal picture, or when Roth conversion and tax-window decisions have real dollars attached. Other situations can still fit, but those are the places where our work usually has the most leverage.</p>
+            <p>That matters most when retirement is close, including Roth conversion and tax-window decisions, or when business profit is changing the family's personal picture. Other situations can still fit, but those are the places where our work usually has the most leverage.</p>
             <p>Our work runs the other way around. We build the plan first, then let the plan guide the investment allocation, tax strategy, estate review, and ongoing decisions.</p>
           </div>
           <a href="/pricing" class="mt-8 inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">
@@ -145,7 +143,7 @@ const secondaryFits = [
         </p>
       </div>
 
-      <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+      <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
         {coreFocus.map((item) => (
           <a href={item.href} class="group h-full rounded-lg border border-border/30 bg-card p-7 shadow-elegant transition hover:-translate-y-1 hover:shadow-elegant-lg">
             <p class="text-xs font-bold uppercase tracking-[0.16em] text-muted-foreground">{item.detail}</p>
@@ -162,7 +160,7 @@ const secondaryFits = [
         <p class="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
           Some people arrive through a more specific question. The fit depends on whether that question needs to be judged against taxes, investments, benefits, estate decisions, cash flow, or timing.
         </p>
-        <div class="mt-5 grid gap-4 md:grid-cols-3">
+        <div class="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {secondaryFits.map((item) => (
             <a href={item.href} class="group rounded-md border border-border/40 bg-background p-4 transition hover:border-accent/50">
               <p class="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">{item.detail}</p>

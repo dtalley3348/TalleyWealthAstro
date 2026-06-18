@@ -11,8 +11,6 @@ type FooterLink = { title: string; href: string; external?: boolean };
 const planningFocus = [
   { title: 'Tax-Smart Retirement Planning', href: '/financial-advisor-for-pre-retirees' },
   { title: 'Business Owner Profit-to-Wealth Planning', href: '/financial-advisor-for-business-owners' },
-  { title: 'Roth Conversion Planning', href: '/roth-conversions-before-retirement-tri-cities-tn' },
-  { title: 'Can I Retire Before 65?', href: '/can-i-retire-before-65-tri-cities-tn' },
   { title: 'Other Planning Situations', href: '/who-we-help' },
 ];
 
@@ -41,6 +39,11 @@ const resources: FooterLink[] = [
   { title: 'Retirement Guide', href: '/guide' },
   { title: 'Key Dates', href: '/resources/key-dates' },
   { title: 'Client Hub', href: '/resources/portal' },
+];
+
+const regulatoryLinks: FooterLink[] = [
+  { title: 'Form CRS', href: 'https://www.joincambridge.com/investors/cambridge-disclosures/form-crs/', external: true },
+  { title: 'FINRA BrokerCheck', href: 'https://brokercheck.finra.org/', external: true },
 ];
 
 const year = new Date().getFullYear();
@@ -160,7 +163,7 @@ const year = new Date().getFullYear();
           <img decoding="async" src="/brands/talley-wealth/logo.webp" alt="Talley Wealth" class="h-10 w-auto"  loading="lazy" />
         </div>
         <p class="mb-6 text-sm leading-relaxed text-white/70">
-          Planning for retirement tax windows, business-owner profit, Roth conversions, investments, and the decisions that should not be guessed at separately.
+          Planning for retirement decisions, business-owner profit, investments, tax windows, and the decisions that should not be guessed at separately.
         </p>
         <div class="flex items-center gap-2 text-sm text-white/70">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -221,6 +224,19 @@ const year = new Date().getFullYear();
   <!-- Disclosures -->
   <div class="border-t border-white/10">
     <div class="section-container py-6">
+      <nav aria-label="Regulatory disclosures" class="mb-4 flex flex-wrap gap-3">
+        {regulatoryLinks.map((item) => (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/[0.04] px-3 py-2 text-sm font-medium text-white/80 transition hover:border-accent/50 hover:text-accent"
+          >
+            <span>{item.title}</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        ))}
+      </nav>
       <p class="mb-3 text-xs leading-relaxed text-white/50">
         Securities offered through Registered Representatives of Cambridge Investment Research, Inc., a broker-dealer member
         <a href="https://www.finra.org" target="_blank" rel="noopener noreferrer" class="underline text-accent/70 hover:text-accent">FINRA</a>/<a href="https://www.sipc.org" target="_blank" rel="noopener noreferrer" class="underline text-accent/70 hover:text-accent">SIPC</a>.

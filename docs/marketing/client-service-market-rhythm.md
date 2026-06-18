@@ -9,7 +9,7 @@ Source-of-truth relationship: this file governs the operational service-rhythm l
 ## Shared Operating Model
 
 - Operational service rhythms: Retirees and retirement-transition households, Business owners, High earners and accumulators.
-- Public center of gravity now emphasizes two core client situations plus one high-intent specialty door: tax-smart retirement planning, business-owner profit-to-wealth planning, and Roth conversion or retirement tax-window planning.
+- Public center of gravity now emphasizes two core client situations: tax-smart retirement planning and business-owner profit-to-wealth planning. Roth conversion and retirement tax-window planning is a major retirement entry point, not a third public market.
 - High earners and accumulators are a real service-model category, but should usually appear on central marketing pages as a supporting fit or nested entry point rather than a third equal homepage lane.
 - Client-facing asset: Your Talley Wealth Annual Planning Rhythm.
 - Core annual meeting: Annual Planning Meeting.

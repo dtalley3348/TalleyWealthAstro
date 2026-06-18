@@ -14,15 +14,16 @@ This is the center that should hold across every page, PDF, email, and client-se
 
 ## Layer 1: Public Center Of Gravity
 
-Use two core client situations plus one high-intent specialty door on central marketing pages:
+Use two core client situations on central marketing pages:
 
 - Tax-smart retirement planning for the five years before and after retirement
 - Business owner planning for turning profit into personal wealth
-- Roth conversion and retirement tax-window planning
 
 These are the clearest "this firm is for me" doors. They should remain dominant on the homepage, Planning Focus/Who We Help, navigation-level pages, flagship lead magnets, and broad referral language.
 
-This does not mean Talley Wealth only serves three kinds of situations. It means the central website should not make every possible good-fit situation feel equal. Focus creates trust. Specificity can expand at the entry-point layer.
+Roth conversion and retirement tax-window planning remains one of the most important retirement decision clusters, but it should not be treated as a separate public market beside retirement and business owners. It belongs inside the retirement architecture.
+
+This does not mean Talley Wealth only serves two kinds of situations. It means the central website should not make every possible good-fit situation feel equal. Focus creates trust. Specificity can expand at the entry-point layer.
 
 ## Layer 2: Operational Service Rhythms
 
@@ -47,7 +48,7 @@ Future SEO, AI-search, referral, seminar, guide, and campaign pages should be ne
 - Pre-retirees asking "can I retire?"
 - Already retired households needing income, tax, RMD, Medicare, or estate coordination
 - Employer-benefit, pension, rollover, or deferred-compensation decisions near retirement
-- Roth conversion planning beyond the flagship Roth/tax-window specialty page
+- Roth conversion planning and retirement tax-window decisions
 - Withdrawal-order planning
 - Medicare, IRMAA, Social Security, and healthcare transition decisions
 - Surviving-spouse readiness, estate organization, and key-contact planning
@@ -99,7 +100,7 @@ Important context: the higher tier also has a legitimate pricing-architecture ro
 
 ## Routing Rules
 
-- Central pages should lead with the core promise, the two core client situations, and the Roth/tax-window specialty door.
+- Central pages should lead with the core promise and the two core client situations. Roth/tax-window content should be prominent inside retirement, not positioned as a third market.
 - Who We Help can show supporting situations, but it should make hierarchy obvious.
 - Service rhythm pages and PDFs can use the three operating lenses because they are about client service, not broad public positioning.
 - SEO and AI-search pages can become highly specific as long as each page routes back into the architecture.
@@ -112,7 +113,7 @@ Use:
 
 - "People arrive through specific situations, but the work still has to account for the full tax, investment, income, business, and estate picture."
 - "Specificity is good at the entry point; clarity is better at the center."
-- "Two core client situations, one high-intent specialty door, three service rhythms, many entry points."
+- "Two core client situations, three service rhythms, many entry points."
 - "Planning lens" or "service rhythm" for ongoing advisory categories.
 - "Entry point" for SEO, referral, guide, campaign, and situational pages.
 - "Scope" or "tier" for Keystone pricing.
@@ -121,13 +122,13 @@ Avoid:
 
 - Presenting 4+ audiences as equal on central pages.
 - Treating high earners/accumulators as a third equal homepage market.
-- Treating Roth conversion planning as a separate demographic instead of a decision-specific specialty door.
+- Treating Roth conversion planning as a separate market instead of a retirement decision cluster.
 - Treating Keystone Custom/Complex as a public audience category.
 - Creating niche pages that do not clearly route into a broader planning lens.
 
 ## Immediate Implications
 
-- Preserve the focused public strategy in the Target-Market Alignment Audit, but update it from two public lanes to two core client situations plus the Roth/tax-window specialty door.
+- Preserve the focused public strategy in the Target-Market Alignment Audit: two core client situations, with Roth/tax-window planning nested under retirement.
 - Preserve the three-category service rhythm model, but clarify that it is operational and client-service oriented.
 - Review homepage, Who We Help, Keystone, and pricing language through this architecture before building additional service-rhythm or entry-point pages.
 - When creating future landing pages, assign each page to a primary lens and entry-point type before drafting copy.

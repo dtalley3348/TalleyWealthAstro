@@ -302,14 +302,14 @@ function cityHubLinks(): RelatedLink[] {
 
 const personaRelatedLinks: Record<string, RelatedLink[]> = {
   'pre-retirees': [
-    { title: 'Johnson City retirement', body: 'A local doorway for retirement timing, income, taxes, and investment decisions in Johnson City.', href: '/retirement-planning-johnson-city-tn' },
-    { title: 'Bristol retirement', body: 'A local doorway for Bristol retirement planning where the TN/VA line may affect the numbers.', href: '/retirement-planning-bristol-tn-va' },
-    { title: 'Kingsport retirement', body: 'A local doorway for long-career families, benefit decisions, and retirement timing in Kingsport.', href: '/retirement-planning-kingsport-tn' },
+    { title: 'Retirement paycheck planning', body: 'Go deeper on turning savings into monthly income once the W-2 stops.', href: '/retirement-paycheck-planning-tri-cities-tn' },
+    { title: 'Five questions before retirement', body: 'A practical starting point for long-term employees before the last paycheck.', href: '/five-retirement-questions-before-you-retire' },
+    { title: 'Retirement tax-window planning', body: 'Go deeper on Roth conversions, Medicare thresholds, RMD pressure, and tax-bracket room inside the retirement lane.', href: '/roth-conversions-before-retirement-tri-cities-tn' },
   ],
   'business-owners': [
-    { title: 'Johnson City owners', body: 'A local doorway for owner pay, tax planning, business cash flow, and personal wealth in Johnson City.', href: '/financial-planning-for-johnson-city-business-owners' },
-    { title: 'Bristol owners', body: 'A local doorway for Bristol owners where tax strategy, owner decisions, and the TN/VA line may overlap.', href: '/financial-planning-for-bristol-business-owners' },
-    { title: 'Kingsport owners', body: 'A local doorway for Kingsport owners coordinating tax, cash flow, retirement plans, and household wealth.', href: '/financial-planning-for-kingsport-business-owners' },
+    { title: 'Owner pay planning', body: 'Go deeper on salary, distributions, reserves, taxes, and money outside the business.', href: '/owner-pay-planning-tri-cities-tn' },
+    { title: 'Business-owner tax planning', body: 'Start with the tax question, then connect it to owner pay, cash flow, retirement plans, and personal wealth.', href: '/business-owner-tax-planning-tri-cities-tn' },
+    { title: 'S-Corp planning', body: 'Go deeper on reasonable compensation, distributions, Tennessee tax drag, and whether the structure earns its keep.', href: '/s-corp-planning-tri-cities-tn' },
   ],
   'inherited-wealth': [
     { title: 'Financial planning', body: 'How accounts, taxes, estate documents, and investments fit into one plan.', href: '/services/financial-planning' },
@@ -467,6 +467,55 @@ const pathGuidance = seoRoute.type === 'city' && city?.slug === 'tri-cities'
       ? localAudiencePathGuidance()
       : null;
 
+const decisionParentSignals: Record<string, RelatedLink & { eyebrow: string }> = {
+  'retirement-paycheck-planning': {
+    eyebrow: 'Part of Tax-Smart Retirement Planning',
+    title: 'The paycheck question belongs inside the retirement plan.',
+    body: 'The broader lane is retirement timing, spending, taxes, Social Security, investments, healthcare, and family continuity.',
+    href: '/financial-advisor-for-pre-retirees',
+  },
+  'five-retirement-questions': {
+    eyebrow: 'Part of Tax-Smart Retirement Planning',
+    title: 'The five questions are the front door, not the whole plan.',
+    body: 'The broader lane is retirement timing, income, taxes, healthcare, Social Security, investment risk, and estate coordination.',
+    href: '/financial-advisor-for-pre-retirees',
+  },
+  'owner-pay-planning': {
+    eyebrow: 'Part of Business Owner Profit-to-Wealth Planning',
+    title: 'Owner pay is one piece of turning profit into personal wealth.',
+    body: 'The broader lane is owner compensation, cash flow, reserves, tax strategy, retirement plans, and assets outside the business.',
+    href: '/financial-advisor-for-business-owners',
+  },
+  'business-owner-tax-planning': {
+    eyebrow: 'Part of Business Owner Profit-to-Wealth Planning',
+    title: 'This tax question usually belongs inside the owner plan.',
+    body: 'The broader lane is owner pay, cash flow, retirement plans, business liquidity, and personal wealth.',
+    href: '/financial-advisor-for-business-owners',
+  },
+  's-corp-planning': {
+    eyebrow: 'Part of Business Owner Profit-to-Wealth Planning',
+    title: 'The S-Corp question sits underneath the owner-pay question.',
+    body: 'The broader lane is owner compensation, distributions, tax drag, business cash flow, and household wealth.',
+    href: '/financial-advisor-for-business-owners',
+  },
+  'retire-before-65': {
+    eyebrow: 'Part of Tax-Smart Retirement Planning',
+    title: 'Early retirement is one retirement transition decision.',
+    body: 'The broader lane is retirement timing, healthcare, taxes, withdrawals, Social Security, and investment risk.',
+    href: '/financial-advisor-for-pre-retirees',
+  },
+  'roth-conversions-before-retirement': {
+    eyebrow: 'Part of Tax-Smart Retirement Planning',
+    title: 'Roth conversions sit inside the retirement tax window.',
+    body: 'The broader lane is retirement income, tax brackets, Medicare thresholds, RMD pressure, and account order.',
+    href: '/financial-advisor-for-pre-retirees',
+  },
+};
+
+const activeDecisionParentSignal = seoRoute.decisionClusterKey
+  ? decisionParentSignals[seoRoute.decisionClusterKey]
+  : null;
+
 const personaReviewSet: Record<string, 'business' | 'retirement' | 'tax' | 'inherited' | 'equity' | 'default'> = {
   'business-owners': 'business',
   'pre-retirees': 'retirement',
@@ -509,6 +558,18 @@ const pageSchema = buildSEOLandingPageSchema({
 const jsonLd = [pageSchema, ...(faqSchema ? [faqSchema] : [])];
 
 const decisionClusterChrome: Record<string, { detailsHeading: string; faqHeading: string }> = {
+  'retirement-paycheck-planning': {
+    detailsHeading: 'The paycheck decisions that need to be designed together.',
+    faqHeading: 'Retirement paycheck questions worth answering before the W-2 stops.',
+  },
+  'owner-pay-planning': {
+    detailsHeading: 'The owner-pay decisions that need to be coordinated.',
+    faqHeading: 'Owner-pay questions worth sorting out before the next tax season.',
+  },
+  'five-retirement-questions': {
+    detailsHeading: 'The retirement pieces these questions pull together.',
+    faqHeading: 'Five retirement questions worth answering before work stops.',
+  },
   'business-owner-tax-planning': {
     detailsHeading: 'The owner decisions to coordinate before year-end.',
     faqHeading: 'Business-owner tax questions worth sorting out early.',
@@ -577,6 +638,13 @@ const pageChrome = seoRoute.type === 'decision-cluster'
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{page.eyebrow}</p>
         <h1 class="mt-5 font-serif text-4xl font-bold leading-tight text-primary md:text-5xl">{page.heading}</h1>
         <p class="mt-6 text-lg leading-relaxed text-muted-foreground">{page.intro}</p>
+        {activeDecisionParentSignal && (
+          <a href={activeDecisionParentSignal.href} class="mt-7 block max-w-xl rounded-lg border border-accent/30 bg-card p-4 shadow-sm transition hover:border-accent/70 hover:shadow-elegant">
+            <span class="block text-xs font-bold uppercase tracking-[0.16em] text-accent">{activeDecisionParentSignal.eyebrow}</span>
+            <span class="mt-2 block font-serif text-xl font-bold leading-tight text-primary">{activeDecisionParentSignal.title}</span>
+            <span class="mt-2 block text-sm leading-relaxed text-muted-foreground">{activeDecisionParentSignal.body}</span>
+          </a>
+        )}
         {page.employerDisclosure && (
           <p class="mt-5 rounded-md border border-border bg-card p-4 text-sm leading-relaxed text-muted-foreground">{page.employerDisclosure}</p>
         )}

@@ -19,17 +19,17 @@ const retirementQuestions = [
   {
     q: 'Can I actually stop working, and what changes if I wait?',
     a: 'Retirement timing can change healthcare, Social Security, taxes, withdrawals, cash reserves, and flexibility in the first few years.',
-    href: '/learn/retirement-planning/when-can-i-afford-to-retire',
+    href: '/five-retirement-questions-before-you-retire',
   },
   {
     q: 'Where does my paycheck come from after my paycheck stops?',
     a: 'The practical work is turning savings into a paycheck: which dollars come out first, which stay invested, and how much cash should stay available.',
-    href: '/learn/retirement-planning/when-can-i-afford-to-retire',
+    href: '/retirement-paycheck-planning-tri-cities-tn',
   },
   {
     q: 'What should my 401(k) be doing now that retirement is close?',
     a: 'The job changes from accumulation to income, guardrails, tax awareness, and protection against bad timing early in retirement.',
-    href: '/learn/investment-basics/how-should-i-invest-in-retirement',
+    href: '/retirement-paycheck-planning-tri-cities-tn',
   },
   {
     q: 'What tax decisions should I see before they are gone?',
@@ -39,7 +39,7 @@ const retirementQuestions = [
   {
     q: 'Would my spouse or family know what to do if I could not explain it?',
     a: 'Estate planning is not only documents. Accounts, beneficiaries, assets, and the documents need to line up before the family has to rely on them.',
-    href: '/learn/estate-planning/what-estate-documents-do-i-need',
+    href: '/five-retirement-questions-before-you-retire',
   },
 ];
 ---
@@ -59,26 +59,26 @@ const retirementQuestions = [
   </section>
 
   <section class="bg-background">
-    <div class="section-container grid gap-12 border-b border-border/70 py-20 lg:grid-cols-[0.68fr_1fr] lg:items-start">
-      <div>
+    <div class="section-container grid gap-10 border-b border-border/70 py-20 lg:grid-cols-[0.72fr_1.1fr] lg:items-start">
+      <div class="max-w-xl">
         <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Retirement starting point</p>
-        <h2 class="mt-4 max-w-xl font-serif text-3xl font-bold leading-tight text-primary md:text-5xl">Five questions that usually decide whether retirement feels ready.</h2>
+        <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-primary md:text-4xl">Five questions that usually decide whether retirement feels ready.</h2>
         <p class="mt-5 max-w-lg text-lg leading-relaxed text-muted-foreground">
           If retirement is within sight, start here. Each question opens into a deeper answer, but the questions belong together because the decisions affect each other.
         </p>
-        <a href="/financial-advisor-for-pre-retirees" class="mt-7 inline-flex text-sm font-bold text-accent transition hover:text-accent/80">
+        <a href="/financial-advisor-for-pre-retirees" class="mt-7 inline-flex rounded-md border border-accent/30 px-4 py-3 text-sm font-bold text-accent transition hover:border-accent hover:bg-accent hover:text-accent-foreground">
           See how we help pre-retirees -&gt;
         </a>
       </div>
-      <ol class="divide-y divide-border">
+      <ol class="grid gap-4">
         {retirementQuestions.map((item, index) => (
-          <li>
-            <a href={item.href} class="group grid gap-4 py-5 first:pt-0 last:pb-0 sm:grid-cols-[48px_1fr]">
-              <span class="font-serif text-2xl font-bold leading-none text-accent/85">{String(index + 1).padStart(2, '0')}</span>
-              <span>
-                <span class="block font-serif text-xl font-bold leading-tight text-primary transition group-hover:text-accent">{item.q}</span>
-                <span class="mt-2 block text-sm leading-relaxed text-muted-foreground">{item.a}</span>
-                <span class="mt-3 inline-flex text-sm font-bold text-accent transition group-hover:translate-x-1">Read the deeper answer -&gt;</span>
+          <li class="min-w-0">
+            <a href={item.href} class="group grid min-w-0 gap-4 rounded-lg border border-border/50 bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-elegant sm:grid-cols-[56px_1fr]">
+              <span class="flex h-12 w-12 items-center justify-center rounded-md bg-accent/10 font-serif text-xl font-bold leading-none text-accent">{String(index + 1).padStart(2, '0')}</span>
+              <span class="min-w-0">
+                <span class="block break-words font-serif text-xl font-bold leading-snug text-primary transition group-hover:text-accent">{item.q}</span>
+                <span class="mt-2 block break-words text-sm leading-relaxed text-muted-foreground">{item.a}</span>
+                <span class="mt-4 inline-flex text-sm font-bold text-accent transition group-hover:translate-x-1">Read the deeper answer -&gt;</span>
               </span>
             </a>
           </li>

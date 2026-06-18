@@ -4,3 +4,19 @@ node_modules/
 .DS_Store
 .env
 .env.local
+
+# Cowork content pipeline (local-only, not part of website)
+content-pipeline/inbox/
+content-pipeline/work/
+content-pipeline/output/
+content-pipeline/approval-queue/
+content-pipeline/remotion/node_modules/
+content-pipeline/remotion/out/
+content-pipeline/node_modules/
+content-pipeline/remotion/public/input.mp4
+content-pipeline/remotion/public/props.json
+content-pipeline/broll/clips/
+content-pipeline/broll/frames/
+content-pipeline/overlay-specs/
+content-pipeline/remotion/public/broll-input.mp4
+content-pipeline/review.html

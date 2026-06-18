@@ -8,7 +8,8 @@ The new public front door should make it obvious that the firm is built around:
 
 1. Tax-smart retirement planning for the five years before and after retirement.
 2. Business owner planning for turning profit into personal wealth.
-3. Roth conversion and retirement tax-window planning as a high-intent specialty door.
+
+Roth conversion and retirement tax-window planning should remain a high-interest retirement decision cluster, not a separate market beside the two core client situations.
 
 Secondary audiences remain legitimate entry points when the situation needs deeper planning, but they should not compete with the core positioning in the header, homepage, or main conversion pages.
 
@@ -55,6 +56,6 @@ After implementation, review the site in this order:
 5. Pricing.
 6. Services.
 7. Explore Call.
-8. Pre-retiree, business-owner, and Roth conversion pages.
+8. Pre-retiree, business-owner, and Roth conversion decision pages.
 
 The final handoff should rank which updates feel strongest and where David's opinion is most useful.

@@ -40,12 +40,12 @@ Final video titles should usually come from the edited video and transcript. Pre
 
 Current homepage expression to preserve in future content strategy:
 
-- "Tax-smart planning for retirement, business owners, and Roth conversion windows."
+- "Tax-smart planning for retirement decisions and business-owner wealth."
 - "Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversions, and the wealth they are trying to build."
 
 1. Tax-smart retirement planning for the five years before and after retirement, especially in Northeast Tennessee.
 2. Business owner planning for turning profit into personal wealth.
-3. Roth conversion and retirement tax-window planning.
+3. Roth conversion and retirement tax-window planning as a retirement decision cluster.
 4. Planning-first advice.
 5. Retirement income, Medicare, Social Security, tax windows, and withdrawal sequencing.
 6. Owner compensation, entity decisions, cash flow, retirement-plan design, and exit readiness.

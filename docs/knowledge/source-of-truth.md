@@ -16,7 +16,7 @@ Talley Wealth helps people make clearer tax, retirement, investment, and busines
 
 Use layered audience architecture, not one flat market list:
 
-- Public center of gravity: two core client situations plus one high-intent specialty door.
+- Public center of gravity: two core client situations. Roth conversion and retirement tax-window planning is a major retirement decision cluster, not a separate public market.
 - Operational service rhythms: retirement/retirees, business owners, and high earners/accumulators.
 - Entry points: specific search, referral, guide, seminar, and campaign pages nested under a planning lens.
 - Keystone tiers: engagement scope and pricing language, not target-market identity.
@@ -25,7 +25,8 @@ Use this public front door unless David explicitly changes the strategy:
 
 1. Tax-smart retirement planning for the five years before and after retirement, especially in Northeast Tennessee, usually with $1M-$5M in investable assets.
 2. Business owner planning for turning profit into personal wealth: tax, cash flow, owner compensation, retirement plans, entity, exit, and family-wealth strategy.
-3. Roth conversion and retirement tax-window planning as a high-intent specialty door for households with meaningful tax-deferred retirement balances.
+
+Roth conversion and retirement tax-window planning remains a high-value retirement topic for households with meaningful tax-deferred retirement balances, but it should live inside the retirement path rather than beside retirement and business owners.
 
 Secondary audiences remain legitimate but should not be presented as equal public markets on the homepage or core conversion pages:
 
@@ -38,15 +39,15 @@ When sources conflict, preserve this hierarchy. Keep secondary audiences visible
 ## Public Language Rules
 
 - Current preferred homepage formulation:
-  - H1: "Tax-smart planning for retirement, business owners, and Roth conversion windows."
+  - H1: "Tax-smart planning for retirement decisions and business-owner wealth."
   - Supporting line: "Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversions, and the wealth they are trying to build."
   - Retirement path: "Tax-Smart Retirement Planning"
   - Business-owner path: "Business Owner Profit-to-Wealth Planning"
-  - Roth specialty path: "Roth Conversion + Retirement Tax Windows"
+  - Roth decision cluster: "Roth Conversion and Retirement Tax Window Planning"
 - Lead with clearer decisions, tax-smart planning, plain-English strategy, and specific planning pressure around retirement dates, tax windows, owner pay, Roth conversions, Medicare, Social Security, cash flow, and investments.
 - Avoid using "piecemeal" as a primary phrase. Prefer "scattered," "handled in separate silos," "moving parts," or "decisions that affect each other."
 - Treat "coordination" as supporting language. Prospects usually feel tax pain, retirement uncertainty, business complexity, decision fatigue, or a desire for clarity before they ask for "coordination."
-- Do not imply Talley Wealth only serves the three public doors. Do make clear those are the places where the firm is most visibly built to be useful.
+- Do not imply Talley Wealth only serves the two public lanes. Do make clear those are the places where the firm is most visibly built to be useful.
 
 ## Client-Specific Facts
 

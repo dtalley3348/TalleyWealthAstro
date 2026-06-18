@@ -10,22 +10,34 @@ export interface InternalLink {
 
 const linkMap: Record<string, InternalLink[]> = {
   retirement: [
+    { label: 'Retirement Paycheck Planning', path: '/retirement-paycheck-planning-tri-cities-tn' },
     { label: 'Retirement Planning', path: '/services/retirement-planning' },
     { label: 'Financial Advisor for Pre-Retirees', path: '/financial-advisor-for-pre-retirees' },
-    { label: 'Roth Conversion Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
+    { label: 'Retirement Tax-Window Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
+  ],
+  paycheck: [
+    { label: 'Retirement Paycheck Planning', path: '/retirement-paycheck-planning-tri-cities-tn' },
+    { label: 'Five Questions Before Retirement', path: '/five-retirement-questions-before-you-retire' },
+    { label: 'Financial Advisor for Pre-Retirees', path: '/financial-advisor-for-pre-retirees' },
   ],
   roth: [
-    { label: 'Roth Conversion Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
+    { label: 'Retirement Tax-Window Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
     { label: 'Financial Advisor for Pre-Retirees', path: '/financial-advisor-for-pre-retirees' },
   ],
   tax: [
     { label: 'Tax Planning', path: '/services/tax-planning' },
-    { label: 'Roth Conversion Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
+    { label: 'Retirement Tax-Window Planning', path: '/roth-conversions-before-retirement-tri-cities-tn' },
     { label: 'Financial Advisor in Johnson City, TN', path: '/financial-advisor-johnson-city-tn' },
   ],
   business: [
+    { label: 'Owner Pay Planning', path: '/owner-pay-planning-tri-cities-tn' },
     { label: 'Financial Advisor for Business Owners', path: '/financial-advisor-for-business-owners' },
     { label: 'Business Owner Planning', path: '/services/business-owner-planning' },
+  ],
+  'owner pay': [
+    { label: 'Owner Pay Planning', path: '/owner-pay-planning-tri-cities-tn' },
+    { label: 'S-Corp Planning', path: '/s-corp-planning-tri-cities-tn' },
+    { label: 'Financial Advisor for Business Owners', path: '/financial-advisor-for-business-owners' },
   ],
   investment: [
     { label: 'Investment Management', path: '/services/investment-management' },

@@ -9,7 +9,7 @@ const { compact = false, animated = false } = Astro.props;
 
 <div class={`tw-arch ${compact ? 'tw-arch--compact' : ''} ${animated ? 'tw-arch--animated' : ''}`}>
   <div class="tw-arch__frame">
-    <svg viewBox="0 0 560 330" class="tw-arch__svg" preserveAspectRatio="xMidYMid meet" aria-label="Keystone Method diagram">
+    <svg viewBox={compact ? '218 112 364 196' : '0 0 580 330'} class="tw-arch__svg" preserveAspectRatio="xMidYMid meet" aria-label="Keystone Method diagram">
       <g class="rough-stones" aria-hidden="true">
         <path d="M38 232 L76 218 L108 238 L98 277 L52 276 Z" />
         <path d="M94 168 L135 158 L165 186 L151 225 L104 218 Z" />
@@ -81,7 +81,7 @@ const { compact = false, animated = false } = Astro.props;
     margin-inline: auto;
   }
   html[data-tenant="talley-wealth"] .tw-arch--compact .tw-arch__frame {
-    max-width: 34rem;
+    max-width: 38rem;
   }
   html[data-tenant="talley-wealth"] .tw-arch__svg {
     width: 100%;
@@ -89,8 +89,8 @@ const { compact = false, animated = false } = Astro.props;
     overflow: visible;
   }
   html[data-tenant="talley-wealth"] .tw-arch--compact .tw-arch__svg {
-    width: 108%;
-    transform: translateX(-4%);
+    width: 100%;
+    transform: none;
   }
   html[data-tenant="talley-wealth"] .tw-arch .rough-stones path {
     fill: color-mix(in srgb, var(--color-primary) 18%, transparent);
@@ -214,11 +214,13 @@ const { compact = false, animated = false } = Astro.props;
       display: none;
     }
     html[data-tenant="talley-wealth"] .tw-arch__frame {
-      overflow: hidden;
+      max-width: min(23rem, calc(100vw - 2rem));
+      overflow: visible;
     }
     html[data-tenant="talley-wealth"] .tw-arch__svg,
     html[data-tenant="talley-wealth"] .tw-arch--compact .tw-arch__svg {
-      width: 100%;
+      width: 108%;
+      margin-left: -4%;
       transform: none;
     }
   }

@@ -20,3 +20,5 @@ content-pipeline/broll/frames/
 content-pipeline/overlay-specs/
 content-pipeline/remotion/public/broll-input.mp4
 content-pipeline/review.html
+content-pipeline/inbox-local/
+public/pipeline-media/

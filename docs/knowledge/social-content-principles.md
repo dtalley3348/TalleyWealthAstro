@@ -29,15 +29,14 @@ Default durable-belief sources:
 
 ## Audience Strategy
 
-Talley Wealth has more than one market, but the public strategy is no longer an equal-weighted list of audiences. The main public focus is tax-smart retirement planning, business owner profit-to-wealth planning, and Roth conversion or retirement tax-window planning as a high-intent specialty door.
+Talley Wealth has more than one market, but the public strategy is no longer an equal-weighted list of audiences. The main public focus is tax-smart retirement planning and business owner profit-to-wealth planning, with retirement tax-window topics treated as major retirement-transition content.
 
 For now, keep the social presence unified and organize content by pillars instead of splitting into separate channels. Separate channels add operational drag before there is enough posting volume and audience data to justify the complexity.
 
 Use this default allocation for prompt batches unless David changes the emphasis:
 
-- 40-45% near-retirees and retirement-transition households.
-- 25-30% business owners, owner tax strategy, cash flow, exit readiness, and turning business profit into personal wealth.
-- 15-20% Roth conversion, retirement tax-window, RMD, Medicare/IRMAA, and withdrawal-sequencing topics.
+- 50-55% near-retirees, recent retirees, retirement paycheck, retirement tax-window, Medicare/IRMAA, Social Security, 401(k), and withdrawal-sequencing topics.
+- 30-35% business owners, owner pay, tax strategy, cash flow, exit readiness, and turning business profit into personal wealth.
 - 10-15% executives, equity comp, healthcare/high-income professionals, and busy delegators.
 - Remaining space for general David POV, Keystone, planning philosophy, implementation, and client-experience themes.
 
@@ -53,7 +52,52 @@ These pillars should stay visible over time: retirement confidence, sequencing, 
 
 Each individual video should speak to one audience and one tension. The overall feed can serve multiple markets as long as each post is specific.
 
-Do not let a batch feel like Talley Wealth is equally built for six different markets. A good secondary-audience prompt is welcome, but the batch should still make the retirement, business-owner, and Roth/tax-window focus visible.
+Do not let a batch feel like Talley Wealth is equally built for six different markets. A good secondary-audience prompt is welcome, but the batch should still make the retirement-transition and business-owner focus visible.
+
+## Intentional Persona Lanes
+
+Use these as prompt lenses, not rigid boxes. A person can borrow language from more than one lane, and the prompt should only use the parts that obviously fit.
+
+### Tax-smart retirement transition
+
+People in the five years before or after retirement who are trying to decide whether the last paycheck can stop, where the retirement paycheck comes from, what the 401(k) should be doing now, which tax windows are closing, and whether a spouse or family member could carry the plan if needed.
+
+Good prompt triggers:
+
+- a last-paycheck date is starting to feel real
+- Social Security, Medicare, Roth conversions, RMDs, withholding, or withdrawal order are colliding
+- the person saved well but has never turned accounts into income
+- the person is afraid of either running out of money or underspending the healthiest years
+
+### Business owner profit-to-wealth
+
+Profitable owners whose business is working, but the owner still has to decide how profit becomes personal wealth. The prompt should respect the spectrum: a solo attorney, a medical practice with partners and staff, and a larger operating company can all fit parts of the lane, but they do not need the same language.
+
+Good prompt triggers:
+
+- owner pay, distributions, salary, reasonable compensation, or estimated taxes feel improvised
+- too much cash is sitting in the business without a clear job
+- the owner is profitable but still unsure whether personal wealth is actually building
+- the business carries too many roles: income, net worth, retirement plan, identity, and future exit
+
+### Secondary complexity lanes
+
+Use these when the transcript or prompt has a real situation, not just because the person is wealthy: executives with equity compensation, inherited-wealth families, high-income professionals, charitable or estate-planning households, and successful families with too many disconnected professionals.
+
+### Referral-partner lens
+
+Some prompts should be simple enough for a CPA, attorney, HR leader, or friend to forward. These should sound like useful plain-English decision framing, not a pitch for Talley Wealth.
+
+## Persona Fit Spectrum
+
+Before writing the prompt, decide how strongly the persona applies:
+
+- **Direct fit:** the prompt can speak plainly to the lane.
+- **Partial fit:** borrow only the relevant language and avoid over-describing the person.
+- **Adjacent fit:** make the prompt about the decision, not the persona.
+- **No fit:** do not force the lane; keep it as general POV or hold it for another batch.
+
+This matters most for business-owner content. Do not make every owner sound like a multi-partner practice with staff, payroll, and succession complexity. Do not make every retirement prompt sound like the same age, same account mix, or same fear.
 
 Broad audience labels are not enough. "Business owners" or "near-retirees" can be the lane, but they are not yet a prompt. Before writing the opening situation, create a required Micro-Audience Brief:
 

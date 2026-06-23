@@ -51,13 +51,13 @@ const secondaryFits = [
   heroTransparent
   ogImage="/brands/talley-wealth/hero-bg.webp"
 >
-  <section class="relative flex min-h-[85vh] items-center overflow-hidden bg-primary pt-20 text-primary-foreground sm:pt-28">
+  <section class="relative flex min-h-[85vh] items-center overflow-hidden bg-primary pt-20 pb-12 text-primary-foreground sm:pt-28 sm:pb-16">
     <img decoding="async" src="/brands/talley-wealth/hero-bg.webp" alt="" class="absolute inset-0 h-full w-full object-cover" loading="eager" />
     <div class="absolute inset-0 bg-gradient-to-r from-primary from-40% via-primary/90 via-70% to-primary/60"></div>
 
     <div class="section-container relative z-10 w-full min-w-0">
       <div class="tw-home-hero__copy max-w-4xl min-w-0">
-        <div class="mb-6 flex items-center gap-3">
+        <div class="tw-home-hero__marker mb-6 flex items-center gap-3">
           <div class="h-1 w-16 rounded-full bg-accent"></div>
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Johnson City, Tennessee</span>
         </div>
@@ -65,9 +65,9 @@ const secondaryFits = [
           Tax-smart planning for retirement decisions and business-owner wealth.
         </h1>
         <p class="mt-5 max-w-full text-lg leading-relaxed text-primary-foreground/80">
-          Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversion windows, and the wealth they are trying to build.
+          Talley Wealth helps people in the years around retirement and profitable business owners make better decisions about income, taxes, investments, owner pay, Roth conversion windows, and the wealth they are building.
         </p>
-        <div class="mt-8 flex min-w-0 flex-col gap-4 sm:flex-row">
+        <div class="tw-home-hero__actions mt-8 flex min-w-0 flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex max-w-full justify-center rounded-md bg-accent px-6 py-4 text-center font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
           <a href="/how-we-work/what-to-expect" class="inline-flex max-w-full justify-center rounded-md border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-4 text-center font-bold text-primary-foreground transition hover:bg-primary-foreground/20">How We Work</a>
         </div>
@@ -88,7 +88,7 @@ const secondaryFits = [
   <section class="border-b border-border/50 bg-card">
     <div class="section-container py-8">
       <div class="grid gap-5 text-sm text-muted-foreground md:grid-cols-4">
-        <p><strong class="block font-serif text-lg text-primary">CFP®, ChFC®, EA</strong> Planning, tax, and investments in one conversation.</p>
+        <p><strong class="block font-serif text-lg text-primary">CFP®, ChFC®, EA</strong> Planning, tax, and investment management in one conversation.</p>
         <p><strong class="block font-serif text-lg text-primary">Founder-led advisory</strong> You work directly with David, supported by a prepared team.</p>
         <p><strong class="block font-serif text-lg text-primary">Two clear planning lanes</strong> Retirement transition and business-owner strategy, with Roth/tax windows inside the retirement work.</p>
         <p><strong class="block font-serif text-lg text-primary">67 five-star Google reviews</strong> Clear explanations, follow-through, and personal attention.</p>
@@ -119,9 +119,9 @@ const secondaryFits = [
               <p class="font-serif text-2xl italic leading-snug text-primary">The problem is not usually a lack of effort. It is that each decision was made before the next one became visible.</p>
             </blockquote>
             <p>That matters most when retirement is close, including Roth conversion and tax-window decisions, or when business profit is changing the family's personal picture. Other situations can still fit, but those are the places where our work usually has the most leverage.</p>
-            <p>Our work runs the other way around. We build the plan first, then let the plan guide the investment allocation, tax strategy, estate review, and ongoing decisions.</p>
+            <p>Our work runs the other way around. We build the plan first, then let the plan guide investment management, tax strategy, estate review, and ongoing decisions.</p>
           </div>
-          <a href="/pricing" class="mt-8 inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">
+          <a href="/pricing" class="tw-home-pricing-link mt-8 inline-flex items-center gap-2 font-bold text-accent transition hover:gap-3">
             How we get paid and how the engagement is structured <span aria-hidden="true">-&gt;</span>
           </a>
         </div>
@@ -186,7 +186,7 @@ const secondaryFits = [
         </div>
         <h2 class="font-serif text-3xl font-bold md:text-4xl">Keystone turns the questions into a plan.</h2>
         <p class="mt-6 text-lg leading-relaxed text-primary-foreground/80">
-          Most firms start by managing money and hope the rest of the picture works itself out. Keystone runs in the other order. It is a structured six-month engagement where we build the plan first, calibrate investments to it, and put tax strategy on the calendar before the best windows close. For retirement families, that usually means income, taxes, and investment decisions finally line up. For business owners, it means the business and personal plan stop being treated like separate projects.
+          Most firms start by managing money and hope the rest of the picture works itself out. Keystone runs in the other order. It is a structured six-month engagement where we build the plan first, calibrate investment management around it, and put tax strategy on the calendar before the best windows close. For retirement families, that usually means income, taxes, and investment decisions finally line up. For business owners, it means the business and personal plan stop being treated like separate projects.
         </p>
         <p class="mt-6 text-sm italic text-primary-foreground/70">Fully refundable at any point during the engagement, for any reason.</p>
         <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -206,8 +206,8 @@ const secondaryFits = [
           </div>
         </a>
 
-        <div>
-          <div class="mb-6 flex items-center gap-3">
+        <div class="tw-home-advisor-copy">
+          <div class="tw-home-advisor-kicker mb-6 flex items-center gap-3">
             <div class="gold-line"></div>
             <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Your Advisor</span>
           </div>
@@ -218,12 +218,12 @@ const secondaryFits = [
             <p>I built Talley Wealth to do that work differently. Every client works directly with me. The plan, the investments, and the tax strategy sit in one conversation. Stephenee keeps the operational side running so the next steps stay visible, and meetings actually feel prepared rather than improvised.</p>
           </div>
           <a href="/about/meet-david-talley" class="mt-5 inline-flex text-sm font-bold text-muted-foreground transition hover:text-accent">The longer version of why I do this work</a>
-          <div class="mt-8 flex flex-wrap gap-3">
+          <div class="tw-home-credentials mt-8 flex flex-wrap gap-3">
             {['CFP®', 'ChFC®', 'EA'].map((credential) => (
               <span class="rounded-md bg-primary px-4 py-2 font-bold text-primary-foreground">{credential}</span>
             ))}
           </div>
-          <div class="mt-8 flex items-center gap-4 border-t border-border pt-5">
+          <div class="tw-home-support mt-8 flex items-center gap-4 border-t border-border pt-5">
             <div class="h-12 w-12 overflow-hidden rounded-full shadow-elegant">
               <img decoding="async" src="/brands/talley-wealth/stephenee-carberry.webp" alt="Stephenee Carberry, FPQP" class="h-full w-full object-cover"  loading="lazy" />
             </div>
@@ -252,11 +252,40 @@ const secondaryFits = [
     .tw-home-hero__copy {
       width: min(100%, calc(100vw - 2rem));
       max-width: calc(100vw - 2rem);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .tw-home-hero__marker,
+    .tw-home-hero__actions {
+      align-items: center;
+      justify-content: center;
     }
 
     section:first-of-type h1 {
       font-size: clamp(1.85rem, 9vw, 2.25rem);
       text-wrap: auto;
+    }
+
+    .tw-home-pricing-link {
+      display: flex;
+      width: fit-content;
+      text-align: center;
+    }
+
+    .tw-home-advisor-copy {
+      text-align: center;
+    }
+
+    .tw-home-advisor-kicker,
+    .tw-home-credentials,
+    .tw-home-support {
+      justify-content: center;
+    }
+
+    .tw-home-support {
+      flex-direction: column;
+      text-align: center;
     }
   }
 </style>

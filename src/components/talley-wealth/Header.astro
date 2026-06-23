@@ -360,15 +360,25 @@ const { transparentOverHero = false } = Astro.props;
     const closeBtn = document.getElementById('tw-mobile-close');
     if (!header) return;
 
-    // Scroll-based solid/transparent transition (only matters when transparent-over-hero=true)
+    // Scroll-based solid/transparent transition. On transparent hero pages,
+    // keep the header in the hero state until the next section is close.
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      const isTransparentHero = header.dataset.transparent === 'true';
+      const hero = document.querySelector('main > section:first-child');
+      const heroBottom = hero?.getBoundingClientRect().bottom ?? 0;
+      const headerHeight = header.getBoundingClientRect().height;
+      const shouldBeSolid = isTransparentHero
+        ? heroBottom <= headerHeight + 16
+        : window.scrollY > 10;
+
+      if (shouldBeSolid) {
         header.classList.add('is-scrolled');
       } else {
         header.classList.remove('is-scrolled');
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
     handleScroll();
 
     // Mobile menu

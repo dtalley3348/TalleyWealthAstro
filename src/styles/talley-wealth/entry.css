@@ -317,10 +317,13 @@
     html[data-tenant="talley-wealth"] h2,
     html[data-tenant="talley-wealth"] h3,
     html[data-tenant="talley-wealth"] p,
-    html[data-tenant="talley-wealth"] li,
+    html[data-tenant="talley-wealth"] li {
+      max-width: min(100%, 18.5rem) !important;
+      text-wrap: auto !important;
+      overflow-wrap: anywhere !important;
+    }
     html[data-tenant="talley-wealth"] a,
     html[data-tenant="talley-wealth"] button {
-      max-width: min(100%, 18.5rem) !important;
       text-wrap: auto !important;
       overflow-wrap: anywhere !important;
     }
@@ -345,6 +348,22 @@
     }
     html[data-tenant="talley-wealth"] [class*="w-["],
     html[data-tenant="talley-wealth"] [class*="min-w-["] {
+      max-width: 100%;
+    }
+    html[data-tenant="talley-wealth"] main a.inline-flex {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    html[data-tenant="talley-wealth"] main a[class*="rounded"][class*="border"],
+    html[data-tenant="talley-wealth"] main a[class*="rounded"][class*="bg-card"],
+    html[data-tenant="talley-wealth"] main article[class*="rounded"][class*="border"],
+    html[data-tenant="talley-wealth"] main div[class*="rounded"][class*="border"] {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+    html[data-tenant="talley-wealth"] main a.inline-flex[class*="rounded"] {
+      width: fit-content;
       max-width: 100%;
     }
   }

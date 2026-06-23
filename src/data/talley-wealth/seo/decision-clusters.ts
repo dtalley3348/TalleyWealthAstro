@@ -7,7 +7,7 @@ export const decisionClusters: Record<string, DecisionClusterPage> = {
     metaDescription: 'Business-owner tax planning for profitable Tri-Cities owners coordinating taxes, owner pay, cash flow, retirement plans, and personal wealth.',
     eyebrow: 'Business-owner tax planning',
     heading: 'Business Owner Tax Planning in the Tri-Cities',
-    intro: 'A bigger tax bill is usually a signal. The business may be working. But now taxes are starting to affect cash, owner pay, retirement contributions, and the wealth you are trying to build outside the company.',
+    intro: 'A bigger tax bill is usually a signal. The business may be working. But now taxes are starting to affect cash, owner pay, retirement contributions, and the wealth you are building outside the company.',
     heroImage: '/brands/talley-wealth/david-whiteboard-strategy.jpg',
     heroImageAlt: 'David Talley explaining planning decisions at a whiteboard',
     sectionLabel: 'The decision',

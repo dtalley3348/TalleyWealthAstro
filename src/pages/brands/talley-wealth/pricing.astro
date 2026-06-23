@@ -5,24 +5,25 @@ import { buildFAQPageSchema } from '../../../data/talley-wealth/seo/schema';
 
 const personalIncludes = [
   'Four to five working meetings over roughly six months',
-  'A written financial plan built around your actual goals, not a generic template',
-  'Retirement income analysis: timing, sequencing, and sustainability',
-  'Multi-year Roth conversion analysis',
-  'Tax projection and strategy coordinated with the plan',
-  'Investment review and allocation recommendation calibrated to the plan',
-  'Estate review: beneficiaries, documents, and coordination',
-  'Risk and protection review: insurance gaps, umbrella coverage, disability',
-  'All analysis and coordination between meetings handled by our team',
+  'A written financial plan built around your actual goals, tradeoffs, and next actions',
+  'Retirement income plan with timing, withdrawal sequencing, Social Security, Medicare, and sustainability decisions mapped',
+  'Multi-year Roth conversion and tax-window plan with the first-year actions identified',
+  'Forward-looking tax projection with strategy, estimated-payment, and year-end planning steps coordinated to the plan',
+  'Investment allocation rebuilt around the retirement income, tax, cash-flow, and risk decisions the plan requires',
+  'Estate planning process led from goals and document review through execution steps, beneficiary updates, and account/title coordination',
+  'Risk and protection work: insurance gaps, umbrella coverage, disability, long-term care exposure, and what should actually change',
+  'Between-meeting analysis, forms, coordination, and open-loop tracking handled by our team so the work keeps moving',
 ];
 
 const ownerIncludes = [
   'Everything in Keystone Personal, plus:',
-  'Entity-level analysis across your business and personal finances',
-  'Owner compensation strategy: salary, distributions, retirement plan design',
-  'Business tax strategy, including pass-through optimization',
-  'Retirement plan review: SEP, Solo 401(k), defined benefit if applicable',
-  'Succession and exit-readiness considerations',
-  'Coordinated planning across personal, entity, and family balance sheets',
+  'Entity-level planning across the business, household cash flow, tax return, and personal balance sheet',
+  'Owner compensation plan covering salary, distributions, reasonable-compensation pressure, retirement contributions, and cash reserves',
+  'Business tax strategy with pass-through planning, timing decisions, estimated payments, and implementation steps coordinated through the year',
+  'Retirement plan design review across SEP, Solo 401(k), defined benefit, or employer plan options when relevant',
+  'Profit-to-personal-wealth system for deciding what stays in the business, what comes home, and what gets invested outside the company',
+  'Succession, sale, or continuity questions surfaced early enough to shape tax, estate, and personal planning decisions',
+  'Coordinated follow-through across personal, entity, and family balance sheets so business decisions do not sit apart from the plan',
 ];
 
 const customFitItems = [
@@ -79,7 +80,7 @@ const pricingFAQs = [
 
 <TalleyPage
   title="Pricing | Talley Wealth Financial Advisor Fees"
-  description="Transparent, clear pricing for financial planning and tax services at Talley Wealth. No hidden fees, no surprises. Know what you will pay before you start."
+  description="Transparent pricing for financial planning, investment management, and tax-aware ongoing advisory at Talley Wealth. Know what you will pay before you start."
   jsonLd={buildFAQPageSchema(pricingFAQs)}
 >
   <section class="bg-muted/35">
@@ -126,7 +127,7 @@ const pricingFAQs = [
             <p class="mt-1 text-sm text-muted-foreground">flat fee · six-month engagement</p>
             <p class="mt-3 text-xs font-semibold text-primary/80">Fully refundable. Any reason, any time during the engagement.</p>
           </div>
-          <p class="mt-8 text-center italic text-muted-foreground">For households where the pieces are mostly personal, especially the years when retirement stops being theoretical.</p>
+          <p class="mt-8 text-center italic text-muted-foreground">For households where the pieces are mostly personal, especially the years when retirement stops being theoretical and the decisions need to start happening.</p>
           <div class="mt-8 border-t border-border/60 pt-6">
             <h4 class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Included in Keystone Personal</h4>
             <ul class="mt-4 space-y-3">
@@ -148,7 +149,7 @@ const pricingFAQs = [
             <p class="mt-1 text-sm text-muted-foreground">flat fee · six-month engagement</p>
             <p class="mt-3 text-xs font-semibold text-primary/80">Fully refundable. Any reason, any time during the engagement.</p>
           </div>
-          <p class="mt-8 text-center italic text-muted-foreground">For business owners where tax, cash flow, owner pay, retirement plans, entity decisions, and personal wealth all affect each other.</p>
+          <p class="mt-8 text-center italic text-muted-foreground">For business owners where tax, cash flow, owner pay, retirement plans, entity decisions, and personal wealth all need to be turned into an executable plan.</p>
           <div class="mt-8 border-t border-border/60 pt-6">
             <h4 class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Included in Keystone Owner</h4>
             <ul class="mt-4 space-y-3">

@@ -31,7 +31,7 @@ const primaryServices = [
     title: 'Investment Management',
     href: '/services/investment-management',
     label: 'Portfolio',
-    body: 'For portfolios that need to support retirement income, tax strategy, concentration risk, cash flow, and the life the money is meant to fund.',
+    body: 'For investment assets that need to support retirement income, tax strategy, concentration risk, cash flow, and the life the money is meant to fund.',
   },
   {
     title: 'Business Owner Planning',
@@ -80,9 +80,9 @@ const planningAreas = [
           Planning for retirement decisions and business-owner wealth.
         </h1>
         <p class="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          Most people do not reach out because they want a menu of services. They reach out because retirement is getting real, a business tax question is becoming strategic, or a retirement tax-window decision is starting to feel too expensive to guess at.
+          Most people do not reach out because they want a menu of services. They reach out because retirement is getting real or a business tax question has become strategic. The technical work, including Roth conversions, investments, estate details, and tax planning, sits inside those larger decisions.
         </p>
-        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <div class="tw-services-actions mt-8 flex flex-col gap-4 sm:flex-row">
           <a href="/get-started" class="inline-flex rounded-md bg-accent px-6 py-4 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
           <a href="/how-we-work/keystone-method" class="inline-flex rounded-md border border-primary/20 bg-background px-6 py-4 font-bold text-primary transition hover:bg-card">See the planning process</a>
         </div>
@@ -168,3 +168,12 @@ const planningAreas = [
     secondaryHref="/pricing"
   />
 </TalleyPage>
+
+<style>
+  @media (max-width: 640px) {
+    .tw-services-actions {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>

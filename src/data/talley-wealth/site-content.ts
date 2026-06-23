@@ -1,4 +1,5 @@
 import { blogPosts as migratedBlogPosts } from './blog-posts';
+import { generatedBlogPosts } from './generated-blog-posts';
 
 export type LinkItem = {
   title: string;
@@ -190,7 +191,7 @@ export const howPages: Record<string, BasicPage> = {
   },
 };
 
-export const blogPosts: BlogPost[] = migratedBlogPosts;
+export const blogPosts: BlogPost[] = [...generatedBlogPosts, ...migratedBlogPosts];
 
 export const learnArticles: LearnArticle[] = [
   {

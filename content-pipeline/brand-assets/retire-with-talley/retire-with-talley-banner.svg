@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Retire With Talley banner</title>
+  <desc id="desc">A navy and gold social banner for Retire With Talley.</desc>
+  <defs>
+    <style>
+      .bg { fill: #243445; }
+      .deep { fill: #1b2937; }
+      .gold { fill: #bf8c4d; }
+      .white { fill: #ffffff; }
+      .soft { fill: #d8dee5; }
+      .muted { fill: rgba(255,255,255,0.11); }
+      .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .sans { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 4px; }
+      .body { font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1500" height="500"/>
+  <path class="deep" d="M0 0h1500v500H0z"/>
+  <circle class="muted" cx="1290" cy="238" r="310"/>
+  <circle class="muted" cx="1160" cy="110" r="160"/>
+
+  <g transform="translate(1165 76) scale(0.36) translate(-360 -360)">
+    <path class="white" d="M389.354309,382.987935c-17.049218,21.239467-42.531625,29.617446-59.032947,20.21295l29.678743,188.792422,33.267986-214.407919c-1.216917,1.828629-2.498069,3.638994-3.913782,5.402547Z"/>
+    <path class="gold" d="M330.645691,335.861961c17.049218-21.239677,42.531625-29.617656,59.032947-20.21316l-29.678533-187.642107-33.268196,213.257814c1.216917-1.828629,2.498069-3.638994,3.913782-5.402547Z"/>
+    <circle class="white" cx="359.999976" cy="359.424966" r="26.783183" transform="translate(-52.925078 62.306826) rotate(-9.217493)"/>
+  </g>
+
+  <text x="96" y="178" class="serif white" font-size="78">Retire With Talley</text>
+  <rect x="98" y="213" width="430" height="5" rx="2.5" class="gold"/>
+  <text x="96" y="286" class="body soft" font-size="34">Plain-English retirement planning ideas</text>
+  <text x="96" y="334" class="body soft" font-size="34">from David Talley and Talley Wealth.</text>
+  <text x="96" y="420" class="sans gold" font-size="20">PAYCHECKS  TAXES  SOCIAL SECURITY  MEDICARE</text>
+</svg>

@@ -1,0 +1,162 @@
+---
+import TalleyPage from '../../../components/talley-wealth/TalleyPage.astro';
+
+const links = [
+  {
+    label: 'Talley Wealth',
+    shortLabel: 'Planning',
+    eyebrow: 'Planning, tax strategy, and investments',
+    description:
+      'For retirement decisions, business-owner wealth, investment management, and planning work that needs the full picture in one conversation.',
+    href: '/',
+    action: 'Visit Talley Wealth',
+  },
+  {
+    label: 'Talley Tax',
+    shortLabel: 'Tax Help',
+    eyebrow: 'Tax preparation and year-round tax help',
+    description:
+      'For tax returns, tax questions, and help when your tax life has gotten too involved for once-a-year filing alone.',
+    href: 'https://talleytax.com/',
+    action: 'Visit Talley Tax',
+  },
+  {
+    label: 'Retire With Talley',
+    shortLabel: 'Retirement',
+    eyebrow: 'Retirement education',
+    description:
+      'For retirement paycheck questions, Social Security, Medicare, 401(k) decisions, and the years before and after work stops.',
+    href: 'https://retirewithtalley.com/',
+    action: 'Visit Retire With Talley',
+  },
+];
+
+const notes = [
+  'Retirement and the decisions that start to stack up when work gets optional.',
+  'Business owners turning profit into personal wealth without tying every dollar to the business.',
+  'Tax strategy, AI, leadership, and the systems that help good work actually get done.',
+];
+---
+
+<TalleyPage
+  title="David Talley | Talley Wealth, Talley Tax, and Retirement Notes"
+  description="A simple starting point for David Talley, founder of Talley Wealth and Talley Tax, with links to planning, tax, retirement education, and notes."
+  ogImage="/brands/talley-wealth/david-talley.webp"
+>
+  <section class="border-b border-border/50 bg-card">
+    <div class="section-container grid items-center gap-10 py-12 sm:py-16 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-24">
+      <div class="order-1" data-reveal="left">
+        <div class="mb-6 flex items-center gap-3">
+          <div class="gold-line"></div>
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-accent">David Talley</span>
+        </div>
+        <h1 class="font-serif text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl">
+          The better question is usually one layer deeper.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          I am the founder of Talley Wealth and Talley Tax. Most of what I write and talk about comes back to the same idea: money decisions get easier when the tax, investment, business, and life pieces are not treated like separate conversations.
+        </p>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          {links.map((link) => (
+            <a href={link.href} class="inline-flex justify-center rounded-md bg-primary px-4 py-3 text-sm font-bold text-primary-foreground transition hover:bg-primary/90">
+              {link.shortLabel}
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-6 hidden flex-wrap gap-3 sm:flex">
+          {['Founder, Talley Wealth', 'Board Member, CrushingIt.ai', 'TEDx Speaker', 'CFP®, ChFC®, EA'].map((item) => (
+            <span class="rounded-md border border-border bg-background px-4 py-2 text-sm font-bold text-primary shadow-elegant">{item}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="order-2 flex justify-center lg:justify-end" data-reveal="right">
+        <div class="relative w-full max-w-[13rem] sm:max-w-sm">
+          <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-lg bg-accent/18"></div>
+          <div class="relative aspect-[4/5] overflow-hidden rounded-lg shadow-elegant-xl">
+            <img
+              decoding="async"
+              src="/brands/talley-wealth/david-talley.webp"
+              alt="David Talley"
+              class="h-full w-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background py-20">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center" data-reveal>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Start Here</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">
+          Pick the place that matches what you are trying to solve.
+        </h2>
+      </div>
+
+      <div class="mx-auto mt-12 grid max-w-6xl gap-6 lg:grid-cols-3">
+        {links.map((link) => (
+          <a href={link.href} class="group flex h-full flex-col rounded-lg border border-border/50 bg-card p-6 shadow-elegant transition hover:-translate-y-1 hover:border-accent/60 hover:shadow-elegant-lg">
+            <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent">{link.eyebrow}</p>
+            <h3 class="mt-4 font-serif text-2xl font-bold text-primary">{link.label}</h3>
+            <p class="mt-4 flex-1 leading-relaxed text-muted-foreground">{link.description}</p>
+            <span class="mt-6 inline-flex text-sm font-bold text-primary transition group-hover:text-accent">{link.action} <span aria-hidden="true">&nbsp;-&gt;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-card py-20">
+    <div class="section-container">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="aspect-[4/3] overflow-hidden rounded-lg shadow-elegant-xl" data-reveal="left">
+          <img
+            decoding="async"
+            src="/brands/talley-wealth/david-tedx.webp"
+            alt="David Talley speaking at TEDx"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div data-reveal="right">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">What I Tend To Write About</p>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-primary md:text-4xl">
+            Planning, taxes, AI, leadership, and better decisions.
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+            This page is a temporary home base for the things that sit around the work: founder notes, retirement questions, tax strategy, AI experiments, and the practical side of building systems that make complex decisions feel usable.
+          </p>
+          <div class="mt-8 grid gap-4">
+            {notes.map((note) => (
+              <div class="rounded-lg border border-border/50 bg-background p-5">
+                <p class="font-serif text-lg font-bold leading-snug text-primary">{note}</p>
+              </div>
+            ))}
+          </div>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="/about/meet-david-talley" class="inline-flex justify-center rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:bg-accent/90">Meet David</a>
+            <a href="/resources/blog" class="inline-flex justify-center rounded-md border border-border bg-card px-6 py-3 font-bold text-primary transition hover:border-accent/60">Read the Blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary py-20 text-primary-foreground">
+    <div class="section-container">
+      <div class="mx-auto max-w-3xl text-center" data-reveal>
+        <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">For Planning Questions</p>
+        <h2 class="mt-4 font-serif text-3xl font-bold md:text-4xl">If the question is personal to your plan, start with Talley Wealth.</h2>
+        <p class="mt-5 text-lg leading-relaxed text-primary-foreground/78">
+          Social posts and articles are educational. A real planning decision should be judged against your income, taxes, investments, family, risk, estate documents, and timing.
+        </p>
+        <a href="/get-started" class="mt-8 inline-flex rounded-md bg-accent px-6 py-3 font-bold text-accent-foreground transition hover:bg-accent/90">Schedule an Explore Call</a>
+      </div>
+    </div>
+  </section>
+</TalleyPage>

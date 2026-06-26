@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Retire With Talley profile mark</title>
+  <desc id="desc">A navy and gold profile mark using the Retire With Talley wordmark and Talley needle.</desc>
+  <defs>
+    <style>
+      .bg { fill: #243445; }
+      .panel { fill: #1b2937; stroke: rgba(255,255,255,0.14); stroke-width: 2; }
+      .gold { fill: #bf8c4d; }
+      .white { fill: #ffffff; }
+      .soft { fill: #d8dee5; }
+      .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .sans { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 5px; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1080" height="1080"/>
+  <rect class="panel" x="96" y="96" width="888" height="888" rx="54"/>
+
+  <g transform="translate(540 238) scale(0.22) translate(-360 -360)">
+    <path class="white" d="M389.354309,382.987935c-17.049218,21.239467-42.531625,29.617446-59.032947,20.21295l29.678743,188.792422,33.267986-214.407919c-1.216917,1.828629-2.498069,3.638994-3.913782,5.402547Z"/>
+    <path class="gold" d="M330.645691,335.861961c17.049218-21.239677,42.531625-29.617656,59.032947-20.21316l-29.678533-187.642107-33.268196,213.257814c1.216917-1.828629,2.498069-3.638994,3.913782-5.402547Z"/>
+    <circle class="white" cx="359.999976" cy="359.424966" r="26.783183" transform="translate(-52.925078 62.306826) rotate(-9.217493)"/>
+  </g>
+
+  <text x="540" y="470" text-anchor="middle" class="serif white" font-size="116">Retire</text>
+  <text x="540" y="594" text-anchor="middle" class="serif white" font-size="88">With Talley</text>
+
+  <line x1="326" y1="672" x2="754" y2="672" stroke="#bf8c4d" stroke-width="5" stroke-linecap="round"/>
+  <text x="540" y="742" text-anchor="middle" class="sans soft" font-size="24">RETIREMENT EDUCATION</text>
+  <text x="540" y="790" text-anchor="middle" class="sans gold" font-size="22">FROM TALLEY WEALTH</text>
+</svg>

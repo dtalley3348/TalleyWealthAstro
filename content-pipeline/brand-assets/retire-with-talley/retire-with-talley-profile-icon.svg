@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Retire With Talley profile icon</title>
+  <desc id="desc">A compact profile icon for Retire With Talley using Talley navy, gold, and needle mark.</desc>
+  <defs>
+    <style>
+      .bg { fill: #243445; }
+      .panel { fill: #1b2937; stroke: rgba(255,255,255,0.16); stroke-width: 2; }
+      .gold { fill: #bf8c4d; }
+      .white { fill: #ffffff; }
+      .soft { fill: #d8dee5; }
+      .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .sans { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 4px; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1080" height="1080"/>
+  <rect class="panel" x="98" y="98" width="884" height="884" rx="442"/>
+
+  <g transform="translate(540 242) scale(0.25) translate(-360 -360)">
+    <path class="white" d="M389.354309,382.987935c-17.049218,21.239467-42.531625,29.617446-59.032947,20.21295l29.678743,188.792422,33.267986-214.407919c-1.216917,1.828629-2.498069,3.638994-3.913782,5.402547Z"/>
+    <path class="gold" d="M330.645691,335.861961c17.049218-21.239677,42.531625-29.617656,59.032947-20.21316l-29.678533-187.642107-33.268196,213.257814c1.216917-1.828629,2.498069-3.638994,3.913782-5.402547Z"/>
+    <circle class="white" cx="359.999976" cy="359.424966" r="26.783183" transform="translate(-52.925078 62.306826) rotate(-9.217493)"/>
+  </g>
+
+  <text x="540" y="500" text-anchor="middle" class="serif white" font-size="126">Retire With</text>
+  <text x="540" y="632" text-anchor="middle" class="serif white" font-size="132">Talley</text>
+  <line x1="336" y1="700" x2="744" y2="700" stroke="#bf8c4d" stroke-width="6" stroke-linecap="round"/>
+  <text x="540" y="782" text-anchor="middle" class="sans gold" font-size="28">FROM TALLEY WEALTH</text>
+</svg>

@@ -82,13 +82,8 @@ const jsonLdArray = [...defaultJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : json
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/brands/talley-wealth/favicon.png" />
 
-    <!-- Fonts: Merriweather (serif) + Source Sans Pro (sans) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Critical brand serif is self-hosted to avoid a render-blocking Google Fonts hop. -->
+    <link rel="preload" href="/fonts/talley-wealth/merriweather-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     {jsonLdArray.map((ld) => (
       <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />

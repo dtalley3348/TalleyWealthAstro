@@ -13,9 +13,10 @@
     "build": "astro build",
     "build:site": "astro build",
     "preview": "astro preview",
+    "start": "node scripts/start-optimized-server.mjs",
     "check": "astro check",
     "check:site": "astro check",
-    "preview:built": "HOST=0.0.0.0 PORT=5181 node dist/server/entry.mjs"
+    "preview:built": "HOST=0.0.0.0 PORT=5181 node scripts/start-optimized-server.mjs"
   },
   "dependencies": {
     "@astrojs/node": "^10.0.4",
@@ -27,6 +28,7 @@
     "lucide-react": "^1.8.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "send": "^1.2.1",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {

@@ -2,6 +2,15 @@
 
 Last updated: June 23, 2026
 
+> **STATUS CORRECTION — July 1, 2026.** The body of this document is stale. Verified live state as of tonight:
+>
+> - **The pipeline is LIVE, not dry-run.** `.env` has `METRICOOL_DRY_RUN=false` and `METRICOOL_LIVE_WRITE=true`. `work/metricool-live-ledger.json` records real scheduled posts (`draft: false`, `autoPublish: true`) starting June 25 across X, GBP, Instagram, and more.
+> - **Passive intake is running.** The pause marker is gone; `com.talley.icloudbridge` and `com.talley.contentpipeline` are loaded as interval launchd jobs (bridge every ~2 min, watcher every ~5 min — see `work/bridge.log` and `work/watcher.log`).
+> - **18 videos are approved** in `approvals.json`; output folders processed as recently as July 1 (`IMG_4131`, `IMG_4580`).
+> - **Part-2 follow-up flow exists:** spoken routing cue "Part 2 for: <title>" is detected from the transcript (`build-content-index.mjs`) and trimmed off clean social exports (`build-resource-threads.mjs` → `prepareCleanFollowUp`).
+>
+> Sections below describing dry-run-only behavior, paused automation, and an empty approvals list describe the June 23 reset state, not today. Trust the live files (`.env`, `approvals.json`, `work/`) over this doc.
+
 This file records what is currently built in the local Talley Wealth video pipeline, what is dry-run only, what is live, and what still needs work.
 
 Root:

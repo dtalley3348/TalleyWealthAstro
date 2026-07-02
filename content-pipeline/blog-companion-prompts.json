@@ -1,0 +1,323 @@
+{
+  "generatedAt": "2026-06-30T00:00:00.000Z",
+  "cuePattern": "Blog companion for: <exact blog title>. Prompt <prompt id>.",
+  "publicCuePolicy": "The routing cue is for the pipeline only. It should be trimmed from public social exports, blog source moments, combined resource videos, and YouTube resource videos.",
+  "items": [
+    {
+      "promptId": "TW-BLOG-RETNUM-01",
+      "slug": "whats-your-number-retirement",
+      "title": "What's Your Retirement Number Based On?",
+      "priority": "cornerstone",
+      "refreshPriority": 10,
+      "status": "needs_recording",
+      "primaryCategory": "Retirement Planning",
+      "routingCue": "Blog companion for: What's Your Retirement Number Based On? Prompt TW-BLOG-RETNUM-01.",
+      "whyThisMatters": "This article already has the right thesis, but it needs David on video explaining the recognition moment: a retirement number may be reasonable, but if it did not come from a plan, it is fragile.",
+      "whoThisIsFor": "Someone 5 to 10 years from retirement who has a number in mind but is not sure what produced it.",
+      "storyTrigger": "Someone says, \"I think we need about a million dollars,\" but cannot explain how spending, taxes, Social Security, healthcare, account types, or risk produced that number.",
+      "safeStoryDoorway": "Use a hypothetical person or couple. Do not imply this is one specific client. Keep the tone empathetic, not corrective.",
+      "firstSpokenLine": "When someone tells me their retirement number is a round number, I know we probably have more work to do.",
+      "turn": "The number might not be wrong. The problem is that they do not know whether it is right.",
+      "talkPath": [
+        "A round number can come from a magazine, a friend, or a gut feeling.",
+        "The real number depends on spending, taxes, Social Security, healthcare, portfolio risk, timing, and account location.",
+        "Two people with the same balance can have very different retirement answers.",
+        "The plan should create the number, not the other way around."
+      ],
+      "groundedClose": "The number is not the plan. The number is what falls out after the plan is honest.",
+      "doNotSay": [
+        "Do not mock the person for having a round number.",
+        "Do not imply everyone needs more money.",
+        "Do not give a universal retirement target."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "timestamped source moment",
+        "retirement guide CTA clip",
+        "Retire With Talley adaptation"
+      ],
+      "visualRefreshNotes": "Turn the article into a cornerstone resource with a short-answer box, retirement-number input framework, worksheet/checklist block, related resource links, and one source moment from this recording."
+    },
+    {
+      "promptId": "TW-BLOG-REALTAX-01",
+      "slug": "what-tax-planning-actually-looks-like",
+      "title": "What Real Tax Planning Looks Like",
+      "priority": "cornerstone",
+      "refreshPriority": 9.7,
+      "status": "needs_recording",
+      "primaryCategory": "Tax Planning",
+      "routingCue": "Blog companion for: What Real Tax Planning Looks Like. Prompt TW-BLOG-REALTAX-01.",
+      "whyThisMatters": "This is a flagship service-definition article. The companion video should make the calendar problem obvious: by March, many useful choices are already closed.",
+      "whoThisIsFor": "Business owners, high earners, and near-retirees who only think about taxes when the return is being prepared.",
+      "storyTrigger": "Someone asks in March what can still be done, and the answer is mostly that the planning window was months earlier.",
+      "safeStoryDoorway": "Speak from a recurring advisory pattern, not a specific client. Be careful not to blame CPAs or tax preparers.",
+      "firstSpokenLine": "A lot of tax planning disappointment starts with one problem: the year is already over.",
+      "turn": "Tax preparation is necessary, but it is not the same job as tax planning.",
+      "talkPath": [
+        "Tax preparation reports history.",
+        "Tax planning works while choices are still open.",
+        "Safe harbor estimates, Roth conversions, capital gains, owner pay, charitable giving, and retirement contributions all depend on timing.",
+        "The better question is what can still be changed before December 31."
+      ],
+      "groundedClose": "The point is not to make taxes exciting. The point is to make them usable while there is still time.",
+      "doNotSay": [
+        "Do not say tax preparation is bad.",
+        "Do not imply every strategy remains available all year.",
+        "Do not promise tax savings."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "Talley Tax crossover candidate",
+        "referral partner education",
+        "Explore Call pre-frame"
+      ],
+      "visualRefreshNotes": "Add a tax-planning calendar/timeline block, decision checklist, FAQ, and related links to year-round tax planning and Keystone/Ongoing Advisory."
+    },
+    {
+      "promptId": "TW-BLOG-SCORP-01",
+      "slug": "should-i-elect-s-corp-status",
+      "title": "Should I Elect S-Corp Status?",
+      "priority": "cornerstone",
+      "refreshPriority": 9.5,
+      "status": "needs_recording",
+      "primaryCategory": "Tax Planning",
+      "routingCue": "Blog companion for: Should I Elect S-Corp Status? Prompt TW-BLOG-SCORP-01.",
+      "whyThisMatters": "The post already has good tax mechanics, but the refresh needs the more human owner-pay story: the S-Corp decision is not just a form.",
+      "whoThisIsFor": "Profitable solo owners and small LLC owners, especially in Tennessee, who have heard an S-Corp can save taxes.",
+      "storyTrigger": "A business owner hears \"S-Corp saves taxes\" and wants to flip the switch without modeling salary, state tax, payroll, and cash flow.",
+      "safeStoryDoorway": "Use a representative owner, not a client. Keep the Tennessee nuance general and caveated.",
+      "firstSpokenLine": "The S-Corp question usually sounds like an entity question, but it is really an owner-pay question.",
+      "turn": "The tax savings may be real, but only after reasonable compensation, state rules, admin cost, and business durability are considered.",
+      "talkPath": [
+        "Payroll tax savings come from profit above reasonable compensation.",
+        "Reasonable compensation narrows the spread and needs a defensible rationale.",
+        "Tennessee franchise and excise tax can change the net result.",
+        "Payroll, bookkeeping, tax filings, and cash-flow discipline add weight.",
+        "The business and household plan both need to support the election."
+      ],
+      "groundedClose": "Sometimes the answer is yes. Sometimes the answer is you are buying complexity before the savings are big enough.",
+      "doNotSay": [
+        "Do not give a revenue or profit threshold as a universal rule.",
+        "Do not imply all LLCs should elect S-Corp status.",
+        "Do not promise Tennessee-specific savings."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "business-owner carousel",
+        "referral partner clip",
+        "S-Corp calculator/tool callout"
+      ],
+      "visualRefreshNotes": "Make this a tool-backed resource with a decision framework, Tennessee caveat box, reasonable compensation checklist, S-Corp visual callout, FAQ, and source moment."
+    },
+    {
+      "promptId": "TW-BLOG-ROTHCHECK-01",
+      "slug": "phantom-checkbox-roth-conversions",
+      "title": "The Roth Conversion Checkbox Problem",
+      "priority": "cornerstone",
+      "refreshPriority": 9.3,
+      "status": "needs_recording",
+      "primaryCategory": "Tax Planning",
+      "routingCue": "Blog companion for: The Roth Conversion Checkbox Problem. Prompt TW-BLOG-ROTHCHECK-01.",
+      "whyThisMatters": "The article's strongest idea is emotional: people can feel responsible while still underdoing the strategy. The video should preserve that human tension.",
+      "whoThisIsFor": "Retirees and pre-retirees with meaningful traditional IRA or 401(k) balances who are doing small Roth conversions without a lifetime plan.",
+      "storyTrigger": "Someone proudly says they converted a little this year and believes the strategy is handled.",
+      "safeStoryDoorway": "Use a broad pattern. Do not imply the comfortable conversion is always wrong.",
+      "firstSpokenLine": "A lot of people are doing Roth conversions just enough to feel like the box is checked.",
+      "turn": "The comfortable number may not be the number the lifetime tax plan would choose.",
+      "talkPath": [
+        "A small conversion feels prudent because the current tax bill is visible.",
+        "The lifetime tax bill is often much larger but less emotionally present.",
+        "IRMAA, brackets, Social Security timing, RMDs, and rule changes make this a year-by-year decision.",
+        "The real question is not what feels painless this April. It is what reduces cumulative tax without creating other problems."
+      ],
+      "groundedClose": "The right number usually is not the comfortable number. It is the number the plan can defend.",
+      "doNotSay": [
+        "Do not say Roth conversions are universally good.",
+        "Do not imply larger is always better.",
+        "Do not minimize IRMAA, cash-flow, or current-year tax costs."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "retirement tax window clip",
+        "timestamped source moment",
+        "X thread starter"
+      ],
+      "visualRefreshNotes": "Preserve the POV but add a lifetime-tax framework, threshold/caveat block, FAQ, and source moment. Consider a checklist instead of a calculator unless assumptions are clear."
+    },
+    {
+      "promptId": "TW-BLOG-W2TAX-01",
+      "slug": "tax-planning-high-income-w2-earners",
+      "title": "Tax Planning for High-Income W-2 Earners",
+      "priority": "cornerstone",
+      "refreshPriority": 9,
+      "status": "needs_recording",
+      "primaryCategory": "Tax Planning",
+      "routingCue": "Blog companion for: Tax Planning for High-Income W-2 Earners. Prompt TW-BLOG-W2TAX-01.",
+      "whyThisMatters": "The current article has useful strategies, but the refresh needs a clearer triage lens so W-2 earners do not just see a long list.",
+      "whoThisIsFor": "Executives, physicians, corporate professionals, and dual-income high earners who assume the tax playbook is mostly closed to them.",
+      "storyTrigger": "A W-2 earner compares themselves to business-owner tax content and tunes out because they think there is nothing meaningful to do.",
+      "safeStoryDoorway": "Name the limitation honestly. Do not oversell the number of available levers.",
+      "firstSpokenLine": "If you are a high-income W-2 earner, your tax playbook is smaller. That does not mean it is empty.",
+      "turn": "The goal is not to collect every strategy. It is to know which few fit the person's compensation, benefits, tax bracket, and life stage.",
+      "talkPath": [
+        "W-2 earners usually have fewer levers than business owners.",
+        "401(k), HSA, backdoor Roth, mega backdoor Roth, equity comp, charitable giving, deferred comp, and 529 planning can still matter.",
+        "Eligibility and timing drive the answer.",
+        "A checklist is useful only after it is filtered through the actual plan."
+      ],
+      "groundedClose": "The point is not to collect every strategy. It is to know which few actually fit your life.",
+      "doNotSay": [
+        "Do not imply every listed strategy is available.",
+        "Do not promise savings.",
+        "Do not turn this into a generic listicle hook."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "secondary-complexity clip",
+        "referral partner forwardable post",
+        "high-income professional social asset"
+      ],
+      "visualRefreshNotes": "Convert the article from listicle to triage guide with a fit matrix, eligibility caveats, FAQ, and related tax-planning resources."
+    },
+    {
+      "promptId": "TW-BLOG-HI65-01",
+      "slug": "health-insurance-options-before-age-65",
+      "title": "Health Insurance Options Before Age 65",
+      "priority": "high",
+      "refreshPriority": 8.5,
+      "status": "needs_recording",
+      "primaryCategory": "Retirement Planning",
+      "routingCue": "Blog companion for: Health Insurance Options Before Age 65. Prompt TW-BLOG-HI65-01.",
+      "whyThisMatters": "The article is practical, but the video should make the stakes feel real: the health insurance bridge can decide whether an early retirement date is actually workable.",
+      "whoThisIsFor": "People considering retirement before Medicare, especially ages 60 to 64.",
+      "storyTrigger": "A couple can afford retirement on paper, then sees the ACA or COBRA quote and feels the plan wobble.",
+      "safeStoryDoorway": "Use a representative couple or household. Avoid giving subsidy guidance without facts.",
+      "firstSpokenLine": "The first time someone sees the health insurance number before Medicare, retirement suddenly feels less real.",
+      "turn": "The portfolio may be ready, but the bridge to Medicare still has to be built on purpose.",
+      "talkPath": [
+        "The length of the gap changes the whole decision.",
+        "COBRA, Marketplace coverage, spouse coverage, retiree coverage, and private options each solve different problems.",
+        "Premium is not the whole cost. Doctors, prescriptions, networks, deductibles, and taxable income matter.",
+        "The healthcare decision belongs near the beginning of the retirement conversation."
+      ],
+      "groundedClose": "I would rather find the healthcare problem before you quit than discover it after the paycheck is gone.",
+      "doNotSay": [
+        "Do not imply one option is best.",
+        "Do not give subsidy advice without income facts.",
+        "Do not minimize provider-network or prescription risk."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "Retire With Talley adaptation",
+        "Google Business Profile local retirement post",
+        "source moment inside pre-65 checklist"
+      ],
+      "visualRefreshNotes": "Add a coverage comparison table, pre-65 retirement checklist, source moment, FAQ, and related links to retirement income/tax planning."
+    },
+    {
+      "promptId": "TW-BLOG-FICLOSER-01",
+      "slug": "what-changes-as-financial-independence-gets-closer",
+      "title": "What Changes as Financial Independence Gets Closer",
+      "priority": "high",
+      "refreshPriority": 8.3,
+      "status": "needs_recording",
+      "primaryCategory": "Retirement Planning",
+      "routingCue": "Blog companion for: What Changes as Financial Independence Gets Closer. Prompt TW-BLOG-FICLOSER-01.",
+      "whyThisMatters": "The current article has a strong feeling but weak resource packaging. The video should name the emotional shift from accumulation to optionality.",
+      "whoThisIsFor": "Successful households in their 50s or early 60s who have built wealth but do not yet feel free.",
+      "storyTrigger": "Someone has enough on paper but still feels like one wrong decision could undo something important.",
+      "safeStoryDoorway": "Keep this broad and human. Do not make financial independence sound like a luxury problem.",
+      "firstSpokenLine": "There is a stage where your net worth gets bigger, but your decisions start feeling heavier.",
+      "turn": "That uneasy feeling is often the signal that the old accumulation playbook is no longer enough.",
+      "talkPath": [
+        "The dollars are larger, so mistakes feel more expensive.",
+        "Taxes, risk, income, estate decisions, work choices, and family priorities start interacting.",
+        "Growth still matters, but coordination starts mattering more.",
+        "Optionality is not just a number. It is knowing what choices are actually available."
+      ],
+      "groundedClose": "That uneasy feeling is not always a warning sign. Sometimes it is the signal that the plan needs to catch up to what you have built.",
+      "doNotSay": [
+        "Do not make financial independence sound like only a number.",
+        "Do not overuse lifestyle freedom language.",
+        "Do not imply the household should take less risk by default."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "core Talley Wealth POV asset",
+        "Ongoing Advisory support",
+        "LinkedIn post"
+      ],
+      "visualRefreshNotes": "Add a stage-shift framework, coordination checklist, disclaimer, FAQ, related resources, and a calm CTA."
+    },
+    {
+      "promptId": "TW-BLOG-SEQRISK-01",
+      "slug": "retirement-risk-nobody-talks-about",
+      "title": "The Retirement Risk Nobody Talks About",
+      "priority": "medium",
+      "refreshPriority": 7.8,
+      "status": "needs_recording",
+      "primaryCategory": "Retirement Planning",
+      "routingCue": "Blog companion for: The Retirement Risk Nobody Talks About. Prompt TW-BLOG-SEQRISK-01.",
+      "whyThisMatters": "The essay has a memorable risk tension. The companion video should make the sequence-risk versus inflation-risk tradeoff easy to grasp.",
+      "whoThisIsFor": "Near-retirees who are tempted to get overly conservative because market loss feels like the only retirement risk.",
+      "storyTrigger": "Someone wants to move everything to cash or ultra-conservative investments because retirement is close.",
+      "safeStoryDoorway": "Use a broad pattern. Do not recommend allocations.",
+      "firstSpokenLine": "The hard part of retirement risk is that solving one risk badly can create another one.",
+      "turn": "The goal is not to eliminate risk. It is to understand which risk the plan can afford to take.",
+      "talkPath": [
+        "Sequence risk is real because early losses plus withdrawals can hurt.",
+        "Going too safe can create inflation risk and longevity risk.",
+        "The plan needs buffers, withdrawal rules, tax awareness, and growth calibrated to the household.",
+        "A good retirement portfolio has jobs, not just a risk score."
+      ],
+      "groundedClose": "Retirement planning is not about hiding from risk. It is about knowing which risk you are actually taking.",
+      "doNotSay": [
+        "Do not recommend a portfolio allocation.",
+        "Do not dismiss market fear.",
+        "Do not imply risk can be eliminated."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "retirement income social sequence",
+        "source moment inside risk framework",
+        "carousel"
+      ],
+      "visualRefreshNotes": "Keep the essay feel but add a two-risk comparison table, FAQ, related links, and one source moment."
+    },
+    {
+      "promptId": "TW-BLOG-TAXGAP-01",
+      "slug": "most-people-cant-name-a-single-tax-strategy",
+      "title": "The Tax Strategy Gap",
+      "priority": "medium",
+      "refreshPriority": 7.5,
+      "status": "needs_recording",
+      "primaryCategory": "Tax Planning",
+      "routingCue": "Blog companion for: The Tax Strategy Gap. Prompt TW-BLOG-TAXGAP-01.",
+      "whyThisMatters": "The post has a strong emotional hook, but the refresh needs the moment where a successful person cannot name the strategy behind a large tax bill.",
+      "whoThisIsFor": "High earners, owners, and families with meaningful tax bills but no visible tax strategy.",
+      "storyTrigger": "A prospect says the tax number out loud and shrugs because they do not know what else could have been done.",
+      "safeStoryDoorway": "Do not shame the person and do not bash CPAs. Frame this as a common planning gap.",
+      "firstSpokenLine": "When I ask someone what tax strategy they are using, the silence tells me a lot.",
+      "turn": "A large tax bill is not automatically a mistake, but it should not be a mystery.",
+      "talkPath": [
+        "People confuse accounts, deductions, or filing accuracy with strategy.",
+        "Tax strategy has three jobs: avoidance, timing, and cash-flow management.",
+        "Different strategies apply at different income levels and life stages.",
+        "Someone has to own the question of what applies, when it applies, and what needs to be implemented."
+      ],
+      "groundedClose": "If the tax bill is big enough to bother you, it is big enough to deserve a plan.",
+      "doNotSay": [
+        "Do not shame the taxpayer.",
+        "Do not imply every large tax bill means bad advice.",
+        "Do not promise hundreds of thousands in savings as a typical result."
+      ],
+      "likelyUse": [
+        "existing blog refresh",
+        "core Talley Wealth POV clip",
+        "Explore Call pre-frame",
+        "referral partner education"
+      ],
+      "visualRefreshNotes": "Remove repetitive copy, add a three-jobs framework, answer box, FAQ, related links, and a measured CTA."
+    }
+  ]
+}

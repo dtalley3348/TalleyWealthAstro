@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "defaultVolume": 0.08,
+  "policy": {
+    "allowed": "Owned or licensed instrumental beds only.",
+    "avoid": [
+      "vocals",
+      "platform-ripped trending audio",
+      "dramatic cinematic swells",
+      "salesy corporate stock music",
+      "anything that makes the financial planning message feel like an ad"
+    ],
+    "manualNativeAudio": "Use native platform trending audio only as a manual finishing step when a specific post deserves it."
+  },
+  "beds": []
+}

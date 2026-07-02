@@ -1,0 +1,29 @@
+{
+  "brand": {
+    "navy": "#243445",
+    "gold": "#BF8C4D",
+    "slate": "#4F5861",
+    "lightGray": "#E9E8E6",
+    "captionTextColor": "#FFFFFF",
+    "captionHighlightColor": "#BF8C4D"
+  },
+  "whisper": {
+    "model": "medium.en",
+    "engine": "openai-whisper"
+  },
+  "trim": {
+    "silenceThresholdDb": -30,
+    "minSilenceSeconds": 0.6,
+    "trimHeadTailOnly": true
+  },
+  "formats": {
+    "vertical": { "w": 1080, "h": 1920, "label": "9x16 Reels/TikTok/Shorts" },
+    "portrait": { "w": 1080, "h": 1350, "label": "4x5 IG/LinkedIn feed" },
+    "square":   { "w": 1080, "h": 1080, "label": "1x1 FB/LinkedIn feed" },
+    "horizontal": { "w": 1920, "h": 1080, "label": "16x9 YouTube/embeds" }
+  },
+  "captions": {
+    "renderOn": "vertical",
+    "maxWordsPerLine": 4
+  }
+}

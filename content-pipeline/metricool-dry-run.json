@@ -1,0 +1,683 @@
+{
+  "readyForApiWrite": true,
+  "missing": [],
+  "generatedAt": "2026-06-29T18:05:52.873Z",
+  "payloads": [
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-07-11T10:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Many people start investing by asking what rate of return they 'should' have. But that's the wrong first question. Instead, ask how long each dollar needs to last and how much market discomfort you can actually live with. From there, you can make better investment choices for your situation. Want help sorting it out? Read more at Talley Wealth.",
+        "providers": [
+          {
+            "network": "gmb",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4167",
+          "asset": "gbp",
+          "localMediaNote": "Text-only Google Business Profile post; no media upload required."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-07-12T10:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Retirement planning covers your investments and taxes, but have you stopped to ask what you really want your life to look like after you stop working? Many retirees have never been asked this question. It is worth considering before your retirement date arrives.\n\nFor more local retirement guidance, visit Talley Wealth in Johnson City. \n\nThis is general education, not advice for your situation.",
+        "providers": [
+          {
+            "network": "gmb",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4168",
+          "asset": "gbp",
+          "localMediaNote": "Text-only Google Business Profile post; no media upload required."
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-07-13T11:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Most business owners outgrow their tax strategy without realizing it. If you are making more but still using the same old tax moves, it could be costing you real dollars every year. Upgrading your tax playbook matters. \n\n#taxstrategy #businessowner #taxplanning #talleywealth\nThis is general education, not advice for your specific situation.",
+        "providers": [
+          {
+            "network": "instagram",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4131",
+          "asset": "video",
+          "localMediaNote": "Uses output/<video>/scheduled/captioned_with_cover_9x16.mp4 when present, otherwise the captioned/clean vertical video."
+        },
+        "instagramData": {
+          "type": "REEL",
+          "showReelOnFeed": true,
+          "collaborators": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-07-13T17:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "If you only talk taxes in April, you’re leaving money on the table. Tax planning is about year-round decisions—how you pay yourself, when you give, big purchases, all of it. Don’t just tip the IRS. Start planning before tax season, not after. \n\n#taxplanning #businesstaxes #moneytips #retirement",
+        "providers": [
+          {
+            "network": "instagram",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4133",
+          "asset": "video",
+          "localMediaNote": "Uses output/<video>/scheduled/captioned_with_cover_9x16.mp4 when present, otherwise the captioned/clean vertical video."
+        },
+        "instagramData": {
+          "type": "REEL",
+          "showReelOnFeed": true,
+          "collaborators": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-07-15T11:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "You can be rich inside your business and still feel lost outside of it. If all your wealth lives in the business, it's more fragile than it seems. Real confidence comes from building up wealth outside the business too—investments, planning, and cash flow that don't depend on it. #businessowner #wealthbuilding #financialplanning #talleywealth\n\nThis is general education, not advice for your specific situation.",
+        "providers": [
+          {
+            "network": "instagram",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "video",
+          "localMediaNote": "Uses output/<video>/scheduled/captioned_with_cover_9x16.mp4 when present, otherwise the captioned/clean vertical video."
+        },
+        "instagramData": {
+          "type": "REEL",
+          "showReelOnFeed": true,
+          "collaborators": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-07-18T11:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Rich in the Business—But Is It Real Independence?\n\nWhy building wealth outside your business matters more than most owners think.\n\nSwipe through for the planning questions.\n\nEducational only. Not individualized financial, tax, or investment advice.",
+        "providers": [
+          {
+            "network": "instagram",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "carousel",
+          "localMediaNote": "Real scheduling needs hosted/uploaded media URLs before video/carousel posts are sent."
+        },
+        "instagramData": {
+          "type": "POST",
+          "showReelOnFeed": true,
+          "collaborators": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-01T08:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "A lot of business owners feel rich inside the business but strangely unclear outside of it. What looks like success—big numbers, cash flow, pride of ownership—can mask how fragile that is if everything rides on one business. Real financial independence comes from building personal wealth beyond the business. Owning a business is a great path, but don't stop there. Doing the planning work, building accounts outside, coordinating taxes, managing cash flow—these are the steps that turn business success into lasting independence. \n\nThis is general education, not advice for your specific situation.",
+        "providers": [
+          {
+            "network": "linkedin",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "video",
+          "localMediaNote": "Uses output/<video>/scheduled/captioned_with_cover_9x16.mp4 when present, otherwise the captioned/clean vertical video."
+        },
+        "linkedinData": {
+          "type": "post",
+          "previewIncluded": true,
+          "publishImagesAsPDF": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-02T09:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "I've seen a lot of business owners who are wealthy on paper because of their business, but still feel unclear or uneasy once you step outside of that company balance sheet. If all your eggs are in the business basket, real independence is still a step away. The good news is, building financial strength outside of the business is possible—and that's where deeper confidence lives.\n\nThis is general education, not advice for your specific situation.",
+        "providers": [
+          {
+            "network": "facebook",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "video",
+          "localMediaNote": "Uses output/<video>/scheduled/captioned_with_cover_9x16.mp4 when present, otherwise the captioned/clean vertical video."
+        },
+        "facebookData": {
+          "type": "POST",
+          "title": ""
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-04T08:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Rich in the Business—But Is It Real Independence?\n\nWhy building wealth outside your business matters more than most owners think.\n\nI turned this into a carousel because the question is easier to scan one decision at a time.\n\nEducational only. Not individualized financial, tax, or investment advice.",
+        "providers": [
+          {
+            "network": "linkedin",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "carousel",
+          "localMediaNote": "Real scheduling needs hosted/uploaded media URLs before video/carousel posts are sent."
+        },
+        "linkedinData": {
+          "type": "post",
+          "previewIncluded": true,
+          "publishImagesAsPDF": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-05T09:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Rich in the Business—But Is It Real Independence?\n\nWhy building wealth outside your business matters more than most owners think.\n\nA few planning questions to sit with before making the number the goal.\n\nEducational only. Not individualized financial, tax, or investment advice.",
+        "providers": [
+          {
+            "network": "facebook",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "carousel",
+          "localMediaNote": "Real scheduling needs hosted/uploaded media URLs before video/carousel posts are sent."
+        },
+        "facebookData": {
+          "type": "POST",
+          "title": ""
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-08T21:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "A lot of business owners feel confident because their business looks strong, good cash flow, solid growth, big valuations.",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "x_thread",
+          "localMediaNote": "Text-only X thread; no media upload required."
+        },
+        "descendants": [
+          {
+            "text": "But everything riding on one business means your net worth is fragile.",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          },
+          {
+            "text": "Real independence comes from translating business success into personal wealth outside the company. That’s where deeper security shows up.",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          },
+          {
+            "text": "Worth modeling before you decide the business is 'enough.'",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          }
+        ],
+        "twitterData": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-09T09:30:00",
+          "timezone": "America/New_York"
+        },
+        "text": "The most common question I get is, 'What rate of return should I look for?' It sounds simple, but skips key steps.",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4167",
+          "asset": "x_thread",
+          "localMediaNote": "Text-only X thread; no media upload required."
+        },
+        "descendants": [
+          {
+            "text": "First: How long will you need each dollar to last? Second: What level of volatility can you actually tolerate without losing sleep or making a big mistake?",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          },
+          {
+            "text": "Until those are clear, the idea of a 'right' rate of return isn’t that useful. Worth modeling before you decide.",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          }
+        ],
+        "twitterData": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-09T21:00:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Most retirement planning is about the numbers. But almost no one stops to ask: what do you actually want your life to be after work?",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4168",
+          "asset": "x_thread",
+          "localMediaNote": "Text-only X thread; no media upload required."
+        },
+        "descendants": [
+          {
+            "text": "You can model cash flow and taxes all day, but the hardest part is thinking through what your day-to-day will look like with no work in your calendar.",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          },
+          {
+            "text": "Planning for retirement isn’t just about building a financial runway. It’s about knowing what you want to walk toward.",
+            "providers": [
+              {
+                "network": "twitter",
+                "status": "PENDING"
+              }
+            ],
+            "autoPublish": false,
+            "draft": true,
+            "media": []
+          }
+        ],
+        "twitterData": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-11T09:30:00",
+          "timezone": "America/New_York"
+        },
+        "text": "If all your wealth is inside the business, your financial independence is more fragile than you think.",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "x_extra_1",
+          "localMediaNote": "Text-only X extra; no media upload required."
+        },
+        "twitterData": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-14T09:30:00",
+          "timezone": "America/New_York"
+        },
+        "text": "\"Real security is built outside the business, not just inside it.\"",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "x_extra_2",
+          "localMediaNote": "Text-only X extra; no media upload required."
+        },
+        "twitterData": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-17T09:30:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Misconception: Owning a successful business means you’re already set for life. The reality is, true independence might require building more outside.",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "x_extra_3",
+          "localMediaNote": "Text-only X extra; no media upload required."
+        },
+        "twitterData": {
+          "tags": []
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "url": "https://app.metricool.com/api/v2/scheduler/posts?userId=2631611&blogId=3305339",
+      "headers": {
+        "X-Mc-Auth": "[set in .env]"
+      },
+      "metricoolBrand": "Talley Wealth",
+      "metricoolBrandId": "3305339",
+      "body": {
+        "publicationDate": {
+          "dateTime": "2026-08-20T09:30:00",
+          "timezone": "America/New_York"
+        },
+        "text": "Ask: If your business sold tomorrow, do you know what your life would look like financially? That is a planning question, not just a math question.",
+        "providers": [
+          {
+            "network": "twitter",
+            "status": "PENDING"
+          }
+        ],
+        "autoPublish": false,
+        "draft": true,
+        "saveExternalMediaFiles": true,
+        "media": [],
+        "pipeline": {
+          "sourceVideo": "IMG_4130",
+          "asset": "x_extra_4",
+          "localMediaNote": "Text-only X extra; no media upload required."
+        },
+        "twitterData": {
+          "tags": []
+        }
+      }
+    }
+  ]
+}

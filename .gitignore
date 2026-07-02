@@ -22,3 +22,7 @@ content-pipeline/remotion/public/broll-input.mp4
 content-pipeline/review.html
 content-pipeline/inbox-local/
 public/pipeline-media/
+
+# Large generated media (kept locally / hosted via R2, too big for GitHub)
+public/brands/talley-wealth/blog/generated/*.mp4
+content-pipeline/inbox.local-before-icloud-*/

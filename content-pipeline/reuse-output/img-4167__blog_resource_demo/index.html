@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why "What Rate of Return Should I Get?" Is the Wrong Investing Question</title>
+  <meta name="description" content="A Talley Wealth article preview on why investment return should be an output of the plan, not the starting question.">
+  <style>
+    :root {
+      --ink: #162433;
+      --navy: #243445;
+      --blue: #315c73;
+      --gold: #bf8c4d;
+      --gold-soft: #f2dfc4;
+      --mist: #eff4f3;
+      --paper: #fbfaf7;
+      --white: #ffffff;
+      --line: rgba(36, 52, 69, 0.16);
+      --shadow: 0 24px 70px rgba(18, 31, 44, 0.16);
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 250, 247, 0.94);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .topbar-inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 148px;
+      height: auto;
+    }
+
+    .draft-pill {
+      border: 1px solid rgba(191, 140, 77, 0.52);
+      color: #7a5326;
+      background: #fff7ea;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 74vh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(22, 36, 51, 0.92), rgba(22, 36, 51, 0.72) 42%, rgba(22, 36, 51, 0.16)),
+        linear-gradient(180deg, rgba(22, 36, 51, 0.08), rgba(22, 36, 51, 0.72));
+      z-index: 1;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.74;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 86px 0 56px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 850;
+      font-size: 13px;
+      margin: 0 0 18px;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .deck {
+      max-width: 690px;
+      margin: 24px 0 0;
+      font-size: clamp(18px, 2vw, 23px);
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 14px;
+    }
+
+    .meta-row span {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 54px;
+      padding: 56px 0 84px;
+    }
+
+    .article {
+      min-width: 0;
+    }
+
+    .article > p,
+    .article li {
+      font-size: 18px;
+    }
+
+    .lead {
+      font-size: 22px;
+      line-height: 1.55;
+      color: #23384a;
+      margin-top: 0;
+    }
+
+    h2 {
+      margin: 54px 0 16px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.05;
+      letter-spacing: 0;
+      color: var(--navy);
+    }
+
+    h3 {
+      margin: 28px 0 10px;
+      font-size: 23px;
+      line-height: 1.2;
+      color: var(--navy);
+    }
+
+    .answer-box {
+      border-left: 7px solid var(--gold);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin: -104px 0 42px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .answer-box p {
+      margin: 0;
+      font-size: 20px;
+      color: #26394a;
+    }
+
+    .answer-label {
+      margin: 0 0 10px;
+      color: #7a5326;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .feature {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 22px;
+      min-height: 190px;
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .framework {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .factor {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 22px;
+      align-items: start;
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #ffffff, #f6f1e9);
+    }
+
+    .number {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: var(--gold-soft);
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .quote-band {
+      margin: 46px 0;
+      padding: 34px;
+      background: var(--navy);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-band p {
+      margin: 0;
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.13;
+      font-weight: 800;
+    }
+
+    .quote-band cite {
+      display: block;
+      margin-top: 18px;
+      color: var(--gold-soft);
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--white);
+      margin: 24px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 17px 18px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: #edf3f1;
+      color: var(--navy);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .checklist {
+      background: #f3eadb;
+      border: 1px solid rgba(191, 140, 77, 0.36);
+      padding: 28px;
+    }
+
+    .checklist ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 34px;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--gold);
+      background: var(--white);
+    }
+
+    .faq {
+      border-top: 1px solid var(--line);
+      margin-top: 18px;
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 850;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    details p {
+      margin-bottom: 0;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+      display: grid;
+      gap: 18px;
+    }
+
+    .side-panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 22px;
+      box-shadow: 0 12px 34px rgba(18, 31, 44, 0.08);
+    }
+
+    .side-panel h2,
+    .side-panel h3 {
+      margin-top: 0;
+      font-size: 21px;
+    }
+
+    .side-panel p,
+    .side-panel li {
+      font-size: 15px;
+    }
+
+    .toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .mini-video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #101a23;
+      object-fit: cover;
+    }
+
+    .cta {
+      margin-top: 56px;
+      padding: 42px;
+      background: var(--navy);
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      color: var(--white);
+      margin: 0 0 10px;
+    }
+
+    .cta p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      background: var(--gold);
+      color: #101a23;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .fine-print {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: #536171;
+      font-size: 14px;
+    }
+
+    .compliance {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px dashed rgba(36, 52, 69, 0.28);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .compliance h3 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    @media (max-width: 940px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        min-height: 78vh;
+      }
+
+      .hero-inner {
+        padding: 72px 0 42px;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .brand img {
+        width: 132px;
+      }
+
+      .answer-box {
+        margin-top: -72px;
+      }
+
+      .factor {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="../../../public/brands/talley-wealth/logo-dark.png" alt="Talley Wealth">
+      </div>
+      <div class="draft-pill">Local Draft Preview</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="../../../public/brands/talley-wealth/blog/generated/why-what-rate-of-return-should-i-get-is-the-wrong-question.jpg" alt="David Talley speaking in an educational video about plan-first investing">
+    <div class="hero-inner">
+      <p class="eyebrow">Plan Before Portfolio</p>
+      <h1>Why "What Rate of Return Should I Get?" Is the Wrong Investing Question</h1>
+      <p class="deck">The return you target should come from the job your money needs to do, not from a number you pulled from market history or a neighbor's portfolio.</p>
+      <div class="meta-row">
+        <span>By David Talley, CFP&reg;, EA</span>
+        <span>Source asset: IMG_4167</span>
+        <span>Review status: draft</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+    <article class="article">
+      <section class="answer-box" id="short-answer">
+        <p class="answer-label">Short Answer</p>
+        <p>Before asking what rate of return you should get, ask two better questions: how long each dollar needs to last, and how much volatility you can realistically live with without making a mistake. Once those two filters are clear, the return target becomes an output of the plan.</p>
+      </section>
+
+      <p class="lead">A return target sounds like the center of investment planning. It feels measurable, clean, and easy to compare. But for most families, especially near retirement, it is not the first question. It is a later question.</p>
+
+      <p>If you start with "I need 8%" or "I should be getting 10%," you may skip the actual planning work. The better conversation starts with what the money is for, when it will be used, what risks the household can absorb, and how much market movement the client can endure without abandoning the plan.</p>
+
+      <section id="situation">
+        <h2>The Situation Behind The Question</h2>
+        <p>Picture a couple five years from retirement. They have saved well. They have several account types, a few old 401(k)s, taxable savings, and maybe a Roth account. They are trying to decide whether their portfolio is "doing enough."</p>
+        <p>So they ask the natural question: "What rate of return should we expect?"</p>
+        <p>That question is understandable. It is also incomplete. Some of their money may need to create income within the next year. Some may have seven to ten years before it is touched. Some may not be needed for decades. Those dollars should not all be judged by the same return target.</p>
+      </section>
+
+      <section id="deeper-problem">
+        <h2>The Deeper Problem</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <strong>Surface question</strong>
+            What rate of return should I get on my investments?
+          </div>
+          <div class="feature">
+            <strong>Deeper question</strong>
+            What job does each part of my money need to do, and how much uncertainty can I handle while it does that job?
+          </div>
+          <div class="feature">
+            <strong>Why it matters</strong>
+            If the portfolio is built around a return target alone, the plan can become either too aggressive to stick with or too conservative to support the life it is meant to fund.
+          </div>
+        </div>
+      </section>
+
+      <section id="framework">
+        <h2>A Better Decision Framework</h2>
+        <p>Instead of starting with a percentage, start with these filters.</p>
+
+        <div class="framework">
+          <div class="factor">
+            <div class="number">1</div>
+            <div>
+              <h3>Give The Money A Time Horizon</h3>
+              <p>Money needed next year has a different job than money intended for your seventies, eighties, heirs, or future charitable giving. A good portfolio does not treat every dollar as if it has the same timeline.</p>
+            </div>
+          </div>
+
+          <div class="factor">
+            <div class="number">2</div>
+            <div>
+              <h3>Name The Volatility You Can Actually Live With</h3>
+              <p>This is not just a technical risk score. It is behavioral. If a portfolio drop causes you to panic, sell, or lose sleep for weeks, the plan may need to be adjusted before the market tests it.</p>
+            </div>
+          </div>
+
+          <div class="factor">
+            <div class="number">3</div>
+            <div>
+              <h3>Match The Asset To The Job</h3>
+              <p>Once the timing and volatility filters are clear, the investment universe gets smaller. You can begin deciding which mix of assets belongs in each part of the plan.</p>
+            </div>
+          </div>
+
+          <div class="factor">
+            <div class="number">4</div>
+            <div>
+              <h3>Judge Return Against The Plan</h3>
+              <p>A return is not "good" or "bad" in isolation. It should be judged against the risk taken, the goal assigned to the money, the market environment, and the role that account plays in the full plan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="quote-band">
+        <p>"The question is not what rate of return should I get next year. It is bigger than that."</p>
+        <cite>David Talley</cite>
+      </div>
+
+      <section id="example">
+        <h2>A Simple Way To Think About Portfolio Jobs</h2>
+        <p>Retirement money usually has more than one job at the same time. That is why one blended return number can be misleading.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Money job</th>
+                <th>Typical planning question</th>
+                <th>What matters most</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Near-term spending</td>
+                <td>What money might we need in the next 1 to 2 years?</td>
+                <td>Liquidity, stability, and avoiding forced selling at the wrong time.</td>
+              </tr>
+              <tr>
+                <td>Mid-term income</td>
+                <td>What will support withdrawals over the next 5 to 10 years?</td>
+                <td>Balance between growth, income, taxes, and market sequence risk.</td>
+              </tr>
+              <tr>
+                <td>Long-term growth</td>
+                <td>What dollars can stay invested for decades?</td>
+                <td>Inflation protection, disciplined risk, and the ability to stay invested through volatility.</td>
+              </tr>
+              <tr>
+                <td>Legacy or flexibility</td>
+                <td>What money may support family, charitable, or later-life goals?</td>
+                <td>Tax location, estate coordination, and the household's broader priorities.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="average">
+        <h2>Why Average Returns Can Mislead You</h2>
+        <p>Market averages can be useful context, but they are not a yearly promise. An investment can have a long-term average that rarely shows up in any single calendar year. Some years may be much higher. Some may be much lower.</p>
+        <p>That is why the more useful planning question is not, "Did I get the average?" It is, "Is this return pattern normal for what I own, the risk I agreed to take, and the job this part of the portfolio is supposed to do?"</p>
+      </section>
+
+      <section id="checklist" class="checklist">
+        <h2>Questions To Bring To A Planning Conversation</h2>
+        <ul>
+          <li>Which dollars might I need in the next 1 to 2 years?</li>
+          <li>Which dollars can stay invested for 7 to 10 years or longer?</li>
+          <li>How much of a decline could I tolerate before I would be tempted to sell?</li>
+          <li>Is my portfolio diversified on purpose, or just spread across accounts?</li>
+          <li>Does each account have a clear job inside the retirement plan?</li>
+          <li>Are taxes, withdrawals, and investment risk being reviewed together?</li>
+        </ul>
+      </section>
+
+      <section id="risks">
+        <h2>Risks And Limits</h2>
+        <p>This framing does not remove investment risk. It helps make the risk more intentional. A plan-first portfolio can still decline. Markets can still surprise you. Tax rules, income needs, health costs, and family priorities can still change.</p>
+        <p>The goal is not to find a magic return number. The goal is to build a portfolio that can support the plan, explain the tradeoffs, and help you avoid making emotional decisions when markets move.</p>
+      </section>
+
+      <section id="faq">
+        <h2>Follow-Up Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Should I ignore rate of return entirely?</summary>
+            <p>No. Return still matters. It just should not be the first filter. Once the plan defines the timeline, risk level, income needs, and tax context, return expectations can become part of a better conversation.</p>
+          </details>
+          <details>
+            <summary>What if my portfolio is earning less than the market?</summary>
+            <p>First compare it to the portfolio's actual job and risk level. A conservative income bucket should not be judged against a stock index. A long-term growth bucket should be evaluated differently than money set aside for near-term withdrawals.</p>
+          </details>
+          <details>
+            <summary>How do I know if my portfolio has too much risk?</summary>
+            <p>Look at both the numbers and your behavior. If the portfolio creates enough stress that you might abandon it during a downturn, the risk may be too high for the plan to work in real life.</p>
+          </details>
+          <details>
+            <summary>Does this matter more near retirement?</summary>
+            <p>Yes, often. Near retirement, some dollars may be needed soon while other dollars still need long-term growth. That mix makes the time-horizon question more important.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="links">
+        <h2>Related Talley Wealth Resources</h2>
+        <p>If this question is on your mind, these pages are natural next reads:</p>
+        <ul>
+          <li><a href="/services/investment-management">Investment management built around the plan</a></li>
+          <li><a href="/services/retirement-planning">Retirement planning for income, taxes, and investment risk</a></li>
+          <li><a href="/how-we-work/keystone-method">How the Keystone Method organizes connected planning decisions</a></li>
+          <li><a href="/resources/blog/why-a-retirement-number-alone-won-t-give-you-confidence">Why a retirement number alone will not give you confidence</a></li>
+        </ul>
+      </section>
+
+      <section class="cta">
+        <div>
+          <h2>Start With The Real Question</h2>
+          <p>If the portfolio conversation feels disconnected from the life it is supposed to support, an Explore Call can help determine whether a deeper planning process makes sense.</p>
+        </div>
+        <a class="button" href="/get-started">Schedule an Explore Call</a>
+      </section>
+
+      <p class="fine-print">For discussion purposes only. This is not individualized legal, tax, or investment advice. Estate, tax, retirement, and investment decisions should be reviewed against the full facts and with the right professional before implementation.</p>
+
+      <section class="compliance">
+        <h3>Draft Review Notes</h3>
+        <ul>
+          <li>Source: IMG_4167 transcript and existing blog draft.</li>
+          <li>Claims requiring review: any exact market-return statistic if added back into the article.</li>
+          <li>Disclosure used: educational-only planning, tax, retirement, and investment disclaimer.</li>
+          <li>Publication status: local draft preview only. Not staged, not submitted, not published.</li>
+        </ul>
+      </section>
+    </article>
+
+    <aside class="sidebar" aria-label="Article navigation and source">
+      <section class="side-panel">
+        <h2>Article Map</h2>
+        <ul class="toc">
+          <li><a href="#short-answer">Short answer</a></li>
+          <li><a href="#situation">The situation</a></li>
+          <li><a href="#deeper-problem">Deeper problem</a></li>
+          <li><a href="#framework">Decision framework</a></li>
+          <li><a href="#checklist">Planning checklist</a></li>
+          <li><a href="#faq">Follow-up questions</a></li>
+        </ul>
+      </section>
+
+      <section class="side-panel">
+        <h3>Source Video</h3>
+        <video class="mini-video" controls preload="metadata" poster="../../output/IMG_4167/cover-smart.jpg">
+          <source src="../../output/IMG_4167/captioned_vertical_9x16.mp4" type="video/mp4">
+        </video>
+        <p>This preview is adapted from a short Talley Wealth educational video and rewritten as a durable article.</p>
+      </section>
+
+      <section class="side-panel">
+        <h3>Why This Was Picked</h3>
+        <p>High-confidence Website Asset. It answers a durable misconception, preserves a strong David point of view, and naturally supports a decision framework.</p>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>

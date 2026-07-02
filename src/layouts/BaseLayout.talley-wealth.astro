@@ -25,6 +25,7 @@ interface Props {
   canonical?: string;
   ogType?: 'website' | 'article';
   noindex?: boolean;
+  nofollow?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   heroTransparent?: boolean;
 }
@@ -43,6 +44,7 @@ const ogImage = _resolved.ogImage ?? undefined;
 const canonical = _props.canonical ?? editor.path;
 const ogType = _props.ogType ?? 'website';
 const noindex = _props.noindex ?? false;
+const nofollow = _props.nofollow ?? false;
 const jsonLd = _props.jsonLd;
 const heroTransparent = _props.heroTransparent ?? false;
 
@@ -62,7 +64,7 @@ const jsonLdArray = [...defaultJsonLd, ...(Array.isArray(jsonLd) ? jsonLd : json
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
+    {noindex && <meta name="robots" content={nofollow ? 'noindex, nofollow' : 'noindex, follow'} />}
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->

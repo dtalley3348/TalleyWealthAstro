@@ -10,13 +10,14 @@ interface Props {
   ogImage?: string;
   ogType?: 'website' | 'article';
   noindex?: boolean;
+  nofollow?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[] | null;
 }
 
-const { title, description, heroTransparent = false, ogImage, ogType, noindex = false, jsonLd } = Astro.props;
+const { title, description, heroTransparent = false, ogImage, ogType, noindex = false, nofollow = false, jsonLd } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} heroTransparent={heroTransparent} ogImage={ogImage} ogType={ogType} noindex={noindex} jsonLd={jsonLd ?? undefined}>
+<BaseLayout title={title} description={description} heroTransparent={heroTransparent} ogImage={ogImage} ogType={ogType} noindex={noindex} nofollow={nofollow} jsonLd={jsonLd ?? undefined}>
   <Header slot="header" transparentOverHero={heroTransparent} />
   <slot />
   <Footer slot="footer" />

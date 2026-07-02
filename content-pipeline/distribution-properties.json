@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-29",
+  "defaultProperty": "Talley Wealth",
+  "properties": [
+    {
+      "id": "talley_wealth",
+      "name": "Talley Wealth",
+      "metricoolBrand": "Talley Wealth",
+      "status": "active_existing",
+      "defaultLink": "https://talleywealth.com/",
+      "purpose": "Main advisory and planning brand.",
+      "primaryPlatforms": ["instagram", "facebook", "linkedin", "gbp", "x"],
+      "disabledPlatforms": ["tiktok", "youtube_shorts"],
+      "defaultCadence": {
+        "instagram": "current",
+        "facebook": "current",
+        "linkedin": "current",
+        "gbp": "current",
+        "x": "current"
+      },
+      "identityBoundary": "This is the main advisory destination. Planning, investments, tax strategy, estate, retirement income, Keystone, ongoing advisory, pricing, and client-fit content can live here when the idea points toward a planning relationship."
+    },
+    {
+      "id": "talley_tax",
+      "name": "Talley Tax",
+      "metricoolBrand": "Talley Tax",
+      "status": "facebook_instagram_linkedin_gbp_metricool_connected_smarsh_x_deferred",
+      "defaultLink": "https://talleytax.com/",
+      "purpose": "Separate tax business and tax-specific education surface.",
+      "primaryPlatforms": ["instagram", "facebook", "linkedin", "gbp"],
+      "disabledPlatforms": ["x", "tiktok", "youtube_shorts"],
+      "defaultCadence": {
+        "instagram": "light",
+        "facebook": "light",
+        "linkedin": "light",
+        "gbp": "local_tax_reminders"
+      },
+      "identityBoundary": "Do not make Talley Tax sound like an advisory or investment firm. Use tax preparation and year-round tax advisory language. Keep Keystone, investment management, and advisory relationship language on Talley Wealth."
+    },
+    {
+      "id": "retire_with_talley",
+      "name": "Retire With Talley",
+      "metricoolBrand": "Retire With Talley",
+      "status": "facebook_instagram_linkedin_metricool_connected_smarsh_x_deferred",
+      "defaultLink": "https://retirewithtalley.com/",
+      "nearTermLink": "https://talleywealth.com/financial-advisor-for-pre-retirees",
+      "purpose": "Retirement education page from David Talley and Talley Wealth.",
+      "primaryPlatforms": ["instagram", "facebook", "linkedin_showcase"],
+      "disabledPlatforms": ["x", "gbp", "tiktok", "youtube_shorts"],
+      "defaultCadence": {
+        "instagram": "light_to_medium",
+        "facebook": "light",
+        "linkedin_showcase": "light"
+      },
+      "identityBoundary": "This is not a separate advisory firm. Use retirement education language and subtle from Talley Wealth relationship language."
+    },
+    {
+      "id": "david_talley_personal",
+      "name": "David Talley Personal",
+      "metricoolBrand": "David Talley Personal",
+      "status": "linkedin_metricool_connected_x_deferred",
+      "defaultLink": "https://talleywealth.com/david",
+      "purpose": "David's founder, leadership, AI, advisory industry, and decision-making channel.",
+      "primaryPlatforms": ["linkedin_personal"],
+      "disabledPlatforms": ["x", "instagram", "facebook", "gbp", "tiktok", "youtube_shorts"],
+      "defaultCadence": {
+        "linkedin_personal": "selective"
+      },
+      "identityBoundary": "Do not flatten David into only Talley Wealth service copy. Preserve TEDx, CrushingIt.ai, founder, AI, leadership, planning, tax, and better-decision credibility."
+    }
+  ],
+  "recommendationLevels": {
+    "primary_only": "Post only to the best property.",
+    "recommended_secondary": "Rewrite for a second property because the idea genuinely belongs in both worlds.",
+    "optional_secondary": "Show the secondary route but leave it unchecked by default.",
+    "manual_review": "Do not schedule automatically until David or Codex reviews the fit.",
+    "exclude": "Do not post to that property."
+  },
+  "livePublishingRule": "A property can be recommended before it is live. It cannot be scheduled by the app until the social surface ledger shows the relevant surface exists, Smarsh is connected or intentionally waived, and Metricool is connected."
+}

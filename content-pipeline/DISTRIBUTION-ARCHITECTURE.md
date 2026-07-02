@@ -13,6 +13,16 @@ The app should eventually drive most of the decision for David. It should not as
 him to choose from scratch every time. The routing recommendation should be visible,
 opinionated, and editable.
 
+Local implementation files:
+
+- `distribution-properties.json`: property definitions, boundaries, platform scope,
+  and setup posture.
+- `scripts/build-distribution-routing.mjs`: builds per-video primary/secondary
+  property recommendations from the content index.
+- `distribution-routing.json`: generated routing snapshot for the review app.
+- `social-surface-ledger.csv`: setup/readiness ledger for live destinations.
+- `SOCIAL-SURFACE-AUDIT.md`: current public audit and caveats.
+
 ## Recommendation Levels
 
 Every processed video should get one primary recommendation and one of these
@@ -101,11 +111,12 @@ Job: a retirement education page/channel, not a separate advisory firm.
 Primary content:
 
 - Retirement paycheck planning.
-- Social Security, Medicare, 401(k) near retirement, retirement timing, cash
-  reserves, sequence risk, inflation risk, withdrawal order, spouse/family
-  continuity.
+- 401(k) near retirement, investment decisions, retirement timing, cash reserves,
+  sequence risk, inflation risk, withdrawal order, spouse/family continuity.
 - Simple retirement decision frameworks that should feel approachable and
   shareable.
+- Social Security and healthcare topics when they are clearly part of a larger
+  retirement decision.
 
 Secondary content:
 
@@ -256,7 +267,7 @@ Turning business profit into personal wealth:
 - Recommended secondary: David Personal.
 - Optional secondary: Talley Tax if the tax mechanics are central.
 
-Retirement paycheck / Social Security / Medicare / 401(k):
+Retirement paycheck / 401(k) / investments / Social Security timing:
 
 - Primary: Retire With Talley.
 - Recommended secondary: Talley Wealth when the post points toward advisory

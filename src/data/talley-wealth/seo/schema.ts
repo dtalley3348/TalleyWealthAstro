@@ -253,6 +253,8 @@ export function buildBlogPostingSchema({
   image,
   url,
   author = 'David Talley',
+  videoUrl,
+  sourceMoments = [],
 }: {
   title: string;
   description: string;
@@ -260,10 +262,21 @@ export function buildBlogPostingSchema({
   image: string;
   url: string;
   author?: string;
+  videoUrl?: string | null;
+  sourceMoments?: {
+    timestamp: string;
+    seconds: number;
+    label: string;
+    question?: string;
+    answer?: string;
+    transcriptExcerpt?: string;
+  }[];
 }): JsonLd {
   const absoluteImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
-  return {
-    '@context': 'https://schema.org',
+  const absoluteVideoUrl = videoUrl
+    ? videoUrl.startsWith('http') ? videoUrl : `${siteUrl}${videoUrl}`
+    : null;
+  const blogPosting: JsonLd = {
     '@type': 'BlogPosting',
     headline: title,
     description,
@@ -273,5 +286,27 @@ export function buildBlogPostingSchema({
     mainEntityOfPage: url,
     author: author === 'David Talley' ? { '@id': davidId } : { '@type': 'Person', name: author },
     publisher: { '@id': organizationId },
+  };
+  const graph: JsonLd[] = [blogPosting];
+  if (absoluteVideoUrl) {
+    const clips = sourceMoments.slice(0, 3).map((moment) => ({
+      '@type': 'Clip',
+      name: moment.label,
+      startOffset: Math.max(0, Math.round(Number(moment.seconds) || 0)),
+      url: `${url}#source-moment-${Math.max(0, Math.round(Number(moment.seconds) || 0))}`,
+    }));
+    graph.push({
+      '@type': 'VideoObject',
+      name: title,
+      description,
+      thumbnailUrl: [absoluteImage],
+      uploadDate: datePublished,
+      contentUrl: absoluteVideoUrl,
+      ...(clips.length ? { hasPart: clips } : {}),
+    });
+  }
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
   };
 }

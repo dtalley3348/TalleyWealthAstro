@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.talley.contentpipeline</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/scripts/watch-run.sh</string>
+  </array>
+
+  <!-- Fire whenever the iCloud inbox changes (new clip synced from the phone). -->
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/inbox-local</string>
+  </array>
+
+  <!-- Safety net: also poll every 5 minutes in case a watch event is missed. -->
+  <key>StartInterval</key>
+  <integer>300</integer>
+
+  <!-- Process anything already waiting the moment the agent loads. -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/work/watcher.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/work/watcher.log</string>
+</dict>
+</plist>

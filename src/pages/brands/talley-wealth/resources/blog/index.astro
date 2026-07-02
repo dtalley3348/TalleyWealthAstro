@@ -24,9 +24,33 @@ const rawPosts = directusPosts.length > 0
     }))
   : blogPosts;
 const posts = rawPosts.map((post) => normalizeBlogPost(post, rawPosts));
-const featuredPost = posts.find((post) => post.featured) ?? posts[0];
-const remainingPosts = posts.filter((post) => post.slug !== featuredPost?.slug);
-const tags = Array.from(new Set(posts.flatMap((post) => deriveTags(post)))).slice(0, 6);
+const activeTag = Astro.url.searchParams.get('tag') ?? '';
+const postsForTag = activeTag ? posts.filter((post) => deriveTags(post).includes(activeTag)) : posts;
+const featuredPost = activeTag ? null : posts.find((post) => post.featured) ?? posts[0];
+const remainingPosts = activeTag ? postsForTag : posts.filter((post) => post.slug !== featuredPost?.slug);
+const tags = Array.from(new Set(posts.flatMap((post) => deriveTags(post)))).slice(0, 12);
+const planningAreas = [
+  {
+    title: 'Retirement decisions',
+    body: 'Income, timing, taxes, healthcare, and market risk near retirement.',
+    tag: 'Retirement Planning',
+  },
+  {
+    title: 'Tax-aware planning',
+    body: 'Roth conversions, RMDs, entity choices, and tax timing questions.',
+    tag: 'Tax Planning',
+  },
+  {
+    title: 'Investment questions',
+    body: 'Portfolio decisions connected to actual goals rather than market noise.',
+    tag: 'Investment Management',
+  },
+  {
+    title: 'Business owner planning',
+    body: 'Owner compensation, business cash flow, taxes, and personal planning overlap.',
+    tag: 'Business Owners',
+  },
+].filter((area) => tags.includes(area.tag));
 const relatedLinks = [
   {
     title: 'Planning tools',
@@ -81,15 +105,35 @@ function formatDate(date: string) {
     <div class="section-container py-16">
       <div class="flex flex-col gap-5 border-b border-border pb-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 class="font-serif text-3xl font-bold text-primary">All Articles</h2>
-          <p class="mt-2 text-muted-foreground">Use these as decision support, not market noise.</p>
+          <h2 class="font-serif text-3xl font-bold text-primary">{activeTag ? `${activeTag} Articles` : 'All Articles'}</h2>
+          <p class="mt-2 text-muted-foreground">{activeTag ? 'Filtered to the planning area you selected.' : 'Use these as decision support, not market noise.'}</p>
         </div>
         <div class="flex flex-wrap gap-2">
+          {activeTag && (
+            <a href="/resources/blog" class="rounded-full border border-accent bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground transition hover:bg-accent/90">All articles</a>
+          )}
           {tags.map((tag) => (
-            <a href={`/resources/blog?tag=${encodeURIComponent(tag)}`} class="rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-muted-foreground transition hover:border-accent hover:text-accent">{tag}</a>
+            <a href={`/resources/blog?tag=${encodeURIComponent(tag)}`} class:list={[
+              'rounded-full border px-4 py-2 text-sm font-semibold transition',
+              activeTag === tag
+                ? 'border-accent bg-accent text-accent-foreground'
+                : 'border-border bg-card text-muted-foreground hover:border-accent hover:text-accent',
+            ]}>{tag}</a>
           ))}
         </div>
       </div>
+
+      {!activeTag && planningAreas.length > 0 && (
+        <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {planningAreas.map((area) => (
+            <a href={`/resources/blog?tag=${encodeURIComponent(area.tag)}`} class="group rounded-lg border border-border bg-muted/30 p-5 transition hover:border-accent hover:bg-card">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent">Browse by planning area</p>
+              <h3 class="mt-3 font-serif text-xl font-bold text-primary transition group-hover:text-accent">{area.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{area.body}</p>
+            </a>
+          ))}
+        </div>
+      )}
 
       <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {remainingPosts.map((post) => (
@@ -105,6 +149,11 @@ function formatDate(date: string) {
             </div>
           </a>
         ))}
+        {remainingPosts.length === 0 && (
+          <div class="rounded-lg border border-border bg-card p-6 text-muted-foreground">
+            No articles match this tag yet.
+          </div>
+        )}
       </div>
     </div>
   </section>

@@ -16,11 +16,13 @@ drafts for review before changing live accounts.
 ## Approved Current Decisions
 
 - David personal destination: `https://talleywealth.com/david`.
-- David personal handle to reserve/use: `@davidtalleynotes`.
+- David personal X account: deferred. Keep X under Talley Wealth only for now.
 - Do not create a separate middle-ground personal Instagram yet.
 - David Personal profile image: `public/brands/talley-wealth/david-talley.webp`.
-- Retire With Talley profile image: use the full `Retire With Talley` wordmark
-  with `From Talley Wealth` below the gold line, not `RWT`.
+- Retire With Talley profile images: use David's square headshot for Facebook
+  and Instagram; use the full `Retire With Talley` wordmark with `From Talley
+  Wealth` below the gold line for LinkedIn-style organization surfaces. X is
+  deferred.
 - Retire With Talley banner direction: use the mountain/landscape banner
   direction based on the Talley visual system.
 - Backup admin for new Facebook/LinkedIn pages: Stephenee.
@@ -35,6 +37,17 @@ for people whose tax picture is too complex for once-a-year filing.
 ### Profile Image
 
 Use existing Talley Tax mark.
+
+Local setup assets:
+
+- `content-pipeline/brand-assets/talley-tax/talley-tax-primary-dark-trans.png`
+- `content-pipeline/brand-assets/talley-tax/talley-tax-primary-dark-trans.svg`
+- `content-pipeline/brand-assets/talley-tax/talley-tax-stacked-dark-trans.png`
+- `content-pipeline/brand-assets/talley-tax/talley-tax-stacked-dark-trans.svg`
+
+Local banner asset:
+
+- `content-pipeline/brand-assets/talley-tax/talley-tax-banner.png`
 
 Preferred source:
 
@@ -138,10 +151,15 @@ separate advisory firm.
 
 ### Profile Image
 
-Create a simple text/mark asset from existing Talley visual elements:
+Use two profile-image treatments depending on the platform:
 
-- Preferred social-profile version: `Retire With Talley` wordmark with `From
-  Talley Wealth` below the gold line.
+- Facebook and Instagram: use David's square headshot crop. These surfaces
+  should feel like David-led retirement education instead of a faceless second
+  advisory firm.
+- LinkedIn Showcase Page: use the clean `Retire With Talley` mark. LinkedIn
+  Showcase Pages behave more like organization pages than creator profiles.
+- Brand/mark version: `Retire With Talley` wordmark with `From Talley Wealth`
+  below the gold line.
 - Avoid `RWT`; it feels like an unexplained monogram.
 - Talley Wealth needle mark as the small visual anchor.
 - Navy background, gold/white text.
@@ -151,6 +169,8 @@ Local draft assets:
 
 - `content-pipeline/brand-assets/retire-with-talley/retire-with-talley-profile-icon.svg`
 - `content-pipeline/brand-assets/retire-with-talley/retire-with-talley-profile.svg`
+- `content-pipeline/brand-assets/retire-with-talley/retire-with-talley-david-profile.jpg`
+- `content-pipeline/brand-assets/retire-with-talley/retire-with-talley-mountain-banner-wide.png`
 - `content-pipeline/brand-assets/retire-with-talley/retire-with-talley-mountain-banner.svg`
 - `content-pipeline/brand-assets/retire-with-talley/retire-with-talley-banner.svg`
 
@@ -187,18 +207,18 @@ too hard.
 
 ### Instagram Bio
 
-Recommended:
+Live version on Instagram, shortened for the 150-character limit:
 
 ```text
-Retirement brings questions most people have never had to answer.
-Paychecks, Social Security, Medicare, taxes, and what changes after work.
+Retirement questions before and after work stops.
+Paychecks, taxes, investments, and what changes after work.
 From David Talley + Talley Wealth.
 ```
 
 ### X Bio
 
 ```text
-Retirement questions before and after work stops. Paychecks, Social Security, Medicare, taxes, and life after work. From David Talley and Talley Wealth.
+Retirement questions before and after work stops. Paychecks, taxes, investments, and life after work. From David Talley and Talley Wealth.
 ```
 
 ### Facebook Page Short Description
@@ -212,7 +232,7 @@ Retirement planning education from David Talley and Talley Wealth, focused on th
 ```text
 Retire With Talley is a retirement education page from David Talley and Talley Wealth.
 
-The page focuses on the decisions that tend to get real in the years before and after retirement: where the paycheck comes from, when to claim Social Security, how Medicare fits, what taxes can still be planned around, and how life changes after work.
+The page focuses on the decisions that tend to get real in the years before and after retirement: where the paycheck comes from, what taxes can still be planned around, how investments should support the life you want, and how life changes after work.
 
 Educational only. Not individualized financial, tax, legal, or investment advice.
 ```
@@ -228,7 +248,7 @@ Retirement planning education from Talley Wealth.
 ```text
 Retire With Talley is a retirement education page from David Talley and Talley Wealth.
 
-The page focuses on the decisions that tend to get real in the years before and after retirement: where the paycheck comes from, when to claim Social Security, how Medicare fits, what taxes can still be planned around, and how to avoid letting the portfolio become the only conversation.
+The page focuses on the decisions that tend to get real in the years before and after retirement: where the paycheck comes from, what taxes can still be planned around, how investments should support the life you want, and how to avoid letting the portfolio become the only conversation.
 
 Educational only. Not individualized financial, tax, legal, or investment advice.
 ```
@@ -276,12 +296,16 @@ flatten it into only Talley Wealth content.
 Use the same approved David headshot used elsewhere:
 
 - `public/brands/talley-wealth/david-talley.webp`
+- Square social crop: `content-pipeline/brand-assets/david-talley/david-talley-profile-square.jpg`
 
 Do not use a company logo as the profile photo for David Personal.
 
 ### X Handle Candidates
 
-Recommended:
+Deferred for now. Keep X under the existing Talley Wealth account unless the
+strategy changes.
+
+Previously considered:
 
 - `@davidtalleynotes`
 
@@ -305,8 +329,8 @@ Other checked but less preferred:
 - `@davidtalleyadvisor` - durable, but less distinctive.
 - `@davidtalleyadvice` - close, but sounds less personal.
 
-`@davidtalley` appears to be taken from an unauthenticated check. Final
-availability must be verified inside X during account creation.
+`@davidtalley` appeared to be taken from an unauthenticated check. Final
+availability would need to be verified inside X if this ever gets revived.
 
 ### X Bio
 
@@ -459,17 +483,15 @@ Use local, practical education:
 2. Confirm exact handles:
    - `@talleytax`
    - `@retirewithtalley`
-   - David personal X handle.
+   - David personal X handle is deferred.
 3. Create/verify Facebook Pages:
    - Talley Tax
    - Retire With Talley
 4. Create/verify LinkedIn surfaces:
    - Talley Tax company page
    - Retire With Talley Showcase Page, if we choose to do it now
-5. Create/reserve X accounts:
-   - Talley Tax
-   - Retire With Talley
-   - David Personal
+5. Do not create separate X accounts for Talley Tax, Retire With Talley, or
+   David Personal unless the strategy changes.
 6. Update bios, links, images, and pinned posts.
 7. Add each property as its own Metricool Brand.
 8. Connect social accounts and verify Metricool can post or draft to each.
@@ -495,8 +517,9 @@ Use local, practical education:
 Recommendation:
 
 - Talley Tax: use existing Talley Tax primary/stacked logo assets from Drive.
-- Retire With Talley: use the drafted `Retire With Talley` profile icon and
-  mountain banner from `content-pipeline/brand-assets/retire-with-talley/`.
+- Retire With Talley: use David's headshot for Facebook and Instagram; use
+  the drafted `Retire With Talley` profile icon for LinkedIn Showcase; use the
+  calmer mountain banner from `content-pipeline/brand-assets/retire-with-talley/`.
 - David Personal: use a real David headshot, not a company logo.
 - Talley Wealth: keep the current profile identity unless a platform audit shows
   a broken crop or outdated image.
@@ -504,7 +527,7 @@ Recommendation:
 Decision needed from David:
 
 - Approve the Retire With Talley profile mark/banner direction.
-- Pick or approve a David headshot for personal LinkedIn/X.
+- Pick or approve a David headshot for personal LinkedIn.
 
 ### Facebook Page Setup
 
@@ -616,7 +639,7 @@ posting before archiving is ready.
   - 1 link-to-site/about post.
 - Retire With Talley:
   - 3 retirement paycheck posts.
-  - 2 Social Security/Medicare posts.
+  - 2 retirement timing / investment coordination posts.
   - 2 401(k)/portfolio-near-retirement posts.
   - 1 retirement tax-window post.
   - 1 pinned intro.
@@ -645,7 +668,7 @@ Recommendation:
 - Connect only accounts that actually exist and are approved.
 - Verify personal LinkedIn vs company/showcase LinkedIn behavior before coding
   the app routing.
-- Confirm X add-on costs/limits before assuming all X handles can be scheduled.
+- Keep X scheduled only through the existing Talley Wealth account.
 
 Decision needed from David:
 

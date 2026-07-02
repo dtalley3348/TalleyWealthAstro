@@ -1,0 +1,23 @@
+{
+  "_note": "Evergreen David Talley POV lines for text-on-b-roll overlays and standalone brand posts. Compliance-safe (educational, no guarantees or performance claims). Pulled from point-of-view-map.md and voice-guide.md. The overlay matcher pairs a line with a b-roll clip by mood. Add to this over time.",
+  "lines": [
+    { "line": "The plan should tell your investments what to do, not the other way around.", "theme": "planning", "mood": "direct" },
+    { "line": "A number is not a plan.", "theme": "retirement", "mood": "direct" },
+    { "line": "A retirement answer by itself doesn't remove the worry.", "theme": "retirement", "mood": "reassuring" },
+    { "line": "Confidence comes from understanding, not from being told the answer.", "theme": "planning", "mood": "reassuring" },
+    { "line": "Most people don't have too much risk. They have the wrong risk for their plan.", "theme": "investing", "mood": "contrarian" },
+    { "line": "Good advice that nobody implements is just an idea.", "theme": "advice", "mood": "direct" },
+    { "line": "You don't need to become the expert. You need a plan you can trust.", "theme": "advice", "mood": "reassuring" },
+    { "line": "In personal finance, two plus two sometimes equals 3.98.", "theme": "advice", "mood": "warm" },
+    { "line": "Being stuck in the middle of your own financial life isn't a fair place to be.", "theme": "business-owner", "mood": "empathetic" },
+    { "line": "Tax planning should care about your lifetime bill, not just this April.", "theme": "tax", "mood": "direct" },
+    { "line": "Sometimes the smart move is paying a little more tax this year on purpose.", "theme": "tax", "mood": "contrarian" },
+    { "line": "Complexity usually shows up because something went right.", "theme": "planning", "mood": "reassuring" },
+    { "line": "A projection from software is an input, not a plan.", "theme": "planning", "mood": "contrarian" },
+    { "line": "The most valuable financial decisions are usually sequencing decisions.", "theme": "planning", "mood": "direct" },
+    { "line": "Real planning should change what happens next.", "theme": "planning", "mood": "direct" },
+    { "line": "Plan first. The investments serve the plan.", "theme": "planning", "mood": "direct" },
+    { "line": "You may want a financial planner, not just an advisor.", "theme": "advice", "mood": "direct" },
+    { "line": "The goal isn't a bigger number. It's a calmer way to make decisions.", "theme": "retirement", "mood": "calm" }
+  ]
+}

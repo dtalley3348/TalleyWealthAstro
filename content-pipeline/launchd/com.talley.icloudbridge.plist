@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.talley.icloudbridge</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/scripts/bridge.mjs</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <!-- Fire when the iCloud inbox changes, plus poll every 2 minutes as a safety net. -->
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/davidtalley/Library/Mobile Documents/com~apple~CloudDocs/TalleyPipeline/Inbox</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>120</integer>
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/work/bridge.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline/work/bridge.log</string>
+</dict>
+</plist>

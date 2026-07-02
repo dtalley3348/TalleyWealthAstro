@@ -13,25 +13,25 @@
       .body { font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
     </style>
     <linearGradient id="shade" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#182635" stop-opacity="0.94"/>
-      <stop offset="0.54" stop-color="#182635" stop-opacity="0.74"/>
-      <stop offset="1" stop-color="#182635" stop-opacity="0.25"/>
+      <stop offset="0" stop-color="#182635" stop-opacity="0.82"/>
+      <stop offset="0.54" stop-color="#182635" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#182635" stop-opacity="0.16"/>
     </linearGradient>
   </defs>
 
-  <image href="/Users/davidtalley/Code/talley-wealth-astro-site-main/public/brands/talley-wealth/tri-cities-landscape.jpg" x="0" y="-170" width="1500" height="844" preserveAspectRatio="xMidYMid slice"/>
+  <image href="/Users/davidtalley/Code/talley-wealth-astro-site-main/public/brands/talley-wealth/tri-cities-landscape.jpg" x="0" y="-140" width="1500" height="844" preserveAspectRatio="xMidYMid slice"/>
   <rect width="1500" height="500" fill="url(#shade)"/>
-  <rect x="0" y="0" width="1500" height="500" fill="#182635" opacity="0.10"/>
+  <rect x="0" y="0" width="1500" height="500" fill="#182635" opacity="0.05"/>
 
-  <g transform="translate(1196 82) scale(0.33) translate(-360 -360)" opacity="0.95">
+  <g transform="translate(1264 104) scale(0.24) translate(-360 -360)" opacity="0.90">
     <path class="white" d="M389.354309,382.987935c-17.049218,21.239467-42.531625,29.617446-59.032947,20.21295l29.678743,188.792422,33.267986-214.407919c-1.216917,1.828629-2.498069,3.638994-3.913782,5.402547Z"/>
     <path class="gold" d="M330.645691,335.861961c17.049218-21.239677,42.531625-29.617656,59.032947-20.21316l-29.678533-187.642107-33.268196,213.257814c1.216917-1.828629,2.498069-3.638994,3.913782-5.402547Z"/>
     <circle class="white" cx="359.999976" cy="359.424966" r="26.783183" transform="translate(-52.925078 62.306826) rotate(-9.217493)"/>
   </g>
 
-  <text x="92" y="178" class="serif white" font-size="78">Retire With Talley</text>
-  <rect x="96" y="214" width="432" height="5" rx="2.5" class="gold"/>
-  <text x="96" y="284" class="body soft" font-size="33">Retirement questions before and after work stops.</text>
-  <text x="96" y="334" class="body soft" font-size="33">Paychecks, taxes, Social Security, and Medicare.</text>
-  <text x="96" y="420" class="sans gold" font-size="22">FROM TALLEY WEALTH</text>
+  <text x="174" y="169" class="serif white" font-size="55">Retire With Talley</text>
+  <rect x="178" y="202" width="314" height="4" rx="2" class="gold"/>
+  <text x="178" y="271" class="body soft" font-size="25">Retirement questions before and after work stops.</text>
+  <text x="178" y="310" class="body soft" font-size="25">Paychecks, taxes, investments, and what changes after work.</text>
+  <text x="178" y="397" class="sans gold" font-size="17">FROM TALLEY WEALTH</text>
 </svg>

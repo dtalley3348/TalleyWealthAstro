@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Talley Tax social banner</title>
+  <desc id="desc">A navy and gold cover image for Talley Tax profile pages.</desc>
+  <defs>
+    <style>
+      .navy { fill: #182635; }
+      .navy2 { fill: #223447; }
+      .gold { fill: #bf8c4d; }
+      .white { fill: #ffffff; }
+      .soft { fill: #dbe3ea; }
+      .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .sans { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 4px; }
+      .body { font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
+    </style>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#182635"/>
+      <stop offset="0.58" stop-color="#223447"/>
+      <stop offset="1" stop-color="#182635"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1500" height="500" fill="url(#bg)"/>
+  <rect x="1070" y="-120" width="560" height="760" transform="rotate(12 1350 250)" fill="#ffffff" opacity="0.045"/>
+  <rect x="1116" y="-80" width="440" height="660" transform="rotate(12 1336 250)" fill="#bf8c4d" opacity="0.10"/>
+
+  <g transform="translate(1264 104) scale(0.24) translate(-360 -360)" opacity="0.90">
+    <path class="white" d="M389.354309,382.987935c-17.049218,21.239467-42.531625,29.617446-59.032947,20.21295l29.678743,188.792422,33.267986-214.407919c-1.216917,1.828629-2.498069,3.638994-3.913782,5.402547Z"/>
+    <path class="gold" d="M330.645691,335.861961c17.049218-21.239677,42.531625-29.617656,59.032947-20.21316l-29.678533-187.642107-33.268196,213.257814c1.216917-1.828629,2.498069-3.638994,3.913782-5.402547Z"/>
+    <circle class="white" cx="359.999976" cy="359.424966" r="26.783183" transform="translate(-52.925078 62.306826) rotate(-9.217493)"/>
+  </g>
+
+  <text x="174" y="176" class="serif white" font-size="58">Talley Tax</text>
+  <rect x="178" y="211" width="238" height="4" rx="2" class="gold"/>
+  <text x="178" y="280" class="body soft" font-size="25">Tax preparation and year-round tax planning</text>
+  <text x="178" y="319" class="body soft" font-size="25">for complex financial lives.</text>
+  <text x="178" y="402" class="sans gold" font-size="17">JOHNSON CITY, TENNESSEE</text>
+</svg>

@@ -1,0 +1,1122 @@
+{
+  "generatedAt": "2026-06-30T20:53:01.924Z",
+  "configVersion": 1,
+  "count": 19,
+  "readiness": {
+    "Talley Wealth": {
+      "status": "active_existing",
+      "schedulingReady": true,
+      "blockers": [],
+      "rowCount": 6
+    },
+    "Talley Tax": {
+      "status": "verify",
+      "schedulingReady": true,
+      "blockers": [],
+      "rowCount": 6
+    },
+    "Retire With Talley": {
+      "status": "verify",
+      "schedulingReady": true,
+      "blockers": [],
+      "rowCount": 5
+    },
+    "David Talley Personal": {
+      "status": "verify",
+      "schedulingReady": true,
+      "blockers": [],
+      "rowCount": 3
+    }
+  },
+  "records": [
+    {
+      "sourceVideo": "IMG_4130",
+      "title": "Rich Inside the Business—But Is It Real Independence?",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 25,
+        "Talley Tax": 0,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.921Z"
+    },
+    {
+      "sourceVideo": "IMG_4131",
+      "title": "Why Your Tax Strategy Needs to Grow Up With Your Business",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 9,
+        "Talley Tax": 5,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Tax",
+          "level": "optional_secondary",
+          "reason": "IRS or tax notice context.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.922Z"
+    },
+    {
+      "sourceVideo": "IMG_4133",
+      "title": "Avoid Tipping the IRS: Why Tax Planning Belongs Year-Round",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 9,
+        "Talley Tax": 5,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Tax",
+          "level": "optional_secondary",
+          "reason": "IRS or tax notice context.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.922Z"
+    },
+    {
+      "sourceVideo": "IMG_4134",
+      "title": "When Should Business Owners Start Moving Wealth Outside the Business?",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. estate / continuity planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 13,
+        "Talley Tax": 5,
+        "Retire With Talley": 10,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Retire With Talley",
+          "level": "recommended_secondary",
+          "reason": "401(k) near-retirement decision. retirement-stage education.",
+          "confidence": "high",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        },
+        {
+          "property": "Talley Tax",
+          "level": "optional_secondary",
+          "reason": "deduction/tax mechanics.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.922Z"
+    },
+    {
+      "sourceVideo": "IMG_4135",
+      "title": "Why Running Your Business Like It's Always For Sale Usually Makes It Better",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 9,
+        "Talley Tax": 0,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4138",
+      "title": "Why Intentional Owner Pay Matters More Than You Think",
+      "primaryProperty": "Talley Tax",
+      "primaryPropertyId": "talley_tax",
+      "primaryReason": "business income mechanics. deduction/tax mechanics.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 9,
+        "Talley Tax": 10,
+        "Retire With Talley": 5,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Wealth",
+          "level": "recommended_secondary",
+          "reason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+          "confidence": "medium",
+          "setup": {
+            "status": "active_existing",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "optional_secondary",
+          "reason": "retirement-stage education.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "verify",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4139",
+      "title": "Why Your Business Shouldn't Carry Every Burden",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. cash-flow planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 13,
+        "Talley Tax": 0,
+        "Retire With Talley": 5,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Retire With Talley",
+          "level": "optional_secondary",
+          "reason": "retirement-stage education.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4156",
+      "title": "Why a Retirement 'Number' Alone Won't Give You Confidence",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. investment planning. financial planning context.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 9,
+        "Talley Tax": 0,
+        "Retire With Talley": 9,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Retire With Talley",
+          "level": "recommended_secondary",
+          "reason": "retirement-stage education. Persona lane is retirement-stage.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4157",
+      "title": "Why a Great Year Doesn’t Always Build Personal Wealth for Business Owners",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 17,
+        "Talley Tax": 0,
+        "Retire With Talley": 5,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Retire With Talley",
+          "level": "optional_secondary",
+          "reason": "retirement-stage education.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4158",
+      "title": "What Happens When Your Professionals Don’t Communicate?",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. portfolio / investment planning. investment planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 19,
+        "Talley Tax": 0,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4159",
+      "title": "Retirement Failure Isn't Just Running Out of Money: Why Oversaving Can Hurt Too",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 13,
+        "Talley Tax": 0,
+        "Retire With Talley": 9,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Retire With Talley",
+          "level": "optional_secondary",
+          "reason": "retirement-stage education. Persona lane is retirement-stage.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4160",
+      "title": "Are Your Roth Conversions Actually Moving the Needle?",
+      "primaryProperty": "Retire With Talley",
+      "primaryPropertyId": "retire_with_talley",
+      "primaryReason": "Roth / retirement tax-window decision. retirement-stage education. Persona lane is retirement-stage.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 5,
+        "Talley Tax": 5,
+        "Retire With Talley": 14,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Wealth",
+          "level": "optional_secondary",
+          "reason": "Default advisory/planning destination. retirement tax-window planning.",
+          "confidence": "medium",
+          "setup": {
+            "status": "active_existing",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        },
+        {
+          "property": "Talley Tax",
+          "level": "optional_secondary",
+          "reason": "deduction/tax mechanics.",
+          "confidence": "medium",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "verify",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4161",
+      "title": "What to Do (Emotionally and Practically) When You Inherit Money",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. investment planning. Complex planning topic belongs on the main advisory brand.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 7,
+        "Talley Tax": 0,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4164",
+      "title": "Why Knowing Your 'Enough' Number Changes Everything",
+      "primaryProperty": "Retire With Talley",
+      "primaryPropertyId": "retire_with_talley",
+      "primaryReason": "retirement-stage education.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 3,
+        "Talley Tax": 0,
+        "Retire With Talley": 5,
+        "David Talley Personal": 0
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Wealth",
+          "level": "manual_review",
+          "reason": "Some fit signal exists, but not enough to recommend routing by default.",
+          "setup": {
+            "status": "active_existing",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "verify",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4165",
+      "title": "Your Estate Plan Isn’t Done After Signing the Documents",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. estate / continuity planning. Complex planning topic belongs on the main advisory brand.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 7,
+        "Talley Tax": 0,
+        "Retire With Talley": 0,
+        "David Talley Personal": 0
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.923Z"
+    },
+    {
+      "sourceVideo": "IMG_4167",
+      "title": "Why 'What Rate of Return Should I Get?' Is the Wrong Question",
+      "primaryProperty": "Retire With Talley",
+      "primaryPropertyId": "retire_with_talley",
+      "primaryReason": "sequence-risk / spending framework. retirement-stage education. Persona lane is retirement-stage.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 13,
+        "Talley Tax": 0,
+        "Retire With Talley": 14,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Wealth",
+          "level": "recommended_secondary",
+          "reason": "Default advisory/planning destination. portfolio / investment planning. investment planning.",
+          "confidence": "high",
+          "setup": {
+            "status": "active_existing",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "verify",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.924Z"
+    },
+    {
+      "sourceVideo": "IMG_4168",
+      "title": "The Retirement Question Most People Never Get Asked",
+      "primaryProperty": "Retire With Talley",
+      "primaryPropertyId": "retire_with_talley",
+      "primaryReason": "retirement-stage education. Persona lane is retirement-stage.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 5,
+        "Talley Tax": 0,
+        "Retire With Talley": 9,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Wealth",
+          "level": "optional_secondary",
+          "reason": "Default advisory/planning destination. investment planning.",
+          "confidence": "medium",
+          "setup": {
+            "status": "active_existing",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "verify",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.924Z"
+    },
+    {
+      "sourceVideo": "IMG_4463",
+      "title": "What It Feels Like to Work Alongside AI Today",
+      "primaryProperty": "David Talley Personal",
+      "primaryPropertyId": "david_talley_personal",
+      "primaryReason": "AI / systems / builder content. Persona lane is general POV.",
+      "confidence": "medium",
+      "scorecard": {
+        "Talley Wealth": 1,
+        "Talley Tax": 0,
+        "Retire With Talley": 0,
+        "David Talley Personal": 7
+      },
+      "secondary": [],
+      "exclusions": [
+        {
+          "property": "Talley Wealth",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "active_existing",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Talley Tax",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "verify",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.924Z"
+    },
+    {
+      "sourceVideo": "IMG_4580",
+      "title": "Why Your Tax Strategy Needs to Grow As Your Business Grows",
+      "primaryProperty": "Talley Wealth",
+      "primaryPropertyId": "talley_wealth",
+      "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+      "confidence": "high",
+      "scorecard": {
+        "Talley Wealth": 17,
+        "Talley Tax": 15,
+        "Retire With Talley": 10,
+        "David Talley Personal": 0
+      },
+      "secondary": [
+        {
+          "property": "Talley Tax",
+          "level": "recommended_secondary",
+          "reason": "S corp / entity-tax mechanics. business income mechanics. deduction/tax mechanics.",
+          "confidence": "high",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        },
+        {
+          "property": "Retire With Talley",
+          "level": "optional_secondary",
+          "reason": "401(k) near-retirement decision. retirement-stage education.",
+          "confidence": "high",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          },
+          "rewriteRequired": true
+        }
+      ],
+      "exclusions": [
+        {
+          "property": "David Talley Personal",
+          "level": "exclude",
+          "reason": "No strong fit signal in the source asset.",
+          "setup": {
+            "status": "verify",
+            "schedulingReady": true,
+            "blockers": []
+          }
+        }
+      ],
+      "schedulingReady": true,
+      "setup": {
+        "status": "active_existing",
+        "schedulingReady": true,
+        "blockers": []
+      },
+      "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+      "generatedAt": "2026-06-30T20:53:01.924Z"
+    }
+  ]
+}

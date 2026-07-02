@@ -38,6 +38,141 @@ export type BlogPost = {
   featured?: boolean | null;
   duration?: string | null;
   videoUrl?: string | null;
+  sourceMoments?: SourceMoment[];
+  resourceSpec?: BlogResourceSpec;
+  contentKind?: 'blog' | 'video_explainer_page';
+  layoutVariant?: 'article' | 'rich_resource_page';
+  publicationStatus?: 'preview' | 'approved' | 'published';
+  reuseId?: string;
+  sourceVideo?: string;
+  candidateScore?: number;
+  candidateSummary?: string;
+  primaryCategory?: string;
+  audienceLane?: string;
+  contentFormat?: string;
+  decisionTheme?: string;
+  sourceBasis?: ResourceSourceBasis;
+  h1Title?: string;
+  seoTitle?: string;
+  titleRationale?: string;
+  youtubeReuse?: YouTubeReuse;
+  compliancePackage?: CompliancePackage;
+  resourceThread?: ResourceThread;
+  resourceThreadStatus?: string;
+  sourceVideoIds?: string[];
+  resourceVideoPath?: string;
+  transcriptBundlePath?: string;
+  cleanSocialVideoPath?: string;
+};
+
+export type ResourceSourceBasis = {
+  inputs?: string[];
+  generatedFrom?: string[];
+  notes?: string;
+};
+
+export type YouTubeReuse = {
+  title?: string;
+  description?: string;
+  standardVideoPath?: string;
+  shortsVideoPath?: string;
+  thumbnailPath?: string;
+  metadataPath?: string;
+  metricoolReady?: boolean;
+};
+
+export type CompliancePackage = {
+  pdfPath?: string;
+  videoPath?: string;
+  transcriptPath?: string;
+  sourceMomentsPath?: string;
+  resourceSpecPath?: string;
+  metadataPath?: string;
+  zipPath?: string;
+  createdAt?: string;
+};
+
+export type ResourceThread = {
+  primaryReuseId?: string;
+  sourceVideo?: string;
+  sourceVideoIds?: string[];
+  followUpVideoIds?: string[];
+  threadStatus?: string;
+  candidateScore?: number;
+  followUpCue?: string;
+  resourceVideoPath?: string;
+  transcriptBundlePath?: string;
+  cleanSocialVideoPath?: string;
+  cleanFollowUpExports?: Record<string, unknown>[];
+  updatedAt?: string;
+};
+
+export type BlogResourceSpec = {
+  eyebrow?: string;
+  deck?: string;
+  shortAnswer?: string;
+  intro?: string[];
+  situation?: {
+    title?: string;
+    body?: string[];
+  };
+  deeperProblem?: {
+    title?: string;
+    surfaceQuestion?: string;
+    deeperQuestion?: string;
+    whyItMatters?: string;
+  };
+  framework?: {
+    title?: string;
+    intro?: string;
+    steps?: {
+      title: string;
+      body: string;
+    }[];
+  };
+  quote?: {
+    text: string;
+    cite?: string;
+  };
+  valueBlock?: {
+    type?: 'table' | 'checklist';
+    title?: string;
+    intro?: string;
+    columns?: string[];
+    rows?: string[][];
+    items?: string[];
+  };
+  risks?: {
+    title?: string;
+    body?: string[];
+  };
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
+  relatedLinks?: LinkItem[];
+  cta?: {
+    title?: string;
+    body?: string;
+    label?: string;
+    href?: string;
+  };
+  disclaimer?: string;
+};
+
+export type SourceMoment = {
+  timestamp: string;
+  seconds: number;
+  label: string;
+  sourceVideoId?: string;
+  combinedStartSecond?: number;
+  originalStartSecond?: number;
+  embedLabel?: string;
+  question?: string;
+  questionAnswered?: string;
+  answer?: string;
+  transcriptExcerpt?: string;
+  sectionId?: string;
 };
 
 export type LearnArticle = {
@@ -191,7 +326,9 @@ export const howPages: Record<string, BasicPage> = {
   },
 };
 
-export const blogPosts: BlogPost[] = [...generatedBlogPosts, ...migratedBlogPosts];
+export const previewGeneratedBlogPosts: BlogPost[] = generatedBlogPosts;
+export const publishedGeneratedBlogPosts: BlogPost[] = generatedBlogPosts.filter((post) => post.publicationStatus === 'published');
+export const blogPosts: BlogPost[] = [...publishedGeneratedBlogPosts, ...migratedBlogPosts];
 
 export const learnArticles: LearnArticle[] = [
   {
@@ -279,6 +416,7 @@ export const seoPages: SeoPage[] = [
 
 export const seoPageMap = new Map(seoPages.map((page) => [page.slug, page]));
 export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]));
+export const previewBlogPostMap = new Map([...blogPosts, ...previewGeneratedBlogPosts].map((post) => [post.slug, post]));
 export const learnArticleMap = new Map(learnArticles.map((article) => [`${article.category}/${article.slug}`, article]));
 
 export const learnCategories = Array.from(new Set(learnArticles.map((article) => article.category)));

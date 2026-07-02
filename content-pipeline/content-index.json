@@ -1,0 +1,3243 @@
+{
+  "generatedAt": "2026-07-01T19:56:49.870Z",
+  "root": "/Users/davidtalley/Code/talley-wealth-astro-site-main/content-pipeline",
+  "count": 19,
+  "records": [
+    {
+      "id": "IMG_4130",
+      "name": "IMG_4130",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Rich Inside the Business—But Is It Real Independence?",
+      "triage": "Caption / Post",
+      "pillar": "business owner profit-to-wealth",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Speaks directly to business owners whose business is their main asset and source of wealth."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+        "confidence": "high",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.921Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "no",
+          "reason": "The transcript is punchy, but it isn't structured as an answer-first long-form article. It would need more educational framing and practical steps.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Addresses a recurring client misconception and resonates for business owner conversion. Could eventually form part of a package support or about page cluster.",
+          "candidateAngle": "Why real wealth means being financially strong both inside and outside of your business.",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could support an FAQ entry on 'What does it mean to be truly financially independent as a business owner?' but would need clean Q&A rewrite.",
+          "candidateQuestion": "What does it mean to be financially independent if you own a business?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Could become a useful PDF or referral explainer for CPAs or attorneys to help clients spot this problem. Needs more structure first.",
+          "candidateUse": "CPA/attorney conversations with owner clients who have plenty of business equity but thin personal assets.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Message is direct but not broad or substantive enough for a planning note to the list.",
+          "candidateAudience": "",
+          "confidence": "high"
+        },
+        "websiteReuse": {
+          "recommend": "maybe",
+          "reason": "Sharp lines and insight could support the main business owner page (ex: 'rich in the business, thin outside'), but it's not a stand-alone article.",
+          "candidateLocation": "Business owner persona or profit-to-wealth service page.",
+          "confidence": "medium"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "Topic is strong and durable—'rich in the business, uncertain outside.' It's thin as a solo video, but with a cluster of examples and common strategies, it could anchor a video explainer.",
+          "suggestedTitle": "Rich in the Business—Why That Alone Doesn't Equal Real Independence",
+          "coreQuestion": "Why is wealth inside your business not the same as lasting personal financial independence?",
+          "whyThisCouldBeDurable": "Many business owners never hear this from their CPA or advisor. It gets at the heart of what ownership is actually buying them.",
+          "suggestedSections": [
+            "The illusion of wealth inside the business",
+            "Why business equity is fragile",
+            "How real confidence is built—in and out of the business",
+            "Cash flow, personal accounts, and planning outside the business",
+            "How traditional financial planning supports owners",
+            "Common mistakes and how to avoid them"
+          ],
+          "relatedAssetIdeas": [
+            "Profit-to-wealth sequencing: how to pay yourself",
+            "Why your business valuation may not mean what you think",
+            "Business owner financial independence checklist"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "Don't be this guy. I meet these people all the time. The guy who is honestly rich inside of their business, but weirdly unclear outside of it, at least financially speaking. The reason why this is a problem is when you have a business there are two things that's successful. There are two things that make you think you're doing really well. Your net worth, you can, a lot of people ego inflate what their business is really worth, number one. And number two, there's a lot of cashflow coming in. So they feel like they can buy things. And a lot of entrepreneurs are first-generation wealthy and so they feel like it's more than they've had in the past. The problem is that is more fragile than most people take at face value. So if all of your eggs are in this one basket of a business, like of course that's a good way to create wealth. That's one of, I mean, probably the main way how wealth is created in America. But it isn't real financial independence, the type of independence that has like this deep confidence. Like if you know somebody who's like really wealthy and they have like this centered confidence when it comes to anything about money, that is essentially peace. And not everyone should have that ambition, but most people starting a business that is part of the ambition. And so they kind of have this like smokescreen and like they don't actually go the final step to get there. The way that you get there is through the traditional financial planning. Now it does help to work with somebody who speaks business. You know, that's a big deal, but tax planning work, estate planning work, cashflow management, setting up investment accounts, like buying real estate, like doing other things than just your business helps you get there. And you don't wanna be that guy who has this false kind of ego front where they're rich inside the business, but outside of it, they're just like confused, but they don't admit it to anyone other than themselves occasionally. I don't know. It's a circle that I wish more people would try to fix.",
+      "transcriptPath": "work/IMG_4130/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Richness inside your business does not guarantee real independence. Owning wealth outside the business—through planning, cash flow, investing, and coordination—creates real confidence and security."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Success inside the business does not always translate into real financial independence if personal wealth and freedom are not built outside the business."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Why do some business owners feel financially confident inside their business but unclear outside of it?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Rich inside the business? Real financial independence takes more."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "A lot of business owners feel confident because their business looks strong, good cash flow, solid growth, big valuations."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If all your wealth is inside the business, your financial independence is more fragile than you think."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "\"Real security is built outside the business, not just inside it.\""
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [
+        {
+          "date": "2026-07-15",
+          "time": "11:00",
+          "platform": "Instagram",
+          "asset": "video"
+        },
+        {
+          "date": "2026-07-18",
+          "time": "11:00",
+          "platform": "Instagram",
+          "asset": "carousel"
+        },
+        {
+          "date": "2026-08-01",
+          "time": "08:00",
+          "platform": "LinkedIn",
+          "asset": "video"
+        },
+        {
+          "date": "2026-08-02",
+          "time": "09:00",
+          "platform": "Facebook",
+          "asset": "video"
+        },
+        {
+          "date": "2026-08-04",
+          "time": "08:00",
+          "platform": "LinkedIn",
+          "asset": "carousel"
+        },
+        {
+          "date": "2026-08-05",
+          "time": "09:00",
+          "platform": "Facebook",
+          "asset": "carousel"
+        },
+        {
+          "date": "2026-08-08",
+          "time": "21:00",
+          "platform": "X",
+          "asset": "x_thread"
+        },
+        {
+          "date": "2026-08-11",
+          "time": "09:30",
+          "platform": "X",
+          "asset": "x_extra_1"
+        },
+        {
+          "date": "2026-08-14",
+          "time": "09:30",
+          "platform": "X",
+          "asset": "x_extra_2"
+        },
+        {
+          "date": "2026-08-17",
+          "time": "09:30",
+          "platform": "X",
+          "asset": "x_extra_3"
+        },
+        {
+          "date": "2026-08-20",
+          "time": "09:30",
+          "platform": "X",
+          "asset": "x_extra_4"
+        }
+      ],
+      "outputPaths": {
+        "outputDir": "output/IMG_4130/",
+        "socialPack": "output/IMG_4130/social-pack.md",
+        "contentLog": "output/IMG_4130/content-log.json",
+        "xPack": "output/IMG_4130/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4130.md",
+        "captionedVideo": "output/IMG_4130/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4130/cover.jpg",
+        "carousel": "output/IMG_4130/carousel/slides.json",
+        "transcript": "work/IMG_4130/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T20:21:21.839Z",
+      "updatedAt": "2026-06-30T20:53:01.925Z",
+      "reuseStatusSummary": "5 candidate"
+    },
+    {
+      "id": "IMG_4131",
+      "name": "IMG_4131",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why Your Tax Strategy Needs to Grow Up With Your Business",
+      "triage": "Caption / Post",
+      "pillar": "Business owner tax strategy",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Makes the lag between business success and advanced tax strategy plain; matches owner-problem."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+        "confidence": "medium",
+        "secondary": [
+          {
+            "property": "Talley Tax",
+            "level": "optional_secondary",
+            "reason": "IRS or tax notice context.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.922Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "Could make a useful educational blog if paired with examples, more substance, and stepwise explanation. Current transcript is strong POV but thin for a standalone long-form article.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Upgrading tax strategy is a repeatable decision point for owners; could be a support page for business owner planning.",
+          "candidateAngle": "Tax Playbook Upgrade for Growing Businesses",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "This answers 'Does my tax strategy need to change as my business grows?' in a direct and plain way. Good for FAQ or Learning Center.",
+          "candidateQuestion": "When should I update my tax strategy as a business owner?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "The 'tax playbook upgrade' analogy could be useful as a referral, client handout, or introductory education piece.",
+          "candidateUse": "Referral partner explainer for tax playbook upgrade",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Good energy, but not quite broad or deep enough for a planning note email unless paired with case study or Q&A.",
+          "candidateAudience": "",
+          "confidence": "low"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "David's 'the playbook changes' and 'dollars too' lines are strong for service/owner planning pages and FAQs.",
+          "candidateLocation": "Business Owner Planning page; FAQ; Keystone fit intro",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "Durable tension (owner tax lag), strong analogy, but would benefit from more examples and practical beats. Could work as part of a larger tax-strategy business owner cluster.",
+          "suggestedTitle": "When Should You Upgrade Your Business Tax Strategy?",
+          "coreQuestion": "Why do growing business owners need to revisit their tax strategies?",
+          "whyThisCouldBeDurable": "Owners repeatedly miss out on advanced strategies because they stick with entry-level tactics; the topic is emotionally and financially high-stakes and frequently overlooked.",
+          "suggestedSections": [
+            "Why old tax strategies can lag your business success",
+            "The cost of sticking with 'what always worked'",
+            "How to know it's time for a tax playbook upgrade",
+            "Peer comparison: are others paying less in taxes at the same income?",
+            "What changes in the tax game as you grow",
+            "Practical ways to start"
+          ],
+          "relatedAssetIdeas": [
+            "Common missed tax strategies for business owners",
+            "Pros and cons of annual vs. ongoing tax planning",
+            "Case studies: before and after a tax playbook upgrade"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "the tax strategies you had in the early years may have not grown up with you now that you're a successful business owner. And that's normal. It works that way and everything and yet taxes are an easy thing to procrastinate until you talk about them once a year. And so they take many more years of like lag time before your tax strategies often catch up with where they should be based on your income and your business success. And that is like, I mean, it's so often that I meet with like tens of thousands of dollars a year, sometimes hundreds of thousands of dollars a year that I mean, that's not uncommon at all. Like a few times a week, I meet with somebody and it's $100,000 of tax savings because of a conversation that they meant to have four years ago. So don't do that. If you have a hunch that there are people making the same amount of money that you have, like if you have whoever you see as a peer financially, as an other business owner or whatever, like if you have a hunch that there are people that are paying less taxes than you at your level of financial success or business success, then you're probably right. Lean into that. Like there's a good chance that you're right. And you don't have to understand everything about the tax code. The one good thing about tax code is it's mostly logical. Like if you're halfway intelligent and you have just a little bit of time with a tax strategist, like you can grasp these things. It isn't that hard, but you have to take the time to do it. And the key is that the entire playbook changes. If you use a sports analogy, like the play calls when you're in high school playing football are different than the play calls in NFL or when there's an eight-year-old playing. Like the entire thing is completely different. And it's the same thing with tax strategy as your income goes up. Like it isn't that you wasted time learning the foundational things, but the whole strategy changes and you need to keep up with that because taxes are dollars too. And most people would rather have them. If you would rather have your dollars than pay them to the IRS, like 99% of Americans would probably say that. One way or the other. Maybe I'm overstating that. Maybe it's not 99, but everybody that I talk to, at least it seems, would rather keep their money than pay it to the IRS. Even if they keep it and give it away, they would rather choose where it is given to than give it to the IRS. But point is those are dollars too. And by doing tax planning as you get more successful, what that means is you have to upgrade the playbook. You have to understand different types of strategies. The game gets faster. The game gets bigger. You need to learn how to keep up.",
+      "transcriptPath": "work/IMG_4131/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Your business may have outgrown your old tax strategies. As you become more successful, what used to work may leave real money on the table. Keeping your strategy current is not just technical; it is about keeping more of what you have earned."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Most business owners stick with the tax strategies they used in the early days, even after their business grows. As income increases, the old playbook may quietly cost them large sums year after year."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Why does my tax strategy need to change as my business income grows?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Your tax strategy may not have kept up with your business. If you think others are paying less, you might be right."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most business owners keep playing the tax game with the same old plays they used early on. The rules, and the stakes, change as your profits grow."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "The dollars you save on taxes count the same as profits. But the playbook that worked in your early years may quietly bleed money today."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "Your old tax strategy is not wrong, but your income may have outgrown it. The playbook changes, and those dollars matter."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [
+        {
+          "date": "2026-07-13",
+          "time": "11:00",
+          "platform": "Instagram",
+          "asset": "video"
+        }
+      ],
+      "outputPaths": {
+        "outputDir": "output/IMG_4131/",
+        "socialPack": "output/IMG_4131/social-pack.md",
+        "contentLog": "output/IMG_4131/content-log.json",
+        "xPack": "output/IMG_4131/x-pack.json",
+        "blogDraft": "output/IMG_4131/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4131.md",
+        "captionedVideo": "output/IMG_4131/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4131/cover.jpg",
+        "carousel": "output/IMG_4131/carousel/slides.json",
+        "transcript": "work/IMG_4131/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T18:03:27.211Z",
+      "updatedAt": "2026-07-01T19:36:47.354Z",
+      "reuseStatusSummary": "1 staged_preview, 5 candidate"
+    },
+    {
+      "id": "IMG_4133",
+      "name": "IMG_4133",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Avoid Tipping the IRS: Why Tax Planning Belongs Year-Round",
+      "triage": "Caption / Post",
+      "pillar": "Tax planning year-round",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Spotlights owner pay, estimates, and charitable/equipment strategies—bread-and-butter business owner planning. Also strongly relevant to retirees and high earners who only think about taxes at filing."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+        "confidence": "medium",
+        "secondary": [
+          {
+            "property": "Talley Tax",
+            "level": "optional_secondary",
+            "reason": "IRS or tax notice context.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.922Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "The core message is evergreen and matches a common surface question, but the single transcript is brief and would need examples or FAQs to turn into a site-ready article.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a standalone high-intent service or download page. More suited to FAQ or education section.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "Directly fits a FAQ or Learning Center answer about 'When should I be talking taxes?' or 'Why you need more than a once-a-year tax meeting'.",
+          "candidateQuestion": "Why does tax strategy need to happen before April?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "A checklist or one-pager for business owners and individuals on 'year-round tax planning' could be valuable for client education or referral partners.",
+          "candidateUse": "Business owner or high earner guide to tax moves to consider before year-end",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Could expand for a timely email (post-tax season or Q3) nudging clients to ask about tax planning—may need bulked-up content for full email.",
+          "candidateAudience": "business owners, high earners, individuals wishing to minimize next year's tax bill",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "The line 'you're tipping the IRS' and explanation of planning windows is strong POV for FAQs, service pages, or a retirement tax guide.",
+          "candidateLocation": "FAQ, service page, tax planning overview, retirement guide",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "The 'tax strategy is not a filing event' point is a durable, frequently misunderstood planning issue and could anchor a richer explainer page with examples. Needs supplementing with planning case studies, a list of tax-sensitive decisions, and a tax-season-to-year-round planning calendar.",
+          "suggestedTitle": "Why Most Tax Moves Can't Wait Until April",
+          "coreQuestion": "What kinds of tax planning need to happen before tax season—and why?",
+          "whyThisCouldBeDurable": "Durable challenge to the default 'just file it' mentality; repeated client confusion makes this a recurring teaching opportunity.",
+          "suggestedSections": [
+            "Why tax planning can't just be about April",
+            "Examples of year-round tax decisions (owner pay, withholding, giving, purchases)",
+            "The cost of 'tipping the IRS'",
+            "A sample tax planning calendar for business owners and retirees",
+            "Proactive vs. reactive (with plain English definitions)",
+            "What good tax coordination looks like"
+          ],
+          "relatedAssetIdeas": [
+            "Year-end tax moves checklist",
+            "How tax prep and tax planning are different",
+            "The myth of the April tax solution",
+            "How to run your own mid-year tax review"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "if most of your tax conversation happens in April or whenever it is that you file your taxes, it's a pretty good bet that you're missing stuff. Like you're probably paying more in taxes than you could be paying. The way I phrase it is you're tipping the IRS. And it isn't that like filing your taxes is a necessary and good thing. I run a tax firm. I file taxes. But the point is most tax work should happen in the planning stages. It should happen in things like how you pay yourself as a business owner, what your estimates or quarterly payments are, tax withholding, your charitable giving, your equipment purchases. I mean like there's probably 75 things that should be planned. You don't make decisions solely because of the tax implication. The taxes are a component of the decision. And throughout the year, like once usually we do tax strategy sessions shortly after tax season. So like this time of year may and then we'll do another one towards the end of the fall, maybe like October, November when you have a good clear picture for the end of the year. And the intent there is so that that like we're, I hate the word proactive because it's kind of eye rolly. It's like synergize or something like that. But proactive is the right word. Like you have to make tax decisions in advance. You have to be forward looking. You have to decide like I'm going to do something today that is better for me tomorrow. And if you're making tax decisions from the perspective of like, oh, last year, whoops, what's the, what's the damage, then like you're, you are paying more than you have to pay. And so keep that in mind, take action on it, start doing things now, learning strategies now that will make you have more cash next April.",
+      "transcriptPath": "work/IMG_4133/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Most tax savings for business owners and individuals come from decisions made before year-end—not at filing. If your only tax conversation happens at tax time, you're likely paying more than you need to."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "People treat taxes as a filing event instead of a year-round series of decisions. This leads to missed strategies and unnecessary tax payments because tax-reducing actions have to be taken before the year ends."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Is it enough to just file my taxes each April—or am I missing out if that's my only tax discussion?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Most people tip the IRS without realizing it—because their tax conversation only happens at filing."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "If your only tax conversation happens in April, you’re likely tipping the IRS. Filing is just reporting what’s already set in stone."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Most missed tax savings are invisible, they’re the moves you didn’t make before December 31. If you only act at filing time, the window is already closed."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "The IRS doesn’t give refunds for missed planning. Treat taxes as a year-round process, not a one-day event."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [
+        {
+          "date": "2026-07-13",
+          "time": "17:00",
+          "platform": "Instagram",
+          "asset": "video"
+        }
+      ],
+      "outputPaths": {
+        "outputDir": "output/IMG_4133/",
+        "socialPack": "output/IMG_4133/social-pack.md",
+        "contentLog": "output/IMG_4133/content-log.json",
+        "xPack": "output/IMG_4133/x-pack.json",
+        "blogDraft": "output/IMG_4133/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4133.md",
+        "captionedVideo": "output/IMG_4133/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4133/cover.jpg",
+        "carousel": "output/IMG_4133/carousel/slides.json",
+        "transcript": "work/IMG_4133/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T18:13:01.681Z",
+      "updatedAt": "2026-06-30T20:53:01.925Z",
+      "reuseStatusSummary": "6 candidate"
+    },
+    {
+      "id": "IMG_4134",
+      "name": "IMG_4134",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "When Should Business Owners Start Moving Wealth Outside the Business?",
+      "triage": "Caption / Post",
+      "pillar": "business owner profit-to-wealth",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Directly speaks to business owners navigating profit, liquidity, and when to move wealth outside the company. Good fit for profitable owners, especially those starting to think beyond the business."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. estate / continuity planning.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Retire With Talley",
+            "level": "recommended_secondary",
+            "reason": "401(k) near-retirement decision. retirement-stage education.",
+            "confidence": "high",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          },
+          {
+            "property": "Talley Tax",
+            "level": "optional_secondary",
+            "reason": "deduction/tax mechanics.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.922Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "This topic could make a strong educational blog if expanded into a full sequencing guide, but the transcript alone is not deep enough yet. Needs more structure, examples, and internal links to client-fit services.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a high-intent, decision-focused or package-support asset. Not repeatable enough for a standalone page.",
+          "candidateAngle": "",
+          "confidence": "low"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could become a FAQ on 'When should I move money out of my business?' or 'What are the stages of transferring wealth outside the business?' but needs tighter framing and a punchy summary.",
+          "candidateQuestion": "When should a business owner start moving money out of the business? What stages are there?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "This sequence of personal liquidity, retirement accounts, real estate, and exit proceeds would be helpful as a visual handout for owners and referral partners. Needs expansion for clarity and example scenarios.",
+          "candidateUse": "Referral partners, business owner meetings, client education on business-to-personal wealth transition.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "A focused but slightly incomplete thought; would need a concrete example or stronger actionable takeaway for the main list.",
+          "candidateAudience": "",
+          "confidence": "low"
+        },
+        "websiteReuse": {
+          "recommend": "maybe",
+          "reason": "David's framing of gradual wealth transfer and the 'earlier than most entrepreneurs, later than most advisors' line deserves reuse in business-owner pages or key service explanations.",
+          "candidateLocation": "Business-owner planning page, Keystone fit sections.",
+          "confidence": "medium"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "Solid core question ('When should I start moving money out of my business?'), some sequencing tension, but the transcript is a little thin. Could anchor a cluster if paired with more practical examples and myths.",
+          "suggestedTitle": "Moving Wealth Out of Your Business: How and When Owners Should Start",
+          "coreQuestion": "When and how should a business owner start moving wealth out of the business?",
+          "whyThisCouldBeDurable": "Many business owners face this decision, and most firms approach it simplistically. David's pacing and tax-driven sequencing is practical and distinguishes the approach.",
+          "suggestedSections": [
+            "Why most wealth starts in the business",
+            "Personal liquidity: the first priority",
+            "Retirement accounts as anchor stage two",
+            "Real estate and large-tax-deduction moves",
+            "Exit proceeds: the 'wild west' transition",
+            "How to pace these moves so it is not overwhelming"
+          ],
+          "relatedAssetIdeas": [
+            "Tax timing and bonus depreciation for owners",
+            "What to do after a big liquidity event",
+            "How owner pay connects to personal wealth building"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "it can make complete sense for most of your wealth to be tied up in your business and that's usually how it starts. The harder question is when that should start changing and sneak peek it's not usually all at once when you sell the business one day it should happen over time at least on some level that should happen over time if it's not happening a little bit then um it's like pulling the covers off of somebody when it's just like this whole new world it's just like so intimidating it's horrifying and they um don't ever feel quite the amount of freedom that they should feel I guess you could say or that they feel like they should feel so what stages do people start moving assets outside the business um I'll say three and often well the first one is just personal liquidity that usually happens very early on in a startup like you have your business entity you have personal you know life you know finances like your mortgage or your groceries the um like you should have a personal emergency fund that's kind of the first stage the next one um retirement accounts like and and number two and three are largely driven by the impact of tax uh because the tax deductions start to get valuable enough you know like it's just worth it to start to move some money outside of the business because in the back of your mind you know you probably should at some point so um thing number two would usually be retirement accounts where symbol ira sep ira 401k you know what there's a bunch of ones point is 20 000 30 000 70 000 um you know if that amount of money as a deduction or you know I want to get to you in the weeds with this but like if that would be meaningful to you if that if that would feel really good if your taxes are high enough where like that amount of cash moving somewhere would be a meaningful deduction then that starts happening and then we see um in today's world uh real estate purchases because of uh bonus depreciation or even if you don't there are ways that you can pull forward big deductions when you buy real estate and um uh when you're paying 500 in taxes if you can lower that by 200 grand um by buying a piece of real estate then like that is attractive enough that even though the money might maybe get a higher return if you buy more you know hired more sales people or you know bought some new equipment like the deduction on on buying this piece of rental property is so attractive that it starts to move some wealth outside of the business i've seen and then of course when you have liquidity events in the business then there's a big lump sum and you get a million dollars or a hundred million dollars or whatever the case is when you exit and then then it's a whole it's the wild west for people financially speaking because there's a lot of education that that they need but um it's a great question and it depends obviously on who you are and the the sum of your ambitions i guess you could say how you pace that but um the big key is that it should probably happen later than almost any financial advisor would tell you but sooner than most entrepreneurs would tell you i guess that's a good way to put it",
+      "transcriptPath": "work/IMG_4134/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "It usually makes sense for most of your wealth to be in your business early on, but moving wealth out should not happen only at a big exit. Business owners have natural opportunities to gradually move assets outside the business, often driven by liquidity needs and tax incentives. The real question is recognizing those stages and being intentional about it."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Owners often start with all of their wealth tied up in the business, but wind up unprepared for what it feels like when everything stays that way until an all-at-once exit. The transition can be overwhelming, and many miss out on making thoughtful, gradual moves."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "When should a business owner move money out of the business and start building wealth outside the company?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Owners: Most of your wealth may start out in the business, but moving money out is a pacing decision—not all at once."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most owners start with nearly all their wealth in the business. When should that start to change?"
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Some business owners wait until the exit to move wealth out. That’s usually too late to maximize flexibility or minimize surprises."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "\"Pacing these moves is a bigger decision than most realize, later than most advisors push, earlier than most entrepreneurs want.\""
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4134/",
+        "socialPack": "output/IMG_4134/social-pack.md",
+        "contentLog": "output/IMG_4134/content-log.json",
+        "xPack": "output/IMG_4134/x-pack.json",
+        "blogDraft": "output/IMG_4134/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4134.md",
+        "captionedVideo": "output/IMG_4134/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4134/cover.jpg",
+        "carousel": "output/IMG_4134/carousel/slides.json",
+        "transcript": "work/IMG_4134/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T18:31:10.208Z",
+      "updatedAt": "2026-06-30T20:53:01.925Z",
+      "reuseStatusSummary": "5 candidate"
+    },
+    {
+      "id": "IMG_4135",
+      "name": "IMG_4135",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why Running Your Business Like It's Always For Sale Usually Makes It Better",
+      "triage": "Caption / Post",
+      "pillar": "business owner profit-to-wealth",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Direct fit for established business owners, especially those vaguely considering a future sale or just wanting a more self-sufficient, valuable business."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+        "confidence": "medium",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "no",
+          "reason": "The transcript is insightful but a little thin for a full blog. It's a mindset post more than a step-by-step sale-prep guide or educational search answer.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "This could play as part of a future succession/exit-readiness landing page (mindset section), but by itself it's not enough.",
+          "candidateAngle": "Succession Planning Mindset",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could work as a learning-center snippet under an FAQ like 'Do I need to prepare my business to sell even if I'm not selling soon?'",
+          "candidateQuestion": "Should I run my business like it's for sale, even if I have no concrete exit date?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Useful for a CPA or planning partner explaining the operational advantage of sale-readiness—for business-owner handouts.",
+          "candidateUse": "Referral partner quick sheet: benefits of sale-readiness even without a target exit",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Not broad or tactical enough; more mindset than planning note.",
+          "candidateAudience": "",
+          "confidence": "high"
+        },
+        "websiteReuse": {
+          "recommend": "maybe",
+          "reason": "Could be referenced as a quick quote or mindset box on the business owner persona or exit planning page.",
+          "candidateLocation": "Exit planning and business owner persona pages",
+          "confidence": "medium"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "It is a clear, signature David POV with emotional and planning weight, but lacks the step-by-step depth for a full explainer page by itself. Could anchor a cluster on business sale readiness.",
+          "suggestedTitle": "Why a Sell-Ready Business is a Better Business (Even If You Never Sell)",
+          "coreQuestion": "Should I run my business as if it's always about to be sold?",
+          "whyThisCouldBeDurable": "This mindset is both contrarian and practical, addresses a common inaction problem, and speaks directly to owner psychology. Widely felt, rarely named plainly.",
+          "suggestedSections": [
+            "The Sale-Ready Mindset: What It Means and Why It Works",
+            "Unexpected Benefits: More Fun, More Value, Less Stress",
+            "Operational vs. Financial Sale-Readiness—What to Prioritize",
+            "What Actually Changes When You Prep for Sale",
+            "Stories from the Succession Planning Front Row",
+            "How to Start Sale-Ready Ops Without Committing to Sell"
+          ],
+          "relatedAssetIdeas": [
+            "Checklist: 'Is Your Business Ready To Sell?'",
+            "Mistakes Owners Make Waiting for a Sale",
+            "Case Example: Owner Prepped to Sell, Then Chose Not To"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "A lot of business owners say they want to sell their business someday, they have no idea when that's going to be, and so they don't do any work in pursuit of setting up the business so that it can be sold. But here's the crazy thing, most, I have an inside look at this because I do a lot of succession planning where businesses like, hey in two to three years you want to sell my business, and so they do all this work to make the business worth more. So make it a business that someone would want to buy. And what happens is it's more fun to run when they do that work. And then when it comes time to sell it, they don't even really want to sell it because they have set up things in a way that it's a better business to run. And so a business that is ready to be sold is a business that you don't want to sell. And so I love the thought of running a business like it's always about to be sold. Now it's not completely right because there are some things like when you're about to sell a business like how do you set up your compensation, some like the operational things, yes, you should act like you're about to sell it within the next few years. The financial things, not always, like the way you do some of your accounting should maybe change. The way you decide on certain types of customers should change if you're going to sell your business just to maximize the amount that you're going to sell it for. But the operational type things like who does what and when and the systems like all of that if you set it up to where someone else could come in and take over like all of a sudden you can step out and you don't have to do all the work and like that's a fun business to run. And so the mindset of more people, more entrepreneurs should be I want to run this thing like I'm going to sell it in a couple years and I need to set it up as if that's the case. Plus it gives you this like a newfound sense of financial security because you have a business that is actually sellable and that's also nice.",
+      "transcriptPath": "work/IMG_4135/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Running your business like it's always about to be sold improves how it operates, often making it more fun and more valuable—so much so that you may not even want to sell after doing the work."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Many owners delay succession prep because the sale feels far away or vague, missing the personal and operational benefits that come from treating the business as if it might be sold soon."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Should I get my business ready to sell even if I'm not sure when I'll exit?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "A business that's ready to be sold is often a business you want to keep running."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most owners wait to prepare their business for sale until the exit is actually on the table. That delay can cost more than owners realize."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If you’re waiting for a sale to make improvements, you’re running a less valuable business than you could. Most real gains happen before the ink is dry."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "\"A business that’s ready to sell is often a business you want to keep running.\""
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4135/",
+        "socialPack": "output/IMG_4135/social-pack.md",
+        "contentLog": "output/IMG_4135/content-log.json",
+        "xPack": "output/IMG_4135/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4135.md",
+        "captionedVideo": "output/IMG_4135/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4135/cover.jpg",
+        "carousel": "output/IMG_4135/carousel/slides.json",
+        "transcript": "work/IMG_4135/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T18:42:04.499Z",
+      "updatedAt": "2026-06-30T20:53:01.925Z",
+      "reuseStatusSummary": "5 candidate"
+    },
+    {
+      "id": "IMG_4138",
+      "name": "IMG_4138",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why Intentional Owner Pay Matters More Than You Think",
+      "triage": "Caption / Post",
+      "pillar": "business owner pay decisions",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Speaks plainly to the owner-pay complexity and why it matters beyond taxes."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Tax",
+        "primaryReason": "business income mechanics. deduction/tax mechanics.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Talley Wealth",
+            "level": "recommended_secondary",
+            "reason": "Default advisory/planning destination. business-owner planning. Persona lane is business-owner planning.",
+            "confidence": "medium",
+            "setup": {
+              "status": "active_existing",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          },
+          {
+            "property": "Retire With Talley",
+            "level": "optional_secondary",
+            "reason": "retirement-stage education.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "verify",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "The transcript covers the pay/owner-draw/salary/entity-type interplay, but it's a bit scattered. Could make a solid blog if structured cleanly with more specifics, otherwise better as part of a series/cluster.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Owner pay and entity-type decisions are repeatable, high-intent topics, but this video alone isn't deep enough to anchor a page.",
+          "candidateAngle": "How business owners should review pay, draws, W-2, and structure every few years",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "FAQ about 'How should a business owner pay themselves?' is a common core question.",
+          "candidateQuestion": "How should I pay myself as a business owner?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "If combined with clear examples or entity-structure visuals, would make a great PDF for referral partners and client education.",
+          "candidateUse": "Handout for CPA/attorney partners, business owner workshop takeaway, onboarding resource",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Good core insight but not broad or sharp enough alone for a list-wide planning note.",
+          "candidateAudience": "",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Strong explanation for persona/Keystone/business owner pages and for future internal links.",
+          "candidateLocation": "Business owner persona page, Keystone fit guide, tax planning page",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "Great core question. Could anchor a clustered explainer page if combined with real examples (owner-draw vs salary, S Corp triggers, thresholds, behavioral errors). As a standalone, it's thin but durable.",
+          "suggestedTitle": "How Should Business Owners Pay Themselves?",
+          "coreQuestion": "What's the right way to pay yourself as a business owner, and what actually changes when you review pay structure?",
+          "whyThisCouldBeDurable": "Every business owner needs to review this over time as income, revenue, and entity structure shift. Most don't, so practical education has lasting value.",
+          "suggestedSections": [
+            "Why how you pay yourself matters",
+            "Owner draws, W-2, 1099: what each means",
+            "How entity type shapes pay decisions",
+            "Thresholds and timing (when to review)",
+            "Common mistakes and what to watch for",
+            "How this ties to business valuation and future sale"
+          ],
+          "relatedAssetIdeas": [
+            "Case studies: LLC vs S Corp pay patterns",
+            "Pay structure decision matrix",
+            "Exit planning and pay sequencing"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "how you pay yourself as a business owner is such an important decision for so many reasons. The types of tax deductions that are available to you, how much tax you actually pay, regardless of other strategies that you use, how much the business is worth when you sell it. And the thing about the pay decisions, like how to take an owner draw, they have impacts on like, like in order to make that decision, well, you have to dive into what tax, what tax, you know, how much income you're going to have, what entity type do you want to be, when might you sell the business, what other income is in place, what types of retirement plans your accounts are already set up versus you might set up in the future. It's, it's like you kind of spin in a circle almost when you're making those decisions. So you need space for discussion to decide those things. But the key here is that when you're deciding how much to pay yourself, if you're not intentional with that, then there, and you just take draws as you need them, or you just do what you have done for years and you haven't looked at it freshly and made any changes, then the safe assumption is that you're probably leaving stuff on the table just because you're not being intentional. And that's a shame. We should be intentional about that stuff. So if you ever have, you haven't ever really had a deep dive and you're a business owner, how do I pay myself? How much, what's the structure? Is it W-2? Is it 1099? Do I just take owner draws? Like, what does that really even mean? If you don't know that stuff, then you should. And if it's been a few years since you've taken a look at it and your income has changed, then you should, because there are all these like thresholds where if you get above a certain level of net income and you're above a certain level of gross revenue or, you know, in like they kind of move against one another, then you should be one entity type versus another. And the entity type structure is how you pay yourself and when you pay yourself and how you pay quarterly estimates or, you know, like it all cycles around each other. So that's a word salad, everything that I just said. But the point is, if you don't understand how that works cleanly, then you should, because you're probably leaving money on the table if you don't.",
+      "transcriptPath": "work/IMG_4138/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Being intentional about owner pay is one of the most underappreciated levers a business owner has. The decisions ripple through taxes, entity type, retirement, and what your business eventually becomes. If you default to the old habits or improvise, you could be leaving money on the table."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Pay decisions shape taxes, your future sale, and even which strategies are possible. Most owners improvise and miss out, simply because no one has led a real review."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "How should I pay myself as a business owner: draw, salary, something else?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Are you paying yourself as a business owner on purpose—or just out of habit? #businessowner #taxplanning"
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most business owners set how they pay themselves and never revisit it."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If you haven't reviewed how you pay yourself in the last few years, that's not strategy, it's autopilot."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "\"The way you pay yourself as an owner is where taxes, entity, and real wealth-building all collide.\""
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4138/",
+        "socialPack": "output/IMG_4138/social-pack.md",
+        "contentLog": "output/IMG_4138/content-log.json",
+        "xPack": "output/IMG_4138/x-pack.json",
+        "blogDraft": "output/IMG_4138/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4138.md",
+        "captionedVideo": "output/IMG_4138/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4138/cover.jpg",
+        "carousel": "output/IMG_4138/carousel/slides.json",
+        "transcript": "work/IMG_4138/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T18:51:52.394Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "6 candidate"
+    },
+    {
+      "id": "IMG_4139",
+      "name": "IMG_4139",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why Your Business Shouldn't Carry Every Burden",
+      "triage": "Caption / Post",
+      "pillar": "business owner profit-to-wealth",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "Speaks directly to business owner experience; also resonates with entrepreneurs just hitting stride."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. cash-flow planning.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Retire With Talley",
+            "level": "optional_secondary",
+            "reason": "retirement-stage education.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "no",
+          "reason": "Not enough technical, stepwise substance or search-oriented framing for a site blog. Stronger as a social asset.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "No repeatable high-intent decision angle; this is foundational mindset, not a service or offer page.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could become an FAQ entry around 'How should I think about the role of my business in my personal wealth?' but is currently too conversational.",
+          "candidateQuestion": "Should my business be my only retirement plan?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Could be useful in a business-owner conversation or as a PDF for referral partners who want to explain why business owners need to move wealth outside the business.",
+          "candidateUse": "Referral handout for business owners hesitant to build personal wealth outside their company.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Conversation-starting for business owners who relate to this problem, but would need more tactical suggestions for standalone email.",
+          "candidateAudience": "Main email list, business-owner segment.",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Strong lines on business owner identity/risk can support persona pages and on-site messaging.",
+          "candidateLocation": "Business owner persona page, FAQ section, internal link from business transition guide.",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "The idea is durable and emotionally strong, but this transcript alone would be thin—better if clustered with 'profit-to-wealth' content or expanded with tactical how-tos.",
+          "suggestedTitle": "Why Your Business Shouldn’t Carry Every Burden",
+          "coreQuestion": "What is the risk when my business becomes my retirement plan, income, and identity?",
+          "whyThisCouldBeDurable": "The single-point-of-failure issue is a recurring worry for business owners. This asset could cluster practical steps, myths, and mindset advice.",
+          "suggestedSections": [
+            "Why the successful business becomes an anchor for everything",
+            "What could go wrong: risk, control, and timing realities",
+            "What spreading the financial responsibility looks like",
+            "How (and when) to separate business success from personal wealth",
+            "Mindset shift: letting your business be a tool, not the only plan",
+            "Common hesitations and why owners resist this move"
+          ],
+          "relatedAssetIdeas": [
+            "How to start investing money outside your business",
+            "Turning business profit into real personal wealth",
+            "What happens if you wait too long to diversify away from your business"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "Look, as an entrepreneur, I can say this too, if you run a business, like we all want our businesses to become wildly successful. And that's good. What happens though, is that often the business starts having too many jobs. It's your legacy, it's your cash flow and your income and your immediate security and your midterm security and your retirement plan and your purpose in life. It's your life, it's your baby, it's your passion, it's your hobby. It's like all of these things rolled up into one and that is too much weight on a singular thing. It's just like, I don't want to go into therapist mode, but like that is too much weight. Like that, like, what if it fails? Like that is possible. Like, I mean, it might not even be in your control. Like I might wipe your business out. I don't know. Like the point is that you should start at least financially speaking, and I can speak to that with authority. You should start diversifying some of that, it's too much of a used word, but like you should start moving some of the weight of your financial responsibility into other things. If your business is this everything and so many business owners, if it weren't everything for them, then it would surely fail because being an entrepreneur is an insane idea in the first place. It should never work. And yet sometimes it does. And so you need that kind of ownership, like responsibility, not ownership in like the legal sense, but ownership and like, this is on my back. I'm going to do this thing. I'm going to make it there. And so you need some level of that. When you start having so much success, that it's also your, your full retirement plan and your full, you know, legacy after you passed away, you're going to pass these dollars to your kids. And you're like, just all of that stuff, like you got to start spreading things out. You need another hobby. You need to start investing money outside of your business. You need to like do other things. And so, um, public service announcement, I guess for all the other entrepreneurs out there, I run into this every day, both personally, I guess, but also in business owners that I work with, um, that too much folks in a singular thing is fine for a little while, but over a long period of time, it's not, once you get more successful, you have just gained freedom to not do that. Take advantage of it.",
+      "transcriptPath": "work/IMG_4139/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "When your business is doing well, you owe it to yourself (and your family) to start easing some weight off your business and build wealth elsewhere. The more successful you get, the more you can afford to step beyond having everything rest on one thing."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Too many business owners let their business serve as income source, retirement plan, legacy, and even identity, loading it with unrealistic expectations and risk."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Should I keep pouring everything into my business as I succeed?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "When your business is your whole plan, that's too much weight for one thing to carry."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Too many business owners treat their company as their paycheck, retirement plan, and legacy. That’s a risk that compounds as the business grows."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Treating your business as income, legacy, and a retirement plan puts all your eggs in one basket. The more you succeed, the more you can afford to rethink that."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "“Your business might fund your lifestyle, but it shouldn’t be your entire safety net.”"
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4139/",
+        "socialPack": "output/IMG_4139/social-pack.md",
+        "contentLog": "output/IMG_4139/content-log.json",
+        "xPack": "output/IMG_4139/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4139.md",
+        "captionedVideo": "output/IMG_4139/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4139/cover.jpg",
+        "carousel": "output/IMG_4139/carousel/slides.json",
+        "transcript": "work/IMG_4139/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:02:17.253Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "5 candidate"
+    },
+    {
+      "id": "IMG_4156",
+      "name": "IMG_4156",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why a Retirement 'Number' Alone Won't Give You Confidence",
+      "triage": "Website Asset",
+      "pillar": "retirement confidence",
+      "personaFit": {
+        "primaryLane": "retirement transition",
+        "fitStrength": "direct",
+        "notes": "This is written directly for pre-retirees who feel uneasy even as they close in on their target number."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. investment planning. financial planning context.",
+        "confidence": "medium",
+        "secondary": [
+          {
+            "property": "Retire With Talley",
+            "level": "recommended_secondary",
+            "reason": "retirement-stage education. Persona lane is retirement-stage.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "yes",
+          "reason": "There is a clear, durable question, enough substance, and a strong Talley POV. The answer-first format will serve clients and search well.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Could serve as a destination page for 'retirement income framework' or 'retirement confidence,' but probably better clustered after a few more assets.",
+          "candidateAngle": "Securing confidence in retirement through planning frameworks",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could support a short FAQ on 'What is my retirement number?' but this is more substantial as a blog.",
+          "candidateQuestion": "Why isn't reaching my retirement number enough to feel secure?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Might be valuable as a quick handout for retiring clients who are still anxious, or for referral partners explaining Talley's approach.",
+          "candidateUse": "Retirement income confidence handout",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Fits as a broad planning note to clients and prospects about retirement confidence, but works best with accompanying real examples.",
+          "candidateAudience": "Near-retirement clients and marketing list",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Strong quotes and framework explanation are suitable for service pages, retirement guides, and the Learning Center.",
+          "candidateLocation": "Retirement income planning page, process/approach section",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "There is real emotional and practical tension, a common misconception, a specific Talley call to action, and the substance for a multi-section teaching page.",
+          "suggestedTitle": "Why Your Retirement Number Isn't Enough",
+          "coreQuestion": "Why doesn't hitting my retirement number make me feel secure?",
+          "whyThisCouldBeDurable": "This is a root anxiety for pre-retirees and first-year retirees—having 'enough' doesn't translate to confidence if there's no framework for income and risk. People search for a number, but what they want is a plan that turns that number into reliability, even when markets are volatile. There's durable demand and repeat use for this plain-English answer.",
+          "suggestedSections": [
+            "The real problem with the retirement number mindset",
+            "How market swings challenge even well-prepared retirees",
+            "Frameworks for turning savings into income: silos, buckets, guardrails",
+            "Why a practical plan beats reassurance from math alone",
+            "What should the retirement income plan include?",
+            "Next steps for building real retirement confidence"
+          ],
+          "relatedAssetIdeas": [
+            "What does a retirement income bucket strategy look like?",
+            "How do I deal with retirement anxiety when the market is down?",
+            "Turning your 401(k) into a paycheck: practical steps"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "couple is two years from retirement and on paper they're okay but every time the market dips they get freaked out this is proof that what people really need is not just a number that isn't going to actually create any more security when you actually get there that's such a such a common misconception people that are thinking about retirement planning say what's my number do i need one million dollars four million dollars ten million dollars whatever it is um you know there's many ways of figuring that out but that in and of itself doesn't actually create security i know that i work with these people every day and when they get there they get freaked out about stuff because they're like does this only work if the market is up so you need to have a framework when you get when you're approaching actual retirement to turn that number into a plan there's different ways that we do that you hear bucketing or i call it silos because i'm just country enough for that guardrails that like there's many different frameworks you can develop a plan to create retirement income but the goal there is so that you aren't so nervous and in like this pit of your stomach feeling if you're right at retirement if like hey yeah i think we have enough like the math should work but oh i don't know and so if that's you develop a plan you need a financial plan or not an advisor there's many other ones not just me but um create a retirement income and legacy plan not just a list of good investments we're going to have a good writer return",
+      "transcriptPath": "work/IMG_4156/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Security in retirement comes not just from having a target number, but from having a framework to turn that number into a practical income and legacy plan—because the math alone rarely creates the confidence people are really looking for."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Even people who hit their number can feel anxious and unprepared when they approach retirement because the market's ups and downs make the future feel uncertain."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "How much do I need to retire?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Feeling anxious even if you're close to your retirement number? The plan, not just the math, makes the difference."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "You can hit your retirement number and still find yourself second-guessing every market headline."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Having your retirement number doesn’t mean you’ll sleep well when markets get rocky. I’ve seen that gap up close."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "The math alone rarely brings lasting confidence. What matters: having a plan that turns savings into reliable income when you need it."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4156/",
+        "socialPack": "output/IMG_4156/social-pack.md",
+        "contentLog": "output/IMG_4156/content-log.json",
+        "xPack": "output/IMG_4156/x-pack.json",
+        "blogDraft": "output/IMG_4156/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4156.md",
+        "captionedVideo": "output/IMG_4156/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4156/cover.jpg",
+        "carousel": "output/IMG_4156/carousel/slides.json",
+        "transcript": "work/IMG_4156/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:09:56.238Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "1 staged_preview, 6 candidate"
+    },
+    {
+      "id": "IMG_4157",
+      "name": "IMG_4157",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why a Great Year Doesn’t Always Build Personal Wealth for Business Owners",
+      "triage": "Caption / Post",
+      "pillar": "Business owner profit-to-wealth",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "This fits owners who've moved past 'growth at all costs' and are trying to figure out if the business is actually translating to personal wealth."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Retire With Talley",
+            "level": "optional_secondary",
+            "reason": "retirement-stage education.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "Strong point, but transcript is structured as a riff, not a full answer article. Could be the seed for a longer blog if tied to practical tactics for owners.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Topic is important but this draft is too narrow for a repeatable high-intent landing page.",
+          "candidateAngle": "",
+          "confidence": "low"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could become an FAQ entry on: 'How do I turn business profits into personal wealth?'",
+          "candidateQuestion": "How do I start turning business success into personal wealth?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "This idea is helpful as an owner-facing explanation or for CPAs referring owners asking this question.",
+          "candidateUse": "Referral explanation: Why a big tax bill does not mean you’re building wealth.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "The core message is strong for a planning note to business-owner segment if expanded slightly.",
+          "candidateAudience": "Established owners who are facing large annual tax bills",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "maybe",
+          "reason": "Parts of this could fit in a business owner hub or tax-strategy persona page.",
+          "candidateLocation": "Business owner planning section; learning center",
+          "confidence": "medium"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "The idea is core, but the transcript is a high-level riff. If paired with examples and practical tactics, it could anchor an explainer page.",
+          "suggestedTitle": "Turning Business Success into Personal Wealth",
+          "coreQuestion": "Why doesn’t a big year in business always feel like personal financial progress—and what do you do about it?",
+          "whyThisCouldBeDurable": "Almost every seasoned business owner eventually wonders why their hard work doesn't feel like it's translating to personal wealth. They need simple coordination steps, not just tax tips.",
+          "suggestedSections": [
+            "Why business success and personal wealth aren't always linked",
+            "When should you start moving money outside the business?",
+            "What transition options might make sense (retirement plans, real estate, investments)",
+            "How to know if your plan is working",
+            "What happens if you never make the shift"
+          ],
+          "relatedAssetIdeas": [
+            "Business owner tax strategy overview",
+            "When reinvesting in the business stops making sense",
+            "Business vs. personal tax planning"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "a business owner has a great year they pay a huge tax bill and they're like what in the world like this doesn't feel like as much progress as i thought it should like i should feel like i have a lot of money and i don't and the issue isn't just the tax bill although that does matter and listen to my other videos to learn how to lower your tax bill the issue is that you don't have a plan to move your business wealth or success into personal wealth and here's the hard thing is most people especially early on should not be doing this they should be reinvesting in their business and if their business is not the best investment they can make then what are you doing you shouldn't even be in business start a different one or something but but at some point as success grows and as you have more successful years then it does become an intentional like over time transitioning wealth from the business to personal assets usually that's you know some type of retirement plan or real estate or like there's many different things and i'm not saying what you should do it depends on your situation but the idea of having a plan of at certain thresholds we're going to start transitioning some of my wealth out of this concentrated equity position asset your business to something else and and and i'm i don't want to say i'm agnostic to what the other things are that you're investing in because it does matter but i kind of don't matter at some point the fact is you need to start transitioning your wealth in some way away from just the business and if you have that gut feeling where it's like oh like i don't feel as ahead as i should then it's probably time to start considering that",
+      "transcriptPath": "work/IMG_4157/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Business owners reach a point where intentionally moving wealth from the business to personal assets matters more than simply reinvesting everything back into the company. Most people don't have a plan for this, and that's what keeps them feeling behind, even in successful years."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Many business owners lack a plan for turning business success into personal wealth, leaving them feeling like their hard work isn’t building what it should."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Why does a big business year and paying a large tax bill not feel like real progress?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "A big year and a big tax bill isn’t the same as real wealth. If you aren’t moving money out of the business, it can start to feel stuck."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "A strong business year and a big tax bill may not move the needle on your personal wealth."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "A big year and a larger tax bill can create the illusion of progress. Without moving value out of the business, you often end up running in place."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "Feeling behind after a strong year? That is usually a sign it may be time to plan the shift from business growth to personal wealth building."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4157/",
+        "socialPack": "output/IMG_4157/social-pack.md",
+        "contentLog": "output/IMG_4157/content-log.json",
+        "xPack": "output/IMG_4157/x-pack.json",
+        "blogDraft": "output/IMG_4157/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4157.md",
+        "captionedVideo": "output/IMG_4157/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4157/cover.jpg",
+        "carousel": "output/IMG_4157/carousel/slides.json",
+        "transcript": "work/IMG_4157/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:18:32.241Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "6 candidate"
+    },
+    {
+      "id": "IMG_4158",
+      "name": "IMG_4158",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "What Happens When Your Professionals Don’t Communicate?",
+      "triage": "Caption / Post",
+      "pillar": "planning coordination",
+      "personaFit": {
+        "primaryLane": "secondary complexity",
+        "fitStrength": "direct",
+        "notes": "Fits secondary complexity: people with multiple professionals (CPA, attorney, advisor, insurance) and real coordination needs."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. portfolio / investment planning. investment planning.",
+        "confidence": "high",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "Good teaching angle about why professional coordination matters, but thin for a full-length article in this exact transcript. Could work as a cluster entry or simple FAQ if expanded.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Coordination issue is a repeatable pain point. Potential support page for 'Coordinated Planning' or persona fit, but needs more substance.",
+          "candidateAngle": "Why coordination is the missing piece",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "Short direct Q&A like 'What happens when my financial professionals don’t talk to each other?' is ideal here.",
+          "candidateQuestion": "What happens when my advisors and CPA don’t communicate?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "yes",
+          "reason": "Useful explainer for referral partners and onboarding: 'What coordination between your professionals really looks like.'",
+          "candidateUse": "Referral-partner forwardable and new client education",
+          "confidence": "high"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Could be a strong planning note for clients with multiple professionals, but may need story/context expansion.",
+          "candidateAudience": "Clients and prospects with complex financial lives",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Strong lines on coordination and why the default is unfair to the client. Good for persona pages and service descriptions.",
+          "candidateLocation": "Secondary complexity service/fit pages, referral partner sections",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "Coordination failure is a durable, emotionally real, often misunderstood problem that most clients feel. Transcript (and extended cluster) can build out FAQs, examples, and clear misconceptions.",
+          "suggestedTitle": "Why Coordination Between Your Financial Professionals Matters",
+          "coreQuestion": "What happens when my advisors, CPA, and attorney do not communicate—and what can I do about it?",
+          "whyThisCouldBeDurable": "Most successful people accumulate multiple professionals over time and experience firsthand the pain of things falling between the cracks. Few firms explain this plainly, and it’s a root cause of confusion and missed opportunities.",
+          "suggestedSections": [
+            "The Invisible Cost of Gaps Between Your Professionals",
+            "What Coordination Looks Like (and Does Not Look Like)",
+            "Who Usually Ends Up in the Middle",
+            "When Separate Advice Creates Problems",
+            "What True Coordination Can Deliver",
+            "What to Watch For When Choosing an Advisor"
+          ],
+          "relatedAssetIdeas": [
+            "What needs to be coordinated after a real estate sale?",
+            "The difference between a plan and a set of recommendations",
+            "The trouble with 'go ask your CPA' advice",
+            "Do you really need your attorney, CPA, and advisor to meet?"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "financial advisor, a CPA, and attorney walk into a room. Here's the thing that never happens. But the point is that they don't communicate. They don't talk to each other. And that's a problem. Most people that have those relationships, they have a CPA, advisor, a state guy, an insurance agent, you know, whatever, that those, like the strategy between those people don't communicate with one another and stuff gets lost in the gaps. That is one of the most common things that we uncover. And if you don't have a financial planner that is in the middle of all of that, and speaks each of the languages and coordinates between them, you know, this real estate transaction should have effects and how you manage your investment portfolio with your investment guy. And like, if someone's not coordinating all that, then you are and you're probably not doing a great job, because that's not fair to you, because you're doing other stuff. You don't speak all those different languages. And so you should have somebody like that if you are successful.",
+      "transcriptPath": "work/IMG_4158/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Real planning means more than just assembling professionals. It takes someone who can coordinate between them, speak every language, and hold the full picture—otherwise, you’re stuck doing a job that shouldn’t fall on you."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "The real issue isn't just separate professionals—it’s what falls between the cracks when no one is coordinating. Without someone in the middle, the client becomes the default project manager for their finances, which is unfair and usually means things get missed."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "What happens when my CPA, advisor, attorney, and insurance agent don’t communicate with each other?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Who’s really connecting the dots between your advisor, CPA, and attorney?"
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Successful people often have a CPA, an attorney, and an advisor. What most don’t realize is those professionals rarely coordinate."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If your CPA, attorney, and advisor aren’t talking, you’re the project manager by default. Most don’t realize how much is missed until something falls through."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "If you’re doing the coordination work between your professionals, something’s broken. That shouldn’t fall on you."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4158/",
+        "socialPack": "output/IMG_4158/social-pack.md",
+        "contentLog": "output/IMG_4158/content-log.json",
+        "xPack": "output/IMG_4158/x-pack.json",
+        "blogDraft": "output/IMG_4158/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4158.md",
+        "captionedVideo": "output/IMG_4158/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4158/cover.jpg",
+        "carousel": "output/IMG_4158/carousel/slides.json",
+        "transcript": "work/IMG_4158/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:24:07.292Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "7 candidate"
+    },
+    {
+      "id": "IMG_4159",
+      "name": "IMG_4159",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Retirement Failure Isn't Just Running Out of Money: Why Oversaving Can Hurt Too",
+      "triage": "Website Asset",
+      "pillar": "Retirement Spending Confidence",
+      "personaFit": {
+        "primaryLane": "retirement transition",
+        "fitStrength": "direct",
+        "notes": "Fits pre-retirees and recent retirees who are disciplined savers, especially those struggling to shift from saving to spending."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Retire With Talley",
+            "level": "optional_secondary",
+            "reason": "retirement-stage education. Persona lane is retirement-stage.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "yes",
+          "reason": "Addresses a durable, widely felt retirement question with enough depth to merit a standalone article.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Could eventually become a candidate for a retirement income planning or 'Are You Actually On Track?' guide or decision page, but not urgent as a standalone landing page yet.",
+          "candidateAngle": "Retirement income planning—avoiding both overspending and underspending",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "The question 'Is it possible to be too frugal in retirement?' or 'Can you fail by saving too much?' is FAQ-worthy.",
+          "candidateQuestion": "Can you fail in retirement by being too frugal?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "May be worth a handout or discussion starter for frugal clients or business owners transitioning to retirement, but not urgent.",
+          "candidateUse": "Referral partner education or client-fit discovery for disciplined savers worried about spending.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Potential for a planning note on 'retirement success isn't only about not running out of money,' but depends on other topics in the email queue.",
+          "candidateAudience": "Clients nearing or in early retirement, especially disciplined savers or business owners.",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "David's core point about defining retirement 'failure' is fundamental and could be reused on retirement income, process, or service pages.",
+          "candidateLocation": "Retirement planning service pages and intro sections of relevant guides.",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "There is strong practical and emotional tension, a clear and under-discussed question, and plenty of teaching angles and examples. David's voice is strong, and there is enough for 3-5 teaching sections.",
+          "suggestedTitle": "Is Passing Away With Too Much Money a Retirement Failure?",
+          "coreQuestion": "Can you miss out in retirement by being too focused on not running out of money?",
+          "whyThisCouldBeDurable": "This is one of the most common and least-discussed mental challenges for disciplined savers. Many pre-retirees don't have language for this regret until it's too late, and the topic sits at the intersection of financial facts and human feeling.",
+          "suggestedSections": [
+            "Why running out of money is not the only risk",
+            "What 'oversaving' looks like in real life",
+            "How discipline can backfire in retirement",
+            "Planning to spend confidently (not just safely)",
+            "Mapping out what you may want to do, not just avoid",
+            "How a retirement income plan may help you see the full picture"
+          ],
+          "relatedAssetIdeas": [
+            "How to shift from saver to spender",
+            "What does a real retirement income plan look like?",
+            "Why retirement regret is about more than money"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "if you're about to retire and you only think of failure in terms of I would fail if I run out of money before I pass away, I have to open you up to the other side of that which is what if I pass away with too much money if it means I missed out on fun things I could have done when I was still young, time I could have spent with my grandkids, whatever it is that if you were you know 92 and instead of having 2.1 million dollars you had 2.05 million dollars and you could go back in time and go spend a week vacation with your grandkids on the beach or fill in the back fill in the blank like everyone would do that and most people don't because they're driven only by the fear of failure of running out of money. The reason I bring this up is that it shows itself all the time and people that I work with which are people who are frugal all their life think classic millionaire next door or a frugal business owner that was disciplined they sold their business whatever they didn't spend as much money as they could they had restraint and they get to retirement and they need to spend money or else they're going to pass away with too much and talk about a first world problem I can't probably think of a bigger one but it is still a problem because there's a lot of mental anguish there to start spending money more freely than you have in the past and that requires a plan. Investments don't dictate that estate planning documents don't dictate that you need a retirement income plan that shows you how to actually make you know what can you spend what should you spend when should you actually change that when should you increase that how much should you can you give and all the stuff like you need to map that out so that you're not not just avoiding running out of money but you're also avoiding accidentally passing with too much and missing out on things because that's a failure too.",
+      "transcriptPath": "work/IMG_4159/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Planning for retirement isn't just about avoiding running out of money. It's also about not missing opportunities you could have enjoyed, because holding back can be its own kind of failure."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "What if being overly cautious means I miss out on the things I could have done or enjoyed with my wealth? What if 'success' on paper feels like regret later?"
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "How do I make sure I don't run out of money in retirement?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Most people fear running out of money in retirement. Not enough worry about missing out by being too careful."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "People see retirement failure as running out of money. But for disciplined savers, another risk is never allowing themselves to enjoy what they’ve built."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Dying with too much money can be its own kind of regret. Reluctance to spend is a very real risk in retirement."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "The hardest spenders to help aren’t reckless, they’re the ones afraid to use what they’ve built. Retirement should give you permission and a plan."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4159/",
+        "socialPack": "output/IMG_4159/social-pack.md",
+        "contentLog": "output/IMG_4159/content-log.json",
+        "xPack": "output/IMG_4159/x-pack.json",
+        "blogDraft": "output/IMG_4159/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4159.md",
+        "captionedVideo": "output/IMG_4159/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4159/cover.jpg",
+        "carousel": "output/IMG_4159/carousel/slides.json",
+        "transcript": "work/IMG_4159/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:33:25.074Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "1 staged_preview, 6 candidate"
+    },
+    {
+      "id": "IMG_4160",
+      "name": "IMG_4160",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Are Your Roth Conversions Actually Moving the Needle?",
+      "triage": "Caption / Post",
+      "pillar": "Roth conversion strategy",
+      "personaFit": {
+        "primaryLane": "retirement transition",
+        "fitStrength": "direct",
+        "notes": "This directly addresses pre-retirees and retirees trying to make Roth conversions work for retirement income and future tax planning."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Retire With Talley",
+        "primaryReason": "Roth / retirement tax-window decision. retirement-stage education. Persona lane is retirement-stage.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Talley Wealth",
+            "level": "optional_secondary",
+            "reason": "Default advisory/planning destination. retirement tax-window planning.",
+            "confidence": "medium",
+            "setup": {
+              "status": "active_existing",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          },
+          {
+            "property": "Talley Tax",
+            "level": "optional_secondary",
+            "reason": "deduction/tax mechanics.",
+            "confidence": "medium",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "verify",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "The idea is strong and common, but this particular transcript is short on step-by-step depth or examples for a full answer-first article alone. Could be clustered with a deeper Roth conversion planning piece.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a repeatable high-intent decision or offer page topic by itself.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "This misconception (not doing enough Roth conversion to move the needle) is a great candidate for a targeted FAQ or Learning Center answer.",
+          "candidateQuestion": "How much Roth conversion should I be doing for it to matter?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Could serve as a handout or talking point with retirees who have started conversions, but not enough for instant referral partner use without more context.",
+          "candidateUse": "Retirement planning or Keystone Roth window explanation",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Common problem, but not broad or urgent enough on its own for a planning note email.",
+          "candidateAudience": "",
+          "confidence": "high"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Strong lines about underdoing conversions and the superficial checkbox effect can reinforce Roth or tax window explanations on the site.",
+          "candidateLocation": "Roth conversion, retirement tax window, or Keystone planning page",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "This is a persistent and broadly relevant problem, but the video is more of a warning than a full explainer by itself. It could anchor a cluster on Roth conversion strategy (e.g., 'Why tiny Roth conversions aren't enough,' 'Mapping your conversion window,' 'How to coordinate with tax thresholds').",
+          "suggestedTitle": "Why Small Roth Conversions May Not Be Enough",
+          "coreQuestion": "How do you know if your Roth conversions are actually making a difference?",
+          "whyThisCouldBeDurable": "People confuse action with meaningful strategy. Naming the danger of underdoing Roth conversions rings true for many retirees and pre-retirees who want clarity.",
+          "suggestedSections": [
+            "Why most people aren't doing enough",
+            "What it means to 'fill up the bracket' or a tax window",
+            "Strategic points: standard deduction, IRMAA, and other triggers",
+            "Examples of meaningful vs. superficial conversions",
+            "What to map out before you take action"
+          ],
+          "relatedAssetIdeas": [
+            "Checklist: Is my Roth conversion strategy meaningful?",
+            "Case study: The difference between token vs. strategic Roth conversions",
+            "FAQ: Risks of under-converting"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "So you heard Roth conversions are smart to do. And so you started doing them a little bit each year. But most of the time, when I meet with somebody, the question or the problem wasn't that they weren't doing Roth conversions at all, although that certainly happens. It's that they weren't doing them in a meaningful enough amount that it actually makes a difference anyway. And so, yeah, it was worth doing, but it's like, just if you're gonna do it, do it and take care of the risks or offset the risks that you wanted to do them in the first place. If you read an article or you listen to a podcast or watch a video like mine that says like, hey, do Roth conversions. There's all these reasons why you might be taxed at a higher rate down the road than you would be right now if you did them a little bit each year. But most people underdo that. Or at the very least, they're not precise enough about it. They don't fill up the tax bracket or they don't fill up to a strategic point like the super senior standard deduction or the IRMA threshold or whatever it is. Just don't need to get into the details. The point is so many people do Roth conversions, but they don't do them in a meaningful enough amount to actually be worth doing the strategy in the first place. And so they think they're checking the box, but they haven't mapped things out long enough to really see the weight of what they're doing. And so they should have doubled the amount or tripled the amount or whatever it is that actually makes it meaningful.",
+      "transcriptPath": "work/IMG_4160/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "A Roth conversion strategy is only effective if the amount and the window are mapped out with enough precision to actually make a difference. Checking the box isn’t the same as shifting risk or tax exposure in a meaningful way."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Most people underdo Roth conversions, believing they're taking action, but they're not making a strategic difference. The root problem is lack of precision and not mapping out the long-term cumulative effect."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Should I be doing Roth conversions each year?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Most people don’t do enough Roth conversion for it to matter."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Doing a little Roth conversion each year might feel proactive, but often it doesn’t make a strategic difference."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Blunt take: Most people stop short with Roth conversions, doing just enough to feel active, not enough to change the result."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "“Checking the Roth conversion box is not the same as actual planning.”"
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4160/",
+        "socialPack": "output/IMG_4160/social-pack.md",
+        "contentLog": "output/IMG_4160/content-log.json",
+        "xPack": "output/IMG_4160/x-pack.json",
+        "blogDraft": "output/IMG_4160/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4160.md",
+        "captionedVideo": "output/IMG_4160/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4160/cover.jpg",
+        "carousel": "output/IMG_4160/carousel/slides.json",
+        "transcript": "work/IMG_4160/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:40:28.789Z",
+      "updatedAt": "2026-06-30T20:53:01.926Z",
+      "reuseStatusSummary": "5 candidate"
+    },
+    {
+      "id": "IMG_4161",
+      "name": "IMG_4161",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "What to Do (Emotionally and Practically) When You Inherit Money",
+      "triage": "Caption / Post",
+      "pillar": "inherited wealth emotional reality",
+      "personaFit": {
+        "primaryLane": "secondary complexity",
+        "fitStrength": "direct",
+        "notes": "Inheriting money is a classic secondary complexity event, fitting those with estate, inheritance, and emotional layers. May also be useful for referral partners and general POV."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. investment planning. Complex planning topic belongs on the main advisory brand.",
+        "confidence": "medium",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "Strong emotional and practical core, but the transcript is a bit short for a full site-ready article unless paired with more specific planning/technical fall-out (tax rules, account transfer scenarios, next steps).",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a repeatable high-intent decision by itself—better as a blog or part of larger resource.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "Direct, plain answer to 'What should I do when I inherit money?' with a practical and emotional lens. Would work as a Learning Center or FAQ entry alongside more technical articles.",
+          "candidateQuestion": "What should I do with money I’ve inherited?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Could be useful as a referral tool for estate attorneys or as a post-inheritance conversation piece. Would need more action steps added.",
+          "candidateUse": "Short guide for people who just inherited money to address the emotional freeze and practical steps.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Could serve as a planning note—especially around year-end or as a theme for families who may inherit or have inherited recently.",
+          "candidateAudience": "Marketing list during inheritance/estate planning season or when markets are volatile.",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Lines from this (especially 'If I don't tell you this, no one might') are strong for Learning Center, estate, and inheritance planning pages.",
+          "candidateLocation": "Inheritance and estate planning resource sections, FAQ, or resource guides.",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "Durable emotional and practical tension ('do I just keep this as it was?'), fits a strong need-for-plain-English resource, and would benefit from ~4-5 short sections. Many people freeze, or feel guilty, and need this spelled out.",
+          "suggestedTitle": "What To Do When You Inherit Money: Respecting The Gift And Making It Your Own",
+          "coreQuestion": "How should you think about money you inherit—from the emotional freeze, to investment decisions, to honoring the legacy?",
+          "whyThisCouldBeDurable": "Inheriting money triggers both practical uncertainty and emotional hesitation. The decision to treat the funds as truly 'yours' is not obvious, and most advisors do not address the freeze directly.",
+          "suggestedSections": [
+            "1. The Emotional Freeze: Why Inheriting Money Feels Different",
+            "2. Legal And Tax Basics: What Does The Law Actually Say?",
+            "3. The Mistake Of Copy-and-Paste: Don't Just Keep What They Had",
+            "4. Your Obligations: Respecting The Gift And Making Decisions",
+            "5. First Steps: How To Move Forward Without Guilt"
+          ],
+          "relatedAssetIdeas": [
+            "Deeper guide on inherited IRA rules and timelines",
+            "How to coordinate inherited assets with your existing plan",
+            "Communicating with siblings or family after inheritance",
+            "When to involve a professional after inheriting money"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "So you inherited money, and you feel this almost guilt about it. I've seen that a lot of times with people is like, they got $100,000 or $10 million, whatever it is. And they're like, like, I didn't like what I don't, I don't know how to handle this emotionally. And so they just kind of pause and they don't do much now they might invest some of it. But the reality is when you when you inherit money, you have like that is legally yours now it like the entire tax law set up to pretty much allow you to reset things. There are exceptions, but you can reset things in your best interest. And you have an obligation if the person cared about you who who, who gave you the money or you know, you know, put you as their beneficiary on all their stuff like they want you to act in their best interest the vast majority of the time and people will hold on to whatever the parent like if the parents had CDs, they'll keep the money in CDs if they know whatever, you know, if they had an investment in an IRA, they'll just keep the same investment. And it's very likely that a saving 87 year old who passed away doesn't have the same investment objectives or risk tolerance or capacity to understand complexity or whatever that you do. And so like, you really do have an obligation to to like, treat it as it is now yours because it is and if I don't tell you that no one might tell you that and so if you inherit money, you have inherited money like it's yours and you need to deal with it with honor and respect and that means treat it as real",
+      "transcriptPath": "work/IMG_4161/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "When you inherit money, it is legally and practically yours. You have a responsibility to treat it with respect—by making decisions that fit your life, not just mirroring what the previous owner did."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "People can feel guilty or unsure about inheriting money and often freeze or do nothing, treating the inheritance as if it still belongs to the person who passed away."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "What should I do with money I just inherited?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "If you inherit money, it’s really yours. You honor the gift by making the right decisions for your own life."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most people freeze when they inherit money. They leave investments as-is, almost as if they're keeping it on hold for the person who left it."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If your approach to inherited money is to keep everything as it was, ask yourself: would you do the same with any other windfall?"
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "You don’t honor someone’s legacy by pausing your own life. You honor it by making considered decisions that serve you now."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4161/",
+        "socialPack": "output/IMG_4161/social-pack.md",
+        "contentLog": "output/IMG_4161/content-log.json",
+        "xPack": "output/IMG_4161/x-pack.json",
+        "blogDraft": "output/IMG_4161/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4161.md",
+        "captionedVideo": "output/IMG_4161/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4161/cover.jpg",
+        "carousel": "output/IMG_4161/carousel/slides.json",
+        "transcript": "work/IMG_4161/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:48:18.989Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "1 staged_preview, 5 candidate"
+    },
+    {
+      "id": "IMG_4164",
+      "name": "IMG_4164",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why Knowing Your 'Enough' Number Changes Everything",
+      "triage": "Caption / Post",
+      "pillar": "retirement confidence",
+      "personaFit": {
+        "primaryLane": "secondary complexity",
+        "fitStrength": "direct",
+        "notes": "Speaks directly to high-earning professionals in their 40s dealing with stress, but the principle applies to pre-retirees and business owners who also struggle with 'enough' and endpoint decisions."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Retire With Talley",
+        "primaryReason": "retirement-stage education.",
+        "confidence": "medium",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "verify",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "no",
+          "reason": "Story-driven and emotional, not enough technical or educational substance for a full blog. Strongest as a social POV.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a high-intent decision or package support topic; fits as a perspective, not a destination.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could support an FAQ or educational page about how to define 'enough' or why planning for an endpoint matters.",
+          "candidateQuestion": "Why does setting a retirement endpoint matter for high-income professionals?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Works as a story for client education or referral partners who see high-earner stress. Could be built into a mindset handout or 'why enough matters' explainer.",
+          "candidateUse": "Referral partner or prospect education for high-income stress and endpoint planning.",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Not quite broad or technical enough for a planning note; stronger as a personal story or LinkedIn POV.",
+          "candidateAudience": "",
+          "confidence": "high"
+        },
+        "websiteReuse": {
+          "recommend": "maybe",
+          "reason": "The story and 'enough' clock analogy could support core persona or Keystone pages as a mindset anchor.",
+          "candidateLocation": "Keystone overview, planning philosophy, or what to expect page.",
+          "confidence": "medium"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "Has emotional resonance and clear analogy but would need to be built into a larger cluster about 'how much is enough,' stress, and endpoint clarity for durable value.",
+          "suggestedTitle": "How Knowing 'Enough' Changes Your Relationship with Work and Retirement",
+          "coreQuestion": "Why do successful people keep working past the point of enough—and how can planning change that?",
+          "whyThisCouldBeDurable": "The subway clock analogy and story make the emotional reality stick. Could anchor a suite of teaching content on endpoint planning and redefining success.",
+          "suggestedSections": [
+            "The real cost of not naming 'enough'",
+            "How high earners fall into the trap of endless work",
+            "What a clear endpoint does for your stress and decision-making",
+            "The subway clock analogy: hope and planning",
+            "Practical steps to find and act on your personal 'enough'"
+          ],
+          "relatedAssetIdeas": [
+            "Blog: 'How Much is Enough? Why the Number (and Timeline) Matter in Retirement Planning'",
+            "Email: 'Why Never Setting an Endpoint Feeds Burnout\"",
+            "Learning Center Q&A: 'How do I know when it's safe to slow down?'"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "Is the stress really worth it sometimes? Like I met with two different really high income earners they're like over a million a year and both of them sat down in my office and they're not old like they're in their 40s and they were shaking not because they were nervous to talk to me but because the stress of just their work was killing them and um those I mean they met with me because they want someone else to make decisions on their behalf and that's great and like I can help them and hit the easy button so to speak maybe maybe that shows my age I don't know if that's a phrase anymore but the the point is I just can't stop thinking about it it's like at what point is it really worth it and what drives people often to work that hard to be that stressed is that they didn't have money when they're younger they want money now and it really is a money thing but at some point without a plan that shows you like how much is enough then you don't ever really hit the like you don't kind of slide down and like stop working so much and both of these people I hope I haven't done the full analysis we only started working together but like I hope and I and and I think what will happen is that they'll see a little bit of light at the end of the tunnel and they can either scale back sooner or have a dead end date that they don't have to keep working beyond and and hopefully my goal is that that brings them a little bit of like um you know there there's a study done of like new york city subways where um uh people were complaining because it took forever and ever and ever and ever and ever and they tried they spent like millions of dollars to speed up the subway and they improved it by you know eight percent and three percent and ten percent and they were spending all this money and this same level of customer satisfaction came in terrible horrible like people hated it and so somebody got the idea to install a clock uh that counted down how many more seconds left until the subway arrives and customer satisfaction shot through the roof they didn't improve speed at all they just had an end point they had hope and hope is a wonderful thing for that reason because it gives you something to hold on to and so when you're doing retirement planning like some there's something to be said for that if you don't absolutely love going to work every day and most of us you know most people don't um then having hope having you know knowing what that is there's real value there it's hard to quantify but it matters",
+      "transcriptPath": "work/IMG_4164/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Without a real plan that shows you how much is enough and when you can let up, it’s hard to ever believe you’ve arrived. Hope comes from seeing an endpoint, not just from working harder."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Many high-income earners never slow down because they never get clear on how much is enough or when they can stop. They work for financial freedom but never feel free from stress. Without a plan to define an endpoint, the cycle just keeps going."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Is all the stress and hard work really worth it if you don’t know when it ends?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "When you know your 'enough' number, you finally see an endpoint worth working toward."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "A lot of high earners come to me stressed and burned out, even with incomes most would envy."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If you can’t name your ‘enough’ number, your work might never feel finished. That’s not just a planning problem, it’s a mindset problem."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "The finish line always feels far away until you see it on a real plan. That’s when things start to change."
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4164/",
+        "socialPack": "output/IMG_4164/social-pack.md",
+        "contentLog": "output/IMG_4164/content-log.json",
+        "xPack": "output/IMG_4164/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4164.md",
+        "captionedVideo": "output/IMG_4164/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4164/cover.jpg",
+        "carousel": "output/IMG_4164/carousel/slides.json",
+        "transcript": "work/IMG_4164/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T19:59:32.244Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "4 candidate"
+    },
+    {
+      "id": "IMG_4165",
+      "name": "IMG_4165",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Your Estate Plan Isn’t Done After Signing the Documents",
+      "triage": "Caption / Post",
+      "pillar": "estate/beneficiary coordination",
+      "personaFit": {
+        "primaryLane": "secondary complexity",
+        "fitStrength": "direct",
+        "notes": "Fits for clients with trusts, wills, blended families, and those with asset complexity who assume estate planning stops at the documents."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. estate / continuity planning. Complex planning topic belongs on the main advisory brand.",
+        "confidence": "medium",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.923Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "Good short explanation, but not quite enough substance for a full long-form article on its own. Could work as part of a durable FAQ cluster covering 'after your documents are done' steps.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a high-intent or dedicated landing page topic; better as education within a broader planning or estate coordination cluster.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "Fits as an FAQ: 'What do I have to do after I sign my estate planning documents?' or 'Why do I need to update beneficiaries after estate planning?'",
+          "candidateQuestion": "What do I still need to do after signing my estate plan?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "yes",
+          "reason": "Useful as a client handout for estate plan signings, attorneys, and referral partners who want to help their clients avoid common errors.",
+          "candidateUse": "Handout/checklist for clients after their estate planning meeting to prompt asset and beneficiary review.",
+          "confidence": "high"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Would fit a planning note reminder email to clients after annual estate plan review season.",
+          "candidateAudience": "Clients who have recently done, or are considering, estate planning.",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Strong lines about 'the next step after legal documents' and 'coordinating assets' deserve reuse in persona and Keystone pages.",
+          "candidateLocation": "Keystone Process, Estate Planning, FAQs",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "There is a durable and practical question here with confusion, costly mistakes, and a clear Talley point of view. Many people (and professionals) miss the need for asset coordination after legal work is done.",
+          "suggestedTitle": "What To Do After You Sign Your Estate Plan: Why Asset Coordination Matters",
+          "coreQuestion": "Are you really done after you sign your estate planning documents?",
+          "whyThisCouldBeDurable": "This question recurs every time families, blended families, or business owners finish an estate plan. The theme is directly linked to implementation failure and asset transfer problems.",
+          "suggestedSections": [
+            "Why signing documents is only step one",
+            "Real-world consequences of unfinished coordination",
+            "What gets missed most often: beneficiaries, deeds, business assets",
+            "What to ask your attorney and advisor right after signing",
+            "How the Keystone process handles estate coordination",
+            "Checklist: next steps after your plan is signed"
+          ],
+          "relatedAssetIdeas": [
+            "Blended family estate planning pitfalls",
+            "Coordinating business assets in estate plans",
+            "The hidden cost of forgetting beneficiary updates"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "you've done your estate planning documents and then considered all of that stuff to be done once you signed them well if you have they're probably not and i ran into this yesterday um somebody had done a you know they did good documents like i think they paid six grand like they had a revocable uh trust uh at you know wills power attorney medical directives trust was kind of complicated instead of blended family and it was all done well here's the problem they didn't update the beneficiaries on their accounts they didn't do a quick claim deed to move their property into the trust the reality is like most of what they did wouldn't have even happened anyway like like what they intended wouldn't have even happened even though the legal documents said it and so if you've done if you're someone who has done your documents if you didn't take the next step there's a whole other step after you get your documents done which is coordinate all of your assets your financial assets usually that's by beneficiary your capital assets like business and um some businesses and real estate would be real estate would be a quick claim deed and businesses depends on what it is but point is um you have to coordinate your assets with the legal documents you put in place and if you've done legal documents you didn't do that step probably wasted no it isn't a complete waste of time most of your stuff or you know a percentage of your stuff will still follow fall through what the trust says or the you know the will says but it's at least partially and sometimes mostly it wastes time to have done that if you didn't do the last step which is coordinate everything with it",
+      "transcriptPath": "work/IMG_4165/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "Legal documents are just the first step. If your assets and beneficiaries aren’t coordinated with your plan, much of what you intended may not actually happen."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "People think signing legal documents means the plan is set, but if they skip coordinating their assets and beneficiaries, their real wishes may never happen."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Is my estate planning finished once I sign the legal documents?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Your estate plan isn’t done after paperwork. If you haven’t lined up your assets and beneficiaries, your wishes may never happen."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Finishing your estate plan documents feels like the finish line. It’s not."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Most plans fail after the documents are signed. The gap isn’t in the paperwork; it’s in the follow-through."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "The ink isn’t dry until your assets match your documents. That’s how you make your wishes happen."
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4165/",
+        "socialPack": "output/IMG_4165/social-pack.md",
+        "contentLog": "output/IMG_4165/content-log.json",
+        "xPack": "output/IMG_4165/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4165.md",
+        "captionedVideo": "output/IMG_4165/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4165/cover.jpg",
+        "carousel": "output/IMG_4165/carousel/slides.json",
+        "transcript": "work/IMG_4165/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T20:06:28.128Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "6 candidate"
+    },
+    {
+      "id": "IMG_4167",
+      "name": "IMG_4167",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why 'What Rate of Return Should I Get?' Is the Wrong Question",
+      "triage": "Website Asset",
+      "pillar": "plan-before-portfolio",
+      "personaFit": {
+        "primaryLane": "retirement transition",
+        "fitStrength": "direct",
+        "notes": "This is a core retirement-transition and portfolio design belief, fits pre-retirees, new retirees, and adjacent household planning situations."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Retire With Talley",
+        "primaryReason": "sequence-risk / spending framework. retirement-stage education. Persona lane is retirement-stage.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Talley Wealth",
+            "level": "recommended_secondary",
+            "reason": "Default advisory/planning destination. portfolio / investment planning. investment planning.",
+            "confidence": "high",
+            "setup": {
+              "status": "active_existing",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "verify",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.924Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "yes",
+          "reason": "Strong, answer-first content that addresses a durable planning misconception. Plenty of nuance for a blog.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a high-intent/niche conversion; better as education.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Could support an FAQ: 'How do I decide what return to target, or whether my portfolio is doing its job?'",
+          "candidateQuestion": "How do I decide what rate of return to target, or whether my investment return is 'normal' for my plan?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Could be a helpful referral PDF—'How to Frame the Right Portfolio Questions.'",
+          "candidateUse": "referral partner explanation of rate-of-return questions",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Could work as a planning note, since many people anchor on this question—fit will depend on current content mix.",
+          "candidateAudience": "retirement-planning audience, general planning list",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Core planning explanation, great for education pages, FAQ, and internal links from investment and planning pages.",
+          "candidateLocation": "Planning philosophy, Roth conversion/portfolio mix, FAQ, service pages",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "This has enough substance and point of view for a durable resource page: Why 'What Rate of Return Should I Get?' Is the Wrong Question. It connects to a real planning tension and can support multiple teaching sections.",
+          "suggestedTitle": "Why 'What Rate of Return Should I Get?' Is the Wrong Question",
+          "coreQuestion": "How do I decide what rate of return to target, or whether my investment return is 'normal' for my plan?",
+          "whyThisCouldBeDurable": "The core question, \"How do I decide what rate of return to target, or whether my investment return is 'normal' for my plan?\", can recur in retirement transition conversations and gives the transcript a useful home beyond the original social post.",
+          "suggestedSections": [
+            "Short answer",
+            "Why this question matters",
+            "The story behind the lesson",
+            "What the usual framing misses",
+            "The classroom version",
+            "Questions to ask yourself",
+            "FAQ",
+            "Useful terms",
+            "Transcript",
+            "Related resources and next step",
+            "Reuse notes"
+          ],
+          "relatedAssetIdeas": [
+            "Social caption refresh",
+            "Carousel expansion",
+            "FAQ entry",
+            "Companion blog article",
+            "Planning-note email",
+            "Website section or pull quote",
+            "Internal link cluster for: Why 'What Rate of Return Should I Get?' Is the Wrong Question"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "David, what's the worst question you're ever asked? It's probably, what rate of return should I have on my investments? That is at least four layers more basic than what a good question should be. Like I could kind of peel back each one of those before we arrive at an actually better question. Now, once you understand those other layers to the question, then that's a fair question. But it's almost always not the case. And I'm going a little bit of a rant here because it is just such a big deal that people grasp this. When you're choosing how to invest your money and what it should be invested in, there are literally tens of millions, hundreds of millions of investment options out there. And there are two filters you always have to go through in order to narrow that down. And then you can start to have the conversation about what rate of return should I have. So first filter is how long do these dollars have to live before you're going to pull them out? When you get close to retirement, that's nuanced because some of the dollars you're going to distribute like next year, some of the dollars have seven years to live, some of them might have 30, so there are stages there. But that's the first one and people forget that. But the second one, and this one is a big deal, I think of these as filters to go through, is how much volatility can you endure without freaking out and making a mistake and calling me or your advisor or whatever and like, hey, David, I like you, I really do. Like I want to trust you, but I'm freaked out like this swing is too much. Some people, if their account goes down a dollar, they might actually have a stroke. Some people can go down 80% and it's fine. They just want a higher average long term rate of return. And so you have to go through those two filters. And once you do, then you can narrow down the world of investment options for a portion of your portfolio, you can start having a conversation about how much return you should actually have. Now, it's usually always still a bad question, because it's not really how much rate of return should I get? It's what should my average rate of return be? And what level of volatility is normal? So pick like SP 500 index fund is very normal to have a 30% up year or 30% down year, roughly I'm generalizing. But like, if you're targeting, I'm going to get 10% yield that actually almost never happens. I think I saw a stat on this that the, you know, the average rate of return SP 500 reinvested dividends like 10 and a half percent for the past 110 years or some timeframe similar to that. But that you it's only actually earned between 10 and 11% like five times in 110 years. So that actual rate of return almost never happens. It's all over the place. And so it's so important that you don't look at it like what rate of return am I getting? You look at is are these assets that I should own is the portfolio diversified, which means there's tension, some things are up, some things are down on purpose. And is the rate of return normal based on what's going on in the world and the amount of risk that I'm able to endure and the goal that these dollars are attributed to? That's the right thinking. And when you're choosing the type of investments that you should own. And if you don't follow all of that in too much detail, like talk to a financial planner, help them educate you more than a three minute video. But the first terrible question remains. And if you feel like it's a good question, then you need to like watch this video again, like dig into this deeper. Because the question isn't what rate of return should I have next year? It is a lot bigger than that. So hope that helps.",
+      "transcriptPath": "work/IMG_4167/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "The right investment decisions start with knowing your time horizon and your real tolerance for volatility—then deciding what job your money needs to do. The rate of return is an output, not a target. Framing the question this way may lead to better portfolio decisions."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Most people are asking for a single number without understanding the bigger sequence of decisions that determines what return is even relevant, or what their plan and risk profile require."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "What rate of return should I have on my investments?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Don’t start with rate of return. Start with time horizon and how much swing you can handle."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "The most common question I get is, 'What rate of return should I look for?' It sounds simple, but skips key steps."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If you start your investment plan by asking about return targets, you skip the work that actually matters."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "\"First, decide what job each dollar needs to do before worrying about the return.\" , David Talley"
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {},
+      "scheduledAssets": [
+        {
+          "date": "2026-07-11",
+          "time": "10:00",
+          "platform": "Google Business Profile",
+          "asset": "gbp"
+        },
+        {
+          "date": "2026-08-09",
+          "time": "09:30",
+          "platform": "X",
+          "asset": "x_thread"
+        }
+      ],
+      "outputPaths": {
+        "outputDir": "output/IMG_4167/",
+        "socialPack": "output/IMG_4167/social-pack.md",
+        "contentLog": "output/IMG_4167/content-log.json",
+        "xPack": "output/IMG_4167/x-pack.json",
+        "blogDraft": "output/IMG_4167/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4167.md",
+        "captionedVideo": "output/IMG_4167/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4167/cover.jpg",
+        "carousel": "output/IMG_4167/carousel/slides.json",
+        "transcript": "work/IMG_4167/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-23T17:40:08.135Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "1 staged_preview, 4 candidate, 1 draft_generated"
+    },
+    {
+      "id": "IMG_4168",
+      "name": "IMG_4168",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "The Retirement Question Most People Never Get Asked",
+      "triage": "Caption / Post",
+      "pillar": "retirement transition",
+      "personaFit": {
+        "primaryLane": "retirement transition",
+        "fitStrength": "direct",
+        "notes": "Aimed at executives and professionals approaching retirement, but also relevant for any pre-retiree facing the identity and purpose question."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Retire With Talley",
+        "primaryReason": "retirement-stage education. Persona lane is retirement-stage.",
+        "confidence": "medium",
+        "secondary": [
+          {
+            "property": "Talley Wealth",
+            "level": "optional_secondary",
+            "reason": "Default advisory/planning destination. investment planning.",
+            "confidence": "medium",
+            "setup": {
+              "status": "active_existing",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "verify",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.924Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "This could be expanded into a blog answering: 'What should I think about beyond numbers as I approach retirement?' but the current story is mostly emotional and anecdotal, not a full durable Q&A.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a high-intent decision page, and does not map to a specific repeated planning offer.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "maybe",
+          "reason": "Possible fit for an FAQ or guide about non-financial retirement planning questions.",
+          "candidateQuestion": "What life questions should I ask myself before retiring?",
+          "confidence": "medium"
+        },
+        "onePager": {
+          "recommend": "maybe",
+          "reason": "Could be useful as a conversation or self-reflection tool for clients nearing retirement, particularly to shape client meetings.",
+          "candidateUse": "retirement transition handout or advisor meeting prep sheet",
+          "confidence": "medium"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "The point is memorable but not actionable or broad enough for a general email note.",
+          "candidateAudience": "",
+          "confidence": "high"
+        },
+        "websiteReuse": {
+          "recommend": "maybe",
+          "reason": "Could provide a memorable pull-quote or section on a retirement transition service page.",
+          "candidateLocation": "Retirement transition persona/service page or client prep resources.",
+          "confidence": "medium"
+        },
+        "video_explainer_page": {
+          "recommend": "yes",
+          "confidence": "high",
+          "reason": "This has enough substance and point of view for a durable resource page: The Retirement Question Most People Never Get Asked. It connects to a real planning tension and can support multiple teaching sections.",
+          "suggestedTitle": "The Retirement Question Most People Never Get Asked",
+          "coreQuestion": "What life questions should I ask myself before retiring?",
+          "whyThisCouldBeDurable": "The core question, \"What life questions should I ask myself before retiring?\", can recur in retirement transition conversations and gives the transcript a useful home beyond the original social post.",
+          "suggestedSections": [
+            "Short answer",
+            "Why this question matters",
+            "The story behind the lesson",
+            "What the usual framing misses",
+            "The classroom version",
+            "Questions to ask yourself",
+            "FAQ",
+            "Useful terms",
+            "Transcript",
+            "Related resources and next step",
+            "Reuse notes"
+          ],
+          "relatedAssetIdeas": [
+            "Social caption refresh",
+            "Carousel expansion",
+            "FAQ entry",
+            "Companion blog article",
+            "Website section or pull quote",
+            "Internal link cluster for: The Retirement Question Most People Never Get Asked"
+          ]
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "I just had a meeting with somebody who's about to retire, they're an executive, they make a couple million dollars a year and their life's work is this business that they have grown over the years and they were hiring me, assumptively, to figure out, you know, can I retire, how do taxes work, how should my investments be managed, I need my state funding done, all the things, but I ask them, hey, when you retire, I think it's like September, what are you going to actually do with your time, like it's Monday or Tuesday, like what are you going to do, like, well, I've got a lot of list of things to do and I presented that a little bit of like what, you know, like how much things do you really have and it hit them and we spent like 90 minutes just talking about their list of like what they want their life to be, they almost cried, it was just a, it was actually beautiful, I feel like a therapist even though I'm not, we didn't talk about anything other than like what they want their life to be and you could tell it was cathartic for them to just let that out, they'd never really thought through it, what happens most of the time is that people either aren't asked that question, that's most of the time, or they are asked and they shrug it off and they don't really get to the heart of it or maybe even worse, they try but they can't because they don't have anything beyond their career and those are all real problems when it comes to retirement planning, when we're talking about retirement planning, we talk about the math and the investments and the taxes and like that stuff matters, yes, of course, we need to make sure that you're going to be sound and safe financially but what are you actually going to do, people need to think about that.",
+      "transcriptPath": "work/IMG_4168/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "True retirement readiness is not just about financial security. It requires asking what life will look like when the career ends, and many people have never been asked—or answered—that question."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Many people reach retirement age without thinking deeply about what their life will actually look like or what will give them purpose and satisfaction beyond work."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "Can I retire, and how do the numbers work?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "Retirement planning is more than just numbers. What do you want life to be after work?"
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most retirement planning is about the numbers. But almost no one stops to ask: what do you actually want your life to be after work?"
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Retirement is the first time many people realize they never planned for purpose. Numbers are the easy part. Monday is the hard part."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "The biggest risk in retirement may not be running out of money. It’s running out of meaning."
+        }
+      ],
+      "blogDraftExists": true,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {
+        "xExtras": true
+      },
+      "scheduledAssets": [
+        {
+          "date": "2026-07-12",
+          "time": "10:00",
+          "platform": "Google Business Profile",
+          "asset": "gbp"
+        },
+        {
+          "date": "2026-08-09",
+          "time": "21:00",
+          "platform": "X",
+          "asset": "x_thread"
+        }
+      ],
+      "outputPaths": {
+        "outputDir": "output/IMG_4168/",
+        "socialPack": "output/IMG_4168/social-pack.md",
+        "contentLog": "output/IMG_4168/content-log.json",
+        "xPack": "output/IMG_4168/x-pack.json",
+        "blogDraft": "output/IMG_4168/blog-draft.md",
+        "approvalNote": "approval-queue/IMG_4168.md",
+        "captionedVideo": "output/IMG_4168/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4168/cover.jpg",
+        "carousel": "output/IMG_4168/carousel/slides.json",
+        "transcript": "work/IMG_4168/audio.json",
+        "brollOverlays": [
+          "output/broll-overlays/IMG_4168_broll_01.mp4"
+        ]
+      },
+      "createdAt": "2026-06-23T12:54:51.914Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "1 saved-for-future-reuse, 3 candidate, 1 drafted, 1 draft_generated"
+    },
+    {
+      "id": "IMG_4463",
+      "name": "IMG_4463",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "What It Feels Like to Work Alongside AI Today",
+      "triage": "Caption / Post",
+      "pillar": "working with AI",
+      "personaFit": {
+        "primaryLane": "general POV",
+        "fitStrength": "adjacent",
+        "notes": "This is not directly planning or tax-focused, but it shares a behind-the-scenes look at how a modern business owner relates to technology. It’s general insight into the changing nature of knowledge work."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "David Talley Personal",
+        "primaryReason": "AI / systems / builder content. Persona lane is general POV.",
+        "confidence": "medium",
+        "secondary": [],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "verify",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.924Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "no",
+          "reason": "This is an interesting POV, but it’s not a durable Talley Wealth education or planning question.",
+          "confidence": "high"
+        },
+        "landingPage": {
+          "recommend": "no",
+          "reason": "Not a fit—this is a POV/social piece, not something users would search for or expect as a recurring landing experience.",
+          "candidateAngle": "",
+          "confidence": "high"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "no",
+          "reason": "Not a client question or planning concept.",
+          "candidateQuestion": "",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "no",
+          "reason": "Too general—would not be useful as a handout.",
+          "candidateUse": "",
+          "confidence": "high"
+        },
+        "email": {
+          "recommend": "no",
+          "reason": "Not central or planning-relevant enough to warrant an email to the list.",
+          "candidateAudience": "",
+          "confidence": "high"
+        },
+        "websiteReuse": {
+          "recommend": "no",
+          "reason": "Interesting insight, but not suitable for website copy, service pages, or client-facing FAQ.",
+          "candidateLocation": "",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "no",
+          "confidence": "high",
+          "reason": "The idea is engaging, but it is experiential and not a planning or decision concept. It would become generic filler as a standalone explainer.",
+          "suggestedTitle": "",
+          "coreQuestion": "",
+          "whyThisCouldBeDurable": "",
+          "suggestedSections": [],
+          "relatedAssetIdeas": []
+        }
+      },
+      "followUpCue": "",
+      "followUpTarget": null,
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "just sat on my computer and worked for six and a half hours and I never directly opened a single app a single browser all I did was talk to codex and codex or claudco whichever one you want to use you know whatever use whatever you want the point is all I did was interact with ai that did those things for me at any given time I think I mean there's probably five or six chats open on my computer right now um they're each one of them at any given time will spur off like you know five to twelve agents that are working on a thing and then they come and go as they as they please but the point is all I'm doing to do the work of running a business at least today is interacting with code and it feels like I'm working in the future and it's cool and more people need to know that feels like because I have a feeling that is going to be the future like soon",
+      "transcriptPath": "work/IMG_4463/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "For some businesses already, the real work doesn't start with opening apps or browsers anymore. It starts with natural, conversational back-and-forth with AI systems that handle the tasks in the background. That shift is here sooner than most realize."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Many people still imagine AI as a novelty or just a helper, but the way work happens—how decisions, creation, and coordination actually unfold—is changing fast for people willing to adapt. There's friction for those who don't realize how second-nature this can become."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "What is it actually like to run your business work through AI instead of directly with apps?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "I worked all day just by talking to AI—never opened an app myself. This is what working in the future feels like."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most people still picture work as clicking around inside apps. That's already out of date for some of us."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "If you think adopting AI means adding another tool to your stack, you’re missing the deeper shift. The whole process of how work gets done is changing."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "Work starts with a conversation now, not a login screen, that’s the real shift AI brings."
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "approved",
+      "approved": true,
+      "assetDecisions": {
+        "coverMode": "smart",
+        "coverPath": "output/IMG_4463/cover.jpg"
+      },
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4463/",
+        "socialPack": "output/IMG_4463/social-pack.md",
+        "contentLog": "output/IMG_4463/content-log.json",
+        "xPack": "output/IMG_4463/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4463.md",
+        "captionedVideo": "output/IMG_4463/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "",
+        "cleanSocialVerticalVideo": "",
+        "cleanSocialHorizontalVideo": "",
+        "cover": "output/IMG_4463/cover.jpg",
+        "carousel": "output/IMG_4463/carousel/slides.json",
+        "transcript": "work/IMG_4463/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-25T17:46:33.692Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "none"
+    },
+    {
+      "id": "IMG_4580",
+      "name": "IMG_4580",
+      "promptId": "",
+      "recordingPromptId": "",
+      "title": "Why Your Tax Strategy Needs to Grow As Your Business Grows",
+      "triage": "Caption / Post",
+      "pillar": "business owner profit-to-wealth",
+      "personaFit": {
+        "primaryLane": "business owner profit-to-wealth",
+        "fitStrength": "direct",
+        "notes": "The examples are pointed directly at owners in that growth/profit range. Tangible for TN/region but applies across markets."
+      },
+      "distributionRecommendations": {
+        "primaryProperty": "Talley Wealth",
+        "primaryReason": "Default advisory/planning destination. business-owner planning. investment planning.",
+        "confidence": "high",
+        "secondary": [
+          {
+            "property": "Talley Tax",
+            "level": "recommended_secondary",
+            "reason": "S corp / entity-tax mechanics. business income mechanics. deduction/tax mechanics.",
+            "confidence": "high",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          },
+          {
+            "property": "Retire With Talley",
+            "level": "optional_secondary",
+            "reason": "401(k) near-retirement decision. retirement-stage education.",
+            "confidence": "high",
+            "setup": {
+              "status": "verify",
+              "schedulingReady": true,
+              "blockers": []
+            },
+            "rewriteRequired": true
+          }
+        ],
+        "schedulingReady": true,
+        "schedulingInstruction": "Eligible for scheduling after normal asset approval.",
+        "setup": {
+          "status": "active_existing",
+          "schedulingReady": true,
+          "blockers": []
+        },
+        "updatedAt": "2026-06-30T20:53:01.924Z"
+      },
+      "routingRecommendations": {
+        "blog": {
+          "recommend": "maybe",
+          "reason": "The transcript sketches key entity/plan/real estate inflection points, but does not dig into each decision in enough depth for a publish-ready article without major expansion. Could cluster well with a multi-clip business-owner thresholds post.",
+          "confidence": "medium"
+        },
+        "landingPage": {
+          "recommend": "maybe",
+          "reason": "Could justify a landing/reference page on business-owner tax/playground thresholds or inflection points, but currently lacks deep enough content density for a solo page.",
+          "candidateAngle": "Business owner profit thresholds that create new planning/tax opportunities",
+          "confidence": "medium"
+        },
+        "learningCenterOrFaq": {
+          "recommend": "yes",
+          "reason": "Short Q&A on 'When should I revisit my business entity type or retirement plan?' is practical and direct.",
+          "candidateQuestion": "What are the key milestones when a business owner should revisit entity structure or retirement plan design?",
+          "confidence": "high"
+        },
+        "onePager": {
+          "recommend": "yes",
+          "reason": "A chart or explanation of major business-owner tax/planning thresholds would be very useful for referral partners, client education, and business-owner fit conversations.",
+          "candidateUse": "Referral handout or prospect leave-behind on business-owner growth and tax planning thresholds",
+          "confidence": "high"
+        },
+        "email": {
+          "recommend": "maybe",
+          "reason": "Could be packaged as a planning note for business-owner segment, but would need a more situation-driven intro.",
+          "candidateAudience": "business owners with growing profits or considering a change in entity or retirement plan",
+          "confidence": "medium"
+        },
+        "websiteReuse": {
+          "recommend": "yes",
+          "reason": "Portions of the transcript—like the business-owner playground analogy and entity/retirement plan decision points—are strong for service subpages or fit explanations.",
+          "candidateLocation": "Business Owner Wealth Planning, Keystone demo, Entity/Roth/SEP/401k service sections",
+          "confidence": "high"
+        },
+        "video_explainer_page": {
+          "recommend": "maybe",
+          "confidence": "medium",
+          "reason": "Video has the key analogies and threshold examples, but would become much more durable as part of a business-owner 'when to revisit your plan' or 'major planning inflection points' resource, not a standalone.",
+          "suggestedTitle": "When to Revisit Your Entity Structure, Retirement Plan, and Tax Strategy as a Business Owner",
+          "coreQuestion": "What business-owner milestones should trigger a review of your tax strategy, entity type, or retirement plan?",
+          "whyThisCouldBeDurable": "Business owners constantly outgrow old decisions, but most have never seen a clear, plain-English map of when those decisions should change. This could serve as a long-lasting resource for mid-growth and established owners.",
+          "suggestedSections": [
+            "Why your tax and plan strategy cannot stay static",
+            "Key profit thresholds for entity choice in Tennessee (or locally relevant area)",
+            "Retirement plan options that open up as you grow",
+            "Real estate: when buying your business building opens tax opportunities",
+            "Behavioral triggers: outgrowing last year's decisions",
+            "Questions to bring to your planning conversation"
+          ],
+          "relatedAssetIdeas": [
+            "Business-owner: How to choose between SEP, SIMPLE, and 401k as you grow",
+            "When is it time to buy your building? Understanding bonus depreciation/cost seg",
+            "Entity type map: S-Corp vs Partnership as you move through thresholds"
+          ]
+        }
+      },
+      "followUpCue": "why your tax strategy needs to grow with your business",
+      "followUpTarget": {
+        "id": "img-4131__blog",
+        "sourceVideo": "IMG_4131",
+        "title": "Why Your Tax Strategy Needs to Grow Up With Your Business",
+        "score": 1,
+        "type": "blog"
+      },
+      "blogCompanionCue": null,
+      "blogCompanionTarget": null,
+      "transcriptText": "Part two, why your tax strategy needs to grow with your business. A lot of families run into this. The idea here, I'll give two examples. One is your entity structure. There's often this area in Tennessee, at least is how it works because the franchise and excess tax were below a certain revenue number. It doesn't make sense to be an S corporation. Then there is a range, once you reach a certain net income number, there's a couple hundred thousand dollar range in the middle there where it does make sense to be an S corporation. Then after you get above that number, it no longer makes sense to. Most people go back to a partnership. The speed at which their business might accelerate through that middle range, or it might be a business where they're probably going to happily be in that middle range for a long period of time, depending on growth ambitions and goals. Also an example of how the plan of what you want out of your life and your business should dictate your strategy. In this example, your entity type in Tennessee, that you outgrow your old business and then you once again outgrow your old business entity type. Another example is the retirement plan design for a small business or closely held business. This is a complex web of just like overlapping stuff. There's simple IRAs, SEP IRAs, solo 401ks, a traditional type of safe harbor 401k plan, cash balance plans. As your income goes up, different versions of these kick in to where almost think of them as you add just a little bit of cost and administrative complexity in return for more cap space, more space that you can put more money in. If it's reasonable to assume you're going to put more money in, then you want to create that cap space because the added tax advantage, whether you're raw or traditional, the advantages of having those investment dollars in the tax advantage space instead of a taxable non-qualified account is worth a little bit of administrative or fee that might come with having a plan administrator or something like that. But if you're maybe or maybe not, it might not be worth it to level up to the next plan. There's several versions of that that depend on age, depend on your employees, what your employees do, what your profit is, all kinds of stuff that might dictate what your retirement plan is. Another example might be the level of purchasing the building that your business has run out of for a cost segregation and bonus depreciation. It's very reasonable. I've done 30 of these in the past year, probably where a business buys their location and they get a $300,000 deduction that year because of a cost segregation and bonus depreciation on it where they were paying rent and $300,000 that their tax bracket saved them $130,000. That's a good deal. And so there's most of the purchase price is back in tax savings in their examples. It's not a promise obviously, depends on the situation, but you get the idea. There are many different thresholds and levels where growth introduces a new tax world, a new playground that you get to go up to the big kid playground now. And there's always a bigger kid playground, but that's the analogy that I would go with.",
+      "transcriptPath": "work/IMG_4580/audio.json",
+      "bestSourceLines": [
+        {
+          "source": "social-pack",
+          "label": "Organizing thesis",
+          "text": "As your business grows, several planning thresholds—entity choice, retirement plan options, and building ownership—require you to reconsider your tax strategy so you do not leave money or opportunity on the table. The smartest move is letting your plan lead the tax and entity decisions, not the other way around."
+        },
+        {
+          "source": "social-pack",
+          "label": "Deeper problem",
+          "text": "Most owners never revisit their entity type or tax approach as profits change, missing important thresholds that would affect both their taxes and long-term wealth. Retirement plan designs, real estate purchases, and entity choices all have inflection points that are easy to miss in the middle of day-to-day business."
+        },
+        {
+          "source": "social-pack",
+          "label": "Surface question",
+          "text": "When should I update my tax strategy or entity structure as my business grows?"
+        },
+        {
+          "source": "social-pack",
+          "label": "short caption",
+          "text": "You outgrow more than just your revenue as a business owner—your plan should grow too."
+        },
+        {
+          "source": "x-pack",
+          "label": "thread opener",
+          "text": "Most business owners outgrow their first entity type, retirement plan, or tax setup. It rarely happens all at once, it’s gradual, but the thresholds matter."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 1",
+          "text": "Your CPA can file last year’s return, but growth means rethinking if last year’s tax strategy still fits. That is a planning question, not just a math question."
+        },
+        {
+          "source": "x-pack",
+          "label": "standalone 2",
+          "text": "If your business profits change meaningfully, so will the right answers about your entity and retirement plan. Old decisions can quietly become outdated."
+        }
+      ],
+      "blogDraftExists": false,
+      "approvalStatus": "pending",
+      "approved": false,
+      "assetDecisions": {},
+      "scheduledAssets": [],
+      "outputPaths": {
+        "outputDir": "output/IMG_4580/",
+        "socialPack": "output/IMG_4580/social-pack.md",
+        "contentLog": "output/IMG_4580/content-log.json",
+        "xPack": "output/IMG_4580/x-pack.json",
+        "blogDraft": "",
+        "approvalNote": "approval-queue/IMG_4580.md",
+        "captionedVideo": "output/IMG_4580/captioned_vertical_9x16.mp4",
+        "cleanSocialCaptionedVideo": "output/IMG_4580/clean-social/captioned_vertical_9x16.mp4",
+        "cleanSocialVerticalVideo": "output/IMG_4580/clean-social/vertical_9x16.mp4",
+        "cleanSocialHorizontalVideo": "output/IMG_4580/clean-social/horizontal_16x9.mp4",
+        "cover": "output/IMG_4580/cover.jpg",
+        "carousel": "output/IMG_4580/carousel/slides.json",
+        "transcript": "work/IMG_4580/audio.json",
+        "brollOverlays": []
+      },
+      "createdAt": "2026-06-30T20:52:52.267Z",
+      "updatedAt": "2026-06-30T20:53:01.927Z",
+      "reuseStatusSummary": "7 candidate"
+    }
+  ]
+}

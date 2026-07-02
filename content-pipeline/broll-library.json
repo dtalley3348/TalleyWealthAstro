@@ -1,0 +1,537 @@
+[
+  {
+    "name": "IMG_4016_seg01",
+    "parent": "IMG_4016",
+    "file": "broll/clips/IMG_4016_seg01.mp4",
+    "duration": 7.43,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_4016_seg01/f1.jpg"
+    ],
+    "description": "A golfer walks alone across a green fairway bordered by dense trees on a bright, sunny day.",
+    "tags": [
+      "golf",
+      "greenery",
+      "outdoors",
+      "trees",
+      "leisure",
+      "sports",
+      "summer",
+      "landscape"
+    ],
+    "mood": "calm and reflective",
+    "visualCategory": "nature",
+    "useCases": [
+      "background for lifestyle or values messaging",
+      "visual metaphor for journey, growth, or focus",
+      "intro or outro b-roll for calming transitions"
+    ],
+    "avoidWhen": [
+      "discussing urban life or office environments",
+      "content focused on financial data or direct business topics"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Stable framing with ample natural light; no visible faces; overall gentle motion adds tranquility.",
+    "approved": true,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_4016_seg02",
+    "parent": "IMG_4016",
+    "file": "broll/clips/IMG_4016_seg02.mp4",
+    "duration": 7.43,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_4016_seg02/f1.jpg"
+    ],
+    "description": "A young child walks up a grassy hill near a golf green with trees in the background.",
+    "tags": [
+      "child",
+      "green grass",
+      "golf green",
+      "outdoors",
+      "summer",
+      "trees",
+      "open space"
+    ],
+    "mood": "peaceful and playful",
+    "visualCategory": "nature",
+    "useCases": [
+      "calming brand texture",
+      "family values illustration",
+      "work-life balance themes",
+      "personal growth metaphors"
+    ],
+    "avoidWhen": [
+      "discussing strict financial topics",
+      "business-only content",
+      "when needing direct finance visuals"
+    ],
+    "brandFit": "good",
+    "qualityNotes": "Well-lit frame, vertical orientation, gentle motion, no distracting elements.",
+    "approved": true,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_4016_seg03",
+    "parent": "IMG_4016",
+    "file": "broll/clips/IMG_4016_seg03.mp4",
+    "duration": 7.43,
+    "width": 1080,
+    "height": 1920,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_4016_seg03/f1.jpg"
+    ],
+    "description": "A person stands alone on a sunny, well-manicured golf green bordered by lush trees.",
+    "tags": [
+      "golf",
+      "green",
+      "outdoors",
+      "trees",
+      "summer",
+      "leisure",
+      "sunlight",
+      "lawn"
+    ],
+    "mood": "peaceful recreation",
+    "visualCategory": "nature",
+    "useCases": [
+      "background for calm reflection pieces",
+      "visual metaphor for open possibilities",
+      "scene-setting in lifestyle topics",
+      "pause in between financial concepts"
+    ],
+    "avoidWhen": [
+      "discussing office productivity",
+      "detailing urban or workspace themes",
+      "focusing on finances or data explicitly"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Natural lighting, vertical framing, subject is small in the frame, background is uncluttered.",
+    "approved": true,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7435_seg01",
+    "parent": "IMG_7435",
+    "file": "broll/clips/IMG_7435_seg01.mp4",
+    "duration": 6.51,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7435_seg01/f1.jpg"
+    ],
+    "description": "A black SUV drives through a stone-lined tunnel toward bright daylight.",
+    "tags": [
+      "car",
+      "tunnel",
+      "stone",
+      "light",
+      "road",
+      "journey",
+      "travel",
+      "vertical",
+      "vehicle"
+    ],
+    "mood": "moving toward opportunity",
+    "visualCategory": "travel",
+    "useCases": [
+      "metaphor for transition",
+      "narrative on progress",
+      "moment of change",
+      "visual interest for journey themes"
+    ],
+    "avoidWhen": [
+      "discussing static concepts",
+      "intimate office culture",
+      "specific financial products"
+    ],
+    "brandFit": "good",
+    "qualityNotes": "Vertical, good contrast from tunnel darkness to bright exit; slight motion blur from car movement.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7435_seg02",
+    "parent": "IMG_7435",
+    "file": "broll/clips/IMG_7435_seg02.mp4",
+    "duration": 6.51,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7435_seg02/f1.jpg"
+    ],
+    "description": "A winding road curves along a rocky landscape with large, sunlit red cliffs and a clear blue sky.",
+    "tags": [
+      "mountains",
+      "road",
+      "sunny",
+      "outdoors",
+      "landscape",
+      "blue sky",
+      "scenic",
+      "nature",
+      "cliffs"
+    ],
+    "mood": "calm and inspiring",
+    "visualCategory": "nature",
+    "useCases": [
+      "background for inspirational quotes",
+      "visual metaphor for a journey or progress",
+      "transitional slide in presentations",
+      "branding visuals emphasizing growth or exploration"
+    ],
+    "avoidWhen": [
+      "discussing financial specifics",
+      "urban or office themes are needed",
+      "requiring people-focused imagery"
+    ],
+    "brandFit": "good",
+    "qualityNotes": "Vertical framing with good natural lighting; steady motion with clear, unobstructed landscape view.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7435_seg03",
+    "parent": "IMG_7435",
+    "file": "broll/clips/IMG_7435_seg03.mp4",
+    "duration": 6.51,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7435_seg03/f1.jpg"
+    ],
+    "description": "A winding road curves through a sunlit canyon with tall rock formations and clear blue sky.",
+    "tags": [
+      "road",
+      "canyon",
+      "sunny",
+      "outdoors",
+      "mountains",
+      "nature",
+      "scenic",
+      "travel"
+    ],
+    "mood": "calm and adventurous",
+    "visualCategory": "nature",
+    "useCases": [
+      "background for inspirational quotes",
+      "visual metaphor for journey or planning",
+      "opening b-roll for webinars",
+      "social media storytelling"
+    ],
+    "avoidWhen": [
+      "focused on office culture",
+      "urban or financial themes",
+      "client service highlights"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Shot is stable with bright natural light; vertical orientation may limit use for widescreen formats.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7722_seg01",
+    "parent": "IMG_7722",
+    "file": "broll/clips/IMG_7722_seg01.mp4",
+    "duration": 5.13,
+    "width": 2160,
+    "height": 3840,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7722_seg01/f1.jpg"
+    ],
+    "description": "View from a boat moving quickly on a large lake, with water splashing in the foreground and distant hills under a clear blue sky.",
+    "tags": [
+      "lake",
+      "boat",
+      "water",
+      "splash",
+      "outdoors",
+      "blue sky",
+      "motion",
+      "nature",
+      "scenic"
+    ],
+    "mood": "adventurous and refreshing",
+    "visualCategory": "nature",
+    "useCases": [
+      "background texture for lifestyle messaging",
+      "metaphor for journey or forward movement",
+      "visual break in informative content"
+    ],
+    "avoidWhen": [
+      "discussing office environments",
+      "focusing on financial topics without clear metaphor",
+      "urban or indoor thematic needs"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Crisp outdoor lighting, energetic water motion; horizon is slightly low for heavier sky emphasis.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_3704_seg01",
+    "parent": "IMG_3704",
+    "file": "broll/clips/IMG_3704_seg01.mp4",
+    "duration": 10.17,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_3704_seg01/f1.jpg"
+    ],
+    "description": "Tall marble columns in a grand architectural exterior with one person walking in the distance.",
+    "tags": [
+      "columns",
+      "architecture",
+      "marble",
+      "historic",
+      "grand",
+      "outdoor",
+      "perspective",
+      "walking",
+      "overcast",
+      "urban"
+    ],
+    "mood": "majestic and contemplative",
+    "visualCategory": "local",
+    "useCases": [
+      "background texture for guiding clients through foundational concepts",
+      "visual metaphor for stability or longevity",
+      "intro/outro frames for thought leadership content",
+      "segment transition in educational videos"
+    ],
+    "avoidWhen": [
+      "discussing modern technology or digital tools",
+      "topics requiring images of home, office, or finance",
+      "appealing to a highly casual or playful audience"
+    ],
+    "brandFit": "good",
+    "qualityNotes": "Strong vertical framing complements the grandeur; lighting is natural and soft, person adds scale without distraction.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_6797-2_seg01",
+    "parent": "IMG_6797-2",
+    "file": "broll/clips/IMG_6797-2_seg01.mp4",
+    "duration": 7.77,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_6797-2_seg01/f1.jpg"
+    ],
+    "description": "A group of horses stands in a shallow river with reeds and greenery along the banks under a partly cloudy sky.",
+    "tags": [
+      "horses",
+      "river",
+      "water",
+      "nature",
+      "animals",
+      "outdoors",
+      "calm",
+      "scenic",
+      "wildlife"
+    ],
+    "mood": "peaceful, serene",
+    "visualCategory": "nature",
+    "useCases": [
+      "background for blog posts on balance or tranquility",
+      "visual pause in video content",
+      "metaphor for teamwork or harmony in presentations"
+    ],
+    "avoidWhen": [
+      "discussing urban finance topics",
+      "requiring direct money or office imagery",
+      "content needing clear financial symbolism"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Good natural lighting and calm composition; vertical framing restricts widescreen use, no people present which limits direct personalization.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7293_seg01",
+    "parent": "IMG_7293",
+    "file": "broll/clips/IMG_7293_seg01.mp4",
+    "duration": 8.12,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7293_seg01/f1.jpg"
+    ],
+    "description": "A dramatic vertical shot of towering red rock cliffs set against a partly cloudy blue sky.",
+    "tags": [
+      "cliffs",
+      "red rock",
+      "vertical",
+      "sky",
+      "landscape",
+      "rock formations",
+      "outdoors",
+      "natural scenery"
+    ],
+    "mood": "awe-inspiring and tranquil",
+    "visualCategory": "nature",
+    "useCases": [
+      "visual metaphor for strength or longevity in content",
+      "background texture for inspirational quotes",
+      "setting a calm and reflective tone in branding videos"
+    ],
+    "avoidWhen": [
+      "discussing specific financial tools or products",
+      "introducing office or team culture",
+      "any context needing direct wealth imagery or urban aesthetics"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Strong natural lighting and steady composition, but landscape feels generic without connection to finance or brand themes.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7436_seg01",
+    "parent": "IMG_7436",
+    "file": "broll/clips/IMG_7436_seg01.mp4",
+    "duration": 9.44,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7436_seg01/f1.jpg"
+    ],
+    "description": "A sunlit roadway curves past striking red rock cliffs against a blue sky.",
+    "tags": [
+      "red rocks",
+      "cliffs",
+      "road",
+      "sky",
+      "scenic",
+      "vertical",
+      "landscape",
+      "outdoors"
+    ],
+    "mood": "adventurous and open",
+    "visualCategory": "nature",
+    "useCases": [
+      "serving as peaceful transition b-roll",
+      "symbolizing journey or forward movement",
+      "background for inspirational quotes",
+      "visual pause between financial topics"
+    ],
+    "avoidWhen": [
+      "context demands financial, office, or client imagery",
+      "message requires clear connection to wealth management",
+      "content must be urban or business-focused"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Well-lit with vivid colors; vertical framing may limit its versatility in standard formats.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_6550_seg01",
+    "parent": "IMG_6550",
+    "file": "broll/clips/IMG_6550_seg01.mp4",
+    "duration": 5.2,
+    "width": 2160,
+    "height": 3840,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_6550_seg01/f1.jpg"
+    ],
+    "description": "A horse stands in a calm river near tall grass, viewed from the perspective of a paddleboard, with mountains under a clear blue sky in the background.",
+    "tags": [
+      "river",
+      "horse",
+      "paddleboard",
+      "mountains",
+      "blue sky",
+      "outdoors",
+      "wildlife",
+      "vertical",
+      "nature scene"
+    ],
+    "mood": "peaceful and adventurous",
+    "visualCategory": "nature",
+    "useCases": [
+      "background texture for calm messaging",
+      "visual metaphor for journey or exploration",
+      "adding variety to outdoor-themed posts"
+    ],
+    "avoidWhen": [
+      "discussing office settings",
+      "urban topics",
+      "directly financial content",
+      "corporate professionalism"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Well-framed with natural light and stable vertical orientation; no people visible so focus is on environment.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  },
+  {
+    "name": "IMG_7434_seg01",
+    "parent": "IMG_7434",
+    "file": "broll/clips/IMG_7434_seg01.mp4",
+    "duration": 10.4,
+    "width": 720,
+    "height": 1280,
+    "orientation": "vertical",
+    "frames": [
+      "broll/frames/IMG_7434_seg01/f1.jpg"
+    ],
+    "description": "A paved road leads through a scenic canyon with tall red rock formations under a blue sky.",
+    "tags": [
+      "canyon",
+      "red rocks",
+      "road",
+      "scenic",
+      "outdoors",
+      "landscape",
+      "travel",
+      "vertical",
+      "blue sky"
+    ],
+    "mood": "adventurous and open",
+    "visualCategory": "nature",
+    "useCases": [
+      "visual metaphor for a journey",
+      "background for quote about growth",
+      "calm transition between segments",
+      "inspiration for new perspectives"
+    ],
+    "avoidWhen": [
+      "discussing urban finance topics",
+      "introducing office-focused advice",
+      "showcasing direct client services"
+    ],
+    "brandFit": "limited",
+    "qualityNotes": "Vertical framing, steady shot, vibrant natural lighting, no people present.",
+    "approved": false,
+    "status": "ready",
+    "added": "2026-06-23"
+  }
+]

@@ -1,0 +1,255 @@
+{
+  "generatedAt": "2026-07-01T20:03:29.001Z",
+  "threads": [
+    {
+      "primaryReuseId": "img-4131__blog",
+      "sourceVideo": "IMG_4131",
+      "sourceVideoIds": [
+        "IMG_4131",
+        "IMG_4580"
+      ],
+      "followUpVideoIds": [
+        "IMG_4580"
+      ],
+      "threadStatus": "preview_generated",
+      "candidateScore": 9.5,
+      "followUpCue": "Part 2 for: When Should You Upgrade Your Business Tax Strategy",
+      "resourceVideoPath": "output/IMG_4131/resource-thread/img-4131-blog/resource-video.mp4",
+      "transcriptBundlePath": "output/IMG_4131/resource-thread/img-4131-blog/combined-transcript.json",
+      "cleanSocialVideoPath": "output/IMG_4580/clean-social/vertical_9x16.mp4",
+      "cleanFollowUpExports": [
+        {
+          "sourceVideoId": "IMG_4580",
+          "cueRemovedThroughSecond": 5.2,
+          "captionedVertical": "output/IMG_4580/clean-social/captioned_vertical_9x16.mp4",
+          "vertical": "output/IMG_4580/clean-social/vertical_9x16.mp4",
+          "horizontal": "output/IMG_4580/clean-social/horizontal_16x9.mp4",
+          "square": "output/IMG_4580/clean-social/square_1x1.mp4"
+        }
+      ],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:28.999Z"
+    },
+    {
+      "primaryReuseId": "img-4133__blog",
+      "sourceVideo": "IMG_4133",
+      "sourceVideoIds": [
+        "IMG_4133"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: Avoid Tipping the IRS: Why Tax Planning Belongs Year-Round",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:28.999Z"
+    },
+    {
+      "primaryReuseId": "img-4134__blog",
+      "sourceVideo": "IMG_4134",
+      "sourceVideoIds": [
+        "IMG_4134"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: When Should Business Owners Start Moving Wealth Outside the Business",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:28.999Z"
+    },
+    {
+      "primaryReuseId": "img-4138__blog",
+      "sourceVideo": "IMG_4138",
+      "sourceVideoIds": [
+        "IMG_4138"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: Why Intentional Owner Pay Matters More Than You Think",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:28.999Z"
+    },
+    {
+      "primaryReuseId": "img-4156__blog",
+      "sourceVideo": "IMG_4156",
+      "sourceVideoIds": [
+        "IMG_4156"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "package_prepared",
+      "candidateScore": 9,
+      "followUpCue": "Part 2 for: Why Doesn't Hitting My Retirement Number Make Me Feel Secure",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.000Z"
+    },
+    {
+      "primaryReuseId": "img-4157__blog",
+      "sourceVideo": "IMG_4157",
+      "sourceVideoIds": [
+        "IMG_4157"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: Why a Great Year Doesn’t Always Build Personal Wealth for Business Owners",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.000Z"
+    },
+    {
+      "primaryReuseId": "img-4158__blog",
+      "sourceVideo": "IMG_4158",
+      "sourceVideoIds": [
+        "IMG_4158"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: What Happens When Your Professionals Don’t Communicate",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.000Z"
+    },
+    {
+      "primaryReuseId": "img-4159__blog",
+      "sourceVideo": "IMG_4159",
+      "sourceVideoIds": [
+        "IMG_4159"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "preview_generated",
+      "candidateScore": 9,
+      "followUpCue": "Part 2 for: Can You Fail in Retirement by Being Too Frugal",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.000Z"
+    },
+    {
+      "primaryReuseId": "img-4160__blog",
+      "sourceVideo": "IMG_4160",
+      "sourceVideoIds": [
+        "IMG_4160"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "preview_generated",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: Are Your Roth Conversions Actually Moving the Needle",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.000Z"
+    },
+    {
+      "primaryReuseId": "img-4161__blog",
+      "sourceVideo": "IMG_4161",
+      "sourceVideoIds": [
+        "IMG_4161"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "preview_generated",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: What Should You Do When You Inherit Money",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.001Z"
+    },
+    {
+      "primaryReuseId": "img-4165__blog",
+      "sourceVideo": "IMG_4165",
+      "sourceVideoIds": [
+        "IMG_4165"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: Your Estate Plan Isn’t Done After Signing the Documents",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.001Z"
+    },
+    {
+      "primaryReuseId": "img-4167__blog",
+      "sourceVideo": "IMG_4167",
+      "sourceVideoIds": [
+        "IMG_4167"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "package_prepared",
+      "candidateScore": 9,
+      "followUpCue": "Part 2 for: How Do I Decide What Rate of Return to Target",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.001Z"
+    },
+    {
+      "primaryReuseId": "img-4168__blog",
+      "sourceVideo": "IMG_4168",
+      "sourceVideoIds": [
+        "IMG_4168"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: The Retirement Question Most People Never Get Asked",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.001Z"
+    },
+    {
+      "primaryReuseId": "img-4580__blog",
+      "sourceVideo": "IMG_4580",
+      "sourceVideoIds": [
+        "IMG_4580"
+      ],
+      "followUpVideoIds": [],
+      "threadStatus": "source_material_with_follow_up_option",
+      "candidateScore": 6.5,
+      "followUpCue": "Part 2 for: Why Your Tax Strategy Needs to Grow As Your Business Grows",
+      "resourceVideoPath": "",
+      "transcriptBundlePath": "",
+      "cleanSocialVideoPath": "",
+      "cleanFollowUpExports": [],
+      "previewNeedsRegeneration": false,
+      "updatedAt": "2026-07-01T20:03:29.001Z"
+    }
+  ]
+}
